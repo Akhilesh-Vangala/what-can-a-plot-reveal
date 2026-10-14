@@ -1,0 +1,25 @@
+# Regenerable or bulky artefacts (every plot and model is regenerated exactly from seeds by the code)
+**/img/
+**/img_iv/
+**/lineups/
+**/lineups_shuffled/
+04_experiments/code/runs/**/*.png
+*.zip
+*.npz
+*.pkl
+*.rds
+**/manifest.jsonl
+04_experiments/code/data/
+# smoke / scratch runs
+04_experiments/code/runs/*smoke*/
+04_experiments/code/runs/v4_ivtest/
+*.log
+*.score_err
+# OS / editor / build
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.aux
+*.out
+*.synctex.gz

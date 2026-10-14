@@ -1,0 +1,1860 @@
+{
+ "detection": [
+  {
+   "spec": "lc_loss",
+   "failure": "overfitting",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.6090666666666666,
+   "test_auc": 0.5709333333333334,
+   "test_acc": 0.7375,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_loss",
+   "failure": "overfitting",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.7652,
+   "test_auc": 0.6971333333333334,
+   "test_acc": 0.755,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_loss",
+   "failure": "overfitting",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.9729666666666665,
+   "test_auc": 0.965,
+   "test_acc": 0.935,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_loss",
+   "failure": "miscalibration",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.6076333333333334,
+   "test_auc": 0.5305666666666666,
+   "test_acc": 0.7275,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_loss",
+   "failure": "miscalibration",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.6335333333333333,
+   "test_auc": 0.5528,
+   "test_acc": 0.7275,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_loss",
+   "failure": "miscalibration",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.7674,
+   "test_auc": 0.7383333333333334,
+   "test_acc": 0.7075,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_loss",
+   "failure": "label_noise",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.5471333333333332,
+   "test_auc": 0.5206333333333333,
+   "test_acc": 0.735,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_loss",
+   "failure": "label_noise",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.6557333333333333,
+   "test_auc": 0.6018,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_loss",
+   "failure": "label_noise",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.8087666666666666,
+   "test_auc": 0.7933333333333333,
+   "test_acc": 0.76,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_loss",
+   "failure": "class_imbalance",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.5539666666666667,
+   "test_auc": 0.4452,
+   "test_acc": 0.66,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_loss",
+   "failure": "class_imbalance",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.5086666666666667,
+   "test_auc": 0.4932333333333333,
+   "test_acc": 0.7,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_loss",
+   "failure": "class_imbalance",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.5095000000000001,
+   "test_auc": 0.5301333333333333,
+   "test_acc": 0.7275,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_acc",
+   "failure": "overfitting",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.6604666666666666,
+   "test_auc": 0.6045333333333334,
+   "test_acc": 0.7325,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_acc",
+   "failure": "overfitting",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.6846666666666665,
+   "test_auc": 0.7021666666666666,
+   "test_acc": 0.665,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_acc",
+   "failure": "overfitting",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.9475,
+   "test_auc": 0.9334,
+   "test_acc": 0.8775,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_acc",
+   "failure": "miscalibration",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.5129333333333334,
+   "test_auc": 0.5621666666666667,
+   "test_acc": 0.7475,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_acc",
+   "failure": "miscalibration",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.5320666666666666,
+   "test_auc": 0.4917,
+   "test_acc": 0.72,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_acc",
+   "failure": "miscalibration",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.5358666666666667,
+   "test_auc": 0.5279,
+   "test_acc": 0.66,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_acc",
+   "failure": "label_noise",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.5286000000000001,
+   "test_auc": 0.5533333333333333,
+   "test_acc": 0.735,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_acc",
+   "failure": "label_noise",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.6009333333333333,
+   "test_auc": 0.5393000000000001,
+   "test_acc": 0.745,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_acc",
+   "failure": "label_noise",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.6995333333333332,
+   "test_auc": 0.6850333333333334,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_acc",
+   "failure": "class_imbalance",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.5157666666666667,
+   "test_auc": 0.5115000000000001,
+   "test_acc": 0.755,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_acc",
+   "failure": "class_imbalance",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.5251666666666668,
+   "test_auc": 0.45663333333333334,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "lc_acc",
+   "failure": "class_imbalance",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.5563333333333333,
+   "test_auc": 0.5881000000000001,
+   "test_acc": 0.7425,
+   "n_test": 400
+  },
+  {
+   "spec": "rel",
+   "failure": "overfitting",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.6243666666666667,
+   "test_auc": 0.5575333333333333,
+   "test_acc": 0.7025,
+   "n_test": 400
+  },
+  {
+   "spec": "rel",
+   "failure": "overfitting",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.7645333333333333,
+   "test_auc": 0.6985666666666666,
+   "test_acc": 0.755,
+   "n_test": 400
+  },
+  {
+   "spec": "rel",
+   "failure": "overfitting",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.9299666666666667,
+   "test_auc": 0.9279,
+   "test_acc": 0.8025,
+   "n_test": 400
+  },
+  {
+   "spec": "rel",
+   "failure": "miscalibration",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.6520666666666666,
+   "test_auc": 0.5352,
+   "test_acc": 0.7425,
+   "n_test": 400
+  },
+  {
+   "spec": "rel",
+   "failure": "miscalibration",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.7051333333333334,
+   "test_auc": 0.6192,
+   "test_acc": 0.7425,
+   "n_test": 400
+  },
+  {
+   "spec": "rel",
+   "failure": "miscalibration",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.8645,
+   "test_auc": 0.8118333333333333,
+   "test_acc": 0.7725,
+   "n_test": 400
+  },
+  {
+   "spec": "rel",
+   "failure": "label_noise",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.5521333333333334,
+   "test_auc": 0.5578000000000001,
+   "test_acc": 0.7475,
+   "n_test": 400
+  },
+  {
+   "spec": "rel",
+   "failure": "label_noise",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.7194666666666667,
+   "test_auc": 0.7026666666666668,
+   "test_acc": 0.76,
+   "n_test": 400
+  },
+  {
+   "spec": "rel",
+   "failure": "label_noise",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.8958,
+   "test_auc": 0.8928666666666667,
+   "test_acc": 0.87,
+   "n_test": 400
+  },
+  {
+   "spec": "rel",
+   "failure": "class_imbalance",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.5716666666666667,
+   "test_auc": 0.5101666666666667,
+   "test_acc": 0.6725,
+   "n_test": 400
+  },
+  {
+   "spec": "rel",
+   "failure": "class_imbalance",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.5638666666666666,
+   "test_auc": 0.5382333333333333,
+   "test_acc": 0.6825,
+   "n_test": 400
+  },
+  {
+   "spec": "rel",
+   "failure": "class_imbalance",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.5961666666666665,
+   "test_auc": 0.5067333333333334,
+   "test_acc": 0.71,
+   "n_test": 400
+  },
+  {
+   "spec": "cm",
+   "failure": "overfitting",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.49606666666666666,
+   "test_auc": 0.5109333333333332,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "cm",
+   "failure": "overfitting",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.5257333333333334,
+   "test_auc": 0.4769333333333333,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "cm",
+   "failure": "overfitting",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.5933333333333333,
+   "test_auc": 0.6756333333333333,
+   "test_acc": 0.755,
+   "n_test": 400
+  },
+  {
+   "spec": "cm",
+   "failure": "miscalibration",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.5362666666666667,
+   "test_auc": 0.5239333333333334,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "cm",
+   "failure": "miscalibration",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.5702,
+   "test_auc": 0.44916666666666666,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "cm",
+   "failure": "miscalibration",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.5236666666666666,
+   "test_auc": 0.53335,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "cm",
+   "failure": "label_noise",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.5962333333333334,
+   "test_auc": 0.5094333333333333,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "cm",
+   "failure": "label_noise",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.5822666666666667,
+   "test_auc": 0.5214,
+   "test_acc": 0.73,
+   "n_test": 400
+  },
+  {
+   "spec": "cm",
+   "failure": "label_noise",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.6814333333333333,
+   "test_auc": 0.6392333333333333,
+   "test_acc": 0.7475,
+   "n_test": 400
+  },
+  {
+   "spec": "cm",
+   "failure": "class_imbalance",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.6463,
+   "test_auc": 0.7014,
+   "test_acc": 0.78,
+   "n_test": 400
+  },
+  {
+   "spec": "cm",
+   "failure": "class_imbalance",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.7877666666666667,
+   "test_auc": 0.78935,
+   "test_acc": 0.6425,
+   "n_test": 400
+  },
+  {
+   "spec": "cm",
+   "failure": "class_imbalance",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.9248666666666667,
+   "test_auc": 0.9113333333333333,
+   "test_acc": 0.865,
+   "n_test": 400
+  },
+  {
+   "spec": "roc",
+   "failure": "overfitting",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.6055333333333334,
+   "test_auc": 0.4686666666666667,
+   "test_acc": 0.6425,
+   "n_test": 400
+  },
+  {
+   "spec": "roc",
+   "failure": "overfitting",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.5015000000000001,
+   "test_auc": 0.5315666666666666,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "roc",
+   "failure": "overfitting",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.6656333333333334,
+   "test_auc": 0.7172999999999999,
+   "test_acc": 0.7525,
+   "n_test": 400
+  },
+  {
+   "spec": "roc",
+   "failure": "miscalibration",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.5316166666666666,
+   "test_auc": 0.4406333333333334,
+   "test_acc": 0.5175,
+   "n_test": 400
+  },
+  {
+   "spec": "roc",
+   "failure": "miscalibration",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.5520666666666667,
+   "test_auc": 0.5098333333333334,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "roc",
+   "failure": "miscalibration",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.529,
+   "test_auc": 0.5009666666666667,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "roc",
+   "failure": "label_noise",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.5953666666666666,
+   "test_auc": 0.6027,
+   "test_acc": 0.7475,
+   "n_test": 400
+  },
+  {
+   "spec": "roc",
+   "failure": "label_noise",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.7706,
+   "test_auc": 0.7838999999999999,
+   "test_acc": 0.7775,
+   "n_test": 400
+  },
+  {
+   "spec": "roc",
+   "failure": "label_noise",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.9344,
+   "test_auc": 0.9153333333333333,
+   "test_acc": 0.8725,
+   "n_test": 400
+  },
+  {
+   "spec": "roc",
+   "failure": "class_imbalance",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.5728333333333333,
+   "test_auc": 0.48029999999999995,
+   "test_acc": 0.495,
+   "n_test": 400
+  },
+  {
+   "spec": "roc",
+   "failure": "class_imbalance",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.5464666666666667,
+   "test_auc": 0.49019999999999997,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "roc",
+   "failure": "class_imbalance",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.5530666666666667,
+   "test_auc": 0.5129666666666667,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "pr",
+   "failure": "overfitting",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.5831333333333333,
+   "test_auc": 0.45623333333333327,
+   "test_acc": 0.7325,
+   "n_test": 400
+  },
+  {
+   "spec": "pr",
+   "failure": "overfitting",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.5181333333333333,
+   "test_auc": 0.5319,
+   "test_acc": 0.745,
+   "n_test": 400
+  },
+  {
+   "spec": "pr",
+   "failure": "overfitting",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.6442666666666667,
+   "test_auc": 0.7006666666666667,
+   "test_acc": 0.745,
+   "n_test": 400
+  },
+  {
+   "spec": "pr",
+   "failure": "miscalibration",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.5427333333333334,
+   "test_auc": 0.5016333333333334,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "pr",
+   "failure": "miscalibration",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.5719666666666667,
+   "test_auc": 0.4752333333333333,
+   "test_acc": 0.725,
+   "n_test": 400
+  },
+  {
+   "spec": "pr",
+   "failure": "miscalibration",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.5290666666666667,
+   "test_auc": 0.5422333333333333,
+   "test_acc": 0.75,
+   "n_test": 400
+  },
+  {
+   "spec": "pr",
+   "failure": "label_noise",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.6508,
+   "test_auc": 0.5332333333333333,
+   "test_acc": 0.6525,
+   "n_test": 400
+  },
+  {
+   "spec": "pr",
+   "failure": "label_noise",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.7618666666666666,
+   "test_auc": 0.7886000000000001,
+   "test_acc": 0.7525,
+   "n_test": 400
+  },
+  {
+   "spec": "pr",
+   "failure": "label_noise",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.9206333333333334,
+   "test_auc": 0.8945333333333333,
+   "test_acc": 0.84,
+   "n_test": 400
+  },
+  {
+   "spec": "pr",
+   "failure": "class_imbalance",
+   "level": 0,
+   "target": 0.65,
+   "val_auc": 0.6426,
+   "test_auc": 0.6449,
+   "test_acc": 0.805,
+   "n_test": 400
+  },
+  {
+   "spec": "pr",
+   "failure": "class_imbalance",
+   "level": 1,
+   "target": 0.8,
+   "val_auc": 0.8019000000000001,
+   "test_auc": 0.8055,
+   "test_acc": 0.8175,
+   "n_test": 400
+  },
+  {
+   "spec": "pr",
+   "failure": "class_imbalance",
+   "level": 2,
+   "target": 0.95,
+   "val_auc": 0.9239999999999999,
+   "test_auc": 0.8908333333333334,
+   "test_acc": 0.8425,
+   "n_test": 400
+  }
+ ],
+ "diagnosis": [
+  {
+   "spec": "lc_loss",
+   "level": 0,
+   "target": 0.65,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.5488866666666666,
+   "test_auc": 0.5459766666666667,
+   "test_acc": 0.27285714285714285,
+   "n_test": 700,
+   "confusion": [
+    [
+     95,
+     30,
+     75,
+     45,
+     55
+    ],
+    [
+     26,
+     17,
+     26,
+     15,
+     16
+    ],
+    [
+     23,
+     6,
+     36,
+     22,
+     13
+    ],
+    [
+     29,
+     8,
+     25,
+     23,
+     15
+    ],
+    [
+     29,
+     10,
+     31,
+     10,
+     20
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.5293133333333333
+    ],
+    [
+     1.0,
+     0.5459766666666667
+    ]
+   ]
+  },
+  {
+   "spec": "lc_loss",
+   "level": 1,
+   "target": 0.8,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.6347716666666666,
+   "test_auc": 0.5934666666666668,
+   "test_acc": 0.38571428571428573,
+   "n_test": 700,
+   "confusion": [
+    [
+     216,
+     24,
+     3,
+     34,
+     23
+    ],
+    [
+     51,
+     28,
+     2,
+     8,
+     11
+    ],
+    [
+     66,
+     8,
+     0,
+     15,
+     11
+    ],
+    [
+     62,
+     7,
+     0,
+     20,
+     11
+    ],
+    [
+     79,
+     3,
+     2,
+     10,
+     6
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.5773291666666667
+    ],
+    [
+     1.0,
+     0.5934666666666668
+    ]
+   ]
+  },
+  {
+   "spec": "lc_loss",
+   "level": 2,
+   "target": 0.95,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.7803783333333334,
+   "test_auc": 0.7625000000000001,
+   "test_acc": 0.5628571428571428,
+   "n_test": 700,
+   "confusion": [
+    [
+     235,
+     9,
+     10,
+     45,
+     1
+    ],
+    [
+     10,
+     86,
+     2,
+     2,
+     0
+    ],
+    [
+     54,
+     6,
+     22,
+     17,
+     1
+    ],
+    [
+     39,
+     4,
+     5,
+     51,
+     1
+    ],
+    [
+     86,
+     0,
+     1,
+     13,
+     0
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.7405900000000001
+    ],
+    [
+     1.0,
+     0.7625000000000001
+    ]
+   ]
+  },
+  {
+   "spec": "lc_acc",
+   "level": 0,
+   "target": 0.65,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.5371966666666668,
+   "test_auc": 0.5554483333333333,
+   "test_acc": 0.4057142857142857,
+   "n_test": 700,
+   "confusion": [
+    [
+     254,
+     26,
+     4,
+     15,
+     1
+    ],
+    [
+     77,
+     16,
+     0,
+     6,
+     1
+    ],
+    [
+     81,
+     7,
+     4,
+     6,
+     2
+    ],
+    [
+     86,
+     6,
+     1,
+     7,
+     0
+    ],
+    [
+     73,
+     9,
+     8,
+     7,
+     3
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.5169183333333334
+    ],
+    [
+     1.0,
+     0.5554483333333333
+    ]
+   ]
+  },
+  {
+   "spec": "lc_acc",
+   "level": 1,
+   "target": 0.8,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.5762116666666667,
+   "test_auc": 0.5630066666666667,
+   "test_acc": 0.3985714285714286,
+   "n_test": 700,
+   "confusion": [
+    [
+     230,
+     24,
+     3,
+     43,
+     0
+    ],
+    [
+     60,
+     33,
+     1,
+     5,
+     1
+    ],
+    [
+     77,
+     7,
+     1,
+     15,
+     0
+    ],
+    [
+     78,
+     7,
+     0,
+     15,
+     0
+    ],
+    [
+     83,
+     4,
+     1,
+     12,
+     0
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.5619616666666666
+    ],
+    [
+     1.0,
+     0.5630066666666667
+    ]
+   ]
+  },
+  {
+   "spec": "lc_acc",
+   "level": 2,
+   "target": 0.95,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.6829850000000001,
+   "test_auc": 0.7100449999999998,
+   "test_acc": 0.51,
+   "n_test": 700,
+   "confusion": [
+    [
+     261,
+     13,
+     17,
+     9,
+     0
+    ],
+    [
+     23,
+     73,
+     4,
+     0,
+     0
+    ],
+    [
+     80,
+     5,
+     11,
+     4,
+     0
+    ],
+    [
+     78,
+     3,
+     7,
+     12,
+     0
+    ],
+    [
+     86,
+     2,
+     7,
+     5,
+     0
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.681135
+    ],
+    [
+     1.0,
+     0.7100449999999998
+    ]
+   ]
+  },
+  {
+   "spec": "rel",
+   "level": 0,
+   "target": 0.65,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.5764916666666666,
+   "test_auc": 0.5409216666666666,
+   "test_acc": 0.16857142857142857,
+   "n_test": 700,
+   "confusion": [
+    [
+     28,
+     2,
+     140,
+     1,
+     129
+    ],
+    [
+     10,
+     0,
+     64,
+     0,
+     26
+    ],
+    [
+     15,
+     0,
+     54,
+     0,
+     31
+    ],
+    [
+     11,
+     1,
+     51,
+     2,
+     35
+    ],
+    [
+     17,
+     1,
+     47,
+     1,
+     34
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.5393883333333334
+    ],
+    [
+     1.0,
+     0.5409216666666666
+    ]
+   ]
+  },
+  {
+   "spec": "rel",
+   "level": 1,
+   "target": 0.8,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.66464,
+   "test_auc": 0.6355866666666666,
+   "test_acc": 0.44,
+   "n_test": 700,
+   "confusion": [
+    [
+     259,
+     7,
+     2,
+     32,
+     0
+    ],
+    [
+     75,
+     10,
+     6,
+     9,
+     0
+    ],
+    [
+     85,
+     4,
+     2,
+     9,
+     0
+    ],
+    [
+     60,
+     3,
+     0,
+     37,
+     0
+    ],
+    [
+     93,
+     2,
+     0,
+     5,
+     0
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.5966816666666667
+    ],
+    [
+     1.0,
+     0.6355866666666666
+    ]
+   ]
+  },
+  {
+   "spec": "rel",
+   "level": 2,
+   "target": 0.95,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.8091316666666666,
+   "test_auc": 0.8079633333333334,
+   "test_acc": 0.5457142857142857,
+   "n_test": 700,
+   "confusion": [
+    [
+     228,
+     30,
+     1,
+     41,
+     0
+    ],
+    [
+     18,
+     73,
+     2,
+     7,
+     0
+    ],
+    [
+     56,
+     35,
+     6,
+     3,
+     0
+    ],
+    [
+     19,
+     7,
+     0,
+     74,
+     0
+    ],
+    [
+     76,
+     10,
+     0,
+     13,
+     1
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.7854133333333334
+    ],
+    [
+     1.0,
+     0.8079633333333334
+    ]
+   ]
+  },
+  {
+   "spec": "cm",
+   "level": 0,
+   "target": 0.65,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.5570766666666667,
+   "test_auc": 0.5592833333333334,
+   "test_acc": 0.44285714285714284,
+   "n_test": 700,
+   "confusion": [
+    [
+     291,
+     0,
+     0,
+     0,
+     9
+    ],
+    [
+     98,
+     0,
+     0,
+     0,
+     2
+    ],
+    [
+     99,
+     0,
+     0,
+     0,
+     1
+    ],
+    [
+     99,
+     0,
+     0,
+     0,
+     1
+    ],
+    [
+     81,
+     0,
+     0,
+     0,
+     19
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.56535
+    ],
+    [
+     1.0,
+     0.5592833333333334
+    ]
+   ]
+  },
+  {
+   "spec": "cm",
+   "level": 1,
+   "target": 0.8,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.6181049999999999,
+   "test_auc": 0.6098983333333333,
+   "test_acc": 0.39285714285714285,
+   "n_test": 700,
+   "confusion": [
+    [
+     206,
+     0,
+     0,
+     1,
+     93
+    ],
+    [
+     70,
+     0,
+     0,
+     0,
+     30
+    ],
+    [
+     73,
+     0,
+     0,
+     0,
+     27
+    ],
+    [
+     70,
+     0,
+     0,
+     0,
+     30
+    ],
+    [
+     31,
+     0,
+     0,
+     0,
+     69
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.6021799999999999
+    ],
+    [
+     1.0,
+     0.6098983333333333
+    ]
+   ]
+  },
+  {
+   "spec": "cm",
+   "level": 2,
+   "target": 0.95,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.68074,
+   "test_auc": 0.6937991666666667,
+   "test_acc": 0.49,
+   "n_test": 700,
+   "confusion": [
+    [
+     277,
+     2,
+     0,
+     0,
+     21
+    ],
+    [
+     89,
+     9,
+     0,
+     0,
+     2
+    ],
+    [
+     93,
+     1,
+     0,
+     0,
+     6
+    ],
+    [
+     94,
+     3,
+     0,
+     0,
+     3
+    ],
+    [
+     41,
+     2,
+     0,
+     0,
+     57
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.6969991666666666
+    ],
+    [
+     1.0,
+     0.6937991666666667
+    ]
+   ]
+  },
+  {
+   "spec": "roc",
+   "level": 0,
+   "target": 0.65,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.5427633333333334,
+   "test_auc": 0.5274366666666667,
+   "test_acc": 0.29428571428571426,
+   "n_test": 700,
+   "confusion": [
+    [
+     132,
+     0,
+     2,
+     161,
+     5
+    ],
+    [
+     50,
+     0,
+     0,
+     50,
+     0
+    ],
+    [
+     51,
+     0,
+     1,
+     46,
+     2
+    ],
+    [
+     28,
+     0,
+     0,
+     72,
+     0
+    ],
+    [
+     54,
+     0,
+     0,
+     45,
+     1
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.51159
+    ],
+    [
+     1.0,
+     0.5274366666666667
+    ]
+   ]
+  },
+  {
+   "spec": "roc",
+   "level": 1,
+   "target": 0.8,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.5899016666666667,
+   "test_auc": 0.5744433333333333,
+   "test_acc": 0.43857142857142856,
+   "n_test": 700,
+   "confusion": [
+    [
+     290,
+     0,
+     0,
+     10,
+     0
+    ],
+    [
+     97,
+     0,
+     0,
+     3,
+     0
+    ],
+    [
+     98,
+     0,
+     0,
+     2,
+     0
+    ],
+    [
+     83,
+     0,
+     0,
+     17,
+     0
+    ],
+    [
+     97,
+     0,
+     0,
+     3,
+     0
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.58796
+    ],
+    [
+     1.0,
+     0.5744433333333333
+    ]
+   ]
+  },
+  {
+   "spec": "roc",
+   "level": 2,
+   "target": 0.95,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.6841983333333334,
+   "test_auc": 0.6903600000000001,
+   "test_acc": 0.49857142857142855,
+   "n_test": 700,
+   "confusion": [
+    [
+     282,
+     0,
+     0,
+     18,
+     0
+    ],
+    [
+     95,
+     0,
+     0,
+     5,
+     0
+    ],
+    [
+     96,
+     0,
+     0,
+     4,
+     0
+    ],
+    [
+     33,
+     0,
+     0,
+     67,
+     0
+    ],
+    [
+     94,
+     0,
+     0,
+     6,
+     0
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.68358
+    ],
+    [
+     1.0,
+     0.6903600000000001
+    ]
+   ]
+  },
+  {
+   "spec": "pr",
+   "level": 0,
+   "target": 0.65,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.5840099999999999,
+   "test_auc": 0.5544333333333333,
+   "test_acc": 0.22428571428571428,
+   "n_test": 700,
+   "confusion": [
+    [
+     56,
+     42,
+     163,
+     27,
+     12
+    ],
+    [
+     13,
+     13,
+     58,
+     10,
+     6
+    ],
+    [
+     13,
+     19,
+     55,
+     8,
+     5
+    ],
+    [
+     15,
+     10,
+     64,
+     8,
+     3
+    ],
+    [
+     13,
+     14,
+     41,
+     7,
+     25
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.5630483333333334
+    ],
+    [
+     1.0,
+     0.5544333333333333
+    ]
+   ]
+  },
+  {
+   "spec": "pr",
+   "level": 1,
+   "target": 0.8,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.6725999999999999,
+   "test_auc": 0.6533683333333333,
+   "test_acc": 0.5028571428571429,
+   "n_test": 700,
+   "confusion": [
+    [
+     269,
+     0,
+     1,
+     25,
+     5
+    ],
+    [
+     93,
+     0,
+     0,
+     6,
+     1
+    ],
+    [
+     91,
+     0,
+     0,
+     9,
+     0
+    ],
+    [
+     57,
+     0,
+     0,
+     43,
+     0
+    ],
+    [
+     56,
+     0,
+     0,
+     4,
+     40
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.658825
+    ],
+    [
+     1.0,
+     0.6533683333333333
+    ]
+   ]
+  },
+  {
+   "spec": "pr",
+   "level": 2,
+   "target": 0.95,
+   "classes": [
+    "healthy",
+    "overfitting",
+    "miscalibration",
+    "label_noise",
+    "class_imbalance"
+   ],
+   "val_auc": 0.7752666666666668,
+   "test_auc": 0.77125,
+   "test_acc": 0.5342857142857143,
+   "n_test": 700,
+   "confusion": [
+    [
+     229,
+     2,
+     0,
+     37,
+     32
+    ],
+    [
+     68,
+     8,
+     0,
+     20,
+     4
+    ],
+    [
+     83,
+     1,
+     0,
+     8,
+     8
+    ],
+    [
+     20,
+     1,
+     0,
+     76,
+     3
+    ],
+    [
+     29,
+     4,
+     0,
+     6,
+     61
+    ]
+   ],
+   "saturation": [
+    [
+     0.5,
+     0.7534816666666666
+    ],
+    [
+     1.0,
+     0.77125
+    ]
+   ]
+  }
+ ]
+}

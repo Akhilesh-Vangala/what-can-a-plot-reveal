@@ -1,0 +1,2802 @@
+[
+{
+"item_id": "hires_probe_main_healthy_730_lc_loss",
+"run_id": "main_healthy_730",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_730_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_730_lc_loss",
+"run_id": "main_healthy_730",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_730_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_571_lc_loss",
+"run_id": "main_healthy_571",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_571_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_571_lc_loss",
+"run_id": "main_healthy_571",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_571_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1063_lc_loss",
+"run_id": "main_healthy_1063",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1063_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1063_lc_loss",
+"run_id": "main_healthy_1063",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1063_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1300_lc_loss",
+"run_id": "main_healthy_1300",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1300_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1300_lc_loss",
+"run_id": "main_healthy_1300",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1300_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_750_lc_loss",
+"run_id": "main_healthy_750",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_750_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_750_lc_loss",
+"run_id": "main_healthy_750",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_750_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_315_lc_loss",
+"run_id": "main_healthy_315",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_315_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_315_lc_loss",
+"run_id": "main_healthy_315",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_315_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_875_lc_loss",
+"run_id": "main_healthy_875",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_875_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_875_lc_loss",
+"run_id": "main_healthy_875",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_875_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_556_lc_loss",
+"run_id": "main_healthy_556",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_556_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_556_lc_loss",
+"run_id": "main_healthy_556",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_556_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1008_lc_loss",
+"run_id": "main_healthy_1008",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1008_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1008_lc_loss",
+"run_id": "main_healthy_1008",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1008_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_114_lc_loss",
+"run_id": "main_healthy_114",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_114_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_114_lc_loss",
+"run_id": "main_healthy_114",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_114_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_703_lc_loss",
+"run_id": "main_healthy_703",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_703_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_703_lc_loss",
+"run_id": "main_healthy_703",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_703_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_262_lc_loss",
+"run_id": "main_healthy_262",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_262_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_262_lc_loss",
+"run_id": "main_healthy_262",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_262_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_122_lc_loss",
+"run_id": "main_healthy_122",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_122_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_122_lc_loss",
+"run_id": "main_healthy_122",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_122_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_761_lc_loss",
+"run_id": "main_healthy_761",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_761_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_761_lc_loss",
+"run_id": "main_healthy_761",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_761_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1414_lc_loss",
+"run_id": "main_healthy_1414",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1414_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1414_lc_loss",
+"run_id": "main_healthy_1414",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1414_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1177_lc_loss",
+"run_id": "main_healthy_1177",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1177_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1177_lc_loss",
+"run_id": "main_healthy_1177",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1177_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1415_lc_loss",
+"run_id": "main_healthy_1415",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1415_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1415_lc_loss",
+"run_id": "main_healthy_1415",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1415_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_401_lc_loss",
+"run_id": "main_healthy_401",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_401_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_401_lc_loss",
+"run_id": "main_healthy_401",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_401_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1157_lc_loss",
+"run_id": "main_healthy_1157",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1157_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1157_lc_loss",
+"run_id": "main_healthy_1157",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1157_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_438_lc_loss",
+"run_id": "main_healthy_438",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_438_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_438_lc_loss",
+"run_id": "main_healthy_438",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_438_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1166_lc_loss",
+"run_id": "main_healthy_1166",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1166_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1166_lc_loss",
+"run_id": "main_healthy_1166",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1166_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_30_lc_loss",
+"run_id": "main_healthy_30",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_30_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_30_lc_loss",
+"run_id": "main_healthy_30",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_30_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_742_lc_loss",
+"run_id": "main_healthy_742",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_742_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_742_lc_loss",
+"run_id": "main_healthy_742",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_742_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_603_lc_loss",
+"run_id": "main_healthy_603",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_603_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_603_lc_loss",
+"run_id": "main_healthy_603",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_603_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1018_lc_loss",
+"run_id": "main_healthy_1018",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1018_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1018_lc_loss",
+"run_id": "main_healthy_1018",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1018_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1120_lc_loss",
+"run_id": "main_healthy_1120",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1120_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1120_lc_loss",
+"run_id": "main_healthy_1120",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1120_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_604_lc_loss",
+"run_id": "main_healthy_604",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_604_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_604_lc_loss",
+"run_id": "main_healthy_604",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_604_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_570_lc_loss",
+"run_id": "main_healthy_570",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_570_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_570_lc_loss",
+"run_id": "main_healthy_570",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_570_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_256_lc_loss",
+"run_id": "main_healthy_256",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_256_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_256_lc_loss",
+"run_id": "main_healthy_256",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_256_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_998_lc_loss",
+"run_id": "main_healthy_998",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_998_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_998_lc_loss",
+"run_id": "main_healthy_998",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_998_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1239_lc_loss",
+"run_id": "main_healthy_1239",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1239_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1239_lc_loss",
+"run_id": "main_healthy_1239",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1239_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1467_lc_loss",
+"run_id": "main_healthy_1467",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1467_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1467_lc_loss",
+"run_id": "main_healthy_1467",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1467_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_889_lc_loss",
+"run_id": "main_healthy_889",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_889_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_889_lc_loss",
+"run_id": "main_healthy_889",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_889_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_607_lc_loss",
+"run_id": "main_healthy_607",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_607_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_607_lc_loss",
+"run_id": "main_healthy_607",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_607_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1180_lc_loss",
+"run_id": "main_healthy_1180",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1180_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1180_lc_loss",
+"run_id": "main_healthy_1180",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1180_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_921_lc_loss",
+"run_id": "main_healthy_921",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_921_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_921_lc_loss",
+"run_id": "main_healthy_921",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_921_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_955_lc_loss",
+"run_id": "main_healthy_955",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_955_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_955_lc_loss",
+"run_id": "main_healthy_955",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_955_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1206_lc_loss",
+"run_id": "main_healthy_1206",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1206_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1206_lc_loss",
+"run_id": "main_healthy_1206",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1206_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_648_lc_loss",
+"run_id": "main_healthy_648",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_648_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_648_lc_loss",
+"run_id": "main_healthy_648",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_648_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1285_lc_loss",
+"run_id": "main_healthy_1285",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1285_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1285_lc_loss",
+"run_id": "main_healthy_1285",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1285_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_60_lc_loss",
+"run_id": "main_healthy_60",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_60_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_60_lc_loss",
+"run_id": "main_healthy_60",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_60_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_182_lc_loss",
+"run_id": "main_healthy_182",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_182_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_182_lc_loss",
+"run_id": "main_healthy_182",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_182_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_124_lc_loss",
+"run_id": "main_healthy_124",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_124_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_124_lc_loss",
+"run_id": "main_healthy_124",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_124_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_100_lc_loss",
+"run_id": "main_healthy_100",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_100_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_100_lc_loss",
+"run_id": "main_healthy_100",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_100_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_705_lc_loss",
+"run_id": "main_healthy_705",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_705_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_705_lc_loss",
+"run_id": "main_healthy_705",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_705_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_91_lc_loss",
+"run_id": "main_healthy_91",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_91_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_91_lc_loss",
+"run_id": "main_healthy_91",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_91_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_483_lc_loss",
+"run_id": "main_healthy_483",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_483_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_483_lc_loss",
+"run_id": "main_healthy_483",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_483_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_973_lc_loss",
+"run_id": "main_healthy_973",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_973_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_973_lc_loss",
+"run_id": "main_healthy_973",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_973_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_5_lc_loss",
+"run_id": "main_healthy_5",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_5_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_5_lc_loss",
+"run_id": "main_healthy_5",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_5_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1497_lc_loss",
+"run_id": "main_healthy_1497",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1497_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1497_lc_loss",
+"run_id": "main_healthy_1497",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_healthy_1497_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_186_lc_loss",
+"run_id": "main_overfitting_L2_186",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_186_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_186_lc_loss",
+"run_id": "main_overfitting_L2_186",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_186_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_570_lc_loss",
+"run_id": "main_overfitting_L2_570",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_570_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_570_lc_loss",
+"run_id": "main_overfitting_L2_570",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_570_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_278_lc_loss",
+"run_id": "main_overfitting_L2_278",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_278_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_278_lc_loss",
+"run_id": "main_overfitting_L2_278",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_278_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_127_lc_loss",
+"run_id": "main_overfitting_L2_127",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_127_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_127_lc_loss",
+"run_id": "main_overfitting_L2_127",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_127_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_147_lc_loss",
+"run_id": "main_overfitting_L2_147",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_147_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_147_lc_loss",
+"run_id": "main_overfitting_L2_147",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_147_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_334_lc_loss",
+"run_id": "main_overfitting_L2_334",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_334_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_334_lc_loss",
+"run_id": "main_overfitting_L2_334",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_334_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_368_lc_loss",
+"run_id": "main_overfitting_L2_368",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_368_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_368_lc_loss",
+"run_id": "main_overfitting_L2_368",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_368_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_353_lc_loss",
+"run_id": "main_overfitting_L2_353",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_353_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_353_lc_loss",
+"run_id": "main_overfitting_L2_353",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_353_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_40_lc_loss",
+"run_id": "main_overfitting_L2_40",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_40_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_40_lc_loss",
+"run_id": "main_overfitting_L2_40",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_40_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_595_lc_loss",
+"run_id": "main_overfitting_L2_595",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_595_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_595_lc_loss",
+"run_id": "main_overfitting_L2_595",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_595_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_446_lc_loss",
+"run_id": "main_overfitting_L2_446",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_446_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_446_lc_loss",
+"run_id": "main_overfitting_L2_446",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_446_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_20_lc_loss",
+"run_id": "main_overfitting_L2_20",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_20_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_20_lc_loss",
+"run_id": "main_overfitting_L2_20",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_20_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_371_lc_loss",
+"run_id": "main_overfitting_L2_371",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_371_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_371_lc_loss",
+"run_id": "main_overfitting_L2_371",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_371_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_441_lc_loss",
+"run_id": "main_overfitting_L2_441",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_441_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_441_lc_loss",
+"run_id": "main_overfitting_L2_441",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_441_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_271_lc_loss",
+"run_id": "main_overfitting_L2_271",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_271_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_271_lc_loss",
+"run_id": "main_overfitting_L2_271",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_271_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_545_lc_loss",
+"run_id": "main_overfitting_L2_545",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_545_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_545_lc_loss",
+"run_id": "main_overfitting_L2_545",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_545_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_224_lc_loss",
+"run_id": "main_overfitting_L2_224",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_224_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_224_lc_loss",
+"run_id": "main_overfitting_L2_224",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_224_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_132_lc_loss",
+"run_id": "main_overfitting_L2_132",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_132_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_132_lc_loss",
+"run_id": "main_overfitting_L2_132",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_132_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_110_lc_loss",
+"run_id": "main_overfitting_L2_110",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_110_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_110_lc_loss",
+"run_id": "main_overfitting_L2_110",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_110_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_130_lc_loss",
+"run_id": "main_overfitting_L2_130",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_130_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_130_lc_loss",
+"run_id": "main_overfitting_L2_130",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_130_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_211_lc_loss",
+"run_id": "main_overfitting_L2_211",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_211_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_211_lc_loss",
+"run_id": "main_overfitting_L2_211",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_211_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_216_lc_loss",
+"run_id": "main_overfitting_L2_216",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_216_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_216_lc_loss",
+"run_id": "main_overfitting_L2_216",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_216_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_183_lc_loss",
+"run_id": "main_overfitting_L2_183",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_183_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_183_lc_loss",
+"run_id": "main_overfitting_L2_183",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_183_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_21_lc_loss",
+"run_id": "main_overfitting_L2_21",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_21_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_21_lc_loss",
+"run_id": "main_overfitting_L2_21",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_21_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_139_lc_loss",
+"run_id": "main_overfitting_L2_139",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_139_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_139_lc_loss",
+"run_id": "main_overfitting_L2_139",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_139_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_519_lc_loss",
+"run_id": "main_overfitting_L2_519",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_519_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_519_lc_loss",
+"run_id": "main_overfitting_L2_519",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_519_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_222_lc_loss",
+"run_id": "main_overfitting_L2_222",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_222_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_222_lc_loss",
+"run_id": "main_overfitting_L2_222",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_222_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_333_lc_loss",
+"run_id": "main_overfitting_L2_333",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_333_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_333_lc_loss",
+"run_id": "main_overfitting_L2_333",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_333_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_339_lc_loss",
+"run_id": "main_overfitting_L2_339",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_339_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_339_lc_loss",
+"run_id": "main_overfitting_L2_339",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_339_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_576_lc_loss",
+"run_id": "main_overfitting_L2_576",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_576_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_576_lc_loss",
+"run_id": "main_overfitting_L2_576",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_576_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_122_lc_loss",
+"run_id": "main_overfitting_L2_122",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_122_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_122_lc_loss",
+"run_id": "main_overfitting_L2_122",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_122_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_52_lc_loss",
+"run_id": "main_overfitting_L2_52",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_52_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_52_lc_loss",
+"run_id": "main_overfitting_L2_52",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_52_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_553_lc_loss",
+"run_id": "main_overfitting_L2_553",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_553_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_553_lc_loss",
+"run_id": "main_overfitting_L2_553",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_553_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_47_lc_loss",
+"run_id": "main_overfitting_L2_47",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_47_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_47_lc_loss",
+"run_id": "main_overfitting_L2_47",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_47_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_523_lc_loss",
+"run_id": "main_overfitting_L2_523",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_523_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_523_lc_loss",
+"run_id": "main_overfitting_L2_523",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_523_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_421_lc_loss",
+"run_id": "main_overfitting_L2_421",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_421_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_421_lc_loss",
+"run_id": "main_overfitting_L2_421",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_421_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_485_lc_loss",
+"run_id": "main_overfitting_L2_485",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_485_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_485_lc_loss",
+"run_id": "main_overfitting_L2_485",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_485_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_45_lc_loss",
+"run_id": "main_overfitting_L2_45",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_45_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_45_lc_loss",
+"run_id": "main_overfitting_L2_45",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_45_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_552_lc_loss",
+"run_id": "main_overfitting_L2_552",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_552_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_552_lc_loss",
+"run_id": "main_overfitting_L2_552",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_552_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_94_lc_loss",
+"run_id": "main_overfitting_L2_94",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_94_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_94_lc_loss",
+"run_id": "main_overfitting_L2_94",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_94_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_100_lc_loss",
+"run_id": "main_overfitting_L2_100",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_100_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_100_lc_loss",
+"run_id": "main_overfitting_L2_100",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_100_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_590_lc_loss",
+"run_id": "main_overfitting_L2_590",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_590_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_590_lc_loss",
+"run_id": "main_overfitting_L2_590",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_590_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_308_lc_loss",
+"run_id": "main_overfitting_L2_308",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_308_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_308_lc_loss",
+"run_id": "main_overfitting_L2_308",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_308_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_563_lc_loss",
+"run_id": "main_overfitting_L2_563",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_563_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_563_lc_loss",
+"run_id": "main_overfitting_L2_563",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_563_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_189_lc_loss",
+"run_id": "main_overfitting_L2_189",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_189_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_189_lc_loss",
+"run_id": "main_overfitting_L2_189",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_189_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_123_lc_loss",
+"run_id": "main_overfitting_L2_123",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_123_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_123_lc_loss",
+"run_id": "main_overfitting_L2_123",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_123_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_594_lc_loss",
+"run_id": "main_overfitting_L2_594",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_594_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_594_lc_loss",
+"run_id": "main_overfitting_L2_594",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_594_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_212_lc_loss",
+"run_id": "main_overfitting_L2_212",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_212_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_212_lc_loss",
+"run_id": "main_overfitting_L2_212",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_212_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_175_lc_loss",
+"run_id": "main_overfitting_L2_175",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_175_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_175_lc_loss",
+"run_id": "main_overfitting_L2_175",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_175_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_321_lc_loss",
+"run_id": "main_overfitting_L2_321",
+"task": "probe",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_321_lc_loss.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_321_lc_loss",
+"run_id": "main_overfitting_L2_321",
+"task": "diagnosis",
+"spec": "lc_loss",
+"image": "img_hires/main_overfitting_L2_321_lc_loss.png"
+},
+{
+"item_id": "hires_probe_main_healthy_730_lc_acc",
+"run_id": "main_healthy_730",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_730_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_730_lc_acc",
+"run_id": "main_healthy_730",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_730_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_571_lc_acc",
+"run_id": "main_healthy_571",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_571_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_571_lc_acc",
+"run_id": "main_healthy_571",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_571_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1063_lc_acc",
+"run_id": "main_healthy_1063",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1063_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1063_lc_acc",
+"run_id": "main_healthy_1063",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1063_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1300_lc_acc",
+"run_id": "main_healthy_1300",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1300_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1300_lc_acc",
+"run_id": "main_healthy_1300",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1300_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_750_lc_acc",
+"run_id": "main_healthy_750",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_750_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_750_lc_acc",
+"run_id": "main_healthy_750",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_750_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_315_lc_acc",
+"run_id": "main_healthy_315",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_315_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_315_lc_acc",
+"run_id": "main_healthy_315",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_315_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_875_lc_acc",
+"run_id": "main_healthy_875",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_875_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_875_lc_acc",
+"run_id": "main_healthy_875",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_875_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_556_lc_acc",
+"run_id": "main_healthy_556",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_556_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_556_lc_acc",
+"run_id": "main_healthy_556",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_556_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1008_lc_acc",
+"run_id": "main_healthy_1008",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1008_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1008_lc_acc",
+"run_id": "main_healthy_1008",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1008_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_114_lc_acc",
+"run_id": "main_healthy_114",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_114_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_114_lc_acc",
+"run_id": "main_healthy_114",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_114_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_703_lc_acc",
+"run_id": "main_healthy_703",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_703_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_703_lc_acc",
+"run_id": "main_healthy_703",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_703_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_262_lc_acc",
+"run_id": "main_healthy_262",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_262_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_262_lc_acc",
+"run_id": "main_healthy_262",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_262_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_122_lc_acc",
+"run_id": "main_healthy_122",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_122_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_122_lc_acc",
+"run_id": "main_healthy_122",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_122_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_761_lc_acc",
+"run_id": "main_healthy_761",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_761_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_761_lc_acc",
+"run_id": "main_healthy_761",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_761_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1414_lc_acc",
+"run_id": "main_healthy_1414",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1414_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1414_lc_acc",
+"run_id": "main_healthy_1414",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1414_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1177_lc_acc",
+"run_id": "main_healthy_1177",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1177_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1177_lc_acc",
+"run_id": "main_healthy_1177",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1177_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1415_lc_acc",
+"run_id": "main_healthy_1415",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1415_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1415_lc_acc",
+"run_id": "main_healthy_1415",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1415_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_401_lc_acc",
+"run_id": "main_healthy_401",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_401_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_401_lc_acc",
+"run_id": "main_healthy_401",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_401_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1157_lc_acc",
+"run_id": "main_healthy_1157",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1157_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1157_lc_acc",
+"run_id": "main_healthy_1157",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1157_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_438_lc_acc",
+"run_id": "main_healthy_438",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_438_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_438_lc_acc",
+"run_id": "main_healthy_438",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_438_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1166_lc_acc",
+"run_id": "main_healthy_1166",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1166_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1166_lc_acc",
+"run_id": "main_healthy_1166",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1166_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_30_lc_acc",
+"run_id": "main_healthy_30",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_30_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_30_lc_acc",
+"run_id": "main_healthy_30",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_30_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_742_lc_acc",
+"run_id": "main_healthy_742",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_742_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_742_lc_acc",
+"run_id": "main_healthy_742",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_742_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_603_lc_acc",
+"run_id": "main_healthy_603",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_603_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_603_lc_acc",
+"run_id": "main_healthy_603",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_603_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1018_lc_acc",
+"run_id": "main_healthy_1018",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1018_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1018_lc_acc",
+"run_id": "main_healthy_1018",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1018_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1120_lc_acc",
+"run_id": "main_healthy_1120",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1120_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1120_lc_acc",
+"run_id": "main_healthy_1120",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1120_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_604_lc_acc",
+"run_id": "main_healthy_604",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_604_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_604_lc_acc",
+"run_id": "main_healthy_604",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_604_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_570_lc_acc",
+"run_id": "main_healthy_570",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_570_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_570_lc_acc",
+"run_id": "main_healthy_570",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_570_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_256_lc_acc",
+"run_id": "main_healthy_256",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_256_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_256_lc_acc",
+"run_id": "main_healthy_256",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_256_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_998_lc_acc",
+"run_id": "main_healthy_998",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_998_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_998_lc_acc",
+"run_id": "main_healthy_998",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_998_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1239_lc_acc",
+"run_id": "main_healthy_1239",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1239_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1239_lc_acc",
+"run_id": "main_healthy_1239",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1239_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1467_lc_acc",
+"run_id": "main_healthy_1467",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1467_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1467_lc_acc",
+"run_id": "main_healthy_1467",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1467_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_889_lc_acc",
+"run_id": "main_healthy_889",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_889_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_889_lc_acc",
+"run_id": "main_healthy_889",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_889_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_607_lc_acc",
+"run_id": "main_healthy_607",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_607_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_607_lc_acc",
+"run_id": "main_healthy_607",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_607_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1180_lc_acc",
+"run_id": "main_healthy_1180",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1180_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1180_lc_acc",
+"run_id": "main_healthy_1180",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1180_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_921_lc_acc",
+"run_id": "main_healthy_921",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_921_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_921_lc_acc",
+"run_id": "main_healthy_921",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_921_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_955_lc_acc",
+"run_id": "main_healthy_955",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_955_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_955_lc_acc",
+"run_id": "main_healthy_955",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_955_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1206_lc_acc",
+"run_id": "main_healthy_1206",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1206_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1206_lc_acc",
+"run_id": "main_healthy_1206",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1206_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_648_lc_acc",
+"run_id": "main_healthy_648",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_648_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_648_lc_acc",
+"run_id": "main_healthy_648",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_648_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1285_lc_acc",
+"run_id": "main_healthy_1285",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1285_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1285_lc_acc",
+"run_id": "main_healthy_1285",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1285_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_60_lc_acc",
+"run_id": "main_healthy_60",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_60_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_60_lc_acc",
+"run_id": "main_healthy_60",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_60_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_182_lc_acc",
+"run_id": "main_healthy_182",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_182_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_182_lc_acc",
+"run_id": "main_healthy_182",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_182_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_124_lc_acc",
+"run_id": "main_healthy_124",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_124_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_124_lc_acc",
+"run_id": "main_healthy_124",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_124_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_100_lc_acc",
+"run_id": "main_healthy_100",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_100_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_100_lc_acc",
+"run_id": "main_healthy_100",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_100_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_705_lc_acc",
+"run_id": "main_healthy_705",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_705_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_705_lc_acc",
+"run_id": "main_healthy_705",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_705_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_91_lc_acc",
+"run_id": "main_healthy_91",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_91_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_91_lc_acc",
+"run_id": "main_healthy_91",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_91_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_483_lc_acc",
+"run_id": "main_healthy_483",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_483_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_483_lc_acc",
+"run_id": "main_healthy_483",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_483_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_973_lc_acc",
+"run_id": "main_healthy_973",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_973_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_973_lc_acc",
+"run_id": "main_healthy_973",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_973_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_5_lc_acc",
+"run_id": "main_healthy_5",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_5_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_5_lc_acc",
+"run_id": "main_healthy_5",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_5_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_healthy_1497_lc_acc",
+"run_id": "main_healthy_1497",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1497_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_healthy_1497_lc_acc",
+"run_id": "main_healthy_1497",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_healthy_1497_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_186_lc_acc",
+"run_id": "main_overfitting_L2_186",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_186_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_186_lc_acc",
+"run_id": "main_overfitting_L2_186",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_186_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_570_lc_acc",
+"run_id": "main_overfitting_L2_570",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_570_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_570_lc_acc",
+"run_id": "main_overfitting_L2_570",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_570_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_278_lc_acc",
+"run_id": "main_overfitting_L2_278",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_278_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_278_lc_acc",
+"run_id": "main_overfitting_L2_278",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_278_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_127_lc_acc",
+"run_id": "main_overfitting_L2_127",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_127_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_127_lc_acc",
+"run_id": "main_overfitting_L2_127",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_127_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_147_lc_acc",
+"run_id": "main_overfitting_L2_147",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_147_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_147_lc_acc",
+"run_id": "main_overfitting_L2_147",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_147_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_334_lc_acc",
+"run_id": "main_overfitting_L2_334",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_334_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_334_lc_acc",
+"run_id": "main_overfitting_L2_334",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_334_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_368_lc_acc",
+"run_id": "main_overfitting_L2_368",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_368_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_368_lc_acc",
+"run_id": "main_overfitting_L2_368",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_368_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_353_lc_acc",
+"run_id": "main_overfitting_L2_353",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_353_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_353_lc_acc",
+"run_id": "main_overfitting_L2_353",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_353_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_40_lc_acc",
+"run_id": "main_overfitting_L2_40",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_40_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_40_lc_acc",
+"run_id": "main_overfitting_L2_40",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_40_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_595_lc_acc",
+"run_id": "main_overfitting_L2_595",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_595_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_595_lc_acc",
+"run_id": "main_overfitting_L2_595",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_595_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_446_lc_acc",
+"run_id": "main_overfitting_L2_446",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_446_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_446_lc_acc",
+"run_id": "main_overfitting_L2_446",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_446_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_20_lc_acc",
+"run_id": "main_overfitting_L2_20",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_20_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_20_lc_acc",
+"run_id": "main_overfitting_L2_20",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_20_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_371_lc_acc",
+"run_id": "main_overfitting_L2_371",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_371_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_371_lc_acc",
+"run_id": "main_overfitting_L2_371",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_371_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_441_lc_acc",
+"run_id": "main_overfitting_L2_441",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_441_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_441_lc_acc",
+"run_id": "main_overfitting_L2_441",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_441_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_271_lc_acc",
+"run_id": "main_overfitting_L2_271",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_271_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_271_lc_acc",
+"run_id": "main_overfitting_L2_271",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_271_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_545_lc_acc",
+"run_id": "main_overfitting_L2_545",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_545_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_545_lc_acc",
+"run_id": "main_overfitting_L2_545",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_545_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_224_lc_acc",
+"run_id": "main_overfitting_L2_224",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_224_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_224_lc_acc",
+"run_id": "main_overfitting_L2_224",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_224_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_132_lc_acc",
+"run_id": "main_overfitting_L2_132",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_132_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_132_lc_acc",
+"run_id": "main_overfitting_L2_132",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_132_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_110_lc_acc",
+"run_id": "main_overfitting_L2_110",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_110_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_110_lc_acc",
+"run_id": "main_overfitting_L2_110",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_110_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_130_lc_acc",
+"run_id": "main_overfitting_L2_130",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_130_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_130_lc_acc",
+"run_id": "main_overfitting_L2_130",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_130_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_211_lc_acc",
+"run_id": "main_overfitting_L2_211",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_211_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_211_lc_acc",
+"run_id": "main_overfitting_L2_211",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_211_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_216_lc_acc",
+"run_id": "main_overfitting_L2_216",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_216_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_216_lc_acc",
+"run_id": "main_overfitting_L2_216",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_216_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_183_lc_acc",
+"run_id": "main_overfitting_L2_183",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_183_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_183_lc_acc",
+"run_id": "main_overfitting_L2_183",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_183_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_21_lc_acc",
+"run_id": "main_overfitting_L2_21",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_21_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_21_lc_acc",
+"run_id": "main_overfitting_L2_21",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_21_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_139_lc_acc",
+"run_id": "main_overfitting_L2_139",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_139_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_139_lc_acc",
+"run_id": "main_overfitting_L2_139",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_139_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_519_lc_acc",
+"run_id": "main_overfitting_L2_519",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_519_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_519_lc_acc",
+"run_id": "main_overfitting_L2_519",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_519_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_222_lc_acc",
+"run_id": "main_overfitting_L2_222",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_222_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_222_lc_acc",
+"run_id": "main_overfitting_L2_222",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_222_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_333_lc_acc",
+"run_id": "main_overfitting_L2_333",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_333_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_333_lc_acc",
+"run_id": "main_overfitting_L2_333",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_333_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_339_lc_acc",
+"run_id": "main_overfitting_L2_339",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_339_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_339_lc_acc",
+"run_id": "main_overfitting_L2_339",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_339_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_576_lc_acc",
+"run_id": "main_overfitting_L2_576",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_576_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_576_lc_acc",
+"run_id": "main_overfitting_L2_576",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_576_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_122_lc_acc",
+"run_id": "main_overfitting_L2_122",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_122_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_122_lc_acc",
+"run_id": "main_overfitting_L2_122",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_122_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_52_lc_acc",
+"run_id": "main_overfitting_L2_52",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_52_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_52_lc_acc",
+"run_id": "main_overfitting_L2_52",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_52_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_553_lc_acc",
+"run_id": "main_overfitting_L2_553",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_553_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_553_lc_acc",
+"run_id": "main_overfitting_L2_553",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_553_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_47_lc_acc",
+"run_id": "main_overfitting_L2_47",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_47_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_47_lc_acc",
+"run_id": "main_overfitting_L2_47",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_47_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_523_lc_acc",
+"run_id": "main_overfitting_L2_523",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_523_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_523_lc_acc",
+"run_id": "main_overfitting_L2_523",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_523_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_421_lc_acc",
+"run_id": "main_overfitting_L2_421",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_421_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_421_lc_acc",
+"run_id": "main_overfitting_L2_421",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_421_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_485_lc_acc",
+"run_id": "main_overfitting_L2_485",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_485_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_485_lc_acc",
+"run_id": "main_overfitting_L2_485",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_485_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_45_lc_acc",
+"run_id": "main_overfitting_L2_45",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_45_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_45_lc_acc",
+"run_id": "main_overfitting_L2_45",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_45_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_552_lc_acc",
+"run_id": "main_overfitting_L2_552",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_552_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_552_lc_acc",
+"run_id": "main_overfitting_L2_552",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_552_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_94_lc_acc",
+"run_id": "main_overfitting_L2_94",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_94_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_94_lc_acc",
+"run_id": "main_overfitting_L2_94",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_94_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_100_lc_acc",
+"run_id": "main_overfitting_L2_100",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_100_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_100_lc_acc",
+"run_id": "main_overfitting_L2_100",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_100_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_590_lc_acc",
+"run_id": "main_overfitting_L2_590",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_590_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_590_lc_acc",
+"run_id": "main_overfitting_L2_590",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_590_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_308_lc_acc",
+"run_id": "main_overfitting_L2_308",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_308_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_308_lc_acc",
+"run_id": "main_overfitting_L2_308",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_308_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_563_lc_acc",
+"run_id": "main_overfitting_L2_563",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_563_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_563_lc_acc",
+"run_id": "main_overfitting_L2_563",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_563_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_189_lc_acc",
+"run_id": "main_overfitting_L2_189",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_189_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_189_lc_acc",
+"run_id": "main_overfitting_L2_189",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_189_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_123_lc_acc",
+"run_id": "main_overfitting_L2_123",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_123_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_123_lc_acc",
+"run_id": "main_overfitting_L2_123",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_123_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_594_lc_acc",
+"run_id": "main_overfitting_L2_594",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_594_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_594_lc_acc",
+"run_id": "main_overfitting_L2_594",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_594_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_212_lc_acc",
+"run_id": "main_overfitting_L2_212",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_212_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_212_lc_acc",
+"run_id": "main_overfitting_L2_212",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_212_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_175_lc_acc",
+"run_id": "main_overfitting_L2_175",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_175_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_175_lc_acc",
+"run_id": "main_overfitting_L2_175",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_175_lc_acc.png"
+},
+{
+"item_id": "hires_probe_main_overfitting_L2_321_lc_acc",
+"run_id": "main_overfitting_L2_321",
+"task": "probe",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_321_lc_acc.png"
+},
+{
+"item_id": "hires_diag_main_overfitting_L2_321_lc_acc",
+"run_id": "main_overfitting_L2_321",
+"task": "diagnosis",
+"spec": "lc_acc",
+"image": "img_hires/main_overfitting_L2_321_lc_acc.png"
+}
+]

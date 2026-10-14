@@ -1,0 +1,112 @@
+{
+ "elec_shift": {
+  "dataset": "electricity",
+  "failure": "distribution_shift",
+  "mechanism": "train on the earliest half of the dates, test on the latest quarter",
+  "reference": "temporal concept drift (Gama et al. 2014)",
+  "statistic": "val_minus_test_acc",
+  "failure_median": 0.08499997854232788,
+  "control_median": 0.0065000057220458984,
+  "verified": true
+ },
+ "bank_shift": {
+  "dataset": "bank-marketing",
+  "failure": "distribution_shift",
+  "mechanism": "rows are in time order: train on the first half, test on the last quarter",
+  "reference": "temporal shift in the bank-marketing campaign data (Moro et al. 2014)",
+  "statistic": "val_minus_test_acc",
+  "failure_median": 0.22499999403953552,
+  "control_median": 0.003999978303909302,
+  "verified": true
+ },
+ "mammo_imb": {
+  "dataset": "mammography",
+  "failure": "class_imbalance",
+  "mechanism": "natural 2.3% positive rate",
+  "reference": "natural class imbalance",
+  "statistic": "pos_rate",
+  "failure_median": 0.023255813953488372,
+  "control_median": 0.5,
+  "verified": true
+ },
+ "ozone_imb": {
+  "dataset": "ozone-level-8hr",
+  "failure": "class_imbalance",
+  "mechanism": "natural 6.3% positive rate",
+  "reference": "natural class imbalance",
+  "statistic": "pos_rate",
+  "failure_median": 0.06315789473684211,
+  "control_median": 0.515625,
+  "verified": true
+ },
+ "pc1_imb": {
+  "dataset": "pc1",
+  "failure": "class_imbalance",
+  "mechanism": "natural 6.9% positive rate (software defects)",
+  "reference": "natural class imbalance",
+  "statistic": "pos_rate",
+  "failure_median": 0.07379518072289157,
+  "control_median": 0.4891304347826087,
+  "verified": true
+ },
+ "kc1_miscal": {
+  "dataset": "kc1",
+  "failure": "miscalibration",
+  "mechanism": "minority class oversampled to 50% in training only",
+  "reference": "resampling miscalibrates probabilities (Xenopoulos et al. 2022, Fig. 8)",
+  "statistic": "ece_excess",
+  "failure_median": 0.1797488760513981,
+  "control_median": 0.011553990908325911,
+  "verified": true
+ },
+ "bank_miscal": {
+  "dataset": "bank-marketing",
+  "failure": "miscalibration",
+  "mechanism": "minority class oversampled to 50% in training only",
+  "reference": "resampling miscalibrates probabilities (Xenopoulos et al. 2022, Fig. 8)",
+  "statistic": "ece_excess",
+  "failure_median": 0.11423479199889237,
+  "control_median": 0.0046800027196558696,
+  "verified": true
+ },
+ "ozone_leak": {
+  "dataset": "ozone-level-8hr",
+  "failure": "data_leakage",
+  "mechanism": "minority oversampled BEFORE the train/val/test split",
+  "reference": "overlap leakage (Yang et al. ASE 2022)",
+  "statistic": "test_minus_deploy_auc",
+  "failure_median": 0.08070195734758034,
+  "control_median": 0.02461571806349172,
+  "verified": true
+ },
+ "madelon_leak": {
+  "dataset": "madelon",
+  "failure": "data_leakage",
+  "mechanism": "top-20 features selected on ALL data (incl. test) before splitting",
+  "reference": "feature-selection leakage (Hastie et al., ESL 7.10.2; Yang et al. ASE 2022)",
+  "statistic": "test_minus_deploy_auc",
+  "failure_median": 0.012484920075984007,
+  "control_median": -0.003000916587653002,
+  "verified": false
+ },
+ "elec_overfit": {
+  "dataset": "electricity",
+  "failure": "overfitting",
+  "mechanism": "256-unit network, no regularization, 300 training rows",
+  "reference": "overparameterized model on small data",
+  "statistic": "val_loss_rise",
+  "failure_median": 0.9514719247817993,
+  "control_median": 0.0,
+  "verified": true
+ },
+ "diabetes_overfit": {
+  "dataset": "diabetes",
+  "failure": "overfitting",
+  "mechanism": "256-unit network, no regularization, 400 training rows",
+  "reference": "overparameterized model on small data",
+  "statistic": "val_loss_rise",
+  "failure_median": 1.1001679301261902,
+  "control_median": 1.1980533599853516e-05,
+  "verified": true
+ }
+}

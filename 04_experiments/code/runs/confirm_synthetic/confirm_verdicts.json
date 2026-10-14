@@ -1,0 +1,17 @@
+{
+ "H1 [confirm_synthetic]": false,
+ "H2 [confirm_synthetic]": true,
+ "H3 [confirm_synthetic]": true,
+ "H4 [confirm_synthetic]": true,
+ "H5 [confirm_synthetic]": true,
+ "H6 [confirm_synthetic]": true,
+ "H7a [confirm_synthetic]": true,
+ "H7b [confirm_synthetic]": true,
+ "H8 [confirm_synthetic]": false,
+ "H1 [confirm_magic]": false,
+ "H2 [confirm_magic]": true,
+ "H3 [confirm_magic]": true,
+ "H4 [confirm_magic]": true,
+ "H5 [confirm_magic]": true,
+ "H6 [confirm_magic]": true
+}

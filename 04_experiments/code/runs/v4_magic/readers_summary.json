@@ -1,0 +1,86 @@
+{
+ "InternVL3-8B_core": {
+  "balanced_acc": 0.14269070339868634,
+  "per_plot": {
+   "lc_loss": 0.14285714285714285,
+   "rel": 0.14285714285714285,
+   "cm": 0.14142857142857143,
+   "roc": 0.14285714285714285,
+   "dist": 0.14142857142857143
+  },
+  "stereotype": {
+   "lc_loss": 1.0,
+   "rel": 1.0,
+   "cm": 0.9766666666666667,
+   "roc": 1.0,
+   "dist": 0.5733333333333334
+  },
+  "over_claim": 0.36741819442701834,
+  "confident_where_ambiguous": 0.18088410991636797,
+  "cannot_tell": 0.0,
+  "hedging_auc": NaN,
+  "healthy_top_answer": {
+   "lc_loss": "overfitting",
+   "rel": "miscalibration",
+   "cm": "miscalibration",
+   "roc": "distribution_shift",
+   "dist": "miscalibration"
+  }
+ },
+ "Qwen2.5-VL-32B-Instruct-AWQ_core": {
+  "balanced_acc": 0.14200000000000002,
+  "per_plot": {
+   "lc_loss": 0.14285714285714285,
+   "rel": 0.15238095238095237,
+   "cm": 0.1319047619047619,
+   "roc": 0.14285714285714285,
+   "dist": 0.13999999999999999
+  },
+  "stereotype": {
+   "lc_loss": 1.0,
+   "rel": 0.9233333333333333,
+   "cm": 0.7366666666666667,
+   "roc": 1.0,
+   "dist": 1.0
+  },
+  "over_claim": 0.45622469234435814,
+  "confident_where_ambiguous": 0.3411111111111111,
+  "cannot_tell": 0.5644444444444444,
+  "hedging_auc": 0.5813610798650168,
+  "healthy_top_answer": {
+   "lc_loss": "overfitting",
+   "rel": "miscalibration",
+   "cm": "class_imbalance",
+   "roc": "healthy",
+   "dist": "miscalibration"
+  }
+ },
+ "Qwen2.5-VL-7B-Instruct_core": {
+  "balanced_acc": 0.1412532234745997,
+  "per_plot": {
+   "lc_loss": 0.14285714285714285,
+   "rel": 0.1457142857142857,
+   "cm": 0.2,
+   "roc": 0.14187866927592954,
+   "dist": 0.1347682752030578
+  },
+  "stereotype": {
+   "lc_loss": 1.0,
+   "rel": 1.0,
+   "cm": 1.0,
+   "roc": 0.9931506849315068,
+   "dist": 0.9832775919732442
+  },
+  "over_claim": 0.17095761476695184,
+  "confident_where_ambiguous": 0.14345637583892618,
+  "cannot_tell": 0.01929530201342282,
+  "hedging_auc": 0.45808176607447637,
+  "healthy_top_answer": {
+   "lc_loss": "overfitting",
+   "rel": "healthy",
+   "cm": "healthy",
+   "roc": "healthy",
+   "dist": "overfitting"
+  }
+ }
+}

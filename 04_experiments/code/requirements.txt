@@ -1,0 +1,11 @@
+anthropic>=1.0
+numpy
+pandas
+matplotlib
+pillow
+scikit-learn
+scipy
+joblib
+torch
+pyreadr
+rdata

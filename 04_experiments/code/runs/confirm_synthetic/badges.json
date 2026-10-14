@@ -1,0 +1,11 @@
+{
+ "lc_loss": "Evidence note for this plot type \u2014 Can identify: overfitting, data leakage. Can signal a problem but cannot tell which: label noise. Cannot show: miscalibration, class imbalance, distribution shift.",
+ "lc_acc": "Evidence note for this plot type \u2014 Can identify: overfitting, data leakage. Can signal a problem but cannot tell which: label noise. Cannot show: miscalibration, class imbalance, distribution shift.",
+ "rel": "Evidence note for this plot type \u2014 Can identify: overfitting, label noise, data leakage, distribution shift. Can signal a problem but cannot tell which: miscalibration. Cannot show: class imbalance.",
+ "rel_n": "Evidence note for this plot type \u2014 Can identify: overfitting, label noise, class imbalance, data leakage, distribution shift. Can signal a problem but cannot tell which: miscalibration.",
+ "cm": "Evidence note for this plot type \u2014 Can identify: class imbalance, data leakage, distribution shift. Can signal a problem but cannot tell which: label noise. Cannot show: overfitting, miscalibration.",
+ "cm_norm": "Evidence note for this plot type \u2014 Can identify: class imbalance, data leakage, distribution shift. Can signal a problem but cannot tell which: label noise. Cannot show: overfitting, miscalibration.",
+ "roc": "Evidence note for this plot type \u2014 Can identify: label noise, class imbalance, data leakage. Can signal a problem but cannot tell which: distribution shift. Cannot show: overfitting, miscalibration.",
+ "pr": "Evidence note for this plot type \u2014 Can identify: label noise, class imbalance, data leakage. Can signal a problem but cannot tell which: distribution shift. Cannot show: overfitting, miscalibration.",
+ "dist": "Evidence note for this plot type \u2014 Can identify: overfitting, label noise, class imbalance, distribution shift. Can signal a problem but cannot tell which: miscalibration, data leakage."
+}

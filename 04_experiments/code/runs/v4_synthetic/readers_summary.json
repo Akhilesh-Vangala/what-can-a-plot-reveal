@@ -1,0 +1,346 @@
+{
+ "InternVL3-38B-AWQ_core": {
+  "balanced_acc": 0.16480180895851088,
+  "per_plot": {
+   "lc_loss": 0.23333333333333334,
+   "rel": 0.14285714285714285,
+   "cm": 0.14285714285714285,
+   "roc": 0.14285714285714285,
+   "dist": 0.14574314574314573
+  },
+  "stereotype": {
+   "lc_loss": 0.7833333333333333,
+   "rel": 1.0,
+   "cm": 1.0,
+   "roc": 1.0,
+   "dist": 0.9933333333333333
+  },
+  "over_claim": 0.43420949847685947,
+  "confident_where_ambiguous": 0.40161596958174905,
+  "cannot_tell": 0.21577946768060838,
+  "hedging_auc": 0.6006217460953143,
+  "healthy_top_answer": {
+   "lc_loss": "healthy",
+   "rel": "miscalibration",
+   "cm": "healthy",
+   "roc": "healthy",
+   "dist": "miscalibration"
+  }
+ },
+ "InternVL3-8B": {
+  "balanced_acc": 0.14684575681572357,
+  "per_plot": {
+   "lc_loss": 0.14285714285714285,
+   "lc_acc": 0.14285714285714285,
+   "rel": 0.14285714285714285,
+   "rel_n": 0.14285714285714285,
+   "cm": 0.14434010152284266,
+   "cm_norm": 0.15214285714285714,
+   "roc": 0.14285714285714285,
+   "pr": 0.14285714285714285,
+   "dist": 0.14714285714285716
+  },
+  "stereotype": {
+   "lc_loss": 1.0,
+   "lc_acc": 1.0,
+   "rel": 1.0,
+   "rel_n": 1.0,
+   "cm": 0.9866666666666667,
+   "cm_norm": 0.6966666666666667,
+   "roc": 1.0,
+   "pr": 1.0,
+   "dist": 0.6433333333333333
+  },
+  "over_claim": 0.4615891764313462,
+  "confident_where_ambiguous": 0.32119258662369055,
+  "cannot_tell": 0.005318291700241741,
+  "hedging_auc": 0.531998124472201,
+  "healthy_top_answer": {
+   "lc_loss": "overfitting",
+   "lc_acc": "overfitting",
+   "rel": "miscalibration",
+   "rel_n": "miscalibration",
+   "cm": "miscalibration",
+   "cm_norm": "miscalibration",
+   "roc": "distribution_shift",
+   "pr": "distribution_shift",
+   "dist": "miscalibration"
+  }
+ },
+ "InternVL3-8B_iv": {
+  "balanced_acc": 0.142801983380392,
+  "per_plot": {
+   "lc_loss": 0.14285714285714285,
+   "rel": 0.14476190476190479,
+   "cm": 0.14058340689965557,
+   "roc": 0.14095238095238097,
+   "dist": 0.13999999999999999
+  },
+  "stereotype": {
+   "lc_loss": 1.0,
+   "rel": 0.6666666666666666,
+   "cm": 0.5823293172690763,
+   "roc": 0.6566666666666666,
+   "dist": 0.71
+  },
+  "over_claim": 0.3241259695497628,
+  "confident_where_ambiguous": 0.1824754690996729,
+  "cannot_tell": 0.306248924083319,
+  "hedging_auc": 0.5668271410179695,
+  "healthy_top_answer": {
+   "lc_loss": "overfitting",
+   "rel": "miscalibration",
+   "cm": "class_imbalance",
+   "roc": "miscalibration",
+   "dist": "overfitting"
+  }
+ },
+ "InternVL3-8B_variants": {
+  "balanced_acc": 0.14083663313310235,
+  "per_plot": {
+   "lc_loss": 0.14285714285714285,
+   "rel": 0.14285714285714285,
+   "cm": 0.13619283211119945
+  },
+  "stereotype": {
+   "lc_loss": 1.0,
+   "rel": 0.96,
+   "cm": 0.5816326530612245
+  },
+  "over_claim": 0.5741997239315094,
+  "confident_where_ambiguous": 0.41565508580996235,
+  "cannot_tell": 0.004185851820845542,
+  "hedging_auc": 0.4914249684741488,
+  "healthy_top_answer": {
+   "lc_loss": "overfitting",
+   "rel": "miscalibration",
+   "cm": "healthy"
+  }
+ },
+ "Qwen2.5-VL-32B-Instruct-AWQ": {
+  "balanced_acc": 0.14521184691218053,
+  "per_plot": {
+   "lc_loss": 0.14285714285714285,
+   "lc_acc": 0.14523809523809522,
+   "rel": 0.14404761904761904,
+   "rel_n": 0.1430952380952381,
+   "cm": 0.15642857142857142,
+   "cm_norm": 0.14285714285714285,
+   "roc": 0.1423777564717162,
+   "pr": 0.14714285714285716,
+   "dist": 0.14285714285714285
+  },
+  "stereotype": {
+   "lc_loss": 1.0,
+   "lc_acc": 0.9833333333333333,
+   "rel": 0.9866666666666667,
+   "rel_n": 0.9733333333333334,
+   "cm": 0.58,
+   "cm_norm": 1.0,
+   "roc": 0.9966442953020134,
+   "pr": 0.7466666666666667,
+   "dist": 1.0
+  },
+  "over_claim": 0.4314473719237138,
+  "confident_where_ambiguous": 0.31892973613993475,
+  "cannot_tell": 0.593166320782686,
+  "hedging_auc": 0.6531296209357818,
+  "healthy_top_answer": {
+   "lc_loss": "overfitting",
+   "lc_acc": "overfitting",
+   "rel": "miscalibration",
+   "rel_n": "miscalibration",
+   "cm": "class_imbalance",
+   "cm_norm": "healthy",
+   "roc": "healthy",
+   "pr": "class_imbalance",
+   "dist": "miscalibration"
+  }
+ },
+ "Qwen2.5-VL-32B-Instruct-AWQ_iv": {
+  "balanced_acc": 0.14096937306103358,
+  "per_plot": {
+   "lc_loss": 0.14413550655161392,
+   "rel": 0.14444096966517697,
+   "cm": 0.13428571428571429,
+   "roc": 0.14238095238095236,
+   "dist": 0.14070812029995702
+  },
+  "stereotype": {
+   "lc_loss": 0.3433333333333333,
+   "rel": 0.9480968858131488,
+   "cm": 0.41,
+   "roc": 0.5966666666666667,
+   "dist": 0.6195286195286195
+  },
+  "over_claim": 0.3971095700178203,
+  "confident_where_ambiguous": 0.2235313920215452,
+  "cannot_tell": 0.5027773102171351,
+  "hedging_auc": 0.4195359421406098,
+  "healthy_top_answer": {
+   "lc_loss": "overfitting",
+   "rel": "miscalibration",
+   "cm": "miscalibration",
+   "roc": "miscalibration",
+   "dist": "overfitting"
+  }
+ },
+ "Qwen2.5-VL-7B-Instruct": {
+  "balanced_acc": 0.14470662139187299,
+  "per_plot": {
+   "lc_loss": 0.14285714285714285,
+   "lc_acc": 0.14285714285714285,
+   "rel": 0.14469954648526076,
+   "rel_n": 0.14411254229355383,
+   "cm": 0.16666666666666666,
+   "cm_norm": 0.13852813852813853,
+   "roc": 0.14285714285714285,
+   "pr": 0.14285714285714285,
+   "dist": 0.14333333333333334
+  },
+  "stereotype": {
+   "lc_loss": 1.0,
+   "lc_acc": 1.0,
+   "rel": 0.9652777777777778,
+   "rel_n": 0.9832775919732442,
+   "cm": 1.0,
+   "cm_norm": 0.9696969696969697,
+   "roc": 1.0,
+   "pr": 1.0,
+   "dist": 0.9666666666666667
+  },
+  "over_claim": 0.2263651179987392,
+  "confident_where_ambiguous": 0.25213837673446116,
+  "cannot_tell": 0.020053221820946588,
+  "hedging_auc": 0.49591174198079535,
+  "healthy_top_answer": {
+   "lc_loss": "overfitting",
+   "lc_acc": "overfitting",
+   "rel": "healthy",
+   "rel_n": "healthy",
+   "cm": "healthy",
+   "cm_norm": "healthy",
+   "roc": "healthy",
+   "pr": "healthy",
+   "dist": "overfitting"
+  }
+ },
+ "Qwen2.5-VL-7B-Instruct_iv": {
+  "balanced_acc": 0.14531310463933741,
+  "per_plot": {
+   "lc_loss": 0.14285714285714285,
+   "rel": 0.14677948373600547,
+   "cm": 0.14711971745219826,
+   "roc": 0.14142857142857143,
+   "dist": 0.15
+  },
+  "stereotype": {
+   "lc_loss": 1.0,
+   "rel": 0.5518394648829431,
+   "cm": 0.9710144927536232,
+   "roc": 0.99,
+   "dist": 0.8433333333333334
+  },
+  "over_claim": 0.21300338893443285,
+  "confident_where_ambiguous": 0.14932287954383464,
+  "cannot_tell": 0.507127583749109,
+  "hedging_auc": 0.4186959383823956,
+  "healthy_top_answer": {
+   "lc_loss": "overfitting",
+   "rel": "overfitting",
+   "cm": "healthy",
+   "roc": "healthy",
+   "dist": "overfitting"
+  }
+ },
+ "Qwen2.5-VL-7B-Instruct_variants": {
+  "balanced_acc": 0.1533486730043485,
+  "per_plot": {
+   "lc_loss": 0.15883323026180168,
+   "rel": 0.155,
+   "cm": 0.14500000000000002
+  },
+  "stereotype": {
+   "lc_loss": 0.9090909090909091,
+   "rel": 0.685,
+   "cm": 0.46
+  },
+  "over_claim": 0.41671386837200236,
+  "confident_where_ambiguous": 0.2766848053578903,
+  "cannot_tell": 0.008790288823775638,
+  "hedging_auc": 0.6027489543114544,
+  "healthy_top_answer": {
+   "lc_loss": "overfitting",
+   "rel": "overfitting",
+   "cm": "label_noise"
+  }
+ },
+ "llava-onevision-qwen2-7b-ov-hf": {
+  "balanced_acc": 0.14247825493199145,
+  "per_plot": {
+   "lc_loss": 0.14285714285714285,
+   "lc_acc": 0.14285714285714285,
+   "rel": 0.14285714285714285,
+   "rel_n": 0.1438095238095238,
+   "cm": 0.13453098827470686,
+   "cm_norm": 0.1477950310559006,
+   "roc": 0.14285714285714285,
+   "pr": 0.14443287867910984,
+   "dist": 0.0
+  },
+  "stereotype": {
+   "lc_loss": 1.0,
+   "lc_acc": 1.0,
+   "rel": 1.0,
+   "rel_n": 0.9933333333333333,
+   "cm": 0.9066666666666666,
+   "cm_norm": 0.8695652173913043,
+   "roc": 1.0,
+   "pr": 0.8060200668896321,
+   "dist": 1.0
+  },
+  "over_claim": 0.2398164784425696,
+  "confident_where_ambiguous": 0.034691959326668374,
+  "cannot_tell": 0.0005981372297701444,
+  "hedging_auc": 0.3187536642564002,
+  "healthy_top_answer": {
+   "lc_loss": "overfitting",
+   "lc_acc": "overfitting",
+   "rel": "label_noise",
+   "rel_n": "label_noise",
+   "cm": "healthy",
+   "cm_norm": "healthy",
+   "roc": "overfitting",
+   "pr": "label_noise",
+   "dist": "overfitting"
+  }
+ },
+ "llava-onevision-qwen2-7b-ov-hf_iv": {
+  "balanced_acc": 0.1368355242976512,
+  "per_plot": {
+   "lc_loss": 0.14224137931034483,
+   "rel": 0.13678580439617333,
+   "cm": 0.1390509111547921,
+   "roc": 0.14285714285714285,
+   "dist": 0.14933029049183125
+  },
+  "stereotype": {
+   "lc_loss": 0.9956896551724138,
+   "rel": 0.37453183520599254,
+   "cm": 0.939799331103679,
+   "roc": 1.0,
+   "dist": 0.8223350253807107
+  },
+  "over_claim": 0.32453499835669825,
+  "confident_where_ambiguous": 0.14516129032258066,
+  "cannot_tell": 0.17461430575035064,
+  "hedging_auc": 0.5015682478806001,
+  "healthy_top_answer": {
+   "lc_loss": "healthy",
+   "rel": "label_noise",
+   "cm": "healthy",
+   "roc": "overfitting",
+   "dist": "overfitting"
+  }
+ }
+}

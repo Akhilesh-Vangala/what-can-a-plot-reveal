@@ -1,0 +1,1226 @@
+{
+ "positive": {
+  "InternVL3-38B-AWQ|synthetic": {
+   "cells": {
+    "overfitting": {
+     "spec": "lc_loss",
+     "auc": 0.9481999999999998,
+     "ci": [
+      0.9025908081852005,
+      0.9855479727017262
+     ],
+     "named": 0.94,
+     "false_alarm": 0.22,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 47,
+      "healthy": 3
+     },
+     "passed": true
+    },
+    "miscalibration": {
+     "spec": "rel",
+     "auc": 0.5,
+     "ci": [
+      0.5,
+      0.5
+     ],
+     "named": 1.0,
+     "false_alarm": 1.0,
+     "no_answer": 21,
+     "top": {
+      "miscalibration": 50
+     },
+     "passed": false
+    },
+    "label_noise": {
+     "spec": "lc_acc",
+     "auc": 0.8849999999999999,
+     "ci": [
+      0.814520237181411,
+      0.9433604476273267
+     ],
+     "named": 0.0,
+     "false_alarm": 0.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 35,
+      "healthy": 15
+     },
+     "passed": false
+    },
+    "class_imbalance": {
+     "spec": "cm",
+     "auc": 0.54,
+     "ci": [
+      0.5089246553884712,
+      0.5795568181818183
+     ],
+     "named": 0.0,
+     "false_alarm": 0.0,
+     "no_answer": 0,
+     "top": {
+      "healthy": 50
+     },
+     "passed": false
+    },
+    "data_leakage": {
+     "spec": "roc",
+     "auc": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "named": 0.0,
+     "false_alarm": 0.0,
+     "no_answer": 0,
+     "top": {
+      "miscalibration": 50
+     },
+     "passed": false
+    },
+    "distribution_shift": {
+     "spec": "dist",
+     "auc": 0.5,
+     "ci": [
+      0.5,
+      0.5
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "miscalibration": 50
+     },
+     "passed": false
+    }
+   },
+   "primary_passed": 1,
+   "can_do_task": false
+  },
+  "InternVL3-38B-AWQ|magic": {
+   "cells": {
+    "overfitting": {
+     "spec": "lc_loss",
+     "auc": 0.8917999999999999,
+     "ci": [
+      0.8279349479966963,
+      0.9533913565426171
+     ],
+     "named": 0.84,
+     "false_alarm": 0.08,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 42,
+      "healthy": 8
+     },
+     "passed": true
+    },
+    "miscalibration": {
+     "spec": "rel",
+     "auc": 0.5,
+     "ci": [
+      0.5,
+      0.5
+     ],
+     "named": 1.0,
+     "false_alarm": 1.0,
+     "no_answer": 37,
+     "top": {
+      "miscalibration": 50
+     },
+     "passed": false
+    },
+    "label_noise": {
+     "spec": "lc_acc",
+     "auc": 0.5832,
+     "ci": [
+      0.4741146875,
+      0.69042
+     ],
+     "named": 0.0,
+     "false_alarm": 0.08,
+     "no_answer": 0,
+     "top": {
+      "healthy": 31,
+      "overfitting": 19
+     },
+     "passed": false
+    },
+    "class_imbalance": {
+     "spec": "cm",
+     "auc": 0.51,
+     "ci": [
+      0.5,
+      0.5319148936170213
+     ],
+     "named": 0.0,
+     "false_alarm": 0.0,
+     "no_answer": 0,
+     "top": {
+      "healthy": 50
+     },
+     "passed": false
+    },
+    "data_leakage": {
+     "spec": "roc",
+     "auc": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "named": 0.0,
+     "false_alarm": 0.0,
+     "no_answer": 0,
+     "top": {
+      "miscalibration": 50
+     },
+     "passed": false
+    },
+    "distribution_shift": {
+     "spec": "dist",
+     "auc": 0.51,
+     "ci": [
+      0.5,
+      0.5333333333333333
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "miscalibration": 49,
+      "overfitting": 1
+     },
+     "passed": false
+    }
+   },
+   "primary_passed": 1,
+   "can_do_task": false
+  },
+  "InternVL3-8B|synthetic": {
+   "cells": {
+    "overfitting": {
+     "spec": "lc_loss",
+     "auc": 0.5144000000000001,
+     "ci": [
+      0.4039511842633481,
+      0.6232027444314205
+     ],
+     "named": 1.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "miscalibration": {
+     "spec": "rel",
+     "auc": 0.6699999999999999,
+     "ci": [
+      0.5965274906986359,
+      0.7434434980888908
+     ],
+     "named": 1.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "miscalibration": 50
+     },
+     "passed": false
+    },
+    "label_noise": {
+     "spec": "lc_acc",
+     "auc": 0.75,
+     "ci": [
+      0.6626390026376251,
+      0.8321381056667149
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "class_imbalance": {
+     "spec": "cm",
+     "auc": 0.4704,
+     "ci": [
+      0.4340948344271937,
+      0.5
+     ],
+     "named": 0.48,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "class_imbalance": 24,
+      "miscalibration": 24,
+      "distribution_shift": 2
+     },
+     "passed": false
+    },
+    "data_leakage": {
+     "spec": "roc",
+     "auc": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 88,
+     "top": {},
+     "passed": false
+    },
+    "distribution_shift": {
+     "spec": "dist",
+     "auc": 0.455,
+     "ci": [
+      0.3556914756453241,
+      0.5700828157349896
+     ],
+     "named": 0.3,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "miscalibration": 30,
+      "distribution_shift": 15,
+      "overfitting": 5
+     },
+     "passed": false
+    }
+   },
+   "primary_passed": 0,
+   "can_do_task": false
+  },
+  "InternVL3-8B|magic": {
+   "cells": {
+    "overfitting": {
+     "spec": "lc_loss",
+     "auc": 0.7875999999999999,
+     "ci": [
+      0.7002702182464173,
+      0.8713802700922266
+     ],
+     "named": 1.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "miscalibration": {
+     "spec": "rel",
+     "auc": 0.8191999999999999,
+     "ci": [
+      0.7424165997936489,
+      0.8844623075367078
+     ],
+     "named": 1.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "miscalibration": 50
+     },
+     "passed": true
+    },
+    "label_noise": {
+     "spec": "lc_acc",
+     "auc": 0.63,
+     "ci": [
+      0.5373042954636691,
+      0.722605897835824
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "class_imbalance": {
+     "spec": "cm",
+     "auc": 0.49,
+     "ci": [
+      0.46873337765957446,
+      0.5
+     ],
+     "named": 0.48,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "miscalibration": 26,
+      "class_imbalance": 24
+     },
+     "passed": false
+    },
+    "data_leakage": {
+     "spec": "roc",
+     "auc": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 66,
+     "top": {},
+     "passed": false
+    },
+    "distribution_shift": {
+     "spec": "dist",
+     "auc": 0.5276000000000001,
+     "ci": [
+      0.42136919070512824,
+      0.6326002922588864
+     ],
+     "named": 0.16,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "miscalibration": 40,
+      "distribution_shift": 8,
+      "overfitting": 2
+     },
+     "passed": false
+    }
+   },
+   "primary_passed": 1,
+   "can_do_task": false
+  },
+  "Qwen2.5-VL-32B-Instruct-AWQ|synthetic": {
+   "cells": {
+    "overfitting": {
+     "spec": "lc_loss",
+     "auc": 0.7946,
+     "ci": [
+      0.7106998321369962,
+      0.8647869047320352
+     ],
+     "named": 1.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "miscalibration": {
+     "spec": "rel",
+     "auc": 0.78,
+     "ci": [
+      0.7111111111111111,
+      0.8478513650151668
+     ],
+     "named": 1.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "miscalibration": 50
+     },
+     "passed": false
+    },
+    "label_noise": {
+     "spec": "lc_acc",
+     "auc": 0.8393999999999999,
+     "ci": [
+      0.7535069311920286,
+      0.9105552134646963
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "class_imbalance": {
+     "spec": "cm",
+     "auc": 0.4706,
+     "ci": [
+      0.34690624999999997,
+      0.603027479558664
+     ],
+     "named": 0.14,
+     "false_alarm": 0.56,
+     "no_answer": 0,
+     "top": {
+      "healthy": 43,
+      "class_imbalance": 7
+     },
+     "passed": false
+    },
+    "data_leakage": {
+     "spec": "roc",
+     "auc": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "named": 0.0,
+     "false_alarm": 0.0,
+     "no_answer": 1,
+     "top": {
+      "miscalibration": 50
+     },
+     "passed": false
+    },
+    "distribution_shift": {
+     "spec": "dist",
+     "auc": 0.55,
+     "ci": [
+      0.4913158470242442,
+      0.6141330562397371
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "miscalibration": 50
+     },
+     "passed": false
+    }
+   },
+   "primary_passed": 0,
+   "can_do_task": false
+  },
+  "Qwen2.5-VL-32B-Instruct-AWQ|magic": {
+   "cells": {
+    "overfitting": {
+     "spec": "lc_loss",
+     "auc": 0.5838,
+     "ci": [
+      0.5064821350147438,
+      0.6606437691610926
+     ],
+     "named": 1.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "miscalibration": {
+     "spec": "rel",
+     "auc": 0.8847999999999999,
+     "ci": [
+      0.8225071193797673,
+      0.942202914792771
+     ],
+     "named": 1.0,
+     "false_alarm": 0.94,
+     "no_answer": 0,
+     "top": {
+      "miscalibration": 50
+     },
+     "passed": true
+    },
+    "label_noise": {
+     "spec": "lc_acc",
+     "auc": 0.6759999999999999,
+     "ci": [
+      0.573735726833553,
+      0.7730027310924369
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "class_imbalance": {
+     "spec": "cm",
+     "auc": 0.2924,
+     "ci": [
+      0.17823900416499397,
+      0.4146781952803294
+     ],
+     "named": 0.04,
+     "false_alarm": 0.68,
+     "no_answer": 0,
+     "top": {
+      "healthy": 48,
+      "class_imbalance": 2
+     },
+     "passed": false
+    },
+    "data_leakage": {
+     "spec": "roc",
+     "auc": 1.0,
+     "ci": [
+      0.9999999999999999,
+      1.0
+     ],
+     "named": 0.0,
+     "false_alarm": 0.0,
+     "no_answer": 0,
+     "top": {
+      "miscalibration": 50
+     },
+     "passed": false
+    },
+    "distribution_shift": {
+     "spec": "dist",
+     "auc": 0.7,
+     "ci": [
+      0.6161616161616161,
+      0.7787672413793103
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "miscalibration": 50
+     },
+     "passed": false
+    }
+   },
+   "primary_passed": 1,
+   "can_do_task": false
+  },
+  "Qwen2.5-VL-7B-Instruct|synthetic": {
+   "cells": {
+    "overfitting": {
+     "spec": "lc_loss",
+     "auc": 0.7208,
+     "ci": [
+      0.6192573022494477,
+      0.8092073798076924
+     ],
+     "named": 1.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "miscalibration": {
+     "spec": "rel",
+     "auc": 0.7,
+     "ci": [
+      0.5868659420289855,
+      0.8182629870129868
+     ],
+     "named": 0.4,
+     "false_alarm": 0.0,
+     "no_answer": 32,
+     "top": {
+      "healthy": 12,
+      "miscalibration": 8
+     },
+     "passed": false
+    },
+    "label_noise": {
+     "spec": "lc_acc",
+     "auc": 0.473,
+     "ci": [
+      0.38879089157621766,
+      0.5564408913756188
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "class_imbalance": {
+     "spec": "cm",
+     "auc": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "named": 0.0,
+     "false_alarm": NaN,
+     "no_answer": 100,
+     "top": {},
+     "passed": false
+    },
+    "data_leakage": {
+     "spec": "roc",
+     "auc": 0.5,
+     "ci": [
+      0.5,
+      0.5
+     ],
+     "named": 0.0,
+     "false_alarm": 0.0,
+     "no_answer": 0,
+     "top": {
+      "healthy": 50
+     },
+     "passed": false
+    },
+    "distribution_shift": {
+     "spec": "dist",
+     "auc": 0.4924,
+     "ci": [
+      0.41846048201889446,
+      0.5628376884789927
+     ],
+     "named": 0.0,
+     "false_alarm": 0.9,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 48,
+      "healthy": 2
+     },
+     "passed": false
+    }
+   },
+   "primary_passed": 0,
+   "can_do_task": false
+  },
+  "Qwen2.5-VL-7B-Instruct|magic": {
+   "cells": {
+    "overfitting": {
+     "spec": "lc_loss",
+     "auc": 0.46499999999999997,
+     "ci": [
+      0.37698308583803336,
+      0.5492196466574539
+     ],
+     "named": 1.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "miscalibration": {
+     "spec": "rel",
+     "auc": 0.8125,
+     "ci": [
+      0.743894621638524,
+      0.8888888888888888
+     ],
+     "named": 0.625,
+     "false_alarm": 0.0,
+     "no_answer": 10,
+     "top": {
+      "miscalibration": 25,
+      "healthy": 15
+     },
+     "passed": true
+    },
+    "label_noise": {
+     "spec": "lc_acc",
+     "auc": 0.6412,
+     "ci": [
+      0.5392256944444445,
+      0.7355610977564103
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "class_imbalance": {
+     "spec": "cm",
+     "auc": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "named": 0.0,
+     "false_alarm": NaN,
+     "no_answer": 97,
+     "top": {
+      "healthy": 3
+     },
+     "passed": false
+    },
+    "data_leakage": {
+     "spec": "roc",
+     "auc": 0.5,
+     "ci": [
+      0.5,
+      0.5
+     ],
+     "named": 0.0,
+     "false_alarm": 0.0,
+     "no_answer": 2,
+     "top": {
+      "healthy": 50
+     },
+     "passed": false
+    },
+    "distribution_shift": {
+     "spec": "dist",
+     "auc": 0.5088,
+     "ci": [
+      0.45192066439181044,
+      0.5656560113994923
+     ],
+     "named": 0.0,
+     "false_alarm": 0.98,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 47,
+      "healthy": 2,
+      "miscalibration": 1
+     },
+     "passed": false
+    }
+   },
+   "primary_passed": 1,
+   "can_do_task": false
+  },
+  "llava-onevision-qwen2-7b-ov-hf|synthetic": {
+   "cells": {
+    "overfitting": {
+     "spec": "lc_loss",
+     "auc": 0.54,
+     "ci": [
+      0.509090909090909,
+      0.5800348837209302
+     ],
+     "named": 1.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "miscalibration": {
+     "spec": "rel",
+     "auc": 0.5,
+     "ci": [
+      0.5,
+      0.5
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "label_noise": 50
+     },
+     "passed": false
+    },
+    "label_noise": {
+     "spec": "lc_acc",
+     "auc": 0.5116,
+     "ci": [
+      0.398601875,
+      0.6123405289121324
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "class_imbalance": {
+     "spec": "cm",
+     "auc": 0.41489795918367345,
+     "ci": [
+      0.3251881484086514,
+      0.5139961469987607
+     ],
+     "named": 0.0,
+     "false_alarm": 0.061224489795918366,
+     "no_answer": 1,
+     "top": {
+      "healthy": 49,
+      "overfitting": 1
+     },
+     "passed": false
+    },
+    "data_leakage": {
+     "spec": "roc",
+     "auc": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 60,
+     "top": {},
+     "passed": false
+    },
+    "distribution_shift": {
+     "spec": "dist",
+     "auc": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "named": 0.0,
+     "false_alarm": NaN,
+     "no_answer": 98,
+     "top": {
+      "overfitting": 2
+     },
+     "passed": false
+    }
+   },
+   "primary_passed": 0,
+   "can_do_task": false
+  },
+  "llava-onevision-qwen2-7b-ov-hf|magic": {
+   "cells": {
+    "overfitting": {
+     "spec": "lc_loss",
+     "auc": 0.55,
+     "ci": [
+      0.4987995198079232,
+      0.6060967694076629
+     ],
+     "named": 1.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "miscalibration": {
+     "spec": "rel",
+     "auc": 0.5,
+     "ci": [
+      0.5,
+      0.5
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 0,
+     "top": {
+      "label_noise": 50
+     },
+     "passed": false
+    },
+    "label_noise": {
+     "spec": "lc_acc",
+     "auc": 0.563877551020408,
+     "ci": [
+      0.4636173469387755,
+      0.6558120644952197
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 1,
+     "top": {
+      "overfitting": 50
+     },
+     "passed": false
+    },
+    "class_imbalance": {
+     "spec": "cm",
+     "auc": 0.4148,
+     "ci": [
+      0.3400972995258709,
+      0.4931993749999999
+     ],
+     "named": 0.0,
+     "false_alarm": 0.0,
+     "no_answer": 0,
+     "top": {
+      "healthy": 50
+     },
+     "passed": false
+    },
+    "data_leakage": {
+     "spec": "roc",
+     "auc": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 50,
+     "top": {},
+     "passed": false
+    },
+    "distribution_shift": {
+     "spec": "dist",
+     "auc": 0.5,
+     "ci": [
+      0.5,
+      0.5
+     ],
+     "named": 0.0,
+     "false_alarm": 1.0,
+     "no_answer": 78,
+     "top": {
+      "overfitting": 3
+     },
+     "passed": false
+    }
+   },
+   "primary_passed": 0,
+   "can_do_task": false
+  }
+ },
+ "probe": {
+  "InternVL3-38B-AWQ": {
+   "lc_loss|train_last": {
+    "corr": 0.9936934165150094,
+    "mae": 0.0045886164903640725,
+    "n": 250
+   },
+   "lc_loss|val_last": {
+    "corr": 0.9982142017206034,
+    "mae": 0.0033286577463150224,
+    "n": 250
+   },
+   "lc_loss|val_best": {
+    "corr": 0.9606349566898861,
+    "mae": 0.004798870384693149,
+    "n": 250
+   },
+   "lc_loss|val_best_epoch": {
+    "corr": 0.6801708128103436,
+    "mae": 7.0,
+    "n": 250
+   },
+   "lc_loss|overfit_auc": {
+    "own": 0.9067999999999998,
+    "true": 0.9361999999999999
+   },
+   "lc_acc|train_last": {
+    "corr": 0.9741129199507415,
+    "mae": 0.004480201005935658,
+    "n": 250
+   },
+   "lc_acc|val_last": {
+    "corr": 0.9892721689650465,
+    "mae": 0.00600000381469723,
+    "n": 250
+   },
+   "lc_acc|val_best": {
+    "corr": 0.9803421349436099,
+    "mae": 0.006000006198883079,
+    "n": 250
+   },
+   "lc_acc|val_best_epoch": {
+    "corr": 0.711592720458548,
+    "mae": 9.0,
+    "n": 250
+   },
+   "lc_acc|overfit_auc": {
+    "own": 0.5920000000000001,
+    "true": 0.796
+   }
+  },
+  "InternVL3-8B": {
+   "lc_loss|train_last": {
+    "corr": 0.990563341759824,
+    "mae": 0.006252290010452272,
+    "n": 250
+   },
+   "lc_loss|val_last": {
+    "corr": 0.9981181691359302,
+    "mae": 0.0037851703166961737,
+    "n": 250
+   },
+   "lc_loss|val_best": {
+    "corr": 0.9468599709767939,
+    "mae": 0.01070842593908311,
+    "n": 250
+   },
+   "lc_loss|val_best_epoch": {
+    "corr": 0.34082440979673756,
+    "mae": 40.0,
+    "n": 250
+   },
+   "lc_loss|overfit_auc": {
+    "own": 0.9236,
+    "true": 0.9361999999999999
+   },
+   "lc_acc|train_last": {
+    "corr": 0.9578722134948002,
+    "mae": 0.003951549530029297,
+    "n": 250
+   },
+   "lc_acc|val_last": {
+    "corr": 0.991198169895608,
+    "mae": 0.003999997377395648,
+    "n": 250
+   },
+   "lc_acc|val_best": {
+    "corr": 0.9827104581099031,
+    "mae": 0.00399999380111693,
+    "n": 250
+   },
+   "lc_acc|val_best_epoch": {
+    "corr": 0.4356298557472,
+    "mae": 17.0,
+    "n": 250
+   },
+   "lc_acc|overfit_auc": {
+    "own": 0.6824000000000001,
+    "true": 0.796
+   }
+  },
+  "Qwen2.5-VL-32B-Instruct-AWQ": {
+   "lc_loss|train_last": {
+    "corr": 0.9465290671918459,
+    "mae": 0.018997605144977572,
+    "n": 250
+   },
+   "lc_loss|val_last": {
+    "corr": 0.9837802517699972,
+    "mae": 0.01196893215179444,
+    "n": 250
+   },
+   "lc_loss|val_best": {
+    "corr": 0.9645006744905014,
+    "mae": 0.013449331521987934,
+    "n": 250
+   },
+   "lc_loss|val_best_epoch": {
+    "corr": 0.5973594775243626,
+    "mae": 20.0,
+    "n": 250
+   },
+   "lc_loss|overfit_auc": {
+    "own": 0.8284,
+    "true": 0.9361999999999999
+   },
+   "lc_acc|train_last": {
+    "corr": 0.9078259278082543,
+    "mae": 0.009511951208114655,
+    "n": 250
+   },
+   "lc_acc|val_last": {
+    "corr": 0.9050835549696175,
+    "mae": 0.013999977111816386,
+    "n": 250
+   },
+   "lc_acc|val_best": {
+    "corr": 0.8835123176691319,
+    "mae": 0.01600001096725462,
+    "n": 250
+   },
+   "lc_acc|val_best_epoch": {
+    "corr": 0.46238639904356393,
+    "mae": 29.0,
+    "n": 250
+   },
+   "lc_acc|overfit_auc": {
+    "own": 0.623,
+    "true": 0.796
+   }
+  },
+  "Qwen2.5-VL-7B-Instruct": {
+   "lc_loss|train_last": {
+    "corr": 0.96247687417597,
+    "mae": 0.018199921846389758,
+    "n": 250
+   },
+   "lc_loss|val_last": {
+    "corr": 0.9876406426353602,
+    "mae": 0.010046190023422247,
+    "n": 250
+   },
+   "lc_loss|val_best": {
+    "corr": 0.9695260925085485,
+    "mae": 0.011535176038742073,
+    "n": 250
+   },
+   "lc_loss|val_best_epoch": {
+    "corr": 0.7127339610175105,
+    "mae": 7.0,
+    "n": 250
+   },
+   "lc_loss|overfit_auc": {
+    "own": 0.8769999999999998,
+    "true": 0.9361999999999999
+   },
+   "lc_acc|train_last": {
+    "corr": 0.896006529365381,
+    "mae": 0.01782060980796818,
+    "n": 250
+   },
+   "lc_acc|val_last": {
+    "corr": 0.9487369484042875,
+    "mae": 0.0079999732971191,
+    "n": 250
+   },
+   "lc_acc|val_best": {
+    "corr": 0.9411972180905978,
+    "mae": 0.007999975681304894,
+    "n": 250
+   },
+   "lc_acc|val_best_epoch": {
+    "corr": 0.574850881365506,
+    "mae": 12.0,
+    "n": 250
+   },
+   "lc_acc|overfit_auc": {
+    "own": 0.6035999999999999,
+    "true": 0.796
+   }
+  },
+  "llava-onevision-qwen2-7b-ov-hf": {
+   "lc_loss|train_last": {
+    "corr": 0.8711291521163199,
+    "mae": 0.03592356517910958,
+    "n": 250
+   },
+   "lc_loss|val_last": {
+    "corr": 0.5513689347175694,
+    "mae": 0.03568588048219681,
+    "n": 250
+   },
+   "lc_loss|val_best": {
+    "corr": 0.7139512697116358,
+    "mae": 0.058561722934246066,
+    "n": 250
+   },
+   "lc_loss|val_best_epoch": {
+    "corr": 0.38098656740538434,
+    "mae": 20.0,
+    "n": 250
+   },
+   "lc_loss|overfit_auc": {
+    "own": 0.4016,
+    "true": 0.9361999999999999
+   },
+   "lc_acc|train_last": {
+    "corr": 0.5018090560052455,
+    "mae": 0.030385357141494762,
+    "n": 250
+   },
+   "lc_acc|val_last": {
+    "corr": 0.41090586295264314,
+    "mae": 0.03200002908706667,
+    "n": 250
+   },
+   "lc_acc|val_best": {
+    "corr": 0.24302611776405583,
+    "mae": 0.024000024795532204,
+    "n": 250
+   },
+   "lc_acc|val_best_epoch": {
+    "corr": 0.3028535507617765,
+    "mae": 16.5,
+    "n": 250
+   },
+   "lc_acc|overfit_auc": {
+    "own": 0.3784,
+    "true": 0.796
+   }
+  }
+ }
+}

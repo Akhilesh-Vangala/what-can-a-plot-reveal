@@ -1,0 +1,250 @@
+{
+ "InternVL3-8B": {
+  "plain": {
+   "balanced_acc": 0.15568950848427604,
+   "p_true": 0.12956515468301283,
+   "stereotype_lc_loss": 1.0,
+   "over_claim": 0.3835725883455476,
+   "confident_where_ambiguous": 0.22593582887700533,
+   "cannot_tell": 0.0,
+   "n": 1496
+  },
+  "badge": {
+   "balanced_acc": 0.14723484417936097,
+   "p_true": 0.15405688926935396,
+   "stereotype_lc_loss": 1.0,
+   "over_claim": 0.3784400901660441,
+   "confident_where_ambiguous": 0.24156992813709233,
+   "cannot_tell": 0.4632393587617468,
+   "n": 1809,
+   "delta_acc_ci": [
+    -0.018975358167474272,
+    0.0013662298291840591
+   ],
+   "delta_over_ci": [
+    -0.01369731963315409,
+    0.008694549353664364
+   ]
+  },
+  "companion": {
+   "balanced_acc": 0.1405714285714286,
+   "p_true": 0.136868637502848,
+   "stereotype_lc_loss": 1.0,
+   "over_claim": 0.34104013623216406,
+   "confident_where_ambiguous": 0.143,
+   "cannot_tell": 0.0,
+   "n": 2000,
+   "delta_acc_ci": [
+    -0.02489755107487003,
+    -0.0054700203019798065
+   ],
+   "delta_over_ci": [
+    -0.04835867586277421,
+    -0.030572399353516296
+   ]
+  },
+  "badge_companion": {
+   "balanced_acc": 0.14114285714285713,
+   "p_true": 0.13457207878765542,
+   "stereotype_lc_loss": 1.0,
+   "over_claim": 0.2707316035421655,
+   "confident_where_ambiguous": 0.1565,
+   "cannot_tell": 0.4705,
+   "n": 2000,
+   "delta_acc_ci": [
+    -0.028240130826068115,
+    -0.004058227824579977
+   ],
+   "delta_over_ci": [
+    -0.1225423206101174,
+    -0.10101330493041526
+   ]
+  }
+ },
+ "Qwen2.5-VL-32B-Instruct-AWQ": {
+  "plain": {
+   "balanced_acc": 0.1460685369797161,
+   "p_true": 0.16977838911754012,
+   "stereotype_lc_loss": 1.0,
+   "over_claim": 0.5157827408773435,
+   "confident_where_ambiguous": 0.3799654576856649,
+   "cannot_tell": 0.42774899251583187,
+   "n": 1737
+  },
+  "badge": {
+   "balanced_acc": 0.1452883314048781,
+   "p_true": 0.15681122448979593,
+   "stereotype_lc_loss": 0.0,
+   "over_claim": 0.47922736629831414,
+   "confident_where_ambiguous": 0.26224489795918365,
+   "cannot_tell": 0.36275510204081635,
+   "n": 1960,
+   "delta_acc_ci": [
+    -0.009073630133471226,
+    0.00793506860019119
+   ],
+   "delta_over_ci": [
+    -0.045128452575831195,
+    -0.02312099315704657
+   ]
+  },
+  "companion": {
+   "balanced_acc": 0.14257142857142857,
+   "p_true": 0.1398855263157895,
+   "stereotype_lc_loss": 1.0,
+   "over_claim": 0.24019874796112445,
+   "confident_where_ambiguous": 0.1175,
+   "cannot_tell": 0.803,
+   "n": 2000,
+   "delta_acc_ci": [
+    -0.013671327610189587,
+    0.006938340606092921
+   ],
+   "delta_over_ci": [
+    -0.2878659177092127,
+    -0.26707458211535
+   ]
+  },
+  "badge_companion": {
+   "balanced_acc": 0.13512707488026351,
+   "p_true": 0.13553760726905603,
+   "stereotype_lc_loss": 0.03,
+   "over_claim": 0.46489553957452684,
+   "confident_where_ambiguous": 0.2675416456335184,
+   "cannot_tell": 0.3382130237253912,
+   "n": 1981,
+   "delta_acc_ci": [
+    -0.018552389323247993,
+    -0.0012334039989265568
+   ],
+   "delta_over_ci": [
+    -0.06737619924116513,
+    -0.0429384890117173
+   ]
+  }
+ },
+ "Qwen2.5-VL-7B-Instruct": {
+  "plain": {
+   "balanced_acc": 0.14421626104283528,
+   "p_true": 0.14307481466699432,
+   "stereotype_lc_loss": 1.0,
+   "over_claim": 0.2311713018630829,
+   "confident_where_ambiguous": 0.2615723732549596,
+   "cannot_tell": 0.009551800146950772,
+   "n": 1361
+  },
+  "badge": {
+   "balanced_acc": 0.15446868402533426,
+   "p_true": 0.1437646203336947,
+   "stereotype_lc_loss": 1.0,
+   "over_claim": 0.23749410013910388,
+   "confident_where_ambiguous": 0.1606699751861042,
+   "cannot_tell": 0.5825062034739454,
+   "n": 1612,
+   "delta_acc_ci": [
+    0.0036084526212881362,
+    0.017006417623627087
+   ],
+   "delta_over_ci": [
+    -0.0015955679961903748,
+    0.02088088507385389
+   ]
+  },
+  "companion": {
+   "balanced_acc": 0.13542857142857143,
+   "p_true": 0.1380639743710396,
+   "stereotype_lc_loss": 1.0,
+   "over_claim": 0.21716973165652326,
+   "confident_where_ambiguous": 0.1285,
+   "cannot_tell": 0.3235,
+   "n": 2000,
+   "delta_acc_ci": [
+    -0.014197571253654,
+    -0.0003465706736792308
+   ],
+   "delta_over_ci": [
+    -0.02178544987394716,
+    -0.00044596942360360467
+   ]
+  },
+  "badge_companion": {
+   "balanced_acc": 0.14771428571428571,
+   "p_true": 0.13450331268972573,
+   "stereotype_lc_loss": 1.0,
+   "over_claim": 0.18500302052143064,
+   "confident_where_ambiguous": 0.1415,
+   "cannot_tell": 0.63,
+   "n": 2000,
+   "delta_acc_ci": [
+    -0.0029491095281988537,
+    0.0115578601191077
+   ],
+   "delta_over_ci": [
+    -0.05483565441174093,
+    -0.030873738758481855
+   ]
+  }
+ },
+ "llava-onevision-qwen2-7b-ov-hf": {
+  "plain": {
+   "balanced_acc": 0.1394927975647249,
+   "p_true": 0.15315923869858494,
+   "stereotype_lc_loss": 1.0,
+   "over_claim": 0.20286481667199074,
+   "confident_where_ambiguous": 0.008283132530120483,
+   "cannot_tell": 0.0,
+   "n": 1328
+  },
+  "badge": {
+   "balanced_acc": 0.1356969103430846,
+   "p_true": 0.1796367408338415,
+   "stereotype_lc_loss": 0.0,
+   "over_claim": 0.36754833301055784,
+   "confident_where_ambiguous": 0.22823984526112184,
+   "cannot_tell": 0.1885880077369439,
+   "n": 1034,
+   "delta_acc_ci": [
+    -0.01407725569473235,
+    0.0005001125327470361
+   ],
+   "delta_over_ci": [
+    0.1500819424401823,
+    0.180909135711417
+   ]
+  },
+  "companion": {
+   "balanced_acc": 0.1416933657695301,
+   "p_true": 0.16575773537672445,
+   "stereotype_lc_loss": 0.01,
+   "over_claim": 0.25125092029445534,
+   "confident_where_ambiguous": 0.046945986875315496,
+   "cannot_tell": 0.0,
+   "n": 1981,
+   "delta_acc_ci": [
+    -0.001357150218742252,
+    0.006070283102542887
+   ],
+   "delta_over_ci": [
+    0.03617939706164568,
+    0.058181326083041204
+   ]
+  },
+  "badge_companion": {
+   "balanced_acc": 0.1268748463240718,
+   "p_true": 0.18122331442067058,
+   "stereotype_lc_loss": 0.0,
+   "over_claim": 0.3908683375420008,
+   "confident_where_ambiguous": 0.22723673792557403,
+   "cannot_tell": 0.43705463182897863,
+   "n": 1263,
+   "delta_acc_ci": [
+    -0.022015870521275134,
+    -0.0014950330984304222
+   ],
+   "delta_over_ci": [
+    0.17527940390791952,
+    0.20194445069225053
+   ]
+  }
+ }
+}

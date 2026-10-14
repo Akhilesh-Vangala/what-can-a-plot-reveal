@@ -1,0 +1,26 @@
+{
+ "severity": {
+  "overfitting": 1.0,
+  "miscalibration": 1.0,
+  "label_noise": 0.5,
+  "class_imbalance": 0.9,
+  "data_leakage": 1.0,
+  "distribution_shift": 1.0
+ },
+ "canonical": {
+  "overfitting": "lc_loss",
+  "miscalibration": "rel",
+  "label_noise": "lc_acc",
+  "class_imbalance": "cm",
+  "data_leakage": "roc",
+  "distribution_shift": "dist"
+ },
+ "primary": [
+  "overfitting",
+  "miscalibration",
+  "class_imbalance",
+  "data_leakage",
+  "distribution_shift"
+ ],
+ "n": 50
+}

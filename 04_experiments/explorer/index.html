@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plot Evidence Explorer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="data_v3.js"></script>
+<script src="data_v4syn.js" onerror="void 0"></script>
+<script src="data_v4magic.js" onerror="void 0"></script>
+<style>
+  :root { --bg:#fbfbfa; --panel:#ffffff; --ink:#1d1d1f; --mute:#6b6b70; --rule:#e3e3e6; --accent:#4b3fa6; --sel:#e8590c; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#141416; --panel:#1d1d21; --ink:#ececf0; --mute:#9a9aa3; --rule:#33333a; --accent:#a99cff; --sel:#ff922b; } }
+  :root[data-theme="dark"] { --bg:#141416; --panel:#1d1d21; --ink:#ececf0; --mute:#9a9aa3; --rule:#33333a; --accent:#a99cff; --sel:#ff922b; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  header { padding:20px 24px 8px; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  .sub { color:var(--mute); max-width:900px; }
+  .controls { display:flex; flex-wrap:wrap; gap:18px; align-items:center; padding:10px 24px 14px; border-bottom:1px solid var(--rule); }
+  .controls label { color:var(--mute); font-size:12px; text-transform:uppercase; letter-spacing:.4px; margin-right:6px; }
+  select, input[type=range] { accent-color:var(--accent); }
+  select { background:var(--panel); color:var(--ink); border:1px solid var(--rule); border-radius:6px; padding:4px 6px; }
+  .seg button { border:1px solid var(--rule); background:var(--panel); color:var(--ink); padding:5px 10px; cursor:pointer; font-size:13px; }
+  .seg button:first-child { border-radius:6px 0 0 6px; } .seg button:last-child { border-radius:0 6px 6px 0; }
+  .seg button.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+  main { display:grid; grid-template-columns: minmax(0,1.15fr) minmax(0,1fr); gap:18px; padding:18px 24px; }
+  .panel { background:var(--panel); border:1px solid var(--rule); border-radius:10px; padding:14px 16px; min-width:0; }
+  .panel h2 { font-size:15px; margin:0 0 2px; } .panel .note { color:var(--mute); font-size:12px; margin-bottom:8px; }
+  .wide { grid-column: 1 / -1; }
+  svg text { fill:var(--ink); font-size:11px; }
+  .axis text { fill:var(--mute); } .axis path, .axis line { stroke:var(--rule); }
+  .cell { cursor:pointer; } .cell:hover rect { stroke:var(--ink); stroke-width:1.5; }
+  .colsel { fill:none; stroke:var(--sel); stroke-width:2.5; }
+  .tip { position:fixed; pointer-events:none; background:var(--panel); border:1px solid var(--rule); border-radius:6px; padding:6px 9px; font-size:12px; box-shadow:0 2px 8px rgba(0,0,0,.15); display:none; max-width:280px; }
+  .legend { display:flex; gap:14px; flex-wrap:wrap; color:var(--mute); font-size:12px; margin-top:6px; }
+  .grid-small { display:grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap:10px; }
+  .mini h3 { font-size:12px; margin:4px 0; font-weight:600; } .mini .ba { color:var(--mute); font-weight:400; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; padding:12px 16px; } header, .controls { padding-left:16px; padding-right:16px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>What can a plot reveal?</h1>
+  <div class="sub">For each ML failure and diagnostic plot: can the plot show <b>that</b> something is wrong (detection), and
+  <b>which</b> failure it is (diagnosis)? Benchmarks are the best classifiers trained on what each plot draws; AI readers are
+  open vision-language models answering the same question. Click a plot column to compare confusions.</div>
+</header>
+<div class="controls">
+  <span><label>Run</label><select id="run"></select></span>
+  <span><label>Severity</label><input id="level" type="range" min="0" max="2" step="1" value="2"> <b id="levelTxt"></b></span>
+  <span class="seg" id="metric"><button data-m="detect" class="on">Detection</button><button data-m="diagnose">Diagnosis</button></span>
+</div>
+<main>
+  <section class="panel"><h2>Evidential map</h2><div class="note" id="mapNote"></div><div id="map"></div>
+    <div class="legend"><span>● identifiable</span><span>◐ detect-only</span><span>○ neither</span></div></section>
+  <section class="panel"><h2 id="confTitle">Benchmark confusion</h2><div class="note">Rows = true state, columns = predicted (share of row). Diagonal = correct.</div><div id="bench"></div></section>
+  <section class="panel wide"><h2>AI readers on the same plots</h2><div class="note" id="readerNote">Reader confusion for the selected plot. A bright single column = the reader gives the same answer whatever the plot shows.</div><div id="readers" class="grid-small"></div></section>
+  <section class="panel wide"><h2>Balanced diagnosis accuracy by plot</h2><div class="note">Chance = 1 / number of states. ◆ benchmark (strongest severity) · ● each AI reader (levels pooled).</div><div id="cmp"></div></section>
+</main>
+<div class="tip" id="tip"></div>
+<script>
+const D = window.EXPLORER_DATA || {};
+const NAMES = {lc_loss:"Loss curves", lc_acc:"Accuracy curves", rel:"Reliability", rel_n:"Reliability + bin sizes",
+  cm:"Confusion matrix", cm_norm:"Confusion (row %)", roc:"ROC", pr:"Precision–recall", dist:"Val vs test scores"};
+const FN = s => s.replace(/_/g, " ");
+const state = { run: Object.keys(D).sort().reverse()[0], level: 2, metric: "detect", plot: null };
+const tip = d3.select("#tip");
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+function showTip(e, html) { tip.style("display","block").html(html).style("left",(e.clientX+12)+"px").style("top",(e.clientY+12)+"px"); }
+function hideTip() { tip.style("display","none"); }
+
+d3.select("#run").selectAll("option").data(Object.keys(D)).join("option").attr("value", d => d)
+  .text(d => `${d} — ${D[d].source}, ${D[d].failures.length} failures × ${D[d].plots.length} plots`).property("selected", d => d === state.run);
+d3.select("#run").on("change", e => { state.run = e.target.value; state.plot = null; render(); });
+d3.select("#level").on("input", e => { state.level = +e.target.value; render(); });
+d3.selectAll("#metric button").on("click", e => { state.metric = e.target.dataset.m;
+  d3.selectAll("#metric button").classed("on", function(){ return this.dataset.m === state.metric; }); render(); });
+
+function render() {
+  const R = D[state.run]; if (!R) return;
+  if (!state.plot) state.plot = R.plots[0];
+  d3.select("#levelTxt").text(`B0 target ${R.levels[state.level]}`);
+  drawMap(R); drawBench(R); drawReaders(R); drawCmp(R);
+}
+
+function drawMap(R) {
+  const cells = R.cells.filter(c => c.level === state.level);
+  const m = state.metric, cw = 64, ch = 34, left = 130, top = 48;
+  const W = left + cw * R.plots.length + 10, H = top + ch * R.failures.length + 8;
+  const color = m === "detect" ? d3.scaleSequential(d3.interpolateViridis).domain([0.5, 1])
+                               : d3.scaleSequential(d3.interpolateViridis).domain([0, 1]);
+  d3.select("#mapNote").text(m === "detect" ? "Colour = detection AUC (0.5 = invisible, 1 = perfect)."
+                                            : "Colour = recall of that failure in the multi-way diagnosis (chance = 1/" + R.classes.length + ").");
+  const svg = d3.select("#map").html("").append("svg").attr("viewBox", `0 0 ${W} ${H}`).attr("width", "100%");
+  svg.selectAll(".ph").data(R.plots).join("text").attr("x", (d,i) => left + i*cw + cw/2).attr("y", top - 8)
+    .attr("text-anchor","middle").text(d => NAMES[d] || d).style("font-size","10px").call(t => t.each(wrap));
+  svg.selectAll(".fh").data(R.failures).join("text").attr("x", left - 8).attr("y", (d,i) => top + i*ch + ch/2 + 4)
+    .attr("text-anchor","end").text(FN);
+  const g = svg.selectAll(".cell").data(cells).join("g").attr("class","cell")
+    .attr("transform", d => `translate(${left + R.plots.indexOf(d.plot)*cw},${top + R.failures.indexOf(d.failure)*ch})`)
+    .on("click", (e,d) => { state.plot = d.plot; render(); })
+    .on("mousemove", (e,d) => showTip(e, `<b>${FN(d.failure)}</b> on <b>${NAMES[d.plot]||d.plot}</b><br>detection AUC ${d.detect.toFixed(2)}<br>diagnosis recall ${d.diagnose.toFixed(2)}<br>${d.label}`))
+    .on("mouseleave", hideTip);
+  g.append("rect").attr("width", cw-3).attr("height", ch-3).attr("rx",4).attr("fill", d => color(m === "detect" ? d.detect : d.diagnose));
+  g.append("text").attr("x", (cw-3)/2).attr("y", ch/2+3).attr("text-anchor","middle").style("font-size","11px")
+    .style("fill", d => (m === "detect" ? d.detect : d.diagnose) > (m === "detect" ? 0.78 : 0.55) ? "#111" : "#fff")
+    .text(d => (d.label === "identifiable" ? "● " : d.label === "detect-only" ? "◐ " : "○ ") + (m === "detect" ? d.detect : d.diagnose).toFixed(2));
+  svg.append("rect").attr("class","colsel").attr("x", left + R.plots.indexOf(state.plot)*cw - 2).attr("y", top - 2)
+    .attr("width", cw+1).attr("height", ch*R.failures.length+1).attr("rx",5);
+}
+function wrap() { const t = d3.select(this), words = t.text().split(" "); if (words.length < 2) return;
+  t.text(null); const x = t.attr("x"); words.forEach((w,i) => t.append("tspan").attr("x", x).attr("dy", i ? "1.1em" : (-(words.length-1)*1.1+"em")).text(w)); }
+
+function matrix(sel, M, rows, cols, size) {
+  const n = rows.length, c = size / (cols.length + 3.2), left = c * 3.2, top = c * 3.0;
+  const svg = sel.append("svg").attr("viewBox", `0 0 ${left + c*cols.length + c*1.6} ${top + c*n + 2}`).attr("width","100%")
+    .style("max-width", size + "px");
+  const col = d3.scaleSequential(d3.interpolateBlues).domain([0,1]);
+  rows.forEach((r,i) => { svg.append("text").attr("x", left-4).attr("y", top + i*c + c/2+3).attr("text-anchor","end").style("font-size", (c*0.32)+"px").text(FN(r));
+    cols.forEach((k,j) => { const v = M[i][j] || 0;
+      svg.append("rect").attr("x", left + j*c).attr("y", top + i*c).attr("width", c-1).attr("height", c-1)
+        .attr("fill", col(v)).attr("stroke", i===j ? css("--ink") : "none").attr("stroke-width", i===j ? 1 : 0)
+        .on("mousemove", e => showTip(e, `true <b>${FN(r)}</b> → answered <b>${FN(k)}</b>: ${(v*100).toFixed(0)}%`)).on("mouseleave", hideTip);
+      if (c > 22) svg.append("text").attr("x", left + j*c + c/2).attr("y", top + i*c + c/2+3).attr("text-anchor","middle")
+        .style("font-size", (c*0.3)+"px").style("fill", v > .55 ? "#fff" : "#333").text(v ? Math.round(v*100) : ""); }); });
+  cols.forEach((k,j) => svg.append("text").attr("transform", `translate(${left + j*c + c/2},${top-4}) rotate(-45)`)
+    .style("font-size", (c*0.3)+"px").text(FN(k)));
+}
+function drawBench(R) {
+  const key = `${state.level}|${state.plot}`;
+  d3.select("#confTitle").text(`Benchmark confusion — ${NAMES[state.plot]||state.plot} (balanced acc ${R.bench_balanced[key].toFixed(2)})`);
+  matrix(d3.select("#bench").html(""), R.confusions[key], R.classes, R.classes, 380);
+}
+function drawReaders(R) {
+  const box = d3.select("#readers").html(""), names = Object.keys(R.readers);
+  if (!names.length) { box.append("div").attr("class","note").text("No reader results for this run yet."); return; }
+  names.forEach(n => { const r = R.readers[n][state.plot]; const d = box.append("div").attr("class","mini");
+    d.append("h3").html(`${n} <span class="ba">· balanced acc ${r ? r.balanced_acc.toFixed(2) : "–"}</span>`);
+    if (r) matrix(d, r.confusion, R.classes, R.classes.concat(["other"]), 230); });
+}
+function drawCmp(R) {
+  const plots = R.plots, names = Object.keys(R.readers), W = 900, H = 260, m = {l:46, r:14, t:14, b:58};
+  const x = d3.scaleBand().domain(plots).range([m.l, W-m.r]).padding(0.25), y = d3.scaleLinear().domain([0, 1]).range([H-m.b, m.t]);
+  const c = d3.scaleOrdinal(d3.schemeTableau10).domain(names);
+  const svg = d3.select("#cmp").html("").append("svg").attr("viewBox", `0 0 ${W} ${H}`).attr("width","100%");
+  svg.append("g").attr("class","axis").attr("transform",`translate(0,${H-m.b})`).call(d3.axisBottom(x).tickFormat(d => NAMES[d]||d))
+    .selectAll("text").attr("transform","rotate(-25)").style("text-anchor","end");
+  svg.append("g").attr("class","axis").attr("transform",`translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5));
+  svg.append("line").attr("x1", m.l).attr("x2", W-m.r).attr("y1", y(1/R.classes.length)).attr("y2", y(1/R.classes.length))
+    .attr("stroke", css("--mute")).attr("stroke-dasharray","4 3");
+  svg.append("text").attr("x", W-m.r).attr("y", y(1/R.classes.length)-4).attr("text-anchor","end").style("fill",css("--mute")).text("chance");
+  plots.forEach(p => { const top = R.levels.length - 1, b = R.bench_balanced[`${top}|${p}`];
+    svg.append("path").attr("d", d3.symbol(d3.symbolDiamond, 90)).attr("transform", `translate(${x(p)+x.bandwidth()/2},${y(b)})`).attr("fill", css("--ink"))
+      .on("mousemove", e => showTip(e, `benchmark on ${NAMES[p]}: ${b.toFixed(2)}`)).on("mouseleave", hideTip);
+    names.forEach((n,i) => { const r = R.readers[n][p]; if (!r) return;
+      svg.append("circle").attr("cx", x(p) + x.bandwidth()*(0.15 + 0.7*i/Math.max(names.length-1,1))).attr("cy", y(r.balanced_acc)).attr("r", 4.5).attr("fill", c(n)).attr("opacity", .9)
+        .on("mousemove", e => showTip(e, `${n} on ${NAMES[p]}: ${r.balanced_acc.toFixed(2)}`)).on("mouseleave", hideTip); }); });
+  const lg = svg.append("g").attr("transform", `translate(${m.l+6},${m.t})`);
+  names.forEach((n,i) => { lg.append("circle").attr("cx", 0).attr("cy", i*14).attr("r",4).attr("fill", c(n)); lg.append("text").attr("x", 8).attr("y", i*14+4).text(n); });
+}
+render();
+</script>
+</body>
+</html>

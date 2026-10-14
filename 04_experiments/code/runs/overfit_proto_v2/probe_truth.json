@@ -1,0 +1,1802 @@
+{
+ "probe_main_healthy_730_lc_loss": {
+  "run_id": "main_healthy_730",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.2069836542846198,
+  "val_last": 0.5059395873533489,
+  "val_best": 0.4673626259662133,
+  "val_best_epoch": 31.0
+ },
+ "probe_main_healthy_571_lc_loss": {
+  "run_id": "main_healthy_571",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.08763931159846967,
+  "val_last": 0.36593264558382194,
+  "val_best": 0.3092265996562494,
+  "val_best_epoch": 36.0
+ },
+ "probe_main_healthy_1063_lc_loss": {
+  "run_id": "main_healthy_1063",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.20719792359362044,
+  "val_last": 0.34897095518883575,
+  "val_best": 0.34897095518883575,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_1300_lc_loss": {
+  "run_id": "main_healthy_1300",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.33142522247790585,
+  "val_last": 0.4013327192260101,
+  "val_best": 0.4013327192260101,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_750_lc_loss": {
+  "run_id": "main_healthy_750",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.12942960580854587,
+  "val_last": 0.2675630114326819,
+  "val_best": 0.2654982940180603,
+  "val_best_epoch": 56.0
+ },
+ "probe_main_healthy_315_lc_loss": {
+  "run_id": "main_healthy_315",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.14558539982589772,
+  "val_last": 0.24403338136736288,
+  "val_best": 0.24403338136736288,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_875_lc_loss": {
+  "run_id": "main_healthy_875",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.1581812533729941,
+  "val_last": 0.29740154254527773,
+  "val_best": 0.2883879937233625,
+  "val_best_epoch": 65.0
+ },
+ "probe_main_healthy_556_lc_loss": {
+  "run_id": "main_healthy_556",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.21057759107804586,
+  "val_last": 0.35891939323972233,
+  "val_best": 0.3377101148060053,
+  "val_best_epoch": 49.0
+ },
+ "probe_main_healthy_1008_lc_loss": {
+  "run_id": "main_healthy_1008",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.09334366139933863,
+  "val_last": 0.33617702359737206,
+  "val_best": 0.2810516536694831,
+  "val_best_epoch": 33.0
+ },
+ "probe_main_healthy_114_lc_loss": {
+  "run_id": "main_healthy_114",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.043857397606356686,
+  "val_last": 0.3602588340403353,
+  "val_best": 0.24421135631534038,
+  "val_best_epoch": 25.0
+ },
+ "probe_main_healthy_703_lc_loss": {
+  "run_id": "main_healthy_703",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.14817324937483667,
+  "val_last": 0.36697477051366545,
+  "val_best": 0.36603883471038,
+  "val_best_epoch": 94.0
+ },
+ "probe_main_healthy_262_lc_loss": {
+  "run_id": "main_healthy_262",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.1749215083333652,
+  "val_last": 0.3315420323935316,
+  "val_best": 0.3315420323935316,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_122_lc_loss": {
+  "run_id": "main_healthy_122",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.25345905895110726,
+  "val_last": 0.34802850442406824,
+  "val_best": 0.34802850442406824,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_761_lc_loss": {
+  "run_id": "main_healthy_761",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.1600141752834295,
+  "val_last": 0.2552338217775248,
+  "val_best": 0.2548805339824236,
+  "val_best_epoch": 94.0
+ },
+ "probe_main_healthy_1414_lc_loss": {
+  "run_id": "main_healthy_1414",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.14400845329415665,
+  "val_last": 0.22182234422434272,
+  "val_best": 0.22182234422434272,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_1177_lc_loss": {
+  "run_id": "main_healthy_1177",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.21676962020194532,
+  "val_last": 0.28140538474304305,
+  "val_best": 0.28140538474304305,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_1415_lc_loss": {
+  "run_id": "main_healthy_1415",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.1061253534077229,
+  "val_last": 0.29623306295779767,
+  "val_best": 0.27046471976677194,
+  "val_best_epoch": 34.0
+ },
+ "probe_main_healthy_401_lc_loss": {
+  "run_id": "main_healthy_401",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.19871014292327047,
+  "val_last": 0.3466609370736718,
+  "val_best": 0.33840578404128835,
+  "val_best_epoch": 70.0
+ },
+ "probe_main_healthy_1157_lc_loss": {
+  "run_id": "main_healthy_1157",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.06970304661899855,
+  "val_last": 0.117239334832115,
+  "val_best": 0.11671482796469486,
+  "val_best_epoch": 96.0
+ },
+ "probe_main_healthy_438_lc_loss": {
+  "run_id": "main_healthy_438",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.1555916041245397,
+  "val_last": 0.2402467185189003,
+  "val_best": 0.2402467185189003,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_1166_lc_loss": {
+  "run_id": "main_healthy_1166",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.05504656425757851,
+  "val_last": 0.09967536277466621,
+  "val_best": 0.09967536277466621,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_30_lc_loss": {
+  "run_id": "main_healthy_30",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.13944778446709513,
+  "val_last": 0.264515359220445,
+  "val_best": 0.264515359220445,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_742_lc_loss": {
+  "run_id": "main_healthy_742",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.2646574286135315,
+  "val_last": 0.2692350613880859,
+  "val_best": 0.2692350613880859,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_603_lc_loss": {
+  "run_id": "main_healthy_603",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.14037221105845582,
+  "val_last": 0.2685320146277917,
+  "val_best": 0.2528619845810689,
+  "val_best_epoch": 31.0
+ },
+ "probe_main_healthy_1018_lc_loss": {
+  "run_id": "main_healthy_1018",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.0834024055110263,
+  "val_last": 0.21499703483412003,
+  "val_best": 0.21499703483412003,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_1120_lc_loss": {
+  "run_id": "main_healthy_1120",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.04878233275112191,
+  "val_last": 0.2734398140853063,
+  "val_best": 0.238432443057234,
+  "val_best_epoch": 31.0
+ },
+ "probe_main_healthy_604_lc_loss": {
+  "run_id": "main_healthy_604",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.18520654826039204,
+  "val_last": 0.2578148301978167,
+  "val_best": 0.2578148301978167,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_570_lc_loss": {
+  "run_id": "main_healthy_570",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.0743215031023713,
+  "val_last": 0.10627325367009101,
+  "val_best": 0.10613010664024995,
+  "val_best_epoch": 99.0
+ },
+ "probe_main_healthy_256_lc_loss": {
+  "run_id": "main_healthy_256",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.18440145559073376,
+  "val_last": 0.37436221876848297,
+  "val_best": 0.37436221876848297,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_998_lc_loss": {
+  "run_id": "main_healthy_998",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.0804347446612373,
+  "val_last": 0.12720631660989712,
+  "val_best": 0.12720631660989712,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_1239_lc_loss": {
+  "run_id": "main_healthy_1239",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.2991470148437727,
+  "val_last": 0.47008416397629416,
+  "val_best": 0.46851848984185857,
+  "val_best_epoch": 90.0
+ },
+ "probe_main_healthy_1467_lc_loss": {
+  "run_id": "main_healthy_1467",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.09526849983907855,
+  "val_last": 0.1763087843875087,
+  "val_best": 0.1763087843875087,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_889_lc_loss": {
+  "run_id": "main_healthy_889",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.2635309261669247,
+  "val_last": 0.4149961607240248,
+  "val_best": 0.4149961607240248,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_607_lc_loss": {
+  "run_id": "main_healthy_607",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.06541995088079229,
+  "val_last": 0.18973191171785464,
+  "val_best": 0.1853458505237018,
+  "val_best_epoch": 84.0
+ },
+ "probe_main_healthy_1180_lc_loss": {
+  "run_id": "main_healthy_1180",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.15885106641584293,
+  "val_last": 0.2787005696422033,
+  "val_best": 0.27615278296874235,
+  "val_best_epoch": 80.0
+ },
+ "probe_main_healthy_921_lc_loss": {
+  "run_id": "main_healthy_921",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.12128488541369312,
+  "val_last": 0.1620688141929513,
+  "val_best": 0.16194016752412904,
+  "val_best_epoch": 98.0
+ },
+ "probe_main_healthy_955_lc_loss": {
+  "run_id": "main_healthy_955",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.14327383813323374,
+  "val_last": 0.2289426282776758,
+  "val_best": 0.2289426282776758,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_1206_lc_loss": {
+  "run_id": "main_healthy_1206",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.14326044490068576,
+  "val_last": 0.23448853493093155,
+  "val_best": 0.23354504846856297,
+  "val_best_epoch": 94.0
+ },
+ "probe_main_healthy_648_lc_loss": {
+  "run_id": "main_healthy_648",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.13361879623478978,
+  "val_last": 0.3624971143313693,
+  "val_best": 0.35741204409944505,
+  "val_best_epoch": 77.0
+ },
+ "probe_main_healthy_1285_lc_loss": {
+  "run_id": "main_healthy_1285",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.06588566858862427,
+  "val_last": 0.310074077393622,
+  "val_best": 0.2691576313269488,
+  "val_best_epoch": 38.0
+ },
+ "probe_main_healthy_60_lc_loss": {
+  "run_id": "main_healthy_60",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.24634370959368568,
+  "val_last": 0.39003783558390526,
+  "val_best": 0.3761870826948714,
+  "val_best_epoch": 38.0
+ },
+ "probe_main_healthy_182_lc_loss": {
+  "run_id": "main_healthy_182",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.2237902872002509,
+  "val_last": 0.2713643807447929,
+  "val_best": 0.2713643807447929,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_124_lc_loss": {
+  "run_id": "main_healthy_124",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.08266202696065664,
+  "val_last": 0.2915717593524174,
+  "val_best": 0.2771470023957553,
+  "val_best_epoch": 52.0
+ },
+ "probe_main_healthy_100_lc_loss": {
+  "run_id": "main_healthy_100",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.20847239866429176,
+  "val_last": 0.27650843967294614,
+  "val_best": 0.27650843967294614,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_705_lc_loss": {
+  "run_id": "main_healthy_705",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.1254124685101924,
+  "val_last": 0.16654584599823596,
+  "val_best": 0.1663212466765512,
+  "val_best_epoch": 99.0
+ },
+ "probe_main_healthy_91_lc_loss": {
+  "run_id": "main_healthy_91",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.1497332259109247,
+  "val_last": 0.4620831456918561,
+  "val_best": 0.418709435769489,
+  "val_best_epoch": 31.0
+ },
+ "probe_main_healthy_483_lc_loss": {
+  "run_id": "main_healthy_483",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.06002240143643571,
+  "val_last": 0.2558128953449991,
+  "val_best": 0.2274023893418074,
+  "val_best_epoch": 45.0
+ },
+ "probe_main_healthy_973_lc_loss": {
+  "run_id": "main_healthy_973",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.14442491841466595,
+  "val_last": 0.26172468152245915,
+  "val_best": 0.26014337407540716,
+  "val_best_epoch": 87.0
+ },
+ "probe_main_healthy_5_lc_loss": {
+  "run_id": "main_healthy_5",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.16713418796519788,
+  "val_last": 0.19080520907538806,
+  "val_best": 0.19080520907538806,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_1497_lc_loss": {
+  "run_id": "main_healthy_1497",
+  "spec": "lc_loss",
+  "failed": false,
+  "train_last": 0.23529584898253508,
+  "val_last": 0.297301258672287,
+  "val_best": 0.297301258672287,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_overfitting_L2_186_lc_loss": {
+  "run_id": "main_overfitting_L2_186",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.04964699894016525,
+  "val_last": 0.39786935620075325,
+  "val_best": 0.29316460254722976,
+  "val_best_epoch": 27.0
+ },
+ "probe_main_overfitting_L2_570_lc_loss": {
+  "run_id": "main_overfitting_L2_570",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.0318179493576562,
+  "val_last": 0.2737465658801153,
+  "val_best": 0.20231676497667012,
+  "val_best_epoch": 41.0
+ },
+ "probe_main_overfitting_L2_278_lc_loss": {
+  "run_id": "main_overfitting_L2_278",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.02367948026678315,
+  "val_last": 0.4994950446098405,
+  "val_best": 0.31732250598835576,
+  "val_best_epoch": 30.0
+ },
+ "probe_main_overfitting_L2_127_lc_loss": {
+  "run_id": "main_overfitting_L2_127",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.011338454937229634,
+  "val_last": 0.6054478886622203,
+  "val_best": 0.3296982544474937,
+  "val_best_epoch": 14.0
+ },
+ "probe_main_overfitting_L2_147_lc_loss": {
+  "run_id": "main_overfitting_L2_147",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.011512397706077687,
+  "val_last": 0.44920077928538527,
+  "val_best": 0.278216539033196,
+  "val_best_epoch": 21.0
+ },
+ "probe_main_overfitting_L2_334_lc_loss": {
+  "run_id": "main_overfitting_L2_334",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.14842851303403448,
+  "val_last": 0.31004168281678157,
+  "val_best": 0.2938384081446377,
+  "val_best_epoch": 57.0
+ },
+ "probe_main_overfitting_L2_368_lc_loss": {
+  "run_id": "main_overfitting_L2_368",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.04130860007697825,
+  "val_last": 0.4272183884758491,
+  "val_best": 0.283376761537886,
+  "val_best_epoch": 33.0
+ },
+ "probe_main_overfitting_L2_353_lc_loss": {
+  "run_id": "main_overfitting_L2_353",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.10145798179853746,
+  "val_last": 0.2553560412743229,
+  "val_best": 0.24830379214958356,
+  "val_best_epoch": 78.0
+ },
+ "probe_main_overfitting_L2_40_lc_loss": {
+  "run_id": "main_overfitting_L2_40",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.0216011565641421,
+  "val_last": 0.3194123652243966,
+  "val_best": 0.24198153661521704,
+  "val_best_epoch": 37.0
+ },
+ "probe_main_overfitting_L2_595_lc_loss": {
+  "run_id": "main_overfitting_L2_595",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.16683246060733226,
+  "val_last": 0.3211467540315984,
+  "val_best": 0.32046546684550636,
+  "val_best_epoch": 93.0
+ },
+ "probe_main_overfitting_L2_446_lc_loss": {
+  "run_id": "main_overfitting_L2_446",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.19367870700760398,
+  "val_last": 0.4508982392370111,
+  "val_best": 0.4154723432118016,
+  "val_best_epoch": 46.0
+ },
+ "probe_main_overfitting_L2_20_lc_loss": {
+  "run_id": "main_overfitting_L2_20",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.10120564023170413,
+  "val_last": 0.29297271104436445,
+  "val_best": 0.2687072263831274,
+  "val_best_epoch": 61.0
+ },
+ "probe_main_overfitting_L2_371_lc_loss": {
+  "run_id": "main_overfitting_L2_371",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.0760235348592892,
+  "val_last": 0.30597595559798185,
+  "val_best": 0.2859270471876221,
+  "val_best_epoch": 60.0
+ },
+ "probe_main_overfitting_L2_441_lc_loss": {
+  "run_id": "main_overfitting_L2_441",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.14818219668943858,
+  "val_last": 0.40115436053754217,
+  "val_best": 0.3843142970217804,
+  "val_best_epoch": 73.0
+ },
+ "probe_main_overfitting_L2_271_lc_loss": {
+  "run_id": "main_overfitting_L2_271",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.22040272276309528,
+  "val_last": 0.3733531915071024,
+  "val_best": 0.3733531915071024,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_overfitting_L2_545_lc_loss": {
+  "run_id": "main_overfitting_L2_545",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.18243308159735044,
+  "val_last": 0.34044961248047284,
+  "val_best": 0.3404414349989251,
+  "val_best_epoch": 98.0
+ },
+ "probe_main_overfitting_L2_224_lc_loss": {
+  "run_id": "main_overfitting_L2_224",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.032707554564951405,
+  "val_last": 0.16137131324199194,
+  "val_best": 0.14768790403279877,
+  "val_best_epoch": 58.0
+ },
+ "probe_main_overfitting_L2_132_lc_loss": {
+  "run_id": "main_overfitting_L2_132",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.21258912289531437,
+  "val_last": 0.41386412393928257,
+  "val_best": 0.4080016763162006,
+  "val_best_epoch": 81.0
+ },
+ "probe_main_overfitting_L2_110_lc_loss": {
+  "run_id": "main_overfitting_L2_110",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.027985083553903573,
+  "val_last": 0.8560015413000758,
+  "val_best": 0.38594345693053517,
+  "val_best_epoch": 15.0
+ },
+ "probe_main_overfitting_L2_130_lc_loss": {
+  "run_id": "main_overfitting_L2_130",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.06517180760909506,
+  "val_last": 0.37164447609784274,
+  "val_best": 0.3181665608768011,
+  "val_best_epoch": 51.0
+ },
+ "probe_main_overfitting_L2_211_lc_loss": {
+  "run_id": "main_overfitting_L2_211",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.21623231872678658,
+  "val_last": 0.3494122932884018,
+  "val_best": 0.3494122932884018,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_overfitting_L2_216_lc_loss": {
+  "run_id": "main_overfitting_L2_216",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.04575414247731889,
+  "val_last": 0.35823027127745605,
+  "val_best": 0.22784073024937004,
+  "val_best_epoch": 25.0
+ },
+ "probe_main_overfitting_L2_183_lc_loss": {
+  "run_id": "main_overfitting_L2_183",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.07363605676443621,
+  "val_last": 0.27223045161729886,
+  "val_best": 0.2533524095729575,
+  "val_best_epoch": 66.0
+ },
+ "probe_main_overfitting_L2_21_lc_loss": {
+  "run_id": "main_overfitting_L2_21",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.06311242548001977,
+  "val_last": 0.3498527624661117,
+  "val_best": 0.298808036252243,
+  "val_best_epoch": 62.0
+ },
+ "probe_main_overfitting_L2_139_lc_loss": {
+  "run_id": "main_overfitting_L2_139",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.065049862557641,
+  "val_last": 0.23934221377164852,
+  "val_best": 0.19858255358395063,
+  "val_best_epoch": 41.0
+ },
+ "probe_main_overfitting_L2_519_lc_loss": {
+  "run_id": "main_overfitting_L2_519",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.08199778725185104,
+  "val_last": 0.5880300169286016,
+  "val_best": 0.4217309670214422,
+  "val_best_epoch": 29.0
+ },
+ "probe_main_overfitting_L2_222_lc_loss": {
+  "run_id": "main_overfitting_L2_222",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.1412357712814936,
+  "val_last": 0.3078548000394402,
+  "val_best": 0.29607499115432756,
+  "val_best_epoch": 69.0
+ },
+ "probe_main_overfitting_L2_333_lc_loss": {
+  "run_id": "main_overfitting_L2_333",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.17273948502244338,
+  "val_last": 0.3642595907607716,
+  "val_best": 0.3557906925920688,
+  "val_best_epoch": 73.0
+ },
+ "probe_main_overfitting_L2_339_lc_loss": {
+  "run_id": "main_overfitting_L2_339",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.00706528483258097,
+  "val_last": 0.5441619521254061,
+  "val_best": 0.2638915185369189,
+  "val_best_epoch": 14.0
+ },
+ "probe_main_overfitting_L2_576_lc_loss": {
+  "run_id": "main_overfitting_L2_576",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.00980705131733613,
+  "val_last": 0.4753297116301003,
+  "val_best": 0.2912327693057328,
+  "val_best_epoch": 28.0
+ },
+ "probe_main_overfitting_L2_122_lc_loss": {
+  "run_id": "main_overfitting_L2_122",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.09629096850647162,
+  "val_last": 0.3193965496199679,
+  "val_best": 0.28546034376000295,
+  "val_best_epoch": 53.0
+ },
+ "probe_main_overfitting_L2_52_lc_loss": {
+  "run_id": "main_overfitting_L2_52",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.22525473943382174,
+  "val_last": 0.36188967295131463,
+  "val_best": 0.36188967295131463,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_overfitting_L2_553_lc_loss": {
+  "run_id": "main_overfitting_L2_553",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.04814791010151627,
+  "val_last": 0.6783851455187802,
+  "val_best": 0.4534622716693217,
+  "val_best_epoch": 27.0
+ },
+ "probe_main_overfitting_L2_47_lc_loss": {
+  "run_id": "main_overfitting_L2_47",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.1013089054523255,
+  "val_last": 0.6280711232238911,
+  "val_best": 0.48966047340808827,
+  "val_best_epoch": 39.0
+ },
+ "probe_main_overfitting_L2_523_lc_loss": {
+  "run_id": "main_overfitting_L2_523",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.054406227206814047,
+  "val_last": 0.1669763799457566,
+  "val_best": 0.16086817289019398,
+  "val_best_epoch": 71.0
+ },
+ "probe_main_overfitting_L2_421_lc_loss": {
+  "run_id": "main_overfitting_L2_421",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.007944391608183778,
+  "val_last": 0.4404572798120483,
+  "val_best": 0.23986932255579513,
+  "val_best_epoch": 23.0
+ },
+ "probe_main_overfitting_L2_485_lc_loss": {
+  "run_id": "main_overfitting_L2_485",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.005697314568405667,
+  "val_last": 0.22035179727096005,
+  "val_best": 0.1528979517677612,
+  "val_best_epoch": 26.0
+ },
+ "probe_main_overfitting_L2_45_lc_loss": {
+  "run_id": "main_overfitting_L2_45",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.010502542878413545,
+  "val_last": 0.41281540158956964,
+  "val_best": 0.23083060337600586,
+  "val_best_epoch": 24.0
+ },
+ "probe_main_overfitting_L2_552_lc_loss": {
+  "run_id": "main_overfitting_L2_552",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.025593862652043647,
+  "val_last": 0.4408618812238718,
+  "val_best": 0.2854067456749317,
+  "val_best_epoch": 29.0
+ },
+ "probe_main_overfitting_L2_94_lc_loss": {
+  "run_id": "main_overfitting_L2_94",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.03565598701750338,
+  "val_last": 0.4360834051248374,
+  "val_best": 0.29073208424124564,
+  "val_best_epoch": 29.0
+ },
+ "probe_main_overfitting_L2_100_lc_loss": {
+  "run_id": "main_overfitting_L2_100",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.00750919408878227,
+  "val_last": 0.5126917573697342,
+  "val_best": 0.22418618086232425,
+  "val_best_epoch": 23.0
+ },
+ "probe_main_overfitting_L2_590_lc_loss": {
+  "run_id": "main_overfitting_L2_590",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.14085497659825408,
+  "val_last": 0.34360803134570683,
+  "val_best": 0.3288854988229417,
+  "val_best_epoch": 67.0
+ },
+ "probe_main_overfitting_L2_308_lc_loss": {
+  "run_id": "main_overfitting_L2_308",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.06194675274987863,
+  "val_last": 0.31088300146702535,
+  "val_best": 0.25582834322401415,
+  "val_best_epoch": 50.0
+ },
+ "probe_main_overfitting_L2_563_lc_loss": {
+  "run_id": "main_overfitting_L2_563",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.13978995144831097,
+  "val_last": 0.4728176739981923,
+  "val_best": 0.39941917251347,
+  "val_best_epoch": 37.0
+ },
+ "probe_main_overfitting_L2_189_lc_loss": {
+  "run_id": "main_overfitting_L2_189",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.05841232635213793,
+  "val_last": 0.3702466759135661,
+  "val_best": 0.23767726134439573,
+  "val_best_epoch": 24.0
+ },
+ "probe_main_overfitting_L2_123_lc_loss": {
+  "run_id": "main_overfitting_L2_123",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.13578989113595122,
+  "val_last": 0.2713035357841786,
+  "val_best": 0.2630067254621668,
+  "val_best_epoch": 68.0
+ },
+ "probe_main_overfitting_L2_594_lc_loss": {
+  "run_id": "main_overfitting_L2_594",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.2705183502348012,
+  "val_last": 0.41325450427650495,
+  "val_best": 0.41325450427650495,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_overfitting_L2_212_lc_loss": {
+  "run_id": "main_overfitting_L2_212",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.17395881692222864,
+  "val_last": 0.30105298955998194,
+  "val_best": 0.30105298955998194,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_overfitting_L2_175_lc_loss": {
+  "run_id": "main_overfitting_L2_175",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.027861952922738756,
+  "val_last": 0.23335658486474156,
+  "val_best": 0.1561444635757604,
+  "val_best_epoch": 34.0
+ },
+ "probe_main_overfitting_L2_321_lc_loss": {
+  "run_id": "main_overfitting_L2_321",
+  "spec": "lc_loss",
+  "failed": true,
+  "train_last": 0.005591231598718688,
+  "val_last": 0.5689382920980945,
+  "val_best": 0.2642258500442101,
+  "val_best_epoch": 20.0
+ },
+ "probe_main_healthy_730_lc_acc": {
+  "run_id": "main_healthy_730",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9285714285714286,
+  "val_last": 0.81,
+  "val_best": 0.818,
+  "val_best_epoch": 87.0
+ },
+ "probe_main_healthy_571_lc_acc": {
+  "run_id": "main_healthy_571",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9786959328599096,
+  "val_last": 0.888,
+  "val_best": 0.898,
+  "val_best_epoch": 92.0
+ },
+ "probe_main_healthy_1063_lc_acc": {
+  "run_id": "main_healthy_1063",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.935077519379845,
+  "val_last": 0.868,
+  "val_best": 0.868,
+  "val_best_epoch": 99.0
+ },
+ "probe_main_healthy_1300_lc_acc": {
+  "run_id": "main_healthy_1300",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.8758901322482198,
+  "val_last": 0.848,
+  "val_best": 0.85,
+  "val_best_epoch": 93.0
+ },
+ "probe_main_healthy_750_lc_acc": {
+  "run_id": "main_healthy_750",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9625935162094763,
+  "val_last": 0.914,
+  "val_best": 0.914,
+  "val_best_epoch": 45.0
+ },
+ "probe_main_healthy_315_lc_acc": {
+  "run_id": "main_healthy_315",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9628557645923782,
+  "val_last": 0.91,
+  "val_best": 0.914,
+  "val_best_epoch": 73.0
+ },
+ "probe_main_healthy_875_lc_acc": {
+  "run_id": "main_healthy_875",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9513543394140409,
+  "val_last": 0.904,
+  "val_best": 0.908,
+  "val_best_epoch": 88.0
+ },
+ "probe_main_healthy_556_lc_acc": {
+  "run_id": "main_healthy_556",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9240170031880978,
+  "val_last": 0.846,
+  "val_best": 0.87,
+  "val_best_epoch": 35.0
+ },
+ "probe_main_healthy_1008_lc_acc": {
+  "run_id": "main_healthy_1008",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9727313366115333,
+  "val_last": 0.906,
+  "val_best": 0.916,
+  "val_best_epoch": 50.0
+ },
+ "probe_main_healthy_114_lc_acc": {
+  "run_id": "main_healthy_114",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9932221063607924,
+  "val_last": 0.904,
+  "val_best": 0.91,
+  "val_best_epoch": 44.0
+ },
+ "probe_main_healthy_703_lc_acc": {
+  "run_id": "main_healthy_703",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9621032685930838,
+  "val_last": 0.85,
+  "val_best": 0.856,
+  "val_best_epoch": 79.0
+ },
+ "probe_main_healthy_262_lc_acc": {
+  "run_id": "main_healthy_262",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9490072202166066,
+  "val_last": 0.88,
+  "val_best": 0.886,
+  "val_best_epoch": 64.0
+ },
+ "probe_main_healthy_122_lc_acc": {
+  "run_id": "main_healthy_122",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9015069967707212,
+  "val_last": 0.83,
+  "val_best": 0.832,
+  "val_best_epoch": 91.0
+ },
+ "probe_main_healthy_761_lc_acc": {
+  "run_id": "main_healthy_761",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9559471365638766,
+  "val_last": 0.916,
+  "val_best": 0.916,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_healthy_1414_lc_acc": {
+  "run_id": "main_healthy_1414",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9585379159847245,
+  "val_last": 0.922,
+  "val_best": 0.922,
+  "val_best_epoch": 96.0
+ },
+ "probe_main_healthy_1177_lc_acc": {
+  "run_id": "main_healthy_1177",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9208905731880626,
+  "val_last": 0.882,
+  "val_best": 0.886,
+  "val_best_epoch": 73.0
+ },
+ "probe_main_healthy_1415_lc_acc": {
+  "run_id": "main_healthy_1415",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9666392092257001,
+  "val_last": 0.922,
+  "val_best": 0.924,
+  "val_best_epoch": 61.0
+ },
+ "probe_main_healthy_401_lc_acc": {
+  "run_id": "main_healthy_401",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9295071740486588,
+  "val_last": 0.874,
+  "val_best": 0.888,
+  "val_best_epoch": 75.0
+ },
+ "probe_main_healthy_1157_lc_acc": {
+  "run_id": "main_healthy_1157",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9841594276954522,
+  "val_last": 0.962,
+  "val_best": 0.964,
+  "val_best_epoch": 37.0
+ },
+ "probe_main_healthy_438_lc_acc": {
+  "run_id": "main_healthy_438",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9464193714580114,
+  "val_last": 0.9,
+  "val_best": 0.904,
+  "val_best_epoch": 86.0
+ },
+ "probe_main_healthy_1166_lc_acc": {
+  "run_id": "main_healthy_1166",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9882794186591655,
+  "val_last": 0.966,
+  "val_best": 0.966,
+  "val_best_epoch": 93.0
+ },
+ "probe_main_healthy_30_lc_acc": {
+  "run_id": "main_healthy_30",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9560384032339565,
+  "val_last": 0.89,
+  "val_best": 0.896,
+  "val_best_epoch": 86.0
+ },
+ "probe_main_healthy_742_lc_acc": {
+  "run_id": "main_healthy_742",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9012345679012346,
+  "val_last": 0.894,
+  "val_best": 0.894,
+  "val_best_epoch": 83.0
+ },
+ "probe_main_healthy_603_lc_acc": {
+  "run_id": "main_healthy_603",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9562948467058056,
+  "val_last": 0.902,
+  "val_best": 0.908,
+  "val_best_epoch": 87.0
+ },
+ "probe_main_healthy_1018_lc_acc": {
+  "run_id": "main_healthy_1018",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9829670329670329,
+  "val_last": 0.932,
+  "val_best": 0.932,
+  "val_best_epoch": 97.0
+ },
+ "probe_main_healthy_1120_lc_acc": {
+  "run_id": "main_healthy_1120",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9892990904226859,
+  "val_last": 0.922,
+  "val_best": 0.924,
+  "val_best_epoch": 77.0
+ },
+ "probe_main_healthy_604_lc_acc": {
+  "run_id": "main_healthy_604",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9329268292682927,
+  "val_last": 0.888,
+  "val_best": 0.892,
+  "val_best_epoch": 61.0
+ },
+ "probe_main_healthy_570_lc_acc": {
+  "run_id": "main_healthy_570",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.98,
+  "val_last": 0.97,
+  "val_best": 0.974,
+  "val_best_epoch": 65.0
+ },
+ "probe_main_healthy_256_lc_acc": {
+  "run_id": "main_healthy_256",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.935467217346412,
+  "val_last": 0.86,
+  "val_best": 0.86,
+  "val_best_epoch": 87.0
+ },
+ "probe_main_healthy_998_lc_acc": {
+  "run_id": "main_healthy_998",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9786959328599096,
+  "val_last": 0.96,
+  "val_best": 0.96,
+  "val_best_epoch": 99.0
+ },
+ "probe_main_healthy_1239_lc_acc": {
+  "run_id": "main_healthy_1239",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.8855905998763142,
+  "val_last": 0.788,
+  "val_best": 0.79,
+  "val_best_epoch": 98.0
+ },
+ "probe_main_healthy_1467_lc_acc": {
+  "run_id": "main_healthy_1467",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9755892255892256,
+  "val_last": 0.936,
+  "val_best": 0.944,
+  "val_best_epoch": 23.0
+ },
+ "probe_main_healthy_889_lc_acc": {
+  "run_id": "main_healthy_889",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.8954372623574145,
+  "val_last": 0.828,
+  "val_best": 0.828,
+  "val_best_epoch": 97.0
+ },
+ "probe_main_healthy_607_lc_acc": {
+  "run_id": "main_healthy_607",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9869646182495344,
+  "val_last": 0.938,
+  "val_best": 0.942,
+  "val_best_epoch": 38.0
+ },
+ "probe_main_healthy_1180_lc_acc": {
+  "run_id": "main_healthy_1180",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9482558139534883,
+  "val_last": 0.892,
+  "val_best": 0.896,
+  "val_best_epoch": 96.0
+ },
+ "probe_main_healthy_921_lc_acc": {
+  "run_id": "main_healthy_921",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9644779332615716,
+  "val_last": 0.948,
+  "val_best": 0.95,
+  "val_best_epoch": 94.0
+ },
+ "probe_main_healthy_955_lc_acc": {
+  "run_id": "main_healthy_955",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9592403890690134,
+  "val_last": 0.926,
+  "val_best": 0.926,
+  "val_best_epoch": 93.0
+ },
+ "probe_main_healthy_1206_lc_acc": {
+  "run_id": "main_healthy_1206",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.956129561295613,
+  "val_last": 0.906,
+  "val_best": 0.916,
+  "val_best_epoch": 51.0
+ },
+ "probe_main_healthy_648_lc_acc": {
+  "run_id": "main_healthy_648",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.96577243293247,
+  "val_last": 0.872,
+  "val_best": 0.88,
+  "val_best_epoch": 87.0
+ },
+ "probe_main_healthy_1285_lc_acc": {
+  "run_id": "main_healthy_1285",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9853113983548766,
+  "val_last": 0.904,
+  "val_best": 0.906,
+  "val_best_epoch": 86.0
+ },
+ "probe_main_healthy_60_lc_acc": {
+  "run_id": "main_healthy_60",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9125615763546798,
+  "val_last": 0.858,
+  "val_best": 0.86,
+  "val_best_epoch": 63.0
+ },
+ "probe_main_healthy_182_lc_acc": {
+  "run_id": "main_healthy_182",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9173387096774194,
+  "val_last": 0.892,
+  "val_best": 0.894,
+  "val_best_epoch": 59.0
+ },
+ "probe_main_healthy_124_lc_acc": {
+  "run_id": "main_healthy_124",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.979484481851657,
+  "val_last": 0.91,
+  "val_best": 0.91,
+  "val_best_epoch": 64.0
+ },
+ "probe_main_healthy_100_lc_acc": {
+  "run_id": "main_healthy_100",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9329990884229717,
+  "val_last": 0.9,
+  "val_best": 0.9,
+  "val_best_epoch": 85.0
+ },
+ "probe_main_healthy_705_lc_acc": {
+  "run_id": "main_healthy_705",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9658344283837057,
+  "val_last": 0.934,
+  "val_best": 0.942,
+  "val_best_epoch": 56.0
+ },
+ "probe_main_healthy_91_lc_acc": {
+  "run_id": "main_healthy_91",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9483614697120158,
+  "val_last": 0.834,
+  "val_best": 0.836,
+  "val_best_epoch": 87.0
+ },
+ "probe_main_healthy_483_lc_acc": {
+  "run_id": "main_healthy_483",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9899849774661993,
+  "val_last": 0.942,
+  "val_best": 0.942,
+  "val_best_epoch": 83.0
+ },
+ "probe_main_healthy_973_lc_acc": {
+  "run_id": "main_healthy_973",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9576229907452508,
+  "val_last": 0.884,
+  "val_best": 0.89,
+  "val_best_epoch": 87.0
+ },
+ "probe_main_healthy_5_lc_acc": {
+  "run_id": "main_healthy_5",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.949244060475162,
+  "val_last": 0.94,
+  "val_best": 0.94,
+  "val_best_epoch": 99.0
+ },
+ "probe_main_healthy_1497_lc_acc": {
+  "run_id": "main_healthy_1497",
+  "spec": "lc_acc",
+  "failed": false,
+  "train_last": 0.9215339233038348,
+  "val_last": 0.866,
+  "val_best": 0.866,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_overfitting_L2_186_lc_acc": {
+  "run_id": "main_overfitting_L2_186",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.993103448275862,
+  "val_last": 0.882,
+  "val_best": 0.89,
+  "val_best_epoch": 36.0
+ },
+ "probe_main_overfitting_L2_570_lc_acc": {
+  "run_id": "main_overfitting_L2_570",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9962943356273161,
+  "val_last": 0.93,
+  "val_best": 0.936,
+  "val_best_epoch": 79.0
+ },
+ "probe_main_overfitting_L2_278_lc_acc": {
+  "run_id": "main_overfitting_L2_278",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9985443959243085,
+  "val_last": 0.864,
+  "val_best": 0.886,
+  "val_best_epoch": 25.0
+ },
+ "probe_main_overfitting_L2_127_lc_acc": {
+  "run_id": "main_overfitting_L2_127",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 1.0,
+  "val_last": 0.87,
+  "val_best": 0.892,
+  "val_best_epoch": 13.0
+ },
+ "probe_main_overfitting_L2_147_lc_acc": {
+  "run_id": "main_overfitting_L2_147",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 1.0,
+  "val_last": 0.892,
+  "val_best": 0.902,
+  "val_best_epoch": 40.0
+ },
+ "probe_main_overfitting_L2_334_lc_acc": {
+  "run_id": "main_overfitting_L2_334",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9516666666666667,
+  "val_last": 0.872,
+  "val_best": 0.878,
+  "val_best_epoch": 42.0
+ },
+ "probe_main_overfitting_L2_368_lc_acc": {
+  "run_id": "main_overfitting_L2_368",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9944979367262724,
+  "val_last": 0.892,
+  "val_best": 0.894,
+  "val_best_epoch": 38.0
+ },
+ "probe_main_overfitting_L2_353_lc_acc": {
+  "run_id": "main_overfitting_L2_353",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9664391353811149,
+  "val_last": 0.92,
+  "val_best": 0.924,
+  "val_best_epoch": 88.0
+ },
+ "probe_main_overfitting_L2_40_lc_acc": {
+  "run_id": "main_overfitting_L2_40",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9974424552429667,
+  "val_last": 0.912,
+  "val_best": 0.912,
+  "val_best_epoch": 97.0
+ },
+ "probe_main_overfitting_L2_595_lc_acc": {
+  "run_id": "main_overfitting_L2_595",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.947239263803681,
+  "val_last": 0.846,
+  "val_best": 0.848,
+  "val_best_epoch": 92.0
+ },
+ "probe_main_overfitting_L2_446_lc_acc": {
+  "run_id": "main_overfitting_L2_446",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.933799784714747,
+  "val_last": 0.796,
+  "val_best": 0.818,
+  "val_best_epoch": 36.0
+ },
+ "probe_main_overfitting_L2_20_lc_acc": {
+  "run_id": "main_overfitting_L2_20",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9709724238026125,
+  "val_last": 0.892,
+  "val_best": 0.896,
+  "val_best_epoch": 56.0
+ },
+ "probe_main_overfitting_L2_371_lc_acc": {
+  "run_id": "main_overfitting_L2_371",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9808868501529052,
+  "val_last": 0.91,
+  "val_best": 0.914,
+  "val_best_epoch": 92.0
+ },
+ "probe_main_overfitting_L2_441_lc_acc": {
+  "run_id": "main_overfitting_L2_441",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9607728337236534,
+  "val_last": 0.832,
+  "val_best": 0.832,
+  "val_best_epoch": 66.0
+ },
+ "probe_main_overfitting_L2_271_lc_acc": {
+  "run_id": "main_overfitting_L2_271",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.914878892733564,
+  "val_last": 0.85,
+  "val_best": 0.852,
+  "val_best_epoch": 98.0
+ },
+ "probe_main_overfitting_L2_545_lc_acc": {
+  "run_id": "main_overfitting_L2_545",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9311208515967438,
+  "val_last": 0.86,
+  "val_best": 0.86,
+  "val_best_epoch": 66.0
+ },
+ "probe_main_overfitting_L2_224_lc_acc": {
+  "run_id": "main_overfitting_L2_224",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9935018050541516,
+  "val_last": 0.938,
+  "val_best": 0.944,
+  "val_best_epoch": 90.0
+ },
+ "probe_main_overfitting_L2_132_lc_acc": {
+  "run_id": "main_overfitting_L2_132",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9344375431331953,
+  "val_last": 0.814,
+  "val_best": 0.816,
+  "val_best_epoch": 81.0
+ },
+ "probe_main_overfitting_L2_110_lc_acc": {
+  "run_id": "main_overfitting_L2_110",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9928698752228164,
+  "val_last": 0.826,
+  "val_best": 0.852,
+  "val_best_epoch": 25.0
+ },
+ "probe_main_overfitting_L2_130_lc_acc": {
+  "run_id": "main_overfitting_L2_130",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9920063948840927,
+  "val_last": 0.866,
+  "val_best": 0.886,
+  "val_best_epoch": 46.0
+ },
+ "probe_main_overfitting_L2_211_lc_acc": {
+  "run_id": "main_overfitting_L2_211",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9274711168164314,
+  "val_last": 0.854,
+  "val_best": 0.864,
+  "val_best_epoch": 91.0
+ },
+ "probe_main_overfitting_L2_216_lc_acc": {
+  "run_id": "main_overfitting_L2_216",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9941822882999354,
+  "val_last": 0.928,
+  "val_best": 0.938,
+  "val_best_epoch": 36.0
+ },
+ "probe_main_overfitting_L2_183_lc_acc": {
+  "run_id": "main_overfitting_L2_183",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9797395079594791,
+  "val_last": 0.93,
+  "val_best": 0.942,
+  "val_best_epoch": 60.0
+ },
+ "probe_main_overfitting_L2_21_lc_acc": {
+  "run_id": "main_overfitting_L2_21",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9844623990055935,
+  "val_last": 0.896,
+  "val_best": 0.898,
+  "val_best_epoch": 97.0
+ },
+ "probe_main_overfitting_L2_139_lc_acc": {
+  "run_id": "main_overfitting_L2_139",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9815436241610739,
+  "val_last": 0.928,
+  "val_best": 0.946,
+  "val_best_epoch": 33.0
+ },
+ "probe_main_overfitting_L2_519_lc_acc": {
+  "run_id": "main_overfitting_L2_519",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9840667678300455,
+  "val_last": 0.804,
+  "val_best": 0.84,
+  "val_best_epoch": 33.0
+ },
+ "probe_main_overfitting_L2_222_lc_acc": {
+  "run_id": "main_overfitting_L2_222",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9519736842105263,
+  "val_last": 0.878,
+  "val_best": 0.89,
+  "val_best_epoch": 63.0
+ },
+ "probe_main_overfitting_L2_333_lc_acc": {
+  "run_id": "main_overfitting_L2_333",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9504132231404959,
+  "val_last": 0.828,
+  "val_best": 0.842,
+  "val_best_epoch": 62.0
+ },
+ "probe_main_overfitting_L2_339_lc_acc": {
+  "run_id": "main_overfitting_L2_339",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 1.0,
+  "val_last": 0.9,
+  "val_best": 0.908,
+  "val_best_epoch": 10.0
+ },
+ "probe_main_overfitting_L2_576_lc_acc": {
+  "run_id": "main_overfitting_L2_576",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 1.0,
+  "val_last": 0.898,
+  "val_best": 0.898,
+  "val_best_epoch": 100.0
+ },
+ "probe_main_overfitting_L2_122_lc_acc": {
+  "run_id": "main_overfitting_L2_122",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.975557917109458,
+  "val_last": 0.888,
+  "val_best": 0.89,
+  "val_best_epoch": 41.0
+ },
+ "probe_main_overfitting_L2_52_lc_acc": {
+  "run_id": "main_overfitting_L2_52",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9114513981358189,
+  "val_last": 0.828,
+  "val_best": 0.834,
+  "val_best_epoch": 68.0
+ },
+ "probe_main_overfitting_L2_553_lc_acc": {
+  "run_id": "main_overfitting_L2_553",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9964488636363636,
+  "val_last": 0.804,
+  "val_best": 0.818,
+  "val_best_epoch": 79.0
+ },
+ "probe_main_overfitting_L2_47_lc_acc": {
+  "run_id": "main_overfitting_L2_47",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9763593380614657,
+  "val_last": 0.766,
+  "val_best": 0.784,
+  "val_best_epoch": 44.0
+ },
+ "probe_main_overfitting_L2_523_lc_acc": {
+  "run_id": "main_overfitting_L2_523",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9911137440758294,
+  "val_last": 0.95,
+  "val_best": 0.952,
+  "val_best_epoch": 77.0
+ },
+ "probe_main_overfitting_L2_421_lc_acc": {
+  "run_id": "main_overfitting_L2_421",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 1.0,
+  "val_last": 0.902,
+  "val_best": 0.916,
+  "val_best_epoch": 50.0
+ },
+ "probe_main_overfitting_L2_485_lc_acc": {
+  "run_id": "main_overfitting_L2_485",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 1.0,
+  "val_last": 0.958,
+  "val_best": 0.964,
+  "val_best_epoch": 67.0
+ },
+ "probe_main_overfitting_L2_45_lc_acc": {
+  "run_id": "main_overfitting_L2_45",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 1.0,
+  "val_last": 0.906,
+  "val_best": 0.924,
+  "val_best_epoch": 29.0
+ },
+ "probe_main_overfitting_L2_552_lc_acc": {
+  "run_id": "main_overfitting_L2_552",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9975510204081632,
+  "val_last": 0.884,
+  "val_best": 0.906,
+  "val_best_epoch": 22.0
+ },
+ "probe_main_overfitting_L2_94_lc_acc": {
+  "run_id": "main_overfitting_L2_94",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9987373737373737,
+  "val_last": 0.87,
+  "val_best": 0.874,
+  "val_best_epoch": 55.0
+ },
+ "probe_main_overfitting_L2_100_lc_acc": {
+  "run_id": "main_overfitting_L2_100",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 1.0,
+  "val_last": 0.9,
+  "val_best": 0.924,
+  "val_best_epoch": 26.0
+ },
+ "probe_main_overfitting_L2_590_lc_acc": {
+  "run_id": "main_overfitting_L2_590",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9586402266288951,
+  "val_last": 0.884,
+  "val_best": 0.888,
+  "val_best_epoch": 81.0
+ },
+ "probe_main_overfitting_L2_308_lc_acc": {
+  "run_id": "main_overfitting_L2_308",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9896729776247849,
+  "val_last": 0.884,
+  "val_best": 0.896,
+  "val_best_epoch": 31.0
+ },
+ "probe_main_overfitting_L2_563_lc_acc": {
+  "run_id": "main_overfitting_L2_563",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.957204767063922,
+  "val_last": 0.832,
+  "val_best": 0.84,
+  "val_best_epoch": 60.0
+ },
+ "probe_main_overfitting_L2_189_lc_acc": {
+  "run_id": "main_overfitting_L2_189",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9848116646415553,
+  "val_last": 0.898,
+  "val_best": 0.918,
+  "val_best_epoch": 32.0
+ },
+ "probe_main_overfitting_L2_123_lc_acc": {
+  "run_id": "main_overfitting_L2_123",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9566704675028507,
+  "val_last": 0.902,
+  "val_best": 0.906,
+  "val_best_epoch": 36.0
+ },
+ "probe_main_overfitting_L2_594_lc_acc": {
+  "run_id": "main_overfitting_L2_594",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9047091412742382,
+  "val_last": 0.818,
+  "val_best": 0.82,
+  "val_best_epoch": 88.0
+ },
+ "probe_main_overfitting_L2_212_lc_acc": {
+  "run_id": "main_overfitting_L2_212",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9339678762641285,
+  "val_last": 0.886,
+  "val_best": 0.888,
+  "val_best_epoch": 94.0
+ },
+ "probe_main_overfitting_L2_175_lc_acc": {
+  "run_id": "main_overfitting_L2_175",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 0.9956521739130435,
+  "val_last": 0.95,
+  "val_best": 0.96,
+  "val_best_epoch": 46.0
+ },
+ "probe_main_overfitting_L2_321_lc_acc": {
+  "run_id": "main_overfitting_L2_321",
+  "spec": "lc_acc",
+  "failed": true,
+  "train_last": 1.0,
+  "val_last": 0.894,
+  "val_best": 0.906,
+  "val_best_epoch": 22.0
+ }
+}

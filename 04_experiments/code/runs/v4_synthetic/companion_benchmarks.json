@@ -1,0 +1,27 @@
+{
+ "lc_loss": {
+  "companion": "cm",
+  "single_balanced_acc": 0.43714285714285717,
+  "pair_balanced_acc": 0.6255952380952381
+ },
+ "rel": {
+  "companion": "dist",
+  "single_balanced_acc": 0.5075,
+  "pair_balanced_acc": 0.5858333333333334
+ },
+ "cm": {
+  "companion": "dist",
+  "single_balanced_acc": 0.41297619047619044,
+  "pair_balanced_acc": 0.5548809523809524
+ },
+ "roc": {
+  "companion": "dist",
+  "single_balanced_acc": 0.40392857142857147,
+  "pair_balanced_acc": 0.5701190476190476
+ },
+ "dist": {
+  "companion": "lc_acc",
+  "single_balanced_acc": 0.48976190476190473,
+  "pair_balanced_acc": 0.6583333333333332
+ }
+}

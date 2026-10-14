@@ -1,0 +1,15 @@
+{
+ "H1 [v4_synthetic]": false,
+ "H2 [v4_synthetic]": true,
+ "H3 [v4_synthetic]": true,
+ "H4 [v4_synthetic]": true,
+ "H5 [v4_synthetic]": true,
+ "H6 [v4_synthetic]": true,
+ "H8 [v4_synthetic]": false,
+ "H1 [v4_magic]": false,
+ "H2 [v4_magic]": true,
+ "H3 [v4_magic]": true,
+ "H4 [v4_magic]": true,
+ "H5 [v4_magic]": true,
+ "H6 [v4_magic]": true
+}

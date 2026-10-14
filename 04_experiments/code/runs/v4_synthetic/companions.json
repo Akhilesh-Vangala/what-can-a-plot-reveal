@@ -1,0 +1,37 @@
+{
+ "lc_loss": {
+  "companion": "cm",
+  "pair": [
+   "class_imbalance",
+   "data_leakage"
+  ]
+ },
+ "rel": {
+  "companion": "dist",
+  "pair": [
+   "miscalibration",
+   "data_leakage"
+  ]
+ },
+ "cm": {
+  "companion": "dist",
+  "pair": [
+   "miscalibration",
+   "data_leakage"
+  ]
+ },
+ "roc": {
+  "companion": "dist",
+  "pair": [
+   "miscalibration",
+   "healthy"
+  ]
+ },
+ "dist": {
+  "companion": "lc_acc",
+  "pair": [
+   "overfitting",
+   "miscalibration"
+  ]
+ }
+}
