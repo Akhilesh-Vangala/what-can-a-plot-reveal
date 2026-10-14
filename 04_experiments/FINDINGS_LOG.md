@@ -294,3 +294,14 @@ Readers on real failures (score_realworld.py; credit for naming any measured con
   LLaVA 0.21 — vs the same readers' DIRECT diagnosis of those plots 0.14–0.23, and a true-value ceiling of 0.377.
   → Readers' perception recovers 75–94% of what the curves carry; their own reasoning throws it away.
   Candidate positive intervention (RQ3): VLM reads, statistics reasons. Exploratory; to be generalized to all plots.
+
+## 2026-10-14 — Secondary analyses named in the analysis plan (score_secondary.py → SECONDARY_RESULTS.md)
+- No-plot baseline (synthetic main set): readers give the SAME answer as with the plot hidden in 23–52% of items
+  (Qwen-32B 52%, Qwen-7B 42%, InternVL-8B 26%, LLaVA 23%); with-plot balanced accuracy 0.144–0.147 vs 0.143 without.
+- Over-claiming (reader top probability − benchmark posterior on that answer): +0.15 to +0.46; confident (≥ 0.7)
+  where the benchmark is uncertain in 4–35% of answers. Hedging AUC ("cannot tell" vs benchmark entropy) 0.26–0.71:
+  abstention is not consistently placed where the evidence is weak.
+- Regression of correctness (deviation from plan, stated): the planned mixed-effects GLMM with ~1,500 run levels did
+  not finish (variational fit > 2 h CPU); replaced by a logistic GEE clustered by model run, readers as fixed
+  effects. Plot type and failure both matter; leakage is never diagnosed by any reader (separation, no estimate),
+  likewise label noise on real data; within-run correlation ≈ 0.

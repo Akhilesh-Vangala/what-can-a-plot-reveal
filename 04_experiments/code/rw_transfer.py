@@ -25,13 +25,27 @@ from score_confirm import Run, auc_of
 TAG, SRC = "confirm", "synthetic"
 
 
-def main(syn, rw):
+def as_proportions(Z):
+    """Count-based marks -> proportions, so test-set size cannot drive detection (confusion-matrix counts -> shares of
+    the total; reliability bin sizes -> shares of all examples). Other plots are unchanged."""
+    Z = {k: np.array(Z[k]) for k in Z.files}
+    Z["cm"] = Z["cm"] / np.maximum(Z["cm"].sum(1, keepdims=True), 1e-9)
+    n = Z["rel_n"].reshape(len(Z["rel_n"]), -1, 3).copy()
+    cnt = np.where(n[:, :, 2] < 0, 0, n[:, :, 2])
+    n[:, :, 2] = np.where(n[:, :, 2] < 0, -1, cnt / np.maximum(cnt.sum(1, keepdims=True), 1e-9))
+    Z["rel_n"] = n.reshape(len(n), -1)
+    return Z
+
+
+def main(syn, rw, proportions=False):
     syn, rw = pathlib.Path(syn), pathlib.Path(rw)
     R = Run(syn)
     j = R.top
     F = np.load(syn / "features.npz")
     pos = {r: i for i, r in enumerate(F["ids"])}
     G = np.load(rw / "features.npz")
+    if proportions:
+        F, G = as_proportions(F), as_proportions(G)
     rpos = {r: i for i, r in enumerate(G["ids"])}
     bad = [sp for sp in R.meta["specs"] if F[sp].shape[1] != G[sp].shape[1]]
     if bad:  # e.g. different number of training epochs -> learning-curve vectors of different length
@@ -93,10 +107,11 @@ def main(syn, rw):
     L += ["", f"Map says detectable vs. real detection AUC ≥ 0.70: agreement {agree:.0%} over {len(out)} case-plot pairs "
           f"(map detectable & real detectable {int((lab & real).sum())}, map blind & real blind {int((~lab & ~real).sum())}, "
           f"map detectable but real not {int((lab & ~real).sum())}, map blind but real detectable {int((~lab & real).sum())})."]
-    json.dump(out, open(rw / "transfer.json", "w"), indent=1)
-    (rw / "TRANSFER.md").write_text("\n".join(L) + "\n")
+    suffix = "_prop" if proportions else ""
+    json.dump(out, open(rw / f"transfer{suffix}.json", "w"), indent=1)
+    (rw / f"TRANSFER{suffix.upper()}.md").write_text("\n".join(L) + "\n")
     print("\n".join(L[-1:]))
 
 
 if __name__ == "__main__":
-    main(*sys.argv[1:3])
+    main(sys.argv[1], sys.argv[2], proportions="--proportions" in sys.argv)

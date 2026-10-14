@@ -69,6 +69,13 @@ need $CODE/rw_transfer.py $R/confirm_synthetic/features.npz $R/confirm_synthetic
 py rw_transfer.py runs/confirm_synthetic runs/realworld || FAIL=1
 need $R/realworld/transfer.json
 '''),
+    "rtr_cpu": (CPU, "02:00:00", "Read-then-reason prep (exact values + extraction items) and proportion-based transfer. No args", r'''
+R=$CODE/runs
+need $CODE/rtr.py $CODE/rtr_prepare.py $R/confirm_synthetic/features.npz $R/confirm_synthetic/reader_items_core.json $R/positive/reader_items.json $R/realworld/reader_items.json $R/realworld/features.npz
+py rtr_prepare.py runs/confirm_synthetic runs/positive runs/realworld || FAIL=1
+py rw_transfer.py runs/confirm_synthetic runs/realworld --proportions || FAIL=1
+need $R/confirm_synthetic/rtr_values.json $R/confirm_synthetic/reader_items_extract.json $R/positive/reader_items_extract.json $R/realworld/reader_items_extract.json $R/realworld/transfer_prop.json
+'''),
 }
 
 for name, (res, time, doc, body) in JOBS.items():

@@ -1,0 +1,222 @@
+{
+ "confirm_synthetic|InternVL3-8B|no_plot": {
+  "unchanged": 0.25734107776702164,
+  "no_plot_acc": 0.14285714285714285,
+  "with_plot_acc": 0.1471373683264296
+ },
+ "confirm_synthetic|Qwen2.5-VL-32B-Instruct-AWQ|no_plot": {
+  "unchanged": 0.516114692153812,
+  "no_plot_acc": 0.14283949636923512,
+  "with_plot_acc": 0.14541656201936468
+ },
+ "confirm_synthetic|Qwen2.5-VL-7B-Instruct|no_plot": {
+  "unchanged": 0.42098260952199945,
+  "no_plot_acc": 0.14285714285714285,
+  "with_plot_acc": 0.14383432662286252
+ },
+ "confirm_synthetic|llava-onevision-qwen2-7b-ov-hf|no_plot": {
+  "unchanged": 0.2300589894844832,
+  "no_plot_acc": 0.14285714285714285,
+  "with_plot_acc": 0.1447028993125219
+ },
+ "confirm_synthetic|InternVL3-38B-AWQ_core|over_claim": {
+  "n": 4249,
+  "over_claim": 0.4259711333322331,
+  "confident_ambiguous": 0.34596375617792424,
+  "cannot_tell": 0.202,
+  "hedging_auc": 0.7058886061259982
+ },
+ "confirm_synthetic|InternVL3-8B|over_claim": {
+  "n": 12396,
+  "over_claim": 0.4643535605174097,
+  "confident_ambiguous": 0.265972894482091,
+  "cannot_tell": 0.08711111111111111,
+  "hedging_auc": 0.35778102623717445
+ },
+ "confirm_synthetic|Qwen2.5-VL-32B-Instruct-AWQ|over_claim": {
+  "n": 13497,
+  "over_claim": 0.4392759442275928,
+  "confident_ambiguous": 0.29058309253908277,
+  "cannot_tell": 0.5968888888888889,
+  "hedging_auc": 0.629882942109617
+ },
+ "confirm_synthetic|Qwen2.5-VL-7B-Instruct|over_claim": {
+  "n": 10523,
+  "over_claim": 0.23009549447893823,
+  "confident_ambiguous": 0.2316829801387437,
+  "cannot_tell": 0.23829629629629628,
+  "hedging_auc": 0.6493198648589947
+ },
+ "confirm_synthetic|llava-onevision-qwen2-7b-ov-hf|over_claim": {
+  "n": 11697,
+  "over_claim": 0.23639768810868864,
+  "confident_ambiguous": 0.035051722663930925,
+  "cannot_tell": 0.13440023708972365,
+  "hedging_auc": 0.38798708269282983
+ },
+ "confirm_synthetic|mixed": {
+  "n": 52362,
+  "fixed": {
+   "Intercept": [
+    -0.5015936205898494,
+    0.05213894365312782
+   ],
+   "C(plot)[T.cm]": [
+    0.3251453073224591,
+    0.09053160895002504
+   ],
+   "C(plot)[T.cm_norm]": [
+    0.4032662787020642,
+    0.10279013441893306
+   ],
+   "C(plot)[T.dist]": [
+    -0.34361238154807977,
+    0.0713287726455673
+   ],
+   "C(plot)[T.lc_acc]": [
+    -0.12950995069488958,
+    0.019443353674342037
+   ],
+   "C(plot)[T.pr]": [
+    0.08003137549795009,
+    0.08251361099567354
+   ],
+   "C(plot)[T.rel]": [
+    -0.09388395903515633,
+    0.08930256008389129
+   ],
+   "C(plot)[T.rel_n]": [
+    0.022469161882083213,
+    0.09084706321219602
+   ],
+   "C(plot)[T.roc]": [
+    0.28415030751730364,
+    0.07510228316856045
+   ],
+   "C(failure)[T.class_imbalance]": [
+    -2.2831066659013883,
+    0.0363500487269398
+   ],
+   "C(failure)[T.data_leakage]": [
+    -37.7205908643249,
+    0.07820452972991832
+   ],
+   "C(failure)[T.distribution_shift]": [
+    -1.8925601231859557,
+    0.03230193775340117
+   ],
+   "C(failure)[T.label_noise]": [
+    -1.4833975462149172,
+    0.0178185577961365
+   ],
+   "C(failure)[T.miscalibration]": [
+    -0.2588380011095331,
+    0.015362138104903588
+   ],
+   "C(failure)[T.overfitting]": [
+    0.08998113990095886,
+    0.014680029244973076
+   ],
+   "C(reader)[T.InternVL3-8B]": [
+    -0.5691903530813206,
+    0.06514644417313908
+   ],
+   "C(reader)[T.Qwen2.5-VL-32B-Instruct-AWQ]": [
+    -0.44602260995010706,
+    0.04028384666701298
+   ],
+   "C(reader)[T.Qwen2.5-VL-7B-Instruct]": [
+    -0.2129816773003434,
+    0.038980052678730163
+   ],
+   "C(reader)[T.llava-onevision-qwen2-7b-ov-hf]": [
+    -0.528139773535628,
+    0.057915528576857986
+   ]
+  },
+  "random_sd": {
+   "within_run_correlation": -0.024168121644004024
+  }
+ },
+ "confirm_magic|InternVL3-8B_core|over_claim": {
+  "n": 4214,
+  "over_claim": 0.3813822715994426,
+  "confident_ambiguous": 0.16943521594684385,
+  "cannot_tell": 0.06355555555555556,
+  "hedging_auc": 0.2594697661142844
+ },
+ "confirm_magic|Qwen2.5-VL-32B-Instruct-AWQ_core|over_claim": {
+  "n": 4500,
+  "over_claim": 0.44076077198084707,
+  "confident_ambiguous": 0.26866666666666666,
+  "cannot_tell": 0.5795555555555556,
+  "hedging_auc": 0.6192654898247707
+ },
+ "confirm_magic|Qwen2.5-VL-7B-Instruct_core|over_claim": {
+  "n": 3565,
+  "over_claim": 0.153901116590398,
+  "confident_ambiguous": 0.1343618513323983,
+  "cannot_tell": 0.21911111111111112,
+  "hedging_auc": 0.6055203988450718
+ },
+ "confirm_magic|mixed": {
+  "n": 12279,
+  "fixed": {
+   "Intercept": [
+    -2.2954131619217697,
+    0.1286418732187737
+   ],
+   "C(plot)[T.cm]": [
+    0.5775695984622552,
+    0.148353856596443
+   ],
+   "C(plot)[T.dist]": [
+    0.008295266232917575,
+    0.11401393396989584
+   ],
+   "C(plot)[T.rel]": [
+    0.7375635752953988,
+    0.14823666587071055
+   ],
+   "C(plot)[T.roc]": [
+    1.274401095135669,
+    0.15684807381277924
+   ],
+   "C(failure)[T.class_imbalance]": [
+    -1.778273837843381,
+    0.09627835624492538
+   ],
+   "C(failure)[T.data_leakage]": [
+    -39.353412634011676,
+    0.10781179167889644
+   ],
+   "C(failure)[T.distribution_shift]": [
+    -1.058324357639912,
+    0.07505138650275477
+   ],
+   "C(failure)[T.label_noise]": [
+    -39.34903611527899,
+    0.10819186016619581
+   ],
+   "C(failure)[T.miscalibration]": [
+    0.6797707027890538,
+    0.028300159996392373
+   ],
+   "C(failure)[T.overfitting]": [
+    0.49396511220251027,
+    0.017902868700648656
+   ],
+   "C(reader)[T.Qwen2.5-VL-32B-Instruct-AWQ]": [
+    0.5057002399587608,
+    0.06972763052517364
+   ],
+   "C(reader)[T.Qwen2.5-VL-7B-Instruct]": [
+    0.9161104949290035,
+    0.10823154685515024
+   ]
+  },
+  "random_sd": {
+   "within_run_correlation": -0.05790176767923289
+  }
+ }
+}

@@ -113,6 +113,34 @@ the training accuracy at the last epoch, the validation accuracy at the last epo
 and the epoch at which the validation accuracy is highest.
 Reply with JSON only: {{"train_last": <number>, "val_last": <number>, "val_best": <number>, "val_best_epoch": <integer>}}""",
 }
+# read-then-reason: read drawn values only (no diagnosis); the diagnosis is made by a fixed rule (code/rtr.py)
+_READ = "The plot shows {what}. Read these values from the plot as precisely as you can. Do not interpret or diagnose.\n"
+EXTRACT = {
+    "lc_loss": _READ + """the training loss at the last epoch, the validation loss at the last epoch, the lowest validation loss,
+and the epoch at which the validation loss is lowest.
+Reply with JSON only: {{"train_last": <number>, "val_last": <number>, "val_best": <number>, "val_best_epoch": <integer>}}""",
+    "lc_acc": _READ + """the training accuracy at the last epoch, the validation accuracy at the last epoch, the highest validation
+accuracy, and the epoch at which the validation accuracy is highest.
+Reply with JSON only: {{"train_last": <number>, "val_last": <number>, "val_best": <number>, "val_best_epoch": <integer>}}""",
+    "rel": _READ + """the x (mean predicted probability) and y (observed fraction positive) of every plotted point, from left to right.
+Reply with JSON only: {{"points": [[<x>, <y>], ...]}}""",
+    "rel_n": _READ + """the x (mean predicted probability) and y (observed fraction positive) of every plotted point, from left to
+right, and each point's share of all examples (0 to 1, estimated from its size; the shares sum to 1).
+Reply with JSON only: {{"points": [[<x>, <y>, <share>], ...]}}""",
+    "cm": _READ + """the four numbers in the matrix: true 0 predicted 0 (tn), true 0 predicted 1 (fp), true 1 predicted 0 (fn),
+true 1 predicted 1 (tp).
+Reply with JSON only: {{"tn": <number>, "fp": <number>, "fn": <number>, "tp": <number>}}""",
+    "cm_norm": _READ + """the four shares in the matrix as numbers from 0 to 1: true 0 predicted 0 (tn), true 0 predicted 1 (fp),
+true 1 predicted 0 (fn), true 1 predicted 1 (tp).
+Reply with JSON only: {{"tn": <number>, "fp": <number>, "fn": <number>, "tp": <number>}}""",
+    "roc": _READ + """the true positive rate of the curve at false positive rates 0.05, 0.1, 0.2 and 0.5.
+Reply with JSON only: {{"tpr_at_0.05": <number>, "tpr_at_0.1": <number>, "tpr_at_0.2": <number>, "tpr_at_0.5": <number>}}""",
+    "pr": _READ + """the precision of the curve at recall 0.2, 0.5 and 0.8, and the height of the dashed positive-rate line.
+Reply with JSON only: {{"precision_at_0.2": <number>, "precision_at_0.5": <number>, "precision_at_0.8": <number>, "positive_rate_line": <number>}}""",
+    "dist": _READ + """for the validation histogram (orange) and the test histogram (green) separately, the share of its area below
+0.1, above 0.9, and above 0.5 (numbers from 0 to 1).
+Reply with JSON only: {{"val_below_0_1": <number>, "val_above_0_9": <number>, "val_above_0_5": <number>, "test_below_0_1": <number>, "test_above_0_9": <number>, "test_above_0_5": <number>}}""",
+}
 MODEL_KW = {  # per-model engine settings
     # 32k (model maximum): a few-shot prompt has 8 images x up to 13 tiles x 256 tokens (~27k); 16k failed on controls
     "OpenGVLab/InternVL3-8B": dict(trust_remote_code=True, max_model_len=32768),
@@ -188,7 +216,8 @@ def items_from_file(path):
                                                      values=it["marks_text"]) if tmpl is None else
                                       tmpl.format(what=what, definitions=DEFINITIONS, fields=FIELDS)),
                 "prior_only": lambda: PRIOR.format(what_short=SHORT[sp], definitions=DEFINITIONS, fields=FIELDS),
-                "probe": lambda: PROBE[sp].format(what=WHAT[sp])}[task]()
+                "probe": lambda: PROBE[sp].format(what=WHAT[sp]),
+                "extract": lambda: EXTRACT[sp].format(what=WHAT[sp])}[task]()
         ex = [dict(e, image=RUN / e["image"]) for e in it.get("examples", [])]
         items.append(dict(it, image=RUN / it["image"] if it.get("image") else None, text=text, examples=ex))
     return items

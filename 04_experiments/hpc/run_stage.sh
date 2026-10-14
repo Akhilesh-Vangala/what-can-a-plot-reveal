@@ -8,6 +8,7 @@
 #                               controls, interventions) — everything chained, one command
 #   positive                    positive control (blatant cases) + value probe on confirm_synthetic, 5 readers
 #   realworld                   real-world check: unzip ~/visml_hpc/realworld_data.zip, transfer job + 5 readers
+#   rtr                         read-then-reason: extraction items on 3 sets + 5 readers; proportion-based transfer
 # Every submission: code version printed; inputs checked first; jobs requeue if a node dies; a failed job cancels the
 # jobs that depend on it (--kill-on-invalid-dep) instead of leaving them waiting forever.
 set -euo pipefail
@@ -90,6 +91,19 @@ case "${1:-check}" in
     G1=$($SB $H/readers.sbatch realworld reader_items.json:-:$Q7 reader_items.json:-:$I8 reader_items.json:-:$LV)
     G2=$($SB $H/readers.sbatch realworld reader_items.json:-:$Q32 reader_items.json:-:$I38)
     echo "submitted real-world check: transfer $T, readers $G1 (7B/8B/LLaVA), $G2 (32B/38B)" ;;
+  rtr)
+    echo "preflight:"; check_env; ok $CODE/rtr.py; ok $CODE/rtr_prepare.py; ok $H/rtr_cpu.sbatch
+    for f in confirm_synthetic/features.npz confirm_synthetic/img positive/img positive/reader_items.json realworld/img realworld/features.npz; do ok $CODE/runs/$f; done
+    [ $MISS = 0 ] || { echo "Not submitting: inputs missing (see above)."; exit 1; }
+    [ ! -e $CODE/runs/confirm_synthetic/rtr_values.json ] || { echo "read-then-reason already prepared — not overwriting."; exit 1; }
+    P=$($SB $H/rtr_cpu.sbatch)
+    J=""
+    for RUN in confirm_synthetic positive realworld; do
+      A=$($SB --dependency=afterok:$P $H/readers.sbatch $RUN reader_items_extract.json:extract:$Q7 reader_items_extract.json:extract:$I8 reader_items_extract.json:extract:$LV)
+      B=$($SB --dependency=afterok:$P $H/readers.sbatch $RUN reader_items_extract.json:extract:$Q32 reader_items_extract.json:extract:$I38)
+      J="$J $RUN:$A,$B"
+    done
+    echo "submitted read-then-reason: prep $P -> readers$J" ;;
   *) echo "unknown stage $1"; exit 1 ;;
 esac
 squeue -u $USER
