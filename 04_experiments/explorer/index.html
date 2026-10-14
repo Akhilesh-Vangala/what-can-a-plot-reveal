@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Plot Evidence Explorer</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
-<script src="data_v3.js"></script>
+<script src="data_confirm_synthetic.js"></script>
+<script src="data_confirm_magic.js" onerror="void 0"></script>
+<script src="data_v3.js" onerror="void 0"></script>
 <script src="data_v4syn.js" onerror="void 0"></script>
 <script src="data_v4magic.js" onerror="void 0"></script>
 <style>
@@ -64,7 +66,7 @@ const D = window.EXPLORER_DATA || {};
 const NAMES = {lc_loss:"Loss curves", lc_acc:"Accuracy curves", rel:"Reliability", rel_n:"Reliability + bin sizes",
   cm:"Confusion matrix", cm_norm:"Confusion (row %)", roc:"ROC", pr:"Precision–recall", dist:"Val vs test scores"};
 const FN = s => s.replace(/_/g, " ");
-const state = { run: Object.keys(D).sort().reverse()[0], level: 2, metric: "detect", plot: null };
+const state = { run: ("confirm_synthetic" in D) ? "confirm_synthetic" : Object.keys(D).sort().reverse()[0], level: 2, metric: "detect", plot: null };
 const tip = d3.select("#tip");
 const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 function showTip(e, html) { tip.style("display","block").html(html).style("left",(e.clientX+12)+"px").style("top",(e.clientY+12)+"px"); }

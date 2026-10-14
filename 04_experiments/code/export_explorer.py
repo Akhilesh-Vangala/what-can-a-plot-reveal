@@ -58,7 +58,7 @@ def main(run, tag):
             continue
         name = rows[0]["model"].split("/")[-1]
         suffix = fp.stem.replace("responses_", "").replace(name, "").strip("_")
-        if suffix in ("iv", "hires"):
+        if suffix in ("iv", "hires", "controls", "probe", "extract", "variants"):
             continue  # interventions / resolution files are shown elsewhere
         name = name + (f" ({suffix})" if suffix else "")
         conf = collections.defaultdict(lambda: np.zeros((len(classes), len(classes) + 1)))

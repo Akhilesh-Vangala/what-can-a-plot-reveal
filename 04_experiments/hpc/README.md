@@ -55,3 +55,4 @@ Old scripts and zips: `hpc/archive/` (do not upload).
 - 2026-10-13: positive control submitted (bundle 2026-10-13_2324-3353a935): pos-cpu 7289 → readers 7290 (positive, 5 models), 7291 (value probe, 5 models).
 - 2026-10-14: bundle 2026-10-14_0222-07920578 adds rw_transfer.py, score_confirm.py, rw_cpu job, `run_stage.sh realworld` (Step 3). Data: realworld_data.zip (440 real models, 11 cases, 10 verified; generated locally by realworld.py).
 - 2026-10-14: real-world check submitted: transfer rw-cpu 7315, readers 7316 (7B/8B/LLaVA), 7317 (32B/38B). All 3,960 images present.
+- 2026-10-14: read-then-reason batch (bundle 2026-10-14_1827-d5d9e085): prep rtr-cpu 7428 -> extraction readers confirm_synthetic 7429 (7B/8B/LLaVA), 7430 (32B/38B); positive 7431, 7432; realworld 7433, 7434. Prep also runs the proportion-based transfer.
