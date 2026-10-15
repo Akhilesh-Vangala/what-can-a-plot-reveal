@@ -30,9 +30,12 @@ those bounds.
   confusion matrix lowers diagnosis.
 - AI readers diagnose at chance (0.14–0.17) against 0.44–0.46 for the image benchmark, also with few-shot examples,
   with the exact values as text, and on blatant failures; answers follow plot type (every loss curve → "overfitting").
-- Four of five readers read curve values almost exactly (r = 0.95–1.00); a read-then-reason pipeline (reader extracts values, a
-  simple statistical rule diagnoses) roughly doubles their accuracy (0.28–0.36).
-- On real models, the evidential map's detectability predictions hold in 72% of case–plot pairs.
+- Four of five readers read curve values almost exactly (r = 0.95–1.00). Separating reading from reasoning (readers
+  only read drawn values, a fixed rule diagnoses) raises balanced accuracy from 0.11–0.18 to 0.21–0.29 on the same
+  models (ceiling 0.39): it reaches the ceiling on loss curves and confusion matrices, while reading positions and
+  areas (reliability points, ROC, histograms) becomes the bottleneck.
+- On real models, the evidential map's detectability predictions hold in 72% of case–plot pairs (73% with counts as
+  proportions).
 
 Full, dated results: [`04_experiments/FINDINGS_LOG.md`](04_experiments/FINDINGS_LOG.md) and the per-run reports in
 `04_experiments/code/runs/*/` (e.g. `confirm_synthetic/CONFIRM_RESULTS.md`, `positive/POSITIVE_RESULTS.md`,
