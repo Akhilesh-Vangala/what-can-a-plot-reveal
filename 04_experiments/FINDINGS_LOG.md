@@ -324,3 +324,15 @@ models diagnoses (rtr.py, score_rtr.py → runs/confirm_synthetic/RTR_RESULTS.md
   healthy controls (domain shift), so it is not yet a deployable detector.
 - Proportion-based transfer (counts → shares): map agreement 73% (was 72%) — the real-world transfer result was not
   driven by test-set size.
+
+## 2026-10-15 — Improvement audit (what could still change a result?)
+- Read-then-reason weak plots are NOT a parsing problem (900/900 answers parse). Readers read reliability point
+  positions well (r 0.82–0.91) but snap x to round values (losing bin locations, where imbalance shows) and cannot
+  estimate histogram area shares (r ≈ 0–0.4); ROC read at r ≈ 0.8. Matches position > area (Cleveland & McGill).
+- Read-then-reason gain over direct diagnosis, same models (robustness_checks.py): +0.12 to +0.15 for all 5 readers,
+  95% bootstrap CIs all ≥ +0.10.
+- Evidential map is robust to cutoffs: detect-only cells ≥ 5 and blind cells 14–20 on both sources under AUC
+  0.65/0.70/0.75 and recall 0.4/0.5/0.6 (H2a needs ≥ 3).
+- Optional GPU batches judged NOT needed: prompt-wording controls (pilot null; confirmatory few-shot, values-as-text
+  and positive control already rule out prompting), interventions on real data (H8 reader effect already null;
+  benchmark part not central). No further runs.
