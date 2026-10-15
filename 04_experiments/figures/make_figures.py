@@ -286,6 +286,69 @@ def fig7():
     save(fig, "fig7_realworld")
 
 
+
+
+def fig8():
+    """Read-then-reason vs direct diagnosis on the same synthetic core models."""
+    sys.path.insert(0, str(CODE))
+    import rtr
+    V = json.load(open(RUNS / "confirm_synthetic/rtr_values.json"))
+    R = json.load(open(RUNS / "confirm_synthetic/rtr_results.json"))
+    specs = ("lc_loss", "cm", "rel", "roc", "dist")
+    core = {json.loads(x)["run_id"] for x in open(RUNS / "confirm_synthetic/responses_InternVL3-8B_extract.jsonl")}
+
+    def bal(y, p):
+        return float(np.mean([np.mean(p[y == c] == c) for c in np.unique(y)]))
+    direct, rtr_acc = collections.defaultdict(list), collections.defaultdict(list)
+    for key, val in R.items():
+        if key.startswith("syn|"):
+            for sp in specs:
+                rtr_acc[sp].append(val["per_plot"][sp])
+    files = {"InternVL3-38B-AWQ": "InternVL3-38B-AWQ_core", "InternVL3-8B": "InternVL3-8B", "Qwen2.5-VL-32B-Instruct-AWQ":
+             "Qwen2.5-VL-32B-Instruct-AWQ", "Qwen2.5-VL-7B-Instruct": "Qwen2.5-VL-7B-Instruct",
+             "llava-onevision-qwen2-7b-ov-hf": "llava-onevision-qwen2-7b-ov-hf"}
+    for m, f in files.items():
+        rows = [json.loads(x) for x in open(RUNS / f"confirm_synthetic/responses_{f}.jsonl")]
+        for sp in specs:
+            y, p = [], []
+            for r in rows:
+                if r.get("task") == "diagnosis" and r["spec"] == sp and r["run_id"] in core:
+                    v = reader_vec(r)
+                    if v is not None:
+                        y.append(CLASSES.index(V[r["run_id"]]["failure"]))
+                        p.append(int(np.argmax(v)))
+            direct[sp].append(bal(np.array(y), np.array(p)))
+    # ceiling: the rule on exact values of the same core models (as in score_rtr)
+    ceil = {}
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.pipeline import make_pipeline
+    from sklearn.preprocessing import StandardScaler
+    for sp in specs:
+        tr = [(rtr.features(v["values"][sp], sp), CLASSES.index(v["failure"])) for v in V.values() if v["split"] == "train"]
+        mdl = make_pipeline(StandardScaler(), LogisticRegression(max_iter=5000, class_weight="balanced")).fit(
+            np.nan_to_num(np.array([a for a, _ in tr], float)), [b for _, b in tr])
+        ids = [k for k in core]
+        y = np.array([CLASSES.index(V[k]["failure"]) for k in ids])
+        ceil[sp] = bal(y, mdl.predict(np.nan_to_num(np.array([rtr.features(V[k]["values"][sp], sp) for k in ids], float))))
+    fig, ax = plt.subplots(figsize=(4.8, 2.3))
+    x = np.arange(len(specs))
+    for off, data, col, lab in ((-.13, direct, ORANGE, "readers diagnose directly"), (.13, rtr_acc, BLUE, "readers read values, rule diagnoses")):
+        mn = [np.min(data[s]) for s in specs]
+        mx = [np.max(data[s]) for s in specs]
+        md = [np.median(data[s]) for s in specs]
+        ax.vlines(x + off, mn, mx, color=col, lw=2.2, alpha=.45)
+        ax.scatter(x + off, md, color=col, s=16, zorder=3, label=lab + " (median, range of 5)")
+    ax.scatter(x, [ceil[s] for s in specs], marker="_", s=260, color="black", lw=1.4, zorder=4, label="rule on exact values (ceiling)")
+    ax.axhline(1 / 7, color=GREY, ls=":", lw=.8)
+    ax.text(len(specs) - .55, 1 / 7 + .008, "chance", fontsize=6, color="#555555")
+    ax.set_xticks(x, [SROT[s] for s in specs], fontsize=6.5)
+    ax.set_ylabel("balanced diagnosis accuracy", fontsize=7)
+    ax.set_ylim(0, .5)
+    ax.legend(fontsize=5.8, frameon=False, loc="upper center", bbox_to_anchor=(.5, -.14), ncol=2)
+    ax.set_title("Separating reading from reasoning (synthetic core models)", fontsize=7.5, loc="left")
+    save(fig, "fig8_read_then_reason")
+
+
 if __name__ == "__main__":
     S, M = Run(RUNS / "confirm_synthetic"), Run(RUNS / "confirm_magic")
     runs = [("Synthetic", S), ("Real (MagicTelescope)", M)]
@@ -296,3 +359,4 @@ if __name__ == "__main__":
     fig5(S)
     fig6()
     fig7()
+    fig8()

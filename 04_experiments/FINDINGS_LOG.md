@@ -305,3 +305,22 @@ Readers on real failures (score_realworld.py; credit for naming any measured con
   not finish (variational fit > 2 h CPU); replaced by a logistic GEE clustered by model run, readers as fixed
   effects. Plot type and failure both matter; leakage is never diagnosed by any reader (separation, no estimate),
   likewise label noise on real data; within-run correlation ≈ 0.
+
+## 2026-10-15 — Read-then-reason on all plot types + proportion-based transfer (jobs 7437–7443; exploratory)
+Readers only READ drawn values (no diagnosis); a fixed logistic rule trained on exact values of synthetic training
+models diagnoses (rtr.py, score_rtr.py → runs/confirm_synthetic/RTR_RESULTS.md).
+- Synthetic core set, same models and plots, balanced accuracy (7 states):
+  direct diagnosis 0.11–0.18 → read-then-reason 0.21–0.29 (ceiling with exact values 0.39).
+  Loss curves 0.14–0.23 → 0.26–0.35 (ceiling 0.35); confusion matrix 0.14–0.33 → 0.35–0.41 (ceiling 0.42):
+  where values are printed or are curve endpoints, readers reach the ceiling.
+  Reliability (0.14–0.30 vs 0.46), ROC (0.14–0.22 vs 0.34), histogram (0.12–0.21 vs 0.41) stay well below:
+  reading positions/areas is the new bottleneck (e.g. ROC TPR at FPR 0.5 read with r = −0.32 to 0.54;
+  confusion-matrix cells r = 1.00 for InternVL-38B and Qwen-32B; LLaVA reads poorly throughout).
+- Positive control: 2/5 primary failures pass for 4 readers on synthetic (1/5 on real) vs ≤ 1/5 directly; e.g.
+  InternVL-38B now names blatant class imbalance in 100% of models (direct 0%) and overfitting 94% at AUC 0.98.
+  Pass rule (≥ 4/5) still not met: miscalibration, leakage and shift live on plots that are hard to read.
+- Real world: detection AUC ≥ 0.70 on the textbook plot in 60% of cases (4/5 readers; direct 25–50%), failure named
+  in 49–60% of failure models, but control false alarms 74–80%: a rule trained on synthetic models over-flags real
+  healthy controls (domain shift), so it is not yet a deployable detector.
+- Proportion-based transfer (counts → shares): map agreement 73% (was 72%) — the real-world transfer result was not
+  driven by test-set size.
