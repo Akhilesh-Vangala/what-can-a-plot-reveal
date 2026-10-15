@@ -141,6 +141,12 @@ Reply with JSON only: {{"precision_at_0.2": <number>, "precision_at_0.5": <numbe
 0.1, above 0.9, and above 0.5 (numbers from 0 to 1).
 Reply with JSON only: {{"val_below_0_1": <number>, "val_above_0_9": <number>, "val_above_0_5": <number>, "test_below_0_1": <number>, "test_above_0_9": <number>, "test_above_0_5": <number>}}""",
 }
+# machine-reader designs (gap 5): same data, key values printed on the plot (code/annotate.py)
+WHAT["rel_ann"] = WHAT["rel"] + "; each point is labelled with its observed fraction and the x positions are written on the axis"
+WHAT["roc_ann"] = WHAT["roc"] + "; a small table on the plot lists the true positive rate at false positive rates 0.05, 0.1, 0.2 and 0.5"
+WHAT["dist_ann"] = WHAT["dist"] + "; a small table on the plot lists, for each histogram, the share of predictions below 0.1, above 0.5 and above 0.9"
+SHORT.update(rel_ann="annotated reliability diagram", roc_ann="annotated ROC curve", dist_ann="annotated score histogram")
+EXTRACT.update(rel_ann=EXTRACT["rel"], roc_ann=EXTRACT["roc"], dist_ann=EXTRACT["dist"])
 MODEL_KW = {  # per-model engine settings
     # 32k (model maximum): a few-shot prompt has 8 images x up to 13 tiles x 256 tokens (~27k); 16k failed on controls
     "OpenGVLab/InternVL3-8B": dict(trust_remote_code=True, max_model_len=32768),

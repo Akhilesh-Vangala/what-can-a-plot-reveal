@@ -76,6 +76,18 @@ py rtr_prepare.py runs/confirm_synthetic runs/positive runs/realworld || FAIL=1
 py rw_transfer.py runs/confirm_synthetic runs/realworld --proportions || FAIL=1
 need $R/confirm_synthetic/rtr_values.json $R/confirm_synthetic/reader_items_extract.json $R/positive/reader_items_extract.json $R/realworld/reader_items_extract.json $R/realworld/transfer_prop.json
 '''),
+    "ann_cpu": (CPU, "01:00:00", "Gap 5: render annotated (machine-reader) designs + reader items on confirm_synthetic. No args", r'''
+R=$CODE/runs/confirm_synthetic
+need $CODE/annotate.py $CODE/gaps_prepare.py $R/features.npz $R/reader_items_core.json
+py gaps_prepare.py ann runs/confirm_synthetic || FAIL=1
+need $R/reader_items_ann.json $R/img_ann
+'''),
+    "sets_cpu": (CPU, "08:00:00", "Gap 3: multi-plot diagnosis benchmark on both confirmatory runs. No args", r'''
+need $CODE/gaps_prepare.py $CODE/runs/confirm_synthetic/features.npz $CODE/runs/confirm_magic/features.npz
+py gaps_prepare.py sets runs/confirm_synthetic --jobs=8 || FAIL=1
+py gaps_prepare.py sets runs/confirm_magic --jobs=8 || FAIL=1
+need $CODE/runs/confirm_synthetic/plotsets.json $CODE/runs/confirm_magic/plotsets.json
+'''),
 }
 
 for name, (res, time, doc, body) in JOBS.items():

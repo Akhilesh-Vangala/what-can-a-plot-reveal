@@ -9,6 +9,7 @@
 #   positive                    positive control (blatant cases) + value probe on confirm_synthetic, 5 readers
 #   realworld                   real-world check: unzip ~/visml_hpc/realworld_data.zip, transfer job + 5 readers
 #   rtr                         read-then-reason: extraction items on 3 sets + 5 readers; proportion-based transfer
+#   gaps                        annotated machine-reader designs + 5 readers; multi-plot benchmark (both runs)
 # Every submission: code version printed; inputs checked first; jobs requeue if a node dies; a failed job cancels the
 # jobs that depend on it (--kill-on-invalid-dep) instead of leaving them waiting forever.
 set -euo pipefail
@@ -104,6 +105,16 @@ case "${1:-check}" in
       J="$J $RUN:$A,$B"
     done
     echo "submitted read-then-reason: prep $P -> readers$J" ;;
+  gaps)
+    echo "preflight:"; check_env; ok $CODE/annotate.py; ok $CODE/gaps_prepare.py; ok $H/ann_cpu.sbatch; ok $H/sets_cpu.sbatch
+    for f in confirm_synthetic/features.npz confirm_synthetic/reader_items_core.json confirm_magic/features.npz; do ok $CODE/runs/$f; done
+    [ $MISS = 0 ] || { echo "Not submitting: inputs missing (see above)."; exit 1; }
+    [ ! -e $CODE/runs/confirm_synthetic/reader_items_ann.json ] || { echo "annotated items already exist — not overwriting."; exit 1; }
+    A=$($SB $H/ann_cpu.sbatch)
+    G1=$($SB --dependency=afterok:$A $H/readers.sbatch confirm_synthetic reader_items_ann.json:ann:$Q7 reader_items_ann.json:ann:$I8 reader_items_ann.json:ann:$LV)
+    G2=$($SB --dependency=afterok:$A $H/readers.sbatch confirm_synthetic reader_items_ann.json:ann:$Q32 reader_items_ann.json:ann:$I38)
+    S=$($SB $H/sets_cpu.sbatch)
+    echo "submitted gaps: annotated designs $A -> readers $G1, $G2; multi-plot benchmark $S" ;;
   *) echo "unknown stage $1"; exit 1 ;;
 esac
 squeue -u $USER

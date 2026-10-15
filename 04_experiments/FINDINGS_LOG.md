@@ -336,3 +336,48 @@ models diagnoses (rtr.py, score_rtr.py → runs/confirm_synthetic/RTR_RESULTS.md
 - Optional GPU batches judged NOT needed: prompt-wording controls (pilot null; confirmatory few-shot, values-as-text
   and positive control already rule out prompting), interventions on real data (H8 reader effect already null;
   benchmark part not central). No further runs.
+
+## 2026-10-15 — Gap 4: WHY readers fail (exploratory; reader "reason" texts + exact plot values, confirmatory core set)
+Readers apply textbook cues without a sense of magnitude (normal variation vs real signal):
+- Loss curves: Qwen-32B's reason is "a significant gap between training and validation loss, suggesting overfitting"
+  on 90% of HEALTHY models (84% of overfit) — but 84% of healthy models have a train–val gap > 0.05. InternVL-38B cites
+  "validation loss plateaus while training continues to decrease" on 76% of healthy models (plateaus are normal).
+  38B's P(overfitting) does track the real signals (Spearman ρ 0.67 val-rise, 0.79 gap) — its threshold is wrong;
+  Qwen-7B, InternVL-8B, LLaVA do not track them (ρ −0.47 to 0.27). Truth: val-rise AUC 0.89, gap AUC 0.91 (by size).
+- Reliability diagrams: "deviation from the diagonal" cited for 99% (Qwen-32B) / 92% (38B) of HEALTHY diagrams; 69%
+  of healthy diagrams deviate > 0.05 through sampling noise alone. Readers barely track the systematic S-shape that
+  marks miscalibration (ρ 0.03–0.24; truth AUC 0.74) and respond to any deviation.
+
+## 2026-10-15 — Gap 7: why accuracy curves reveal class imbalance (H1 deviation explained; exploratory)
+- Final accuracy/loss values are identical for healthy and imbalanced models at the strongest calibrated level
+  (synthetic: AUC 0.49–0.51), so the signal is not in the endpoints.
+- Real data (MagicTelescope, 150 + 150 fresh models): the signal sits in the late-epoch TRAINING-accuracy level
+  (single-epoch AUC up to 0.68; whole curve 0.65). Mechanism: accuracy is a class-weighted average of per-class
+  accuracies; on MagicTelescope positives are harder (healthy models: 79.6% vs 85.8% on negatives), so removing
+  positives raises accuracy. On synthetic data both classes are equally hard (90.2% vs 90.0%) and the leak is weak
+  (benchmark AUC 0.59 vs 0.73 real; small early-epoch component, AUC 0.55–0.57).
+→ Theory said accuracy curves are blind to class balance; they are not whenever classes differ in difficulty,
+  which is the usual case in real data.
+
+## 2026-10-15 — Gap 8: multi-plot read-then-reason (local, existing readings; exploratory)
+Rule (logistic, exact values of synthetic training models) on several plots' readings per model, synthetic core set:
+- Loss curves + confusion matrix: exact-value ceiling 0.596; readers 0.549–0.596 (InternVL-38B 0.596 = ceiling,
+  InternVL-8B 0.570, Qwen-7B 0.564, Qwen-32B 0.549; LLaVA 0.386) — about 4× the readers' direct diagnosis (≈ 0.15).
+- Adding poorly read plots hurts (+ROC: 0.33–0.42; +reliability: 0.13–0.30; all five: 0.15–0.34) although the
+  exact-value ceiling rises to 0.77: misread values mislead a rule trained on exact values.
+
+## 2026-10-15 — Gap 6: real-world false alarms are domain shift, not misreading (exploratory)
+- With EXACT real plot values (no reader), the synthetic-trained rule still flags 80% of healthy real controls
+  (readers: 74–80%). Healthy real loss curves are called "label noise" (harder real tasks → higher healthy loss
+  levels than synthetic healthy models); balanced real controls are called shift/miscalibration.
+- Within each real dataset the plots separate failure from control well (AUC 1.00 for imbalance via confusion
+  matrix, overfitting via loss curves, leakage via ROC 0.99): the signal transfers, absolute labels do not.
+- Real temporal drift moves the score histogram opposite to the synthetic shift signature (AUC 0.00–0.03), and real
+  oversampling-miscalibration differs from logit scaling on the reliability diagram (AUC 0.36–0.47).
+- A label-free per-dataset alignment did not fix it (false alarm 80% → 73%, naming 59% → 30%); reported, not tuned.
+→ "Normal" in a diagnostic plot is task-relative: plots support comparisons with a reference run, not absolute
+  verdicts that transfer across tasks.
+- Gap 8b — rule trained on each reader's OWN readings (5-fold CV on held-out core models; logistic, median-imputed):
+  all five plots 0.574–0.608 for four readers (LLaVA 0.402) vs 0.189–0.347 for the exact-value rule on the same
+  readings — reader-specific training removes the harm of misread plots, but adds little beyond loss + confusion
+  matrix (own-rule 0.560–0.586). Exact-value ceiling with all five plots: 0.766 → reading quality is the limit (gap 5).
