@@ -1,13 +1,16 @@
-# Plot Evidence Explorer (D3)
+# Plot Evidence Explorer
 
-Interactive view of the study results: open `index.html` in a browser (no server needed).
+Interactive D3 view of what each ML diagnostic plot can reveal. Open `index.html` in a browser (no server needed).
 
-- **Evidential map**: failure × plot; colour = detection AUC or diagnosis recall; ● identifiable · ◐ detect-only · ○ neither;
-  severity slider; click a column to select a plot.
-- **Benchmark confusion** for the selected plot (B1* = best of mark-table / image model).
-- **AI readers**: each reader's confusion on the same plot (a single bright column = same answer regardless of the plot).
-- **Balanced accuracy by plot**: benchmark vs each reader, with the chance line.
+**Views**
+1. **Evidential map**: failure × plot matrix, detection or diagnosis, by severity and data source; hover for the
+   benchmark AUC with its 95% CI and the cell label (identifiable / detect-only / blind).
+2. **Cell view**: click a cell: the cell's statistics at every severity, example plots of held-out healthy and failing
+   models (re-trained from their seeds, identical to the study run), and what each AI reader answers on that plot.
+3. **My plots**: tick the plots you already look at; see which failures they can identify, only flag, or miss, and the
+   single plot that would add the most evidence.
+4. **AI readers**: each reader's confusion on the selected plot next to the benchmark, and balanced accuracy by plot.
 
-Data files are generated from a run folder:
-`python 04_experiments/code/export_explorer.py 04_experiments/code/runs/multi_v3 v3` → `data_v3.js`
-(v4: `... runs/v4_synthetic v4syn`, `... runs/v4_magic v4magic`; the page picks them up automatically).
+**Data**: `data_<run>.js` from `code/export_explorer.py`; example plots from `code/make_examples.py`
+(`examples/<run>/`, `examples_<run>.js`). Default run: the confirmatory synthetic study; the real-data run and the
+pilots are selectable.

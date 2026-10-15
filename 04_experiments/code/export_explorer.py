@@ -40,7 +40,9 @@ def main(run, tag):
             g = star(drow[sp], b2dia.get((j, sp)))
             c = np.array(g["confusion"], dtype=float)
             rec = c[classes.index(f), classes.index(f)] / max(c[classes.index(f)].sum(), 1)
+            ci = d.get("ci") or [None, None]
             cells.append(dict(failure=f, plot=sp, level=j, detect=round(d["test_auc"], 3), diagnose=round(float(rec), 3),
+                              ci=[round(float(x), 3) if x is not None else None for x in ci[:2]],
                               label="identifiable" if d["test_auc"] >= 0.7 and rec >= 0.5 else
                               ("detect-only" if d["test_auc"] >= 0.7 else "neither")))
     for d in res["diagnosis"]:
@@ -79,6 +81,7 @@ def main(run, tag):
                                                                    np.maximum(c.sum(1), 1))), 3))
                          for sp, c in conf.items()}
     data = dict(tag=tag, source=meta.get("source", "synthetic"), failures=fails, classes=classes, plots=specs,
+                severities=meta.get("severities", {}),
                 levels=meta["targets"], cells=cells, confusions=confusions, bench_balanced=bench_bal, readers=readers)
     out = ROOT / "04_experiments" / "explorer" / f"data_{tag}.js"
     out.parent.mkdir(parents=True, exist_ok=True)

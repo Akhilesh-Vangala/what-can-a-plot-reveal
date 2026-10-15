@@ -7,6 +7,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script src="data_confirm_synthetic.js"></script>
 <script src="data_confirm_magic.js" onerror="void 0"></script>
+<script src="examples_confirm_synthetic.js" onerror="void 0"></script>
+<script src="examples_confirm_magic.js" onerror="void 0"></script>
 <script src="data_v3.js" onerror="void 0"></script>
 <script src="data_v4syn.js" onerror="void 0"></script>
 <script src="data_v4magic.js" onerror="void 0"></script>
@@ -38,6 +40,18 @@
   .legend { display:flex; gap:14px; flex-wrap:wrap; color:var(--mute); font-size:12px; margin-top:6px; }
   .grid-small { display:grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap:10px; }
   .mini h3 { font-size:12px; margin:4px 0; font-weight:600; } .mini .ba { color:var(--mute); font-weight:400; }
+  .ex { display:grid; grid-template-columns: 90px repeat(3, minmax(0, 230px)); gap:6px 10px; align-items:center; }
+  .ex img { width:100%; border:1px solid var(--rule); border-radius:6px; background:#fff; }
+  .ex .rl { color:var(--mute); font-size:12px; text-align:right; }
+  .stats { display:flex; gap:18px; flex-wrap:wrap; margin:6px 0 10px; font-size:13px; }
+  .stats b { font-variant-numeric: tabular-nums; }
+  .pill { display:inline-block; padding:1px 8px; border-radius:10px; font-size:12px; border:1px solid var(--rule); }
+  .pill.id { background:#2b8a3e; color:#fff; border-color:#2b8a3e; } .pill.do { background:#e8590c; color:#fff; border-color:#e8590c; }
+  .pill.ne { color:var(--mute); }
+  .checks { display:flex; flex-wrap:wrap; gap:6px 14px; margin:4px 0 10px; } .checks label { font-size:13px; cursor:pointer; }
+  table.cov { border-collapse:collapse; width:100%; font-size:13px; } table.cov td, table.cov th { padding:5px 8px; border-bottom:1px solid var(--rule); text-align:left; }
+  table.cov th { color:var(--mute); font-weight:500; font-size:12px; }
+  .rec { margin-top:10px; padding:8px 10px; border-left:3px solid var(--accent); background:color-mix(in srgb, var(--accent) 8%, transparent); font-size:13px; }
   @media (max-width: 900px) { main { grid-template-columns: 1fr; padding:12px 16px; } header, .controls { padding-left:16px; padding-right:16px; } }
 </style>
 </head>
@@ -57,7 +71,11 @@
   <section class="panel"><h2>Evidential map</h2><div class="note" id="mapNote"></div><div id="map"></div>
     <div class="legend"><span>● identifiable</span><span>◐ detect-only</span><span>○ neither</span></div></section>
   <section class="panel"><h2 id="confTitle">Benchmark confusion</h2><div class="note">Rows = true state, columns = predicted (share of row). Diagonal = correct.</div><div id="bench"></div></section>
-  <section class="panel wide"><h2>AI readers on the same plots</h2><div class="note" id="readerNote">Reader confusion for the selected plot. A bright single column = the reader gives the same answer whatever the plot shows.</div><div id="readers" class="grid-small"></div></section>
+  <section class="panel wide"><h2 id="cellTitle">Cell view</h2><div class="note">Click a cell in the map. Example plots are real held-out models from the run (re-trained from their seeds); the same plot type for a healthy model and for this failure at each severity.</div>
+    <div class="stats" id="cellStats"></div><div class="ex" id="cellEx"></div><div class="note" id="cellReaders" style="margin-top:10px"></div></section>
+  <section class="panel wide"><h2>My plots: what can my dashboard catch?</h2><div class="note">Tick the plots you already look at. For each failure, the best evidence any of them gives at the selected severity (from single-plot benchmarks; combining plots can only do better), and the one plot that would add the most.</div>
+    <div class="checks" id="mychecks"></div><div id="mytable"></div><div id="myrec"></div></section>
+  <section class="panel wide"><h2>AI readers on the same plots</h2><div class="note" id="readerNote">Reader confusion for the selected plot, i.e. where an automated critique of this plot is reliable and where it guesses. A bright single column = the reader gives the same answer whatever the plot shows.</div><div id="readers" class="grid-small"></div></section>
   <section class="panel wide"><h2>Balanced diagnosis accuracy by plot</h2><div class="note">Chance = 1 / number of states. ◆ benchmark (strongest severity) · ● each AI reader (levels pooled).</div><div id="cmp"></div></section>
 </main>
 <div class="tip" id="tip"></div>
@@ -66,7 +84,7 @@ const D = window.EXPLORER_DATA || {};
 const NAMES = {lc_loss:"Loss curves", lc_acc:"Accuracy curves", rel:"Reliability", rel_n:"Reliability + bin sizes",
   cm:"Confusion matrix", cm_norm:"Confusion (row %)", roc:"ROC", pr:"Precision–recall", dist:"Val vs test scores"};
 const FN = s => s.replace(/_/g, " ");
-const state = { run: ("confirm_synthetic" in D) ? "confirm_synthetic" : Object.keys(D).sort().reverse()[0], level: 2, metric: "detect", plot: null };
+const state = { run: ("confirm_synthetic" in D) ? "confirm_synthetic" : Object.keys(D).sort().reverse()[0], level: 2, metric: "detect", plot: null, failure: null, mine: new Set(["lc_loss", "cm", "roc"]) };
 const tip = d3.select("#tip");
 const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 function showTip(e, html) { tip.style("display","block").html(html).style("left",(e.clientX+12)+"px").style("top",(e.clientY+12)+"px"); }
@@ -83,7 +101,8 @@ function render() {
   const R = D[state.run]; if (!R) return;
   if (!state.plot) state.plot = R.plots[0];
   d3.select("#levelTxt").text(`B0 target ${R.levels[state.level]}`);
-  drawMap(R); drawBench(R); drawReaders(R); drawCmp(R);
+  if (!state.failure) state.failure = R.failures[0];
+  drawMap(R); drawBench(R); drawCell(R); drawMine(R); drawReaders(R); drawCmp(R);
 }
 
 function drawMap(R) {
@@ -101,8 +120,8 @@ function drawMap(R) {
     .attr("text-anchor","end").text(FN);
   const g = svg.selectAll(".cell").data(cells).join("g").attr("class","cell")
     .attr("transform", d => `translate(${left + R.plots.indexOf(d.plot)*cw},${top + R.failures.indexOf(d.failure)*ch})`)
-    .on("click", (e,d) => { state.plot = d.plot; render(); })
-    .on("mousemove", (e,d) => showTip(e, `<b>${FN(d.failure)}</b> on <b>${NAMES[d.plot]||d.plot}</b><br>detection AUC ${d.detect.toFixed(2)}<br>diagnosis recall ${d.diagnose.toFixed(2)}<br>${d.label}`))
+    .on("click", (e,d) => { state.plot = d.plot; state.failure = d.failure; render(); })
+    .on("mousemove", (e,d) => showTip(e, `<b>${FN(d.failure)}</b> on <b>${NAMES[d.plot]||d.plot}</b><br>detection AUC ${d.detect.toFixed(2)}${d.ci && d.ci[0] != null ? ` [95% CI ${d.ci[0].toFixed(2)}–${d.ci[1].toFixed(2)}]` : " (image benchmark)"}<br>diagnosis recall ${d.diagnose.toFixed(2)}<br>${d.label}`))
     .on("mouseleave", hideTip);
   g.append("rect").attr("width", cw-3).attr("height", ch-3).attr("rx",4).attr("fill", d => color(m === "detect" ? d.detect : d.diagnose));
   g.append("text").attr("x", (cw-3)/2).attr("y", ch/2+3).attr("text-anchor","middle").style("font-size","11px")
@@ -128,6 +147,52 @@ function matrix(sel, M, rows, cols, size) {
         .style("font-size", (c*0.3)+"px").style("fill", v > .55 ? "#fff" : "#333").text(v ? Math.round(v*100) : ""); }); });
   cols.forEach((k,j) => svg.append("text").attr("transform", `translate(${left + j*c + c/2},${top-4}) rotate(-45)`)
     .style("font-size", (c*0.3)+"px").text(FN(k)));
+}
+const RANK = {identifiable: 2, "detect-only": 1, neither: 0};
+const PILL = l => `<span class="pill ${l === "identifiable" ? "id" : l === "detect-only" ? "do" : "ne"}">${l === "neither" ? "blind" : l}</span>`;
+function drawCell(R) {
+  const f = state.failure, p = state.plot, ex = (window.EXAMPLES || {})[state.run];
+  d3.select("#cellTitle").text(`Cell view — ${FN(f)} on ${NAMES[p] || p}`);
+  const lv = R.cells.filter(c => c.failure === f && c.plot === p).sort((a, b) => a.level - b.level);
+  d3.select("#cellStats").html(lv.map(c => `<span>Severity ${c.level + 1}: ${PILL(c.label)} detection <b>${c.detect.toFixed(2)}</b>` +
+    `${c.ci && c.ci[0] != null ? ` <span class="ba">[${c.ci[0].toFixed(2)}–${c.ci[1].toFixed(2)}]</span>` : ""} · recall <b>${c.diagnose.toFixed(2)}</b></span>`).join(""));
+  const box = d3.select("#cellEx").html("");
+  if (!ex) { box.append("div").attr("class", "note").text("No example plots for this run."); }
+  else {
+    const rows = [["Healthy", (ex.healthy || {}).None || []]].concat([0, 1, 2].map(j => [`Severity ${j + 1}`, ((ex[f] || {})[String(j)]) || []]));
+    rows.forEach(([lab, ids]) => { box.append("div").attr("class", "rl").text(lab);
+      for (let k = 0; k < 3; k++) { const id = ids[k]; const cell = box.append("div");
+        if (id) cell.append("img").attr("src", `examples/${state.run}/${id}_${p}.png`).attr("alt", `${lab} example ${k + 1}`).attr("loading", "lazy"); } });
+  }
+  const fi = R.classes.indexOf(f), hi = R.classes.indexOf("healthy");
+  const lines = Object.keys(R.readers).map(n => { const r = R.readers[n][p]; if (!r) return null;
+    const row = r.confusion[fi], hrow = r.confusion[hi], cols = R.classes.concat(["other"]);
+    const top = row.indexOf(Math.max(...row));
+    return `<b>${n}</b>: names ${FN(f)} on ${Math.round(row[fi] * 100)}% of these models, and on ${Math.round(hrow[fi] * 100)}% of healthy ones; most common answer here: ${FN(cols[top])}`; })
+    .filter(Boolean);
+  d3.select("#cellReaders").html(lines.length ? "AI readers on this plot (levels pooled):<br>" + lines.join("<br>") : "");
+}
+function drawMine(R) {
+  const box = d3.select("#mychecks").html("");
+  R.plots.forEach(p => { const l = box.append("label");
+    l.append("input").attr("type", "checkbox").property("checked", state.mine.has(p)).on("change", e => {
+      e.target.checked ? state.mine.add(p) : state.mine.delete(p); drawMine(R); });
+    l.append("span").text(" " + (NAMES[p] || p)); });
+  const at = R.cells.filter(c => c.level === state.level), get = (f, p) => at.find(c => c.failure === f && c.plot === p);
+  const best = (f, set) => { let b = null; set.forEach(p => { const c = get(f, p); if (c && (!b || RANK[c.label] > RANK[b.label] ||
+    (RANK[c.label] === RANK[b.label] && c.detect > b.detect))) b = c; }); return b; };
+  const mine = [...state.mine];
+  const rows = R.failures.map(f => { const b = best(f, mine); return `<tr><td>${FN(f)}</td><td>${b ? PILL(b.label) : PILL("neither")}</td>` +
+    `<td>${b ? `${NAMES[b.plot]} (AUC ${b.detect.toFixed(2)}, recall ${b.diagnose.toFixed(2)})` : "—"}</td></tr>`; });
+  d3.select("#mytable").html(`<table class="cov"><tr><th>Failure</th><th>Your plots can…</th><th>Best evidence from</th></tr>${rows.join("")}</table>`);
+  const score = set => R.failures.reduce((s, f) => { const b = best(f, set); return s + (b ? RANK[b.label] : 0); }, 0), base = score(mine);
+  const cand = R.plots.filter(p => !state.mine.has(p)).map(p => ({p, gain: score(mine.concat([p])) - base})).sort((a, b) => b.gain - a.gain);
+  const rec = cand[0];
+  d3.select("#myrec").html(!rec ? `<div class="rec">You already use every plot.</div>` : rec.gain <= 0
+    ? `<div class="rec">No single extra plot improves on your current set at this severity.</div>`
+    : `<div class="rec"><b>Add ${NAMES[rec.p]}</b>: it upgrades ${R.failures.filter(f => { const a = best(f, mine), b = best(f, mine.concat([rec.p]));
+        return (b ? RANK[b.label] : 0) > (a ? RANK[a.label] : 0); }).map(FN).join(", ")}.` +
+      ` Failures your plots can only flag are detected but not told apart from others; blind failures leave no trace in any ticked plot.</div>`);
 }
 function drawBench(R) {
   const key = `${state.level}|${state.plot}`;
