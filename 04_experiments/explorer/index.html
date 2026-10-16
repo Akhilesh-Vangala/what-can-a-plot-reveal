@@ -188,11 +188,23 @@ function drawMine(R) {
   const score = set => R.failures.reduce((s, f) => { const b = best(f, set); return s + (b ? RANK[b.label] : 0); }, 0), base = score(mine);
   const cand = R.plots.filter(p => !state.mine.has(p)).map(p => ({p, gain: score(mine.concat([p])) - base})).sort((a, b) => b.gain - a.gain);
   const rec = cand[0];
-  d3.select("#myrec").html(!rec ? `<div class="rec">You already use every plot.</div>` : rec.gain <= 0
+  let setNote = "";
+  if (R.plotsets) {
+    const key = arr => arr.slice().sort().join("|"), mineKey = key(mine);
+    const exact = R.plotsets.find(r => key(r.plots) === mineKey);
+    const inside = R.plotsets.filter(r => r.plots.every(p => state.mine.has(p))).sort((a, b) => b.balanced_acc - a.balanced_acc)[0];
+    const all9 = R.plotsets.find(r => r.plots.length === R.plots.length);
+    const nm = r => r.plots.map(p => NAMES[p] || p).join(" + ");
+    setNote = exact
+      ? `Benchmark for exactly this set: <b>${exact.balanced_acc.toFixed(2)}</b> balanced diagnosis accuracy (strongest severity)`
+      : inside ? `Best benchmarked set within your plots: ${nm(inside)}, <b>${inside.balanced_acc.toFixed(2)}</b> balanced diagnosis accuracy` : "";
+    if (all9 && setNote) setNote += ` · all nine plots together: <b>${all9.balanced_acc.toFixed(2)}</b> · chance ${(1 / R.classes.length).toFixed(2)}.`;
+  }
+  d3.select("#myrec").html((setNote ? `<div class="rec">${setNote}</div>` : "") + (!rec ? `<div class="rec">You already use every plot.</div>` : rec.gain <= 0
     ? `<div class="rec">No single extra plot improves on your current set at this severity.</div>`
     : `<div class="rec"><b>Add ${NAMES[rec.p]}</b>: it upgrades ${R.failures.filter(f => { const a = best(f, mine), b = best(f, mine.concat([rec.p]));
         return (b ? RANK[b.label] : 0) > (a ? RANK[a.label] : 0); }).map(FN).join(", ")}.` +
-      ` Failures your plots can only flag are detected but not told apart from others; blind failures leave no trace in any ticked plot.</div>`);
+      ` Failures your plots can only flag are detected but not told apart from others; blind failures leave no trace in any ticked plot.</div>`));
 }
 function drawBench(R) {
   const key = `${state.level}|${state.plot}`;

@@ -34,6 +34,11 @@ those bounds.
   only read drawn values, a fixed rule diagnoses) raises balanced accuracy from 0.11–0.18 to 0.21–0.29 on the same
   models (ceiling 0.39): it reaches the ceiling on loss curves and confusion matrices, while reading positions and
   areas (reliability points, ROC, histograms) becomes the bottleneck.
+- No single plot is enough, but the nine standard plots together carry almost everything the full model state
+  does (0.82 / 0.79 vs 0.81 / 0.79); the best pair (reliability with bin sizes + a learning curve) reaches 0.77–0.78.
+- Readers apply textbook cues ("gap between curves", "off the diagonal") without a sense of magnitude; with values
+  printed on the plot and a rule trained on each reader's own readings, the best readers reach 0.68–0.69 on five plots
+  (ceiling 0.76) — while their direct diagnosis of the same annotated plots stays at chance.
 - On real models, the evidential map's detectability predictions hold in 72% of case–plot pairs (73% with counts as
   proportions).
 

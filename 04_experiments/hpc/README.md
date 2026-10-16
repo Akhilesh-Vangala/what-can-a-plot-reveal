@@ -57,3 +57,4 @@ Old scripts and zips: `hpc/archive/` (do not upload).
 - 2026-10-14: real-world check submitted: transfer rw-cpu 7315, readers 7316 (7B/8B/LLaVA), 7317 (32B/38B). All 3,960 images present.
 - 2026-10-14: read-then-reason batch (bundle 2026-10-14_1827-d5d9e085): prep rtr-cpu 7428 -> extraction readers confirm_synthetic 7429 (7B/8B/LLaVA), 7430 (32B/38B); positive 7431, 7432; realworld 7433, 7434. Prep also runs the proportion-based transfer.
 - 2026-10-14: 7428 held with 'user env retrieval failed' (node could not load the login environment; scontrol release not permitted). Batch 7428–7434 cancelled before anything ran; resubmitted unchanged: prep 7437 -> readers confirm_synthetic 7438,7439; positive 7440,7441; realworld 7442,7443.
+- 2026-10-15: gaps batch (bundle 2026-10-15_0417-53642d6f): annotated designs ann-cpu 7495 -> readers 7496 (7B/8B/LLaVA), 7497 (32B/38B); multi-plot benchmark sets-cpu 7498 (both runs).

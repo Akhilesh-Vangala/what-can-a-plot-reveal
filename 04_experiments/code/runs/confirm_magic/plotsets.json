@@ -1,0 +1,1204 @@
+[
+ {
+  "plots": [
+   "lc_loss"
+  ],
+  "balanced_acc": 0.38055555555555554,
+  "recall": {
+   "healthy": 0.24166666666666667,
+   "overfitting": 0.7555555555555555,
+   "miscalibration": 0.14444444444444443,
+   "label_noise": 0.6277777777777778,
+   "class_imbalance": 0.16111111111111112,
+   "data_leakage": 0.5833333333333334,
+   "distribution_shift": 0.15
+  },
+  "detect_auc": {
+   "overfitting": 0.9603796296296296,
+   "miscalibration": 0.5000833333333333,
+   "label_noise": 0.8078981481481481,
+   "class_imbalance": 0.5308055555555555,
+   "data_leakage": 0.8744629629629631,
+   "distribution_shift": 0.4624074074074074
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "lc_acc"
+  ],
+  "balanced_acc": 0.3734126984126984,
+  "recall": {
+   "healthy": 0.325,
+   "overfitting": 0.65,
+   "miscalibration": 0.1388888888888889,
+   "label_noise": 0.45555555555555555,
+   "class_imbalance": 0.2833333333333333,
+   "data_leakage": 0.6166666666666667,
+   "distribution_shift": 0.14444444444444443
+  },
+  "detect_auc": {
+   "overfitting": 0.9188796296296295,
+   "miscalibration": 0.5184444444444445,
+   "label_noise": 0.7113333333333334,
+   "class_imbalance": 0.7081666666666666,
+   "data_leakage": 0.8820833333333333,
+   "distribution_shift": 0.5124537037037037
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "rel"
+  ],
+  "balanced_acc": 0.5121428571428572,
+  "recall": {
+   "healthy": 0.41833333333333333,
+   "overfitting": 0.5888888888888889,
+   "miscalibration": 0.40555555555555556,
+   "label_noise": 0.7444444444444445,
+   "class_imbalance": 0.24444444444444444,
+   "data_leakage": 0.4666666666666667,
+   "distribution_shift": 0.7166666666666667
+  },
+  "detect_auc": {
+   "overfitting": 0.9299444444444445,
+   "miscalibration": 0.7956851851851852,
+   "label_noise": 0.8744537037037037,
+   "class_imbalance": 0.6883981481481483,
+   "data_leakage": 0.7831388888888889,
+   "distribution_shift": 0.9372037037037036
+  },
+  "best": "rf"
+ },
+ {
+  "plots": [
+   "rel_n"
+  ],
+  "balanced_acc": 0.6496031746031746,
+  "recall": {
+   "healthy": 0.6916666666666667,
+   "overfitting": 0.5555555555555556,
+   "miscalibration": 0.40555555555555556,
+   "label_noise": 0.6777777777777778,
+   "class_imbalance": 0.7888888888888889,
+   "data_leakage": 0.7055555555555556,
+   "distribution_shift": 0.7222222222222222
+  },
+  "detect_auc": {
+   "overfitting": 0.9185925925925926,
+   "miscalibration": 0.8005277777777778,
+   "label_noise": 0.8845462962962962,
+   "class_imbalance": 0.956787037037037,
+   "data_leakage": 0.9371851851851852,
+   "distribution_shift": 0.9439629629629629
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "cm"
+  ],
+  "balanced_acc": 0.43888888888888894,
+  "recall": {
+   "healthy": 0.1,
+   "overfitting": 0.1388888888888889,
+   "miscalibration": 0.1,
+   "label_noise": 0.48333333333333334,
+   "class_imbalance": 0.8722222222222222,
+   "data_leakage": 0.6666666666666666,
+   "distribution_shift": 0.7111111111111111
+  },
+  "detect_auc": {
+   "overfitting": 0.5450462962962963,
+   "miscalibration": 0.5517546296296296,
+   "label_noise": 0.6591944444444445,
+   "class_imbalance": 0.9725324074074075,
+   "data_leakage": 0.8094953703703704,
+   "distribution_shift": 0.9169675925925925
+  },
+  "best": "mlp"
+ },
+ {
+  "plots": [
+   "cm_norm"
+  ],
+  "balanced_acc": 0.38706349206349205,
+  "recall": {
+   "healthy": 0.015,
+   "overfitting": 0.18333333333333332,
+   "miscalibration": 0.1388888888888889,
+   "label_noise": 0.4222222222222222,
+   "class_imbalance": 0.7222222222222222,
+   "data_leakage": 0.6555555555555556,
+   "distribution_shift": 0.5722222222222222
+  },
+  "detect_auc": {
+   "overfitting": 0.5586666666666666,
+   "miscalibration": 0.49363425925925924,
+   "label_noise": 0.6576851851851852,
+   "class_imbalance": 0.895550925925926,
+   "data_leakage": 0.7865972222222222,
+   "distribution_shift": 0.8936342592592592
+  },
+  "best": "mlp"
+ },
+ {
+  "plots": [
+   "roc"
+  ],
+  "balanced_acc": 0.4314285714285714,
+  "recall": {
+   "healthy": 0.5033333333333333,
+   "overfitting": 0.08888888888888889,
+   "miscalibration": 0.13333333333333333,
+   "label_noise": 0.6111111111111112,
+   "class_imbalance": 0.7333333333333333,
+   "data_leakage": 0.65,
+   "distribution_shift": 0.3
+  },
+  "detect_auc": {
+   "overfitting": 0.5344537037037037,
+   "miscalibration": 0.5270277777777778,
+   "label_noise": 0.87975,
+   "class_imbalance": 0.9547407407407408,
+   "data_leakage": 0.8781666666666667,
+   "distribution_shift": 0.6815833333333333
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "pr"
+  ],
+  "balanced_acc": 0.44571428571428573,
+  "recall": {
+   "healthy": 0.10333333333333333,
+   "overfitting": 0.26666666666666666,
+   "miscalibration": 0.1111111111111111,
+   "label_noise": 0.6833333333333333,
+   "class_imbalance": 0.8388888888888889,
+   "data_leakage": 0.7777777777777778,
+   "distribution_shift": 0.3388888888888889
+  },
+  "detect_auc": {
+   "overfitting": 0.5541018518518519,
+   "miscalibration": 0.46637037037037044,
+   "label_noise": 0.8786388888888889,
+   "class_imbalance": 0.9723981481481481,
+   "data_leakage": 0.8634907407407406,
+   "distribution_shift": 0.6711759259259259
+  },
+  "best": "logreg"
+ },
+ {
+  "plots": [
+   "dist"
+  ],
+  "balanced_acc": 0.576031746031746,
+  "recall": {
+   "healthy": 0.32666666666666666,
+   "overfitting": 0.5666666666666667,
+   "miscalibration": 0.26666666666666666,
+   "label_noise": 0.7277777777777777,
+   "class_imbalance": 0.8388888888888889,
+   "data_leakage": 0.5833333333333334,
+   "distribution_shift": 0.7222222222222222
+  },
+  "detect_auc": {
+   "overfitting": 0.9026481481481481,
+   "miscalibration": 0.7887314814814815,
+   "label_noise": 0.7964027777777778,
+   "class_imbalance": 0.9512361111111111,
+   "data_leakage": 0.9126898148148147,
+   "distribution_shift": 0.9549166666666667
+  },
+  "best": "rf"
+ },
+ {
+  "plots": [
+   "lc_loss",
+   "lc_acc"
+  ],
+  "balanced_acc": 0.4656349206349207,
+  "recall": {
+   "healthy": 0.24833333333333332,
+   "overfitting": 0.8055555555555556,
+   "miscalibration": 0.3388888888888889,
+   "label_noise": 0.6666666666666666,
+   "class_imbalance": 0.45555555555555555,
+   "data_leakage": 0.6,
+   "distribution_shift": 0.14444444444444443
+  },
+  "detect_auc": {
+   "overfitting": 0.9622314814814814,
+   "miscalibration": 0.6356388888888889,
+   "label_noise": 0.8615462962962963,
+   "class_imbalance": 0.7444166666666666,
+   "data_leakage": 0.8696851851851853,
+   "distribution_shift": 0.4829444444444444
+  },
+  "best": "mlp"
+ },
+ {
+  "plots": [
+   "lc_loss",
+   "rel"
+  ],
+  "balanced_acc": 0.6423015873015874,
+  "recall": {
+   "healthy": 0.5683333333333334,
+   "overfitting": 0.7611111111111111,
+   "miscalibration": 0.6,
+   "label_noise": 0.7944444444444444,
+   "class_imbalance": 0.3333333333333333,
+   "data_leakage": 0.7166666666666667,
+   "distribution_shift": 0.7222222222222222
+  },
+  "detect_auc": {
+   "overfitting": 0.9669074074074074,
+   "miscalibration": 0.8752314814814817,
+   "label_noise": 0.9152407407407407,
+   "class_imbalance": 0.698888888888889,
+   "data_leakage": 0.9207407407407407,
+   "distribution_shift": 0.9352685185185186
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "lc_loss",
+   "rel_n"
+  ],
+  "balanced_acc": 0.7807142857142857,
+  "recall": {
+   "healthy": 0.5483333333333333,
+   "overfitting": 0.85,
+   "miscalibration": 0.8055555555555556,
+   "label_noise": 0.8111111111111111,
+   "class_imbalance": 0.8611111111111112,
+   "data_leakage": 0.8222222222222222,
+   "distribution_shift": 0.7666666666666667
+  },
+  "detect_auc": {
+   "overfitting": 0.9720555555555556,
+   "miscalibration": 0.954462962962963,
+   "label_noise": 0.920962962962963,
+   "class_imbalance": 0.9648518518518518,
+   "data_leakage": 0.9566759259259259,
+   "distribution_shift": 0.9318703703703705
+  },
+  "best": "mlp"
+ },
+ {
+  "plots": [
+   "lc_loss",
+   "cm"
+  ],
+  "balanced_acc": 0.6196031746031746,
+  "recall": {
+   "healthy": 0.19833333333333333,
+   "overfitting": 0.8,
+   "miscalibration": 0.2722222222222222,
+   "label_noise": 0.7777777777777778,
+   "class_imbalance": 0.8333333333333334,
+   "data_leakage": 0.7166666666666667,
+   "distribution_shift": 0.7388888888888889
+  },
+  "detect_auc": {
+   "overfitting": 0.9708796296296296,
+   "miscalibration": 0.5751388888888889,
+   "label_noise": 0.8073055555555555,
+   "class_imbalance": 0.9672129629629629,
+   "data_leakage": 0.8819537037037037,
+   "distribution_shift": 0.8994074074074074
+  },
+  "best": "mlp"
+ },
+ {
+  "plots": [
+   "lc_loss",
+   "cm_norm"
+  ],
+  "balanced_acc": 0.5668253968253968,
+  "recall": {
+   "healthy": 0.3233333333333333,
+   "overfitting": 0.8,
+   "miscalibration": 0.10555555555555556,
+   "label_noise": 0.7111111111111111,
+   "class_imbalance": 0.6777777777777778,
+   "data_leakage": 0.7055555555555556,
+   "distribution_shift": 0.6444444444444445
+  },
+  "detect_auc": {
+   "overfitting": 0.9683055555555555,
+   "miscalibration": 0.5433703703703704,
+   "label_noise": 0.8061574074074074,
+   "class_imbalance": 0.8914629629629629,
+   "data_leakage": 0.8783703703703702,
+   "distribution_shift": 0.8848703703703704
+  },
+  "best": "mlp"
+ },
+ {
+  "plots": [
+   "lc_loss",
+   "roc"
+  ],
+  "balanced_acc": 0.586031746031746,
+  "recall": {
+   "healthy": 0.6466666666666666,
+   "overfitting": 0.7444444444444445,
+   "miscalibration": 0.16111111111111112,
+   "label_noise": 0.7277777777777777,
+   "class_imbalance": 0.7,
+   "data_leakage": 0.7277777777777777,
+   "distribution_shift": 0.39444444444444443
+  },
+  "detect_auc": {
+   "overfitting": 0.9535185185185185,
+   "miscalibration": 0.5448425925925926,
+   "label_noise": 0.9088703703703703,
+   "class_imbalance": 0.9476481481481481,
+   "data_leakage": 0.947388888888889,
+   "distribution_shift": 0.733712962962963
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "lc_loss",
+   "pr"
+  ],
+  "balanced_acc": 0.6123015873015873,
+  "recall": {
+   "healthy": 0.25833333333333336,
+   "overfitting": 0.8277777777777777,
+   "miscalibration": 0.26666666666666666,
+   "label_noise": 0.75,
+   "class_imbalance": 0.8555555555555555,
+   "data_leakage": 0.8111111111111111,
+   "distribution_shift": 0.5166666666666667
+  },
+  "detect_auc": {
+   "overfitting": 0.9752037037037038,
+   "miscalibration": 0.5462962962962963,
+   "label_noise": 0.9002499999999999,
+   "class_imbalance": 0.9746296296296297,
+   "data_leakage": 0.8899259259259259,
+   "distribution_shift": 0.7122407407407407
+  },
+  "best": "logreg"
+ },
+ {
+  "plots": [
+   "lc_loss",
+   "dist"
+  ],
+  "balanced_acc": 0.7679365079365078,
+  "recall": {
+   "healthy": 0.5366666666666666,
+   "overfitting": 0.8333333333333334,
+   "miscalibration": 0.8166666666666667,
+   "label_noise": 0.7388888888888889,
+   "class_imbalance": 0.8277777777777777,
+   "data_leakage": 0.8222222222222222,
+   "distribution_shift": 0.8
+  },
+  "detect_auc": {
+   "overfitting": 0.9725185185185186,
+   "miscalibration": 0.9562685185185186,
+   "label_noise": 0.8981574074074073,
+   "class_imbalance": 0.9527314814814816,
+   "data_leakage": 0.941212962962963,
+   "distribution_shift": 0.9511388888888889
+  },
+  "best": "mlp"
+ },
+ {
+  "plots": [
+   "lc_acc",
+   "rel"
+  ],
+  "balanced_acc": 0.6188888888888888,
+  "recall": {
+   "healthy": 0.5933333333333334,
+   "overfitting": 0.7111111111111111,
+   "miscalibration": 0.5388888888888889,
+   "label_noise": 0.7666666666666667,
+   "class_imbalance": 0.35,
+   "data_leakage": 0.6666666666666666,
+   "distribution_shift": 0.7055555555555556
+  },
+  "detect_auc": {
+   "overfitting": 0.9558611111111112,
+   "miscalibration": 0.8543518518518517,
+   "label_noise": 0.8947870370370371,
+   "class_imbalance": 0.7597129629629629,
+   "data_leakage": 0.9239351851851852,
+   "distribution_shift": 0.9326111111111112
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "lc_acc",
+   "rel_n"
+  ],
+  "balanced_acc": 0.7281746031746031,
+  "recall": {
+   "healthy": 0.6583333333333333,
+   "overfitting": 0.7055555555555556,
+   "miscalibration": 0.6833333333333333,
+   "label_noise": 0.7333333333333333,
+   "class_imbalance": 0.7888888888888889,
+   "data_leakage": 0.8,
+   "distribution_shift": 0.7277777777777777
+  },
+  "detect_auc": {
+   "overfitting": 0.9517685185185185,
+   "miscalibration": 0.9239814814814814,
+   "label_noise": 0.8927685185185184,
+   "class_imbalance": 0.9578425925925925,
+   "data_leakage": 0.956037037037037,
+   "distribution_shift": 0.9455833333333333
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "lc_acc",
+   "cm"
+  ],
+  "balanced_acc": 0.5878571428571429,
+  "recall": {
+   "healthy": 0.465,
+   "overfitting": 0.6944444444444444,
+   "miscalibration": 0.18333333333333332,
+   "label_noise": 0.5055555555555555,
+   "class_imbalance": 0.8111111111111111,
+   "data_leakage": 0.7333333333333333,
+   "distribution_shift": 0.7222222222222222
+  },
+  "detect_auc": {
+   "overfitting": 0.9239722222222222,
+   "miscalibration": 0.5181111111111112,
+   "label_noise": 0.7142222222222222,
+   "class_imbalance": 0.9726666666666667,
+   "data_leakage": 0.9108425925925926,
+   "distribution_shift": 0.9154259259259259
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "lc_acc",
+   "cm_norm"
+  ],
+  "balanced_acc": 0.5341269841269841,
+  "recall": {
+   "healthy": 0.4,
+   "overfitting": 0.6944444444444444,
+   "miscalibration": 0.18333333333333332,
+   "label_noise": 0.46111111111111114,
+   "class_imbalance": 0.6666666666666666,
+   "data_leakage": 0.6888888888888889,
+   "distribution_shift": 0.6444444444444445
+  },
+  "detect_auc": {
+   "overfitting": 0.9253888888888889,
+   "miscalibration": 0.5294166666666666,
+   "label_noise": 0.7107407407407409,
+   "class_imbalance": 0.8854814814814815,
+   "data_leakage": 0.906574074074074,
+   "distribution_shift": 0.8885092592592593
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "lc_acc",
+   "roc"
+  ],
+  "balanced_acc": 0.5750000000000001,
+  "recall": {
+   "healthy": 0.5083333333333333,
+   "overfitting": 0.6444444444444445,
+   "miscalibration": 0.23333333333333334,
+   "label_noise": 0.7,
+   "class_imbalance": 0.7444444444444445,
+   "data_leakage": 0.7944444444444444,
+   "distribution_shift": 0.4
+  },
+  "detect_auc": {
+   "overfitting": 0.9155648148148149,
+   "miscalibration": 0.5412407407407407,
+   "label_noise": 0.894287037037037,
+   "class_imbalance": 0.94525,
+   "data_leakage": 0.944287037037037,
+   "distribution_shift": 0.7326203703703704
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "lc_acc",
+   "pr"
+  ],
+  "balanced_acc": 0.5544444444444444,
+  "recall": {
+   "healthy": 0.27,
+   "overfitting": 0.7,
+   "miscalibration": 0.20555555555555555,
+   "label_noise": 0.7055555555555556,
+   "class_imbalance": 0.7888888888888889,
+   "data_leakage": 0.7611111111111111,
+   "distribution_shift": 0.45
+  },
+  "detect_auc": {
+   "overfitting": 0.9233518518518518,
+   "miscalibration": 0.5116759259259259,
+   "label_noise": 0.8927037037037037,
+   "class_imbalance": 0.9603796296296297,
+   "data_leakage": 0.9050185185185186,
+   "distribution_shift": 0.7232129629629629
+  },
+  "best": "mlp"
+ },
+ {
+  "plots": [
+   "lc_acc",
+   "dist"
+  ],
+  "balanced_acc": 0.6801587301587302,
+  "recall": {
+   "healthy": 0.7666666666666667,
+   "overfitting": 0.6722222222222223,
+   "miscalibration": 0.6222222222222222,
+   "label_noise": 0.49444444444444446,
+   "class_imbalance": 0.7555555555555555,
+   "data_leakage": 0.7111111111111111,
+   "distribution_shift": 0.7388888888888889
+  },
+  "detect_auc": {
+   "overfitting": 0.9432500000000001,
+   "miscalibration": 0.9236666666666666,
+   "label_noise": 0.8125833333333333,
+   "class_imbalance": 0.9496203703703704,
+   "data_leakage": 0.9557407407407407,
+   "distribution_shift": 0.9409351851851852
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "rel",
+   "rel_n"
+  ],
+  "balanced_acc": 0.6511111111111111,
+  "recall": {
+   "healthy": 0.68,
+   "overfitting": 0.5833333333333334,
+   "miscalibration": 0.38333333333333336,
+   "label_noise": 0.6888888888888889,
+   "class_imbalance": 0.7722222222222223,
+   "data_leakage": 0.7111111111111111,
+   "distribution_shift": 0.7388888888888889
+  },
+  "detect_auc": {
+   "overfitting": 0.92275,
+   "miscalibration": 0.7953703703703704,
+   "label_noise": 0.8872407407407408,
+   "class_imbalance": 0.9589907407407408,
+   "data_leakage": 0.9347685185185185,
+   "distribution_shift": 0.9505370370370371
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "rel",
+   "cm"
+  ],
+  "balanced_acc": 0.6443650793650795,
+  "recall": {
+   "healthy": 0.5883333333333334,
+   "overfitting": 0.5722222222222222,
+   "miscalibration": 0.4,
+   "label_noise": 0.7444444444444445,
+   "class_imbalance": 0.8055555555555556,
+   "data_leakage": 0.6722222222222223,
+   "distribution_shift": 0.7277777777777777
+  },
+  "detect_auc": {
+   "overfitting": 0.9216944444444444,
+   "miscalibration": 0.7616759259259259,
+   "label_noise": 0.8810555555555556,
+   "class_imbalance": 0.9682037037037037,
+   "data_leakage": 0.8957037037037037,
+   "distribution_shift": 0.9394444444444444
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "rel",
+   "cm_norm"
+  ],
+  "balanced_acc": 0.5967460317460318,
+  "recall": {
+   "healthy": 0.6383333333333333,
+   "overfitting": 0.5722222222222222,
+   "miscalibration": 0.3277777777777778,
+   "label_noise": 0.6833333333333333,
+   "class_imbalance": 0.6666666666666666,
+   "data_leakage": 0.5777777777777777,
+   "distribution_shift": 0.7111111111111111
+  },
+  "detect_auc": {
+   "overfitting": 0.9253425925925927,
+   "miscalibration": 0.7720555555555557,
+   "label_noise": 0.8747962962962963,
+   "class_imbalance": 0.9321759259259259,
+   "data_leakage": 0.9013148148148149,
+   "distribution_shift": 0.9301944444444444
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "rel",
+   "roc"
+  ],
+  "balanced_acc": 0.6411904761904762,
+  "recall": {
+   "healthy": 0.7383333333333333,
+   "overfitting": 0.5666666666666667,
+   "miscalibration": 0.3888888888888889,
+   "label_noise": 0.7555555555555555,
+   "class_imbalance": 0.6777777777777778,
+   "data_leakage": 0.6666666666666666,
+   "distribution_shift": 0.6944444444444444
+  },
+  "detect_auc": {
+   "overfitting": 0.9189907407407408,
+   "miscalibration": 0.7798240740740742,
+   "label_noise": 0.9168425925925926,
+   "class_imbalance": 0.9527962962962963,
+   "data_leakage": 0.9253888888888889,
+   "distribution_shift": 0.9376851851851852
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "rel",
+   "pr"
+  ],
+  "balanced_acc": 0.6475396825396825,
+  "recall": {
+   "healthy": 0.7216666666666667,
+   "overfitting": 0.5833333333333334,
+   "miscalibration": 0.3111111111111111,
+   "label_noise": 0.7666666666666667,
+   "class_imbalance": 0.8,
+   "data_leakage": 0.6555555555555556,
+   "distribution_shift": 0.6944444444444444
+  },
+  "detect_auc": {
+   "overfitting": 0.92325,
+   "miscalibration": 0.7663333333333332,
+   "label_noise": 0.9213055555555555,
+   "class_imbalance": 0.9743518518518519,
+   "data_leakage": 0.9190092592592591,
+   "distribution_shift": 0.9379351851851853
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "rel",
+   "dist"
+  ],
+  "balanced_acc": 0.6402380952380952,
+  "recall": {
+   "healthy": 0.7816666666666666,
+   "overfitting": 0.5166666666666667,
+   "miscalibration": 0.3277777777777778,
+   "label_noise": 0.6388888888888888,
+   "class_imbalance": 0.7666666666666667,
+   "data_leakage": 0.6777777777777778,
+   "distribution_shift": 0.7722222222222223
+  },
+  "detect_auc": {
+   "overfitting": 0.9156481481481482,
+   "miscalibration": 0.804037037037037,
+   "label_noise": 0.8841018518518517,
+   "class_imbalance": 0.956,
+   "data_leakage": 0.9458240740740741,
+   "distribution_shift": 0.9576851851851853
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "rel_n",
+   "cm"
+  ],
+  "balanced_acc": 0.6646031746031745,
+  "recall": {
+   "healthy": 0.63,
+   "overfitting": 0.6055555555555555,
+   "miscalibration": 0.43333333333333335,
+   "label_noise": 0.7277777777777777,
+   "class_imbalance": 0.8222222222222222,
+   "data_leakage": 0.7111111111111111,
+   "distribution_shift": 0.7222222222222222
+  },
+  "detect_auc": {
+   "overfitting": 0.9258055555555557,
+   "miscalibration": 0.7967592592592593,
+   "label_noise": 0.8811388888888889,
+   "class_imbalance": 0.9645648148148147,
+   "data_leakage": 0.9422407407407407,
+   "distribution_shift": 0.9461574074074074
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "rel_n",
+   "cm_norm"
+  ],
+  "balanced_acc": 0.6499206349206349,
+  "recall": {
+   "healthy": 0.705,
+   "overfitting": 0.5777777777777777,
+   "miscalibration": 0.4,
+   "label_noise": 0.6944444444444444,
+   "class_imbalance": 0.7666666666666667,
+   "data_leakage": 0.7,
+   "distribution_shift": 0.7055555555555556
+  },
+  "detect_auc": {
+   "overfitting": 0.9244166666666666,
+   "miscalibration": 0.8094722222222223,
+   "label_noise": 0.8834537037037036,
+   "class_imbalance": 0.9592962962962963,
+   "data_leakage": 0.9383796296296296,
+   "distribution_shift": 0.9501111111111111
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "rel_n",
+   "roc"
+  ],
+  "balanced_acc": 0.6612698412698412,
+  "recall": {
+   "healthy": 0.6233333333333333,
+   "overfitting": 0.5611111111111111,
+   "miscalibration": 0.42777777777777776,
+   "label_noise": 0.8,
+   "class_imbalance": 0.7944444444444444,
+   "data_leakage": 0.7,
+   "distribution_shift": 0.7222222222222222
+  },
+  "detect_auc": {
+   "overfitting": 0.9195925925925926,
+   "miscalibration": 0.8013425925925926,
+   "label_noise": 0.9267222222222223,
+   "class_imbalance": 0.9625,
+   "data_leakage": 0.9471574074074074,
+   "distribution_shift": 0.943138888888889
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "rel_n",
+   "pr"
+  ],
+  "balanced_acc": 0.6674603174603175,
+  "recall": {
+   "healthy": 0.75,
+   "overfitting": 0.5666666666666667,
+   "miscalibration": 0.38333333333333336,
+   "label_noise": 0.7611111111111111,
+   "class_imbalance": 0.8,
+   "data_leakage": 0.7,
+   "distribution_shift": 0.7111111111111111
+  },
+  "detect_auc": {
+   "overfitting": 0.9279351851851851,
+   "miscalibration": 0.7993425925925925,
+   "label_noise": 0.9245462962962964,
+   "class_imbalance": 0.9719722222222222,
+   "data_leakage": 0.95525,
+   "distribution_shift": 0.9472222222222222
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "rel_n",
+   "dist"
+  ],
+  "balanced_acc": 0.6471428571428571,
+  "recall": {
+   "healthy": 0.7633333333333333,
+   "overfitting": 0.5444444444444444,
+   "miscalibration": 0.31666666666666665,
+   "label_noise": 0.6611111111111111,
+   "class_imbalance": 0.7611111111111111,
+   "data_leakage": 0.7111111111111111,
+   "distribution_shift": 0.7722222222222223
+  },
+  "detect_auc": {
+   "overfitting": 0.9199074074074075,
+   "miscalibration": 0.7982037037037037,
+   "label_noise": 0.8943425925925925,
+   "class_imbalance": 0.958037037037037,
+   "data_leakage": 0.9480462962962962,
+   "distribution_shift": 0.9609166666666666
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "cm",
+   "cm_norm"
+  ],
+  "balanced_acc": 0.43674603174603177,
+  "recall": {
+   "healthy": 0.06833333333333333,
+   "overfitting": 0.13333333333333333,
+   "miscalibration": 0.15,
+   "label_noise": 0.4444444444444444,
+   "class_imbalance": 0.8722222222222222,
+   "data_leakage": 0.6722222222222223,
+   "distribution_shift": 0.7166666666666667
+  },
+  "detect_auc": {
+   "overfitting": 0.5467685185185185,
+   "miscalibration": 0.5344305555555555,
+   "label_noise": 0.6550462962962963,
+   "class_imbalance": 0.9711435185185185,
+   "data_leakage": 0.8070231481481482,
+   "distribution_shift": 0.9177268518518519
+  },
+  "best": "mlp"
+ },
+ {
+  "plots": [
+   "cm",
+   "roc"
+  ],
+  "balanced_acc": 0.5290476190476191,
+  "recall": {
+   "healthy": 0.18666666666666668,
+   "overfitting": 0.23333333333333334,
+   "miscalibration": 0.23333333333333334,
+   "label_noise": 0.7277777777777777,
+   "class_imbalance": 0.8444444444444444,
+   "data_leakage": 0.7722222222222223,
+   "distribution_shift": 0.7055555555555556
+  },
+  "detect_auc": {
+   "overfitting": 0.5787685185185185,
+   "miscalibration": 0.5276481481481482,
+   "label_noise": 0.8688981481481481,
+   "class_imbalance": 0.968361111111111,
+   "data_leakage": 0.8921851851851852,
+   "distribution_shift": 0.8921481481481481
+  },
+  "best": "mlp"
+ },
+ {
+  "plots": [
+   "cm",
+   "pr"
+  ],
+  "balanced_acc": 0.5200793650793651,
+  "recall": {
+   "healthy": 0.185,
+   "overfitting": 0.2777777777777778,
+   "miscalibration": 0.1,
+   "label_noise": 0.7277777777777777,
+   "class_imbalance": 0.8611111111111112,
+   "data_leakage": 0.7777777777777778,
+   "distribution_shift": 0.7111111111111111
+  },
+  "detect_auc": {
+   "overfitting": 0.5748796296296297,
+   "miscalibration": 0.5281944444444444,
+   "label_noise": 0.8799722222222223,
+   "class_imbalance": 0.9673425925925926,
+   "data_leakage": 0.8741203703703704,
+   "distribution_shift": 0.9051203703703703
+  },
+  "best": "mlp"
+ },
+ {
+  "plots": [
+   "cm",
+   "dist"
+  ],
+  "balanced_acc": 0.6113492063492064,
+  "recall": {
+   "healthy": 0.685,
+   "overfitting": 0.4666666666666667,
+   "miscalibration": 0.32222222222222224,
+   "label_noise": 0.5833333333333334,
+   "class_imbalance": 0.8055555555555556,
+   "data_leakage": 0.6388888888888888,
+   "distribution_shift": 0.7777777777777778
+  },
+  "detect_auc": {
+   "overfitting": 0.8967407407407407,
+   "miscalibration": 0.7980185185185185,
+   "label_noise": 0.8112962962962964,
+   "class_imbalance": 0.965787037037037,
+   "data_leakage": 0.9313796296296297,
+   "distribution_shift": 0.9612037037037037
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "cm_norm",
+   "roc"
+  ],
+  "balanced_acc": 0.48904761904761906,
+  "recall": {
+   "healthy": 0.49,
+   "overfitting": 0.17222222222222222,
+   "miscalibration": 0.12777777777777777,
+   "label_noise": 0.6444444444444445,
+   "class_imbalance": 0.75,
+   "data_leakage": 0.6333333333333333,
+   "distribution_shift": 0.6055555555555555
+  },
+  "detect_auc": {
+   "overfitting": 0.5554537037037037,
+   "miscalibration": 0.5545555555555555,
+   "label_noise": 0.8619629629629632,
+   "class_imbalance": 0.9438240740740741,
+   "data_leakage": 0.8847685185185186,
+   "distribution_shift": 0.8854629629629628
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "cm_norm",
+   "pr"
+  ],
+  "balanced_acc": 0.5081746031746032,
+  "recall": {
+   "healthy": 0.20166666666666666,
+   "overfitting": 0.2722222222222222,
+   "miscalibration": 0.17777777777777778,
+   "label_noise": 0.7,
+   "class_imbalance": 0.8222222222222222,
+   "data_leakage": 0.6833333333333333,
+   "distribution_shift": 0.7
+  },
+  "detect_auc": {
+   "overfitting": 0.5418888888888889,
+   "miscalibration": 0.5309351851851851,
+   "label_noise": 0.8643240740740741,
+   "class_imbalance": 0.9673425925925925,
+   "data_leakage": 0.8559166666666667,
+   "distribution_shift": 0.9066574074074074
+  },
+  "best": "rf"
+ },
+ {
+  "plots": [
+   "cm_norm",
+   "dist"
+  ],
+  "balanced_acc": 0.6151587301587301,
+  "recall": {
+   "healthy": 0.445,
+   "overfitting": 0.5444444444444444,
+   "miscalibration": 0.3,
+   "label_noise": 0.6777777777777778,
+   "class_imbalance": 0.8333333333333334,
+   "data_leakage": 0.6944444444444444,
+   "distribution_shift": 0.8111111111111111
+  },
+  "detect_auc": {
+   "overfitting": 0.9046296296296298,
+   "miscalibration": 0.7958703703703702,
+   "label_noise": 0.8247777777777777,
+   "class_imbalance": 0.9570092592592593,
+   "data_leakage": 0.9208611111111111,
+   "distribution_shift": 0.936537037037037
+  },
+  "best": "mlp"
+ },
+ {
+  "plots": [
+   "roc",
+   "pr"
+  ],
+  "balanced_acc": 0.4634920634920635,
+  "recall": {
+   "healthy": 0.15,
+   "overfitting": 0.17777777777777778,
+   "miscalibration": 0.17777777777777778,
+   "label_noise": 0.6888888888888889,
+   "class_imbalance": 0.8222222222222222,
+   "data_leakage": 0.7555555555555555,
+   "distribution_shift": 0.4722222222222222
+  },
+  "detect_auc": {
+   "overfitting": 0.5243425925925926,
+   "miscalibration": 0.5132962962962964,
+   "label_noise": 0.8922314814814815,
+   "class_imbalance": 0.9715185185185184,
+   "data_leakage": 0.8976203703703705,
+   "distribution_shift": 0.7118888888888888
+  },
+  "best": "rf"
+ },
+ {
+  "plots": [
+   "roc",
+   "dist"
+  ],
+  "balanced_acc": 0.6446825396825397,
+  "recall": {
+   "healthy": 0.635,
+   "overfitting": 0.5388888888888889,
+   "miscalibration": 0.34444444444444444,
+   "label_noise": 0.7777777777777778,
+   "class_imbalance": 0.8,
+   "data_leakage": 0.7111111111111111,
+   "distribution_shift": 0.7055555555555556
+  },
+  "detect_auc": {
+   "overfitting": 0.915537037037037,
+   "miscalibration": 0.7865833333333334,
+   "label_noise": 0.9137314814814816,
+   "class_imbalance": 0.9598703703703704,
+   "data_leakage": 0.9476203703703704,
+   "distribution_shift": 0.9291481481481482
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "pr",
+   "dist"
+  ],
+  "balanced_acc": 0.6536507936507937,
+  "recall": {
+   "healthy": 0.77,
+   "overfitting": 0.5277777777777778,
+   "miscalibration": 0.3111111111111111,
+   "label_noise": 0.7666666666666667,
+   "class_imbalance": 0.7944444444444444,
+   "data_leakage": 0.7111111111111111,
+   "distribution_shift": 0.6944444444444444
+  },
+  "detect_auc": {
+   "overfitting": 0.9139722222222222,
+   "miscalibration": 0.7891296296296297,
+   "label_noise": 0.9276018518518517,
+   "class_imbalance": 0.9676388888888889,
+   "data_leakage": 0.9607592592592593,
+   "distribution_shift": 0.94
+  },
+  "best": "hgb"
+ },
+ {
+  "plots": [
+   "lc_loss",
+   "cm",
+   "roc"
+  ],
+  "balanced_acc": 0.6611111111111111,
+  "recall": {
+   "healthy": 0.35,
+   "overfitting": 0.8277777777777777,
+   "miscalibration": 0.2833333333333333,
+   "label_noise": 0.8,
+   "class_imbalance": 0.8277777777777777,
+   "data_leakage": 0.8333333333333334,
+   "distribution_shift": 0.7055555555555556
+  },
+  "detect_auc": {
+   "overfitting": 0.967388888888889,
+   "miscalibration": 0.5694074074074074,
+   "label_noise": 0.9141111111111111,
+   "class_imbalance": 0.9680277777777778,
+   "data_leakage": 0.936,
+   "distribution_shift": 0.8903425925925925
+  },
+  "best": "mlp"
+ },
+ {
+  "plots": [
+   "lc_loss",
+   "lc_acc",
+   "cm",
+   "roc",
+   "pr"
+  ],
+  "balanced_acc": 0.6925396825396826,
+  "recall": {
+   "healthy": 0.4033333333333333,
+   "overfitting": 0.8,
+   "miscalibration": 0.4388888888888889,
+   "label_noise": 0.8444444444444444,
+   "class_imbalance": 0.8055555555555556,
+   "data_leakage": 0.8388888888888889,
+   "distribution_shift": 0.7166666666666667
+  },
+  "detect_auc": {
+   "overfitting": 0.9651666666666666,
+   "miscalibration": 0.6615462962962964,
+   "label_noise": 0.9314537037037037,
+   "class_imbalance": 0.9694999999999999,
+   "data_leakage": 0.9362222222222221,
+   "distribution_shift": 0.9197962962962963
+  },
+  "best": "mlp"
+ },
+ {
+  "plots": [
+   "lc_loss",
+   "lc_acc",
+   "rel",
+   "rel_n",
+   "cm",
+   "cm_norm",
+   "roc",
+   "pr",
+   "dist"
+  ],
+  "balanced_acc": 0.791031746031746,
+  "recall": {
+   "healthy": 0.8316666666666667,
+   "overfitting": 0.7611111111111111,
+   "miscalibration": 0.7111111111111111,
+   "label_noise": 0.85,
+   "class_imbalance": 0.7944444444444444,
+   "data_leakage": 0.8333333333333334,
+   "distribution_shift": 0.7555555555555555
+  },
+  "detect_auc": {
+   "overfitting": 0.9691203703703705,
+   "miscalibration": 0.9455833333333333,
+   "label_noise": 0.9569166666666666,
+   "class_imbalance": 0.971537037037037,
+   "data_leakage": 0.9802037037037037,
+   "distribution_shift": 0.9478611111111112
+  },
+  "best": "hgb"
+ }
+]

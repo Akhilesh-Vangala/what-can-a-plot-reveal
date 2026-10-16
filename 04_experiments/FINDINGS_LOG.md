@@ -381,3 +381,18 @@ Rule (logistic, exact values of synthetic training models) on several plots' rea
   all five plots 0.574–0.608 for four readers (LLaVA 0.402) vs 0.189–0.347 for the exact-value rule on the same
   readings — reader-specific training removes the harm of misread plots, but adds little beyond loss + confusion
   matrix (own-rule 0.560–0.586). Exact-value ceiling with all five plots: 0.766 → reading quality is the limit (gap 5).
+
+## 2026-10-15 — Gaps 3 and 5 (jobs 7495–7498; exploratory) → score_gaps.py, GAPS_RESULTS.md
+Gap 3 — multi-plot diagnosis benchmark (balanced accuracy, strongest severity, study's benchmark procedure):
+- Best single plot (reliability + bin sizes) 0.627 / 0.650 (synthetic / real); best pair reliability-with-sizes +
+  a learning curve 0.766 / 0.781; common dashboard loss + confusion matrix + ROC 0.703 / 0.661; loss + accuracy +
+  CM + ROC + PR 0.766 / 0.693; ALL NINE 0.819 / 0.791 ≈ full model state B0 (0.814 / 0.788).
+→ No single plot is enough, but the standard set together carries essentially all the evidence; two well-chosen
+  plots recover most of it, and the usual loss/CM/ROC dashboard is not the best choice.
+Gap 5 — machine-reader designs (key values printed on reliability, ROC, histogram), same held-out core models:
+- Read-then-reason improves where reading was the bottleneck: histogram 0.12–0.21 → 0.23–0.39 (ceiling 0.41;
+  InternVL-38B 0.394), ROC 0.14–0.22 → 0.14–0.30 (ceiling 0.34); reliability barely changes (x positions still hard).
+- Direct diagnosis on annotated plots stays at chance (0.12–0.15): giving exact numbers does not fix reasoning
+  (consistent with the values-as-text control).
+- Rule trained on each reader's own readings, all five plots: InternVL-38B 0.608 → 0.689, InternVL-8B 0.594 → 0.682
+  with annotated designs (ceiling 0.760; direct ≈ 0.15); Qwen-32B/7B 0.57–0.58 → 0.56 (no gain); LLaVA 0.40 → 0.42.

@@ -349,6 +349,101 @@ def fig8():
     save(fig, "fig8_read_then_reason")
 
 
+def fig9():
+    """(a) What sets of plots carry (multi-plot benchmark). (b) From chance to near-ceiling: separating reading from
+    reasoning, combining plots, reader-specific rules, machine-reader designs (same held-out synthetic core models)."""
+    import rtr
+    from annotate import BASE
+    from sklearn.impute import SimpleImputer
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.model_selection import StratifiedKFold
+    from sklearn.pipeline import make_pipeline
+    from sklearn.preprocessing import StandardScaler
+    fig, (ax, bx) = plt.subplots(1, 2, figsize=(7.2, 2.5), gridspec_kw=dict(width_ratios=[1, 1.25], wspace=.45))
+    for name, col, off in (("confirm_synthetic", BLUE, -.08), ("confirm_magic", ORANGE, .08)):
+        S = json.load(open(RUNS / name / "plotsets.json"))
+        b0 = json.load(open(RUNS / name / "results.json"))["diagnosis"][2]["B0"]["balanced_acc"]
+        groups = [("best single", max(r["balanced_acc"] for r in S if len(r["plots"]) == 1)),
+                  ("loss+CM+ROC", [r for r in S if sorted(r["plots"]) == sorted(["lc_loss", "cm", "roc"])][0]["balanced_acc"]),
+                  ("best pair", max(r["balanced_acc"] for r in S if len(r["plots"]) == 2)),
+                  ("all nine", [r for r in S if len(r["plots"]) == 9][0]["balanced_acc"])]
+        x = np.arange(len(groups)) + off
+        ax.plot(x, [g[1] for g in groups], "o-", color=col, ms=4, lw=1, label="Synthetic" if "syn" in name else "Real")
+        ax.axhline(b0, color=col, lw=.7, ls="--")
+    ax.set_xticks(range(4), [g[0] for g in groups], fontsize=6.3, rotation=20, ha="right")
+    ax.set_ylim(.5, .9)
+    ax.set_ylabel("benchmark balanced accuracy", fontsize=7)
+    ax.legend(fontsize=6, frameon=False, loc="upper left")
+    ax.text(3.2, .835, "dashed: full\nmodel state", fontsize=5.5, color="#555555", ha="right")
+    ax.set_title("(a) Plots together carry what one plot cannot", fontsize=7.3, loc="left")
+    V = json.load(open(RUNS / "confirm_synthetic/rtr_values.json"))
+    specs = ("lc_loss", "rel", "cm", "roc", "dist")
+    dims = {sp: len(rtr.features(next(iter(V.values()))["values"][sp], sp)) for sp in specs}
+
+    def feats(vals, S):
+        out = []
+        for sp in S:
+            f = rtr.features(vals.get(sp), sp) if vals.get(sp) is not None else None
+            out += f if f is not None and not any(np.isnan(f)) else [np.nan] * dims[sp]
+        return out
+
+    def bal(y, p):
+        return float(np.mean([np.mean(p[y == c] == c) for c in np.unique(y)]))
+    mk = lambda: make_pipeline(SimpleImputer(strategy="median"), StandardScaler(), LogisticRegression(max_iter=5000, class_weight="balanced", C=.5))  # noqa: E731
+    exact = {S: mk().fit(np.array([feats(v["values"], S) for v in V.values() if v["split"] == "train"]),
+                         [CLASSES.index(v["failure"]) for v in V.values() if v["split"] == "train"]) for S in (("cm",), ("lc_loss", "cm"), specs)}
+    steps = ["direct\ndiagnosis", "read → rule\n(one plot)", "read → rule\nloss + CM", "own-reading rule\nall five", "+ annotated\ndesigns"]
+    files = {"InternVL3-38B-AWQ": "InternVL3-38B-AWQ_core", "InternVL3-8B": "InternVL3-8B", "Qwen2.5-VL-32B-Instruct-AWQ": "Qwen2.5-VL-32B-Instruct-AWQ",
+             "Qwen2.5-VL-7B-Instruct": "Qwen2.5-VL-7B-Instruct", "llava-onevision-qwen2-7b-ov-hf": "llava-onevision-qwen2-7b-ov-hf"}
+    for i, (m, f) in enumerate(files.items()):
+        O, A = {}, {}
+        for line in open(RUNS / f"confirm_synthetic/responses_{m}_extract.jsonl"):
+            r = json.loads(line)
+            d = rtr.from_reader(r.get("parsed"), r["spec"])
+            if d:
+                O.setdefault(r["run_id"], {})[r["spec"]] = d
+        for line in open(RUNS / f"confirm_synthetic/responses_{m}_ann.jsonl"):
+            r = json.loads(line)
+            if r["task"] == "extract":
+                d = rtr.from_reader(r.get("parsed"), BASE[r["spec"]])
+                if d:
+                    A.setdefault(r["run_id"], {})[BASE[r["spec"]]] = d
+        ks = sorted(O)
+        y = np.array([CLASSES.index(V[k]["failure"]) for k in ks])
+        dd = {}
+        for line in open(RUNS / f"confirm_synthetic/responses_{f}.jsonl"):
+            r = json.loads(line)
+            if r.get("task") == "diagnosis" and r["spec"] in specs and r["run_id"] in O:
+                v = reader_vec(r)
+                dd[(r["run_id"], r["spec"])] = int(np.argmax(v)) if v is not None else -1
+        dk = list(dd)
+        direct = bal(np.array([CLASSES.index(V[k[0]]["failure"]) for k in dk]), np.array([dd[k] for k in dk]))
+
+        def ex(S):
+            X = np.array([feats(O[k], S) for k in ks], float)
+            return bal(y, exact[S].predict(X))
+
+        def own(src):
+            X = np.array([feats(src[k], specs) for k in ks], float)
+            p = np.zeros(len(y), int)
+            for a, b in StratifiedKFold(5, shuffle=True, random_state=0).split(X, y):
+                p[b] = mk().fit(X[a], y[a]).predict(X[b])
+            return bal(y, p)
+        vals = [direct, ex(("cm",)), ex(("lc_loss", "cm")), own(O), own({k: dict(O[k], **A.get(k, {})) for k in ks})]
+        bx.plot(range(5), vals, "o-", ms=3.5, lw=1, color=plt.cm.Blues(.35 + .14 * i) if "Intern" in m else plt.cm.Oranges(.4 + .15 * i), label=rl(m))
+    ceil = bal(np.array([CLASSES.index(V[k]["failure"]) for k in V if V[k]["split"] == "test"]),
+               exact[specs].predict(np.array([feats(V[k]["values"], specs) for k in V if V[k]["split"] == "test"])))
+    bx.axhline(ceil, color="black", lw=.9, ls="--")
+    bx.text(4.3, ceil + .01, f"exact values, all five ({ceil:.2f})", fontsize=5.5, ha="right")
+    bx.axhline(1 / 7, color=GREY, ls=":", lw=.8)
+    bx.set_xticks(range(5), steps, fontsize=5.6)
+    bx.set_ylim(0, .85)
+    bx.set_ylabel("balanced diagnosis accuracy", fontsize=7)
+    bx.legend(fontsize=5.3, frameon=False, loc="lower right", ncol=2)
+    bx.set_title("(b) From chance toward the ceiling (same held-out models)", fontsize=7.3, loc="left")
+    save(fig, "fig9_sets_and_readers")
+
+
 if __name__ == "__main__":
     S, M = Run(RUNS / "confirm_synthetic"), Run(RUNS / "confirm_magic")
     runs = [("Synthetic", S), ("Real (MagicTelescope)", M)]
@@ -360,3 +455,4 @@ if __name__ == "__main__":
     fig6()
     fig7()
     fig8()
+    fig9()

@@ -53,7 +53,7 @@ def main(syn, mag=None):
                 np.array([a for a, _ in tr]), [b for _, b in tr])
         return rules[S]
     L = ["# Gaps 3 and 5 (exploratory)", "", "## Gap 5: plots redesigned for machine readers (values printed on the plot)", ""]
-    if (syn / "reader_items_ann.json").exists():
+    if any(syn.glob("responses_*_ann.jsonl")):
         L += ["| reader | design | rtr reliability | rtr ROC | rtr histogram | direct reliability | direct ROC | direct histogram | all five plots (rtr) |",
               "|---|---|---|---|---|---|---|---|---|"]
         for m, f in READERS.items():

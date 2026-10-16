@@ -60,7 +60,7 @@ def main(run, tag):
             continue
         name = rows[0]["model"].split("/")[-1]
         suffix = fp.stem.replace("responses_", "").replace(name, "").strip("_")
-        if suffix in ("iv", "hires", "controls", "probe", "extract", "variants"):
+        if suffix in ("iv", "hires", "controls", "probe", "extract", "variants", "ann"):
             continue  # interventions / resolution files are shown elsewhere
         name = name + (f" ({suffix})" if suffix else "")
         conf = collections.defaultdict(lambda: np.zeros((len(classes), len(classes) + 1)))
@@ -83,6 +83,8 @@ def main(run, tag):
     data = dict(tag=tag, source=meta.get("source", "synthetic"), failures=fails, classes=classes, plots=specs,
                 severities=meta.get("severities", {}),
                 levels=meta["targets"], cells=cells, confusions=confusions, bench_balanced=bench_bal, readers=readers)
+    if (run / "plotsets.json").exists():  # multi-plot benchmark (strongest severity): singles, pairs, dashboards
+        data["plotsets"] = [dict(plots=r["plots"], balanced_acc=round(r["balanced_acc"], 3)) for r in json.load(open(run / "plotsets.json"))]
     out = ROOT / "04_experiments" / "explorer" / f"data_{tag}.js"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(f"window.EXPLORER_DATA = window.EXPLORER_DATA || {{}};\nwindow.EXPLORER_DATA[{json.dumps(tag)}] = "
