@@ -25,6 +25,23 @@ Everything below is also recorded, with dates and job numbers, in `FINDINGS_LOG.
 
 ## Exploratory analyses (not in the analysis plan; labelled as exploratory everywhere)
 
-Positive control and value probe; real-world check (one case, madelon feature-selection leakage, failed objective
-verification and is excluded; label noise has no real tabular source and is not included); contextual calibration;
-read-then-reason; proportion-based transfer.
+| Analysis | Script | Report |
+|---|---|---|
+| Positive control (blatant failures) and value probe | `make_positive.py`, `score_positive.py` | `runs/positive/POSITIVE_RESULTS.md` |
+| Real-world check (10 verified cases; madelon feature-selection leakage failed verification and is excluded; no real tabular label-noise source) | `realworld.py`, `rw_transfer.py`, `score_realworld.py` | `runs/realworld/REALWORLD_RESULTS.md`, `TRANSFER.md`, `TRANSFER_PROP.md` |
+| Contextual calibration of reader answers | inline analysis, logged | `FINDINGS_LOG.md` (2026-10-14) |
+| Read-then-reason (readers read values, a fixed rule diagnoses) | `rtr.py`, `rtr_prepare.py`, `score_rtr.py` | `runs/confirm_synthetic/RTR_RESULTS.md` |
+| Robustness: read-then-reason CIs, evidential-map cutoffs | `robustness_checks.py` | `runs/confirm_synthetic/ROBUSTNESS.md` |
+| Why readers fail (reason texts vs exact plot values) | inline analysis, logged | `FINDINGS_LOG.md` (gap 4) |
+| Why accuracy curves reveal imbalance (class-mix effect) | inline analysis, logged | `FINDINGS_LOG.md` (gap 7) |
+| Real-world false alarms (domain shift) | inline analysis, logged | `FINDINGS_LOG.md` (gap 6) |
+| Multi-plot read-then-reason; rule trained on each reader's own readings | inline analysis, logged; recomputed in `figures/make_figures.py` (fig. 9) | `FINDINGS_LOG.md` (gap 8) |
+| Machine-reader designs (values printed on the plot) | `annotate.py`, `gaps_prepare.py ann`, `score_gaps.py` | `runs/confirm_synthetic/GAPS_RESULTS.md` |
+| Multi-plot diagnosis benchmark (sets of plots) | `gaps_prepare.py sets`, `score_gaps.py` | `runs/confirm_*/plotsets.json`, `GAPS_RESULTS.md` |
+
+## Analysis-code fix found by the end-to-end re-run (2026-10-15)
+
+Scorers that collect a reader's diagnosis answers by file pattern began to also pick up answer files created later
+for other tasks (`_extract`, `_ann`, `_probe`). The committed reports were produced before those files existed and
+are correct; a re-run would have mixed them in. Fixed with one shared rule (`score_confirm.is_diagnosis_file`) used by
+every scorer and the figure script; the full re-run then reproduced the committed reports.

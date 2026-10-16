@@ -23,12 +23,11 @@ from sklearn.metrics import roc_auc_score
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 
-from score_confirm import CLASSES, Run, bal_acc, reader_vec
+from score_confirm import CLASSES, Run, bal_acc, is_diagnosis_file, reader_vec
 
 
 def readers_of(R):
-    return {k: v for k, v in R.responses("responses_*.jsonl").items()
-            if not any(k.endswith(s) for s in ("_iv", "_variants", "_controls", "_hires", "_probe"))}
+    return {k: v for k, v in R.responses("responses_*.jsonl").items() if is_diagnosis_file(k)}
 
 
 def no_plot(R, L, out):

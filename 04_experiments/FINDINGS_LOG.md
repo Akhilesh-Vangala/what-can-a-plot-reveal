@@ -396,3 +396,17 @@ Gap 5 — machine-reader designs (key values printed on reliability, ROC, histog
   (consistent with the values-as-text control).
 - Rule trained on each reader's own readings, all five plots: InternVL-38B 0.608 → 0.689, InternVL-8B 0.594 → 0.682
   with annotated designs (ceiling 0.760; direct ≈ 0.15); Qwen-32B/7B 0.57–0.58 → 0.56 (no gain); LLaVA 0.40 → 0.42.
+
+## 2026-10-15 — Consistency pass (every scorer + figures re-run from scratch)
+- BUG FOUND AND FIXED: scorers collecting diagnosis answers by file pattern also picked up later answer files for
+  other tasks (_extract, _ann, _probe). Committed reports predate those files and are correct; a re-run would have
+  corrupted H5/H6 and the positive/real-world reports. Fixed with one shared rule (score_confirm.is_diagnosis_file).
+  Committed Figure 5 WAS affected (duplicated empty reader rows) — regenerated.
+- After the fix, every report and results file (CONFIRM, HOLM, SECONDARY, SATURATION, POSITIVE, REALWORLD, RTR, GAPS,
+  ROBUSTNESS, json verdicts) is reproduced byte-for-byte; figure PNGs reproduce (PDFs differ only by timestamp).
+- The previously inline analyses are now reproducible from gap_analyses.py → runs/confirm_synthetic/GAP_ANALYSES.md.
+  Calibration, gap 4 correlations, gap 6 and gap 8 match the log (gap 8 within ±0.003). Gap 4 reason shares there use
+  one merged cue category (Qwen-32B 94%, 38B 79% of healthy loss-curve reasons cite a gap or plateau).
+  Gap 7 refined with fresh models (n = 150 per group): on real data the final validation accuracy also separates
+  imbalance (AUC 0.65; the earlier n = 40 run gave 0.51) and the best single epoch of training accuracy 0.65 (earlier
+  0.68); synthetic stays ≈ 0.52. Mechanism replicates: healthy real models 79.2% on positives vs 85.8% on negatives.

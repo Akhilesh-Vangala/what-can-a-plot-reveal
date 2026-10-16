@@ -18,7 +18,7 @@ import numpy as np
 from sklearn.metrics import roc_auc_score
 
 from make_positive import CANONICAL
-from score_confirm import CLASSES, reader_vec
+from score_confirm import CLASSES, is_diagnosis_file, reader_vec
 
 
 def main(rw):
@@ -31,7 +31,7 @@ def main(rw):
          "Named = top answer is a condition measured as present (planted failure in brackets). "
          "Benchmark = the confirmatory B1 detector applied to the same plots.", ""]
     out = {}
-    for fp in sorted(rw.glob("responses_*.jsonl")):
+    for fp in sorted(f for f in rw.glob("responses_*.jsonl") if is_diagnosis_file(f.stem)):
         model = fp.stem.replace("responses_", "")
         rows = [json.loads(x) for x in open(fp)]
         by = collections.defaultdict(list)

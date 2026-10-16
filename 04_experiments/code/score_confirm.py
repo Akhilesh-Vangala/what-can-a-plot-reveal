@@ -18,6 +18,12 @@ from sklearn.metrics import roc_auc_score
 CLASSES = ["healthy", "overfitting", "miscalibration", "label_noise", "class_imbalance", "data_leakage",
            "distribution_shift"]
 NB = 1000
+# answer files that are NOT 7-way diagnoses of the main item set (other tasks, designs or item sets)
+NON_DIAGNOSIS = ("_iv", "_variants", "_controls", "_hires", "_probe", "_extract", "_ann")
+
+
+def is_diagnosis_file(name):
+    return not any(name.endswith(s) for s in NON_DIAGNOSIS)
 RNG = np.random.default_rng(0)
 
 
@@ -335,8 +341,7 @@ def main(paths):
         section(f"H2 [{tag}]", "detection ≠ diagnosis", h2, Rx)
         section(f"H3 [{tag}]", "encoding loss in the calibration plot", h3, Rx)
         section(f"H4 [{tag}]", "design variants change the evidence", h4, Rx)
-        main_readers = {k: v for k, v in Rx.responses("responses_*.jsonl").items()
-                        if not any(k.endswith(s) for s in ("_iv", "_variants", "_controls", "_hires"))}
+        main_readers = {k: v for k, v in Rx.responses("responses_*.jsonl").items() if is_diagnosis_file(k)}
         section(f"H5 [{tag}]", "readers below the image benchmark", reader_vs_b2, Rx, main_readers, "main/core")
         section(f"H6 [{tag}]", "plot-type stereotype", h6, Rx, main_readers)
         ctl = Rx.responses("responses_*_controls.jsonl")

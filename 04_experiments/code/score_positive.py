@@ -11,7 +11,7 @@ import numpy as np
 from sklearn.metrics import roc_auc_score
 
 from make_positive import CANONICAL, PRIMARY
-from score_confirm import CLASSES, reader_vec
+from score_confirm import CLASSES, is_diagnosis_file, reader_vec
 
 RNG = np.random.default_rng(0)
 
@@ -33,7 +33,7 @@ def positive(P):
               "failure items whose top answer is the failure. Healthy false alarm = share of healthy items on that plot "
               "whose top answer is not healthy. Pass rule (fixed before reading): AUC ≥ 0.80 and named ≥ 50% on ≥ 4 of "
               f"the 5 primary failures ({', '.join(PRIMARY)}).", ""], {}
-    for fp in sorted(P.glob("responses_*.jsonl")):
+    for fp in sorted(f for f in P.glob("responses_*.jsonl") if is_diagnosis_file(f.stem)):
         model = fp.stem.replace("responses_", "")
         rows = [json.loads(x) for x in open(fp)]
         for src in ("synthetic", "magic"):

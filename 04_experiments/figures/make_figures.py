@@ -17,7 +17,7 @@ HERE = pathlib.Path(__file__).parent
 CODE = HERE.parent / "code"
 RUNS = CODE / "runs"
 sys.path.insert(0, str(CODE))
-from score_confirm import CLASSES, Run, auc_of, reader_vec  # noqa: E402
+from score_confirm import CLASSES, Run, auc_of, is_diagnosis_file, reader_vec  # noqa: E402
 
 plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "Times", "DejaVu Serif"], "font.size": 8,
                      "axes.linewidth": 0.6, "axes.spines.top": False, "axes.spines.right": False, "pdf.fonttype": 42,
@@ -180,8 +180,7 @@ def fig4():
 
 def fig5(R):
     """Top answer on HEALTHY plots, per reader and plot type."""
-    readers = {k: v for k, v in R.responses("responses_*.jsonl").items()
-               if not any(k.endswith(s) for s in ("_iv", "_controls", "_probe", "_variants"))}
+    readers = {k: v for k, v in R.responses("responses_*.jsonl").items() if is_diagnosis_file(k)}
     names = sorted(readers, key=rl)
     M = np.full((len(names), 9), np.nan)
     lab = [[""] * 9 for _ in names]
