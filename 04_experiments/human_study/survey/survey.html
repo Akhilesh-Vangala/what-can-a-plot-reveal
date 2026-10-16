@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diagnostic Plot Study</title>
+<script src="forms.js"></script>
+<style>
+  :root { --bg:#fafaf9; --panel:#fff; --ink:#1d1d1f; --mute:#666; --rule:#e2e2e5; --accent:#3b5bdb; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#141416; --panel:#1d1d21; --ink:#ececf0; --mute:#a0a0a8; --rule:#34343a; --accent:#748ffc; } }
+  :root[data-theme="dark"] { --bg:#141416; --panel:#1d1d21; --ink:#ececf0; --mute:#a0a0a8; --rule:#34343a; --accent:#748ffc; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:24px 16px 60px; }
+  .card { background:var(--panel); border:1px solid var(--rule); border-radius:12px; padding:20px 22px; }
+  h1 { font-size:22px; margin:0 0 8px; } h2 { font-size:17px; margin:18px 0 6px; }
+  .mute { color:var(--mute); font-size:14px; }
+  ul.defs { padding-left:20px; margin:6px 0; } ul.defs li { margin:2px 0; }
+  button { font:inherit; padding:9px 18px; border-radius:8px; border:1px solid var(--accent); background:var(--accent); color:#fff; cursor:pointer; }
+  button:disabled { opacity:.4; cursor:not-allowed; }
+  button.ghost { background:transparent; color:var(--accent); }
+  input[type=text], select { font:inherit; padding:7px 9px; border-radius:8px; border:1px solid var(--rule); background:var(--panel); color:var(--ink); }
+  .plot { width:100%; max-width:520px; display:block; margin:6px auto 12px; background:#fff; border:1px solid var(--rule); border-radius:8px; }
+  .opts { display:grid; grid-template-columns:repeat(auto-fill, minmax(190px, 1fr)); gap:8px; margin:6px 0 12px; }
+  .opt { border:1px solid var(--rule); border-radius:8px; padding:8px 10px; cursor:pointer; display:flex; gap:8px; align-items:center; }
+  .opt input { accent-color:var(--accent); }
+  .conf { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:4px 0 14px; }
+  .bar { height:6px; background:var(--rule); border-radius:3px; overflow:hidden; margin:0 0 14px; } .bar > div { height:100%; background:var(--accent); }
+  .row { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  .hidden { display:none; }
+</style>
+</head>
+<body>
+<main>
+  <section id="consent" class="card">
+    <h1>Reading diagnostic plots of machine-learning models</h1>
+    <p class="mute">DRAFT — the consent text below must be replaced by the approved version before any data are collected.</p>
+    <div id="consentText"></div>
+    <p><label><input type="checkbox" id="agree"> I have read the information above and agree to take part.</label></p>
+    <p class="row"><span><label class="mute" for="pid">Participant code (given to you):</label> <input type="text" id="pid" size="10"></span>
+      <span><label class="mute" for="form">Form:</label> <select id="form"></select></span></p>
+    <button id="start" disabled>Continue</button>
+  </section>
+
+  <section id="intro" class="card hidden">
+    <h1>Instructions</h1>
+    <p>You will see about 40 plots. Each comes from one trained binary classifier. The model is either <b>healthy</b> or has
+    <b>exactly one</b> problem. For each plot, choose the state you think is most likely, based only on what the plot shows,
+    and say how confident you are. If you think the plot cannot tell, choose your best guess and tick “the plot is
+    insufficient to tell”. There is no time limit, but please answer at a natural pace and do not look anything up.</p>
+    <h2>Possible states of the model</h2>
+    <ul class="defs" id="defs"></ul>
+    <p class="mute">Some plots carry extra annotations (printed values or point sizes). Use them if they help.</p>
+    <button id="begin">Start</button>
+  </section>
+
+  <section id="task" class="card hidden">
+    <div class="bar"><div id="prog"></div></div>
+    <div class="row"><b id="counter"></b><span class="mute" id="what"></span></div>
+    <img class="plot" id="img" alt="diagnostic plot">
+    <div class="opts" id="opts"></div>
+    <label><input type="checkbox" id="cannot"> The plot is insufficient to tell</label>
+    <div class="conf"><span class="mute">Confidence:</span>
+      <label><input type="radio" name="conf" value="1"> 1 guess</label><label><input type="radio" name="conf" value="2"> 2</label>
+      <label><input type="radio" name="conf" value="3"> 3</label><label><input type="radio" name="conf" value="4"> 4</label>
+      <label><input type="radio" name="conf" value="5"> 5 certain</label></div>
+    <button id="next" disabled>Next</button>
+  </section>
+
+  <section id="done" class="card hidden">
+    <h1>Thank you!</h1>
+    <p>Please download your answers and send the file to the study team as instructed.</p>
+    <button id="download">Download my answers</button>
+    <p class="mute" id="saved"></p>
+  </section>
+</main>
+<script>
+const STATES = [["healthy","healthy","no problem"],
+  ["overfitting","overfitting","the model fits the training data much better than new data"],
+  ["label_noise","label noise","some training labels are wrong"],
+  ["class_imbalance","class imbalance","one class is much rarer than the other"],
+  ["data_leakage","data leakage","information about the labels leaked into the training features or the evaluation data"],
+  ["miscalibration","miscalibration","the model's confidence does not match how often it is right"],
+  ["distribution_shift","distribution shift","the test data differs from the training data"]];
+const WHAT = {lc_loss:"training (blue) and validation (orange) loss over epochs", cm:"confusion matrix (counts) on the test set",
+  rel:"reliability (calibration) diagram on the test set", rel_n:"reliability diagram; point size = number of test examples in the bin",
+  rel_ann:"reliability diagram with the observed fraction printed at each point", roc:"ROC curve on the test set",
+  roc_ann:"ROC curve with a table of true positive rates", dist:"histograms of predicted probabilities, validation (orange) vs test (green)",
+  dist_ann:"histograms of predicted probabilities with a table of shares"};
+const CONSENT = `<p><b>Purpose.</b> We study how people read standard plots used to check machine-learning models.</p>
+<p><b>What you will do.</b> Look at about 40 plots and, for each, choose what you think is wrong with the model (if anything),
+with a confidence rating. It takes about 20–30 minutes.</p>
+<p><b>Risks and benefits.</b> No risks beyond everyday computer use. No direct benefit; you help us understand plot reading.</p>
+<p><b>Data.</b> We record your answers, confidence and time per plot under a participant code. No names or contact
+details are stored with the answers. Data are used for research and may be reported in aggregate.</p>
+<p><b>Voluntary.</b> Taking part is voluntary; you can stop at any time without giving a reason.</p>
+<p><b>Contact.</b> [study team contact and IRB contact — to be inserted from the approved protocol]</p>`;
+const qs = new URLSearchParams(location.search), forms = window.FORMS || {};
+const $ = id => document.getElementById(id);
+let items = [], i = 0, t0 = 0, answers = [], meta = {};
+$("consentText").innerHTML = CONSENT;
+$("defs").innerHTML = STATES.map(s => `<li><b>${s[1]}</b>: ${s[2]}</li>`).join("");
+$("form").innerHTML = Object.keys(forms).map(f => `<option ${qs.get("form") === f ? "selected" : ""}>${f}</option>`).join("");
+if (qs.get("pid")) $("pid").value = qs.get("pid");
+const ready = () => { $("start").disabled = !($("agree").checked && $("pid").value.trim()); };
+$("agree").onchange = ready; $("pid").oninput = ready; ready();
+$("start").onclick = () => { meta = {participant: $("pid").value.trim(), form: $("form").value, started: new Date().toISOString(),
+  user_agent: navigator.userAgent}; items = forms[meta.form]; $("consent").classList.add("hidden"); $("intro").classList.remove("hidden"); };
+$("begin").onclick = () => { $("intro").classList.add("hidden"); $("task").classList.remove("hidden"); show(); };
+$("opts").innerHTML = STATES.map(s => `<label class="opt"><input type="radio" name="ans" value="${s[0]}"> ${s[1]}</label>`).join("");
+const valid = () => { $("next").disabled = !(document.querySelector("input[name=ans]:checked") && document.querySelector("input[name=conf]:checked")); };
+document.querySelectorAll("input[name=ans], input[name=conf]").forEach(e => e.onchange = valid);
+function show() {
+  const it = items[i];
+  $("counter").textContent = `Plot ${i + 1} of ${items.length}`;
+  $("what").textContent = WHAT[it.spec] || "";
+  $("prog").style.width = `${100 * i / items.length}%`;
+  $("img").src = it.image;
+  document.querySelectorAll("input[name=ans], input[name=conf]").forEach(e => e.checked = false);
+  $("cannot").checked = false; valid(); t0 = performance.now(); window.scrollTo(0, 0);
+}
+$("next").onclick = () => {
+  const it = items[i];
+  answers.push({item_id: it.item_id, spec: it.spec, answer: document.querySelector("input[name=ans]:checked").value,
+    confidence: +document.querySelector("input[name=conf]:checked").value, cannot_tell: $("cannot").checked,
+    seconds: +((performance.now() - t0) / 1000).toFixed(1), position: i + 1});
+  i += 1;
+  if (i < items.length) show(); else { $("task").classList.add("hidden"); $("done").classList.remove("hidden"); meta.finished = new Date().toISOString(); }
+};
+$("download").onclick = () => {
+  const blob = new Blob([JSON.stringify({meta, answers}, null, 1)], {type: "application/json"});
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+  a.download = `responses_${meta.participant}_${meta.form}.json`; a.click();
+  $("saved").textContent = `Saved as responses_${meta.participant}_${meta.form}.json`;
+};
+</script>
+</body>
+</html>
