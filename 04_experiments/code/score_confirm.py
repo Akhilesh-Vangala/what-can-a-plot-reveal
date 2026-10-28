@@ -19,7 +19,7 @@ CLASSES = ["healthy", "overfitting", "miscalibration", "label_noise", "class_imb
            "distribution_shift"]
 NB = 1000
 # answer files that are NOT 7-way diagnoses of the main item set (other tasks, designs or item sets)
-NON_DIAGNOSIS = ("_iv", "_variants", "_controls", "_hires", "_probe", "_extract", "_ann")
+NON_DIAGNOSIS = ("_iv", "_variants", "_controls", "_hires", "_probe", "_extract", "_ann", "_binary", "_2afc")
 
 
 def is_diagnosis_file(name):

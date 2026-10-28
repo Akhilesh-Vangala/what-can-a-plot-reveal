@@ -10,6 +10,8 @@
 #   realworld                   real-world check: unzip ~/visml_hpc/realworld_data.zip, transfer job + 5 readers
 #   rtr                         read-then-reason: extraction items on 3 sets + 5 readers; proportion-based transfer
 #   gaps                        annotated machine-reader designs + 5 readers; multi-plot benchmark (both runs)
+#   review                      instructor-review checks: two-sample tests, binary + 2AFC reader tasks (5 readers),
+#                               stronger image benchmark B3 (both runs)
 # Every submission: code version printed; inputs checked first; jobs requeue if a node dies; a failed job cancels the
 # jobs that depend on it (--kill-on-invalid-dep) instead of leaving them waiting forever.
 set -euo pipefail
@@ -115,6 +117,18 @@ case "${1:-check}" in
     G2=$($SB --dependency=afterok:$A $H/readers.sbatch confirm_synthetic reader_items_ann.json:ann:$Q32 reader_items_ann.json:ann:$I38)
     S=$($SB $H/sets_cpu.sbatch)
     echo "submitted gaps: annotated designs $A -> readers $G1, $G2; multi-plot benchmark $S" ;;
+  review)
+    echo "preflight:"; check_env; ok $CODE/review_prepare.py; ok $H/b3_strong.py; ok $H/rev_cpu.sbatch; ok $H/b3.sbatch
+    for f in confirm_synthetic/features.npz confirm_synthetic/img confirm_synthetic/reader_items_core.json confirm_magic/features.npz confirm_magic/img; do ok $CODE/runs/$f; done
+    [ $MISS = 0 ] || { echo "Not submitting: inputs missing (see above)."; exit 1; }
+    [ ! -e $CODE/runs/confirm_synthetic/reader_items_2afc.json ] || { echo "review items already exist — not overwriting."; exit 1; }
+    P=$($SB $H/rev_cpu.sbatch)
+    S=confirm_synthetic; I1=reader_items_binary.json; I2=reader_items_2afc.json
+    G1=$($SB --dependency=afterok:$P $H/readers.sbatch $S $I1:binary:$Q7 $I2:2afc:$Q7 $I1:binary:$I8 $I2:2afc:$I8 $I1:binary:$LV $I2:2afc:$LV)
+    G2=$($SB --dependency=afterok:$P $H/readers.sbatch $S $I1:binary:$Q32 $I2:2afc:$Q32 $I1:binary:$I38 $I2:2afc:$I38)
+    B1=$($SB $H/b3.sbatch confirm_synthetic)
+    B2=$($SB $H/b3.sbatch confirm_magic)
+    echo "submitted review checks: prep $P -> readers $G1 (7B/8B/LLaVA), $G2 (32B/38B); stronger image benchmark $B1 (synthetic), $B2 (real)" ;;
   *) echo "unknown stage $1"; exit 1 ;;
 esac
 squeue -u $USER

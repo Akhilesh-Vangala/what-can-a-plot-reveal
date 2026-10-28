@@ -6,6 +6,8 @@ Tasks
   prior_only : the diagnosis question with no image (what the model guesses from the prompt alone, gap 4.3)
   lineup_shuffled : the same lineups with panels in new positions (position-bias control, gap 3.3)
   probe      : read numbers off a single plot (perception vs reasoning control, gap 4.1)
+  binary     : one plot -> probability that the model has any problem (healthy vs failing)
+  2afc       : two plots side by side, one healthy and one failing model -> which one has the problem
 
 Same failure definitions for every reader (gap 4.2). Temperature 0. Answer keys are never in prompts.
   python vlm_read.py <run_dir> [model] [items.json] [tag]   -> <run_dir>/responses_<model>[_<tag>].jsonl
@@ -147,6 +149,19 @@ WHAT["roc_ann"] = WHAT["roc"] + "; a small table on the plot lists the true posi
 WHAT["dist_ann"] = WHAT["dist"] + "; a small table on the plot lists, for each histogram, the share of predictions below 0.1, above 0.5 and above 0.9"
 SHORT.update(rel_ann="annotated reliability diagram", roc_ann="annotated ROC curve", dist_ann="annotated score histogram")
 EXTRACT.update(rel_ann=EXTRACT["rel"], roc_ann=EXTRACT["roc"], dist_ann=EXTRACT["dist"])
+# simpler tasks (instructor review, point 5): is near-chance 7-way performance a task-difficulty effect?
+BINARY = """The plot shows {what}. The model is either healthy or has exactly one problem.
+{definitions}
+
+Based only on what this plot shows, how likely is it that the model has a problem (any of the problems above) rather
+than being healthy? Give a probability from 0 (surely healthy) to 1 (surely has a problem).
+Reply with JSON only: {{"p_problem": <number from 0 to 1>, "reason": "<one short sentence>"}}"""
+TWO_AFC = """The image shows two plots side by side, labelled A (left) and B (right). Each shows {what}.
+The plots come from two different models: one model is healthy, the other has exactly one problem.
+{definitions}
+
+Based only on the plots, which one comes from the model with the problem?
+Reply with JSON only: {{"answer": "<A or B>", "confidence": <integer 1-5>, "reason": "<one short sentence>"}}"""
 MODEL_KW = {  # per-model engine settings
     # 32k (model maximum): a few-shot prompt has 8 images x up to 13 tiles x 256 tokens (~27k); 16k failed on controls
     "OpenGVLab/InternVL3-8B": dict(trust_remote_code=True, max_model_len=32768),
@@ -223,7 +238,9 @@ def items_from_file(path):
                                       tmpl.format(what=what, definitions=DEFINITIONS, fields=FIELDS)),
                 "prior_only": lambda: PRIOR.format(what_short=SHORT[sp], definitions=DEFINITIONS, fields=FIELDS),
                 "probe": lambda: PROBE[sp].format(what=WHAT[sp]),
-                "extract": lambda: EXTRACT[sp].format(what=WHAT[sp])}[task]()
+                "extract": lambda: EXTRACT[sp].format(what=WHAT[sp]),
+                "binary": lambda: BINARY.format(what=WHAT[sp], definitions=DEFINITIONS),
+                "2afc": lambda: TWO_AFC.format(what=WHAT[sp], definitions=DEFINITIONS)}[task]()
         ex = [dict(e, image=RUN / e["image"]) for e in it.get("examples", [])]
         items.append(dict(it, image=RUN / it["image"] if it.get("image") else None, text=text, examples=ex))
     return items

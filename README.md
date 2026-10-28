@@ -2,6 +2,8 @@
 
 Detection vs. diagnosis in ML diagnostic plots, for human and AI readers.
 
+Project status, instructor feedback and next steps: [`PROJECT_STATUS.md`](PROJECT_STATUS.md).
+
 Practitioners and AI agents check classifiers by looking at standard plots: loss curves, reliability diagrams,
 confusion matrices, ROC curves. This project measures which model failures each plot can actually reveal, and whether
 readers find what is there. We plant known failures in thousands of trained classifiers, render nine standard

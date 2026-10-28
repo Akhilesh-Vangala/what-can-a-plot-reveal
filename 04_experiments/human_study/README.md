@@ -1,13 +1,12 @@
-# Human reader study — how to run
+# Human readers — formative expert sessions
 
-**Do not collect data until the IRB route is confirmed** and the consent text in `survey.html` is replaced by the
-approved version (see `PROTOCOL.md`).
+The controlled human-reader study is **dropped** (instructor review: it would need IRB approval, not feasible in the
+course). Instead: 4–6 qualitative expert sessions (think-aloud on 12 plots + an Explorer task + short interview),
+reported as themes and quotes only. Full protocol: `PROTOCOL.md`.
 
-1. Give each participant ONLY the `survey/` folder (`survey.html`, `forms.js`, `images/`) — zipped, or hosted as a static page —
-   plus a participant code (e.g. P01) and a form letter (rotate A, B, C, D).
-   Direct link form: `survey/survey.html?form=B&pid=P01`.
-2. They complete the survey (20–30 min) and send back `responses_<code>_<form>.json`.
-3. Put returned files in `responses/` and run, from `04_experiments/code/`:
-   `python score_humans.py ../human_study/responses` → `HUMAN_RESULTS.md`, `human_answers.csv`.
+1. `python code/make_formative.py` → `formative/plots/P01–P12.png`, `formative/key.json` (team only).
+2. Run each session with the protocol; one notes file per participant (code E1, E2, ...); no names, no recordings.
+3. Code the notes into the four themes in `PROTOCOL.md`.
 
-Do **not** share `answer_key.json` with participants. Regenerate everything with `python make_human_study.py`.
+The earlier controlled-study materials (`survey/`, `answer_key.json`, `code/make_human_study.py`,
+`code/score_humans.py`, `archive/`) are kept for reference only and are not used for data collection.

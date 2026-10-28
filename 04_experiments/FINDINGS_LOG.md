@@ -410,3 +410,22 @@ Gap 5 — machine-reader designs (key values printed on reliability, ROC, histog
   Gap 7 refined with fresh models (n = 150 per group): on real data the final validation accuracy also separates
   imbalance (AUC 0.65; the earlier n = 40 run gave 0.51) and the best single epoch of training accuracy 0.65 (earlier
   0.68); synthetic stays ≈ 0.52. Mechanism replicates: healthy real models 79.2% on positives vs 85.8% on negatives.
+
+## 2026-10-28 — Instructor review, point 4: what "blind" means (certify_blind.py, blind_sensitivity.py)
+- **Blind by construction.** Failing models re-trained next to their healthy twins (30 per failure, strongest level,
+  both sources; re-trained models match the study exactly). Plotted values identical in every model for: miscalibration
+  on accuracy curves, confusion matrix (counts and row-normalized), ROC and PR (real data); distribution shift on loss
+  and accuracy curves. Reason: miscalibration rescales reported probabilities after training (ranking and 0.5 decisions
+  unchanged); shift moves only the test features (training and validation curves untouched). On synthetic data ROC/PR
+  under miscalibration differ only through ties created by float32 storage of probabilities near 1 (benchmark AUC 0.52)
+  → identical in exact arithmetic. So 7 of the real-data blind cells (5–7 synthetic) are proven: no reader or
+  estimator can ever detect them.
+- **Cutoff sensitivity** (AUC 0.60–0.80 × recall 0.30–0.70, 25 pairs): blind count synthetic 10–23, real 13–22;
+  30/54 (syn) and 31/54 (real) cells keep their label under all 25 pairs. Every blind cell graded:
+  synthetic 15 = 5 certified + 10 robust (95% CI upper < 0.70 and every estimator family < 0.70) + 0 borderline;
+  real 17 = 7 certified + 7 robust + 3 borderline (label noise on accuracy curves 0.70 and row-normalized CM 0.67;
+  shift on PR 0.67 — labels depend on the cutoff).
+- **Wording change:** several robust cells carry a weak but real signal (e.g. overfitting on the confusion matrix,
+  AUC 0.60 [0.56, 0.65]). "Blind" is therefore split into *invisible* (plot unchanged) and *weak* (detectable
+  difference, but no estimator reaches 0.70). The kernel two-sample test and B3 (stage `review`) decide the split for
+  the non-certified cells.

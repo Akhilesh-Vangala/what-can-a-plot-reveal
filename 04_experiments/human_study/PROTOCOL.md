@@ -1,50 +1,53 @@
-# Human reader study — protocol
+# Formative expert sessions — protocol
 
-Status: materials ready; **data collection waits for the IRB route** (exempt / course-project determination).
-The design and analysis below are fixed before any data are collected.
+Replaces the controlled human-reader study (archived in `archive/`), following the instructor's review: a controlled
+user study needs IRB approval, which is not feasible in the course; a small expert/formative study reported
+qualitatively fits the rules. The quantitative evidence comes from the benchmarks and the five AI readers.
+**No statistics are computed on these sessions and no accuracy is reported as a measurement.**
 
-## Question
+## Purpose
 
-Do people diagnose ML failures from standard diagnostic plots better than chance and better than AI readers, and do
-redesigned plots (bin sizes drawn; key values printed) help them? People, five open AI readers and the plot-content
-benchmark are compared on **identical items**.
+1. **Plots:** how experienced practitioners read standard diagnostic plots — which cues they use, whether they notice
+   when a plot cannot show a failure, and whether the redesigns (bin sizes drawn; values printed) change what they say.
+2. **Explorer:** whether the Plot Evidence Explorer helps with a realistic task ("given the plots I have, which
+   failures can I rule out?") and what is confusing or missing. Findings feed the Explorer's final design.
 
 ## Participants
 
-- Target **N = 20** people with ML training (graduate students or practitioners who have trained classifiers).
-- Recruitment: course and lab mailing lists; voluntary; no compensation planned (to be confirmed with the IRB route).
-- Power (two proportions, before clustering): 20 participants give ≈ 0.82 power to detect a +0.13 accuracy effect of a
-  redesign (baseline 0.40); 12 participants give ≈ 0.61 for the same effect. Clustering by participant lowers this.
+4–6 people who have trained and evaluated classifiers (graduate students, TAs or practitioners), invited personally.
+Voluntary, no compensation, can stop at any time. No names, contact details or recordings are kept: one team member
+takes written notes under a code (E1, E2, ...).
 
-## Materials (`make_human_study.py`)
+## Session (about 40 minutes, in person or video call, one participant and one or two team members)
 
-- 140 held-out models from the confirmatory study (strongest severity; 20 per state: healthy + six failures), all
-  read by the AI readers. Re-trained from their seeds; identical to the study models (checked: max |Δ deploy accuracy| = 0).
-- Plot families and versions: loss curves; confusion matrix; reliability diagram (standard / bin sizes drawn / values
-  printed); ROC (standard / values printed); validation-vs-test histogram (standard / values printed).
-- Four counterbalanced forms (A–D), 40 items each (8 per family, states balanced), each model at most once per form;
-  the version of a redesign-eligible item rotates across forms. Two attention checks per form (blatant class imbalance
-  on a confusion matrix; blatant leakage on a ROC curve). Item order randomised per form.
-- Task wording and failure definitions are identical to the AI readers' prompt.
+1. **Introduction (3 min).** Purpose, voluntary participation, notes only, no recording. Verbal agreement.
+2. **Think-aloud on 12 plots (15 min).** `formative/plots/P01.png`–`P12.png`, in order, one at a time. For each plot the
+   participant says aloud what they see and what, if anything, is wrong with the model; "the plot cannot tell" is a
+   valid answer. Prompts only: "What are you looking at?", "What would you check next?" No feedback on answers.
+   The set (`formative/key.json`, team only) covers every plot family, standard and redesigned versions, a healthy
+   model, failures the plot identifies, and one failure the plot cannot show at all (identical to a healthy plot).
+3. **Explorer task (15 min).** Open `explorer/index.html`. Scenario: "Your team only looked at loss curves and a
+   confusion matrix before shipping." Tasks: (a) which failures could those plots have missed? (b) which single plot
+   would you add, and why? (c) look at one cell of your choice in the cell view and explain what it shows. Think aloud.
+4. **Interview (7 min).** What was surprising? Would you trust an AI assistant's critique of these plots? What would
+   make the Explorer useful in your own work? What is missing or confusing?
 
-## Procedure
+## Notes template (one per participant)
 
-1. Participant receives the study folder (or link), a participant code and a form letter (rotating A–D).
-2. `survey.html` (works offline in any browser): consent → instructions with definitions → 42 plots, one at a time:
-   seven-way answer, optional "the plot is insufficient to tell", confidence 1–5; time per plot recorded; no going back.
-3. Participant downloads `responses_<code>_<form>.json` and sends it to the team. Expected duration 20–30 minutes.
+Per plot: answer given (state or "cannot tell"), cue mentioned, confidence in words, anything surprising.
+Explorer: task answers, where they hesitated, misunderstandings, suggestions. Interview: short quotes.
 
-## Analysis (`score_humans.py`, fixed in advance)
+## Analysis (qualitative)
 
-- Exclusion: missing either attention check, or answering fewer than 80% of items.
-- Primary: balanced accuracy (7 states; chance 1/7) overall and per family.
-- Redesign effect: logistic GEE clustered by participant, correct ~ redesigned + family + state, on the three families
-  with redesigns; reported as log-odds with 95% CI.
-- Comparison on the same items: people (majority answer per item) vs each AI reader vs the plot-content benchmark (B1*).
-- Confidence: accuracy by confidence level; abstention rate.
-- All results reported, including null effects; anything beyond this list is labelled exploratory.
+Notes are coded into four themes fixed in advance — (1) cues used and textbook heuristics (e.g. "validation loss above
+training loss means overfitting"); (2) awareness of what a plot cannot show; (3) effect of the redesigns; (4) Explorer
+usability and trust in AI critique — plus any theme that emerges. Reported as themes with representative quotes and
+counts of participants ("4 of 5 experts..."), never as accuracy or significance. Explorer changes made in response
+are listed in the final report.
 
-## Data handling
+## Materials
 
-Answers are stored under participant codes only; no names or contact details in the response files. The key linking
-codes to people (if any) is kept separately by one team member and deleted after the study.
+- `formative/plots/` — the 12 plots (regenerate with `code/make_formative.py`).
+- `formative/key.json` — true states and the reason each plot is in the set (team only; not shown to participants).
+- `../explorer/index.html` — the Plot Evidence Explorer.
+- `survey/` — the earlier self-paced survey; not used for data collection.

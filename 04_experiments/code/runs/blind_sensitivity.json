@@ -1,0 +1,1048 @@
+{
+ "confirm_synthetic": {
+  "grid": {
+   "0.6|0.3": [
+    40,
+    4,
+    10
+   ],
+   "0.6|0.4": [
+    35,
+    9,
+    10
+   ],
+   "0.6|0.5": [
+    29,
+    15,
+    10
+   ],
+   "0.6|0.6": [
+    24,
+    20,
+    10
+   ],
+   "0.6|0.7": [
+    20,
+    24,
+    10
+   ],
+   "0.65|0.3": [
+    37,
+    2,
+    15
+   ],
+   "0.65|0.4": [
+    34,
+    5,
+    15
+   ],
+   "0.65|0.5": [
+    29,
+    10,
+    15
+   ],
+   "0.65|0.6": [
+    24,
+    15,
+    15
+   ],
+   "0.65|0.7": [
+    20,
+    19,
+    15
+   ],
+   "0.7|0.3": [
+    37,
+    2,
+    15
+   ],
+   "0.7|0.4": [
+    34,
+    5,
+    15
+   ],
+   "0.7|0.5": [
+    29,
+    10,
+    15
+   ],
+   "0.7|0.6": [
+    24,
+    15,
+    15
+   ],
+   "0.7|0.7": [
+    20,
+    19,
+    15
+   ],
+   "0.75|0.3": [
+    33,
+    2,
+    19
+   ],
+   "0.75|0.4": [
+    30,
+    5,
+    19
+   ],
+   "0.75|0.5": [
+    27,
+    8,
+    19
+   ],
+   "0.75|0.6": [
+    22,
+    13,
+    19
+   ],
+   "0.75|0.7": [
+    19,
+    16,
+    19
+   ],
+   "0.8|0.3": [
+    30,
+    1,
+    23
+   ],
+   "0.8|0.4": [
+    28,
+    3,
+    23
+   ],
+   "0.8|0.5": [
+    27,
+    4,
+    23
+   ],
+   "0.8|0.6": [
+    22,
+    9,
+    23
+   ],
+   "0.8|0.7": [
+    19,
+    12,
+    23
+   ]
+  },
+  "blind": [
+   {
+    "failure": "overfitting",
+    "plot": "cm",
+    "auc": 0.6008518518518519,
+    "ci": [
+     0.5552099537037037,
+     0.64833125
+    ],
+    "recall": 0.21666666666666667,
+    "families": {
+     "logreg": 0.6349351851851852,
+     "hgb": 0.6262361111111111,
+     "rf": 0.6134444444444445,
+     "mlp": 0.4818611111111111,
+     "resnet18_image": 0.6290555555555555
+    },
+    "grade": "robust",
+    "best_estimator": "logreg",
+    "best_val": 0.6349351851851852,
+    "blind_share": 0.8
+   },
+   {
+    "failure": "overfitting",
+    "plot": "cm_norm",
+    "auc": 0.5985925925925926,
+    "ci": [
+     0.5543763888888888,
+     0.6461326388888888
+    ],
+    "recall": 0.13333333333333333,
+    "families": {
+     "logreg": 0.6334722222222223,
+     "hgb": 0.5674814814814815,
+     "rf": 0.572699074074074,
+     "mlp": 0.5429722222222222,
+     "resnet18_image": 0.6197592592592593
+    },
+    "grade": "robust",
+    "best_estimator": "logreg",
+    "best_val": 0.6334722222222223,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "overfitting",
+    "plot": "roc",
+    "auc": 0.6417037037037038,
+    "ci": [
+     0.5967920144390223,
+     0.6817291358835973
+    ],
+    "recall": 0.28888888888888886,
+    "families": {
+     "logreg": 0.6641759259259259,
+     "hgb": 0.6709074074074073,
+     "rf": 0.6492685185185185,
+     "mlp": 0.6193518518518518,
+     "resnet18_image": 0.680787037037037
+    },
+    "grade": "robust",
+    "best_estimator": "resnet18_image",
+    "best_val": 0.680787037037037,
+    "blind_share": 0.8
+   },
+   {
+    "failure": "overfitting",
+    "plot": "pr",
+    "auc": 0.6216203703703704,
+    "ci": [
+     0.5771826239451315,
+     0.6674783474469905
+    ],
+    "recall": 0.43333333333333335,
+    "families": {
+     "logreg": 0.6592407407407408,
+     "hgb": 0.6550555555555556,
+     "rf": 0.649175925925926,
+     "mlp": 0.597361111111111,
+     "resnet18_image": 0.6620092592592592
+    },
+    "grade": "robust",
+    "best_estimator": "resnet18_image",
+    "best_val": 0.6620092592592592,
+    "blind_share": 0.8
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "lc_loss",
+    "auc": 0.6498518518518519,
+    "ci": [
+     0.6057690575091992,
+     0.6988158369670543
+    ],
+    "recall": 0.3333333333333333,
+    "families": {
+     "logreg": 0.6497037037037037,
+     "hgb": 0.6506527777777777,
+     "rf": 0.6512500000000001,
+     "mlp": 0.5793055555555555,
+     "resnet18_image": 0.6632222222222223
+    },
+    "grade": "robust",
+    "best_estimator": "resnet18_image",
+    "best_val": 0.6632222222222223,
+    "blind_share": 0.8
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "lc_acc",
+    "auc": 0.49125,
+    "ci": [
+     0.442309462401896,
+     0.5378489279779898
+    ],
+    "recall": 0.12222222222222222,
+    "families": {
+     "logreg": 0.48653703703703705,
+     "hgb": 0.5069537037037037,
+     "rf": 0.4973009259259259,
+     "mlp": 0.4887777777777777,
+     "resnet18_image": 0.5303981481481481
+    },
+    "grade": "certified",
+    "best_estimator": "resnet18_image",
+    "best_val": 0.5303981481481481,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "cm",
+    "auc": 0.4779953703703704,
+    "ci": [
+     0.4305260416666666,
+     0.527365162037037
+    ],
+    "recall": 0.011111111111111112,
+    "families": {
+     "logreg": 0.5259675925925926,
+     "hgb": 0.5001157407407407,
+     "rf": 0.5283888888888889,
+     "mlp": 0.499087962962963,
+     "resnet18_image": 0.5254212962962963
+    },
+    "grade": "certified",
+    "best_estimator": "rf",
+    "best_val": 0.5283888888888889,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "cm_norm",
+    "auc": 0.5267685185185185,
+    "ci": [
+     0.48193969907407413,
+     0.5753625
+    ],
+    "recall": 0.05,
+    "families": {
+     "logreg": 0.5332916666666666,
+     "hgb": 0.5249259259259259,
+     "rf": 0.5798055555555556,
+     "mlp": 0.5227916666666667,
+     "resnet18_image": 0.528662037037037
+    },
+    "grade": "certified",
+    "best_estimator": "rf",
+    "best_val": 0.5798055555555556,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "roc",
+    "auc": 0.5232129629629629,
+    "ci": [
+     0.47786365740740744,
+     0.5698064814814815
+    ],
+    "recall": 0.14444444444444443,
+    "families": {
+     "logreg": 0.5519166666666666,
+     "hgb": 0.4891944444444445,
+     "rf": 0.5000694444444445,
+     "mlp": 0.5263425925925925,
+     "resnet18_image": 0.5065185185185185
+    },
+    "grade": "robust",
+    "best_estimator": "logreg",
+    "best_val": 0.5519166666666666,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "pr",
+    "auc": 0.5160462962962963,
+    "ci": [
+     0.4690104166666667,
+     0.563649074074074
+    ],
+    "recall": 0.12777777777777777,
+    "families": {
+     "logreg": 0.5182407407407408,
+     "hgb": 0.4831388888888889,
+     "rf": 0.46968981481481487,
+     "mlp": 0.5116018518518518,
+     "resnet18_image": 0.5136666666666667
+    },
+    "grade": "robust",
+    "best_estimator": "logreg",
+    "best_val": 0.5182407407407408,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "class_imbalance",
+    "plot": "lc_loss",
+    "auc": 0.4999444444444444,
+    "ci": [
+     0.45969868689706517,
+     0.5457605364295993
+    ],
+    "recall": 0.05,
+    "families": {
+     "logreg": 0.523050925925926,
+     "hgb": 0.5285648148148148,
+     "rf": 0.5241944444444444,
+     "mlp": 0.4713425925925926,
+     "resnet18_image": 0.5638425925925925
+    },
+    "grade": "robust",
+    "best_estimator": "resnet18_image",
+    "best_val": 0.5638425925925925,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "class_imbalance",
+    "plot": "lc_acc",
+    "auc": 0.5899351851851852,
+    "ci": [
+     0.540255787037037,
+     0.6367800925925925
+    ],
+    "recall": 0.21666666666666667,
+    "families": {
+     "logreg": 0.5502499999999999,
+     "hgb": 0.5894537037037038,
+     "rf": 0.5499444444444445,
+     "mlp": 0.5345833333333334,
+     "resnet18_image": 0.5660833333333334
+    },
+    "grade": "robust",
+    "best_estimator": "hgb",
+    "best_val": 0.5894537037037038,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "class_imbalance",
+    "plot": "rel",
+    "auc": 0.6382685185185185,
+    "ci": [
+     0.596404398148148,
+     0.6835539351851851
+    ],
+    "recall": 0.3277777777777778,
+    "families": {
+     "logreg": 0.6473425925925926,
+     "hgb": 0.6439166666666667,
+     "rf": 0.6664351851851851,
+     "mlp": 0.5679814814814815,
+     "resnet18_image": 0.6408703703703704
+    },
+    "grade": "robust",
+    "best_estimator": "rf",
+    "best_val": 0.6664351851851851,
+    "blind_share": 0.8
+   },
+   {
+    "failure": "distribution_shift",
+    "plot": "lc_loss",
+    "auc": 0.5052592592592593,
+    "ci": [
+     0.45927757698277033,
+     0.5555922129832949
+    ],
+    "recall": 0.011111111111111112,
+    "families": {
+     "logreg": 0.5053240740740741,
+     "hgb": 0.4929444444444444,
+     "rf": 0.5010462962962963,
+     "mlp": 0.43538888888888894,
+     "resnet18_image": 0.511824074074074
+    },
+    "grade": "certified",
+    "best_estimator": "resnet18_image",
+    "best_val": 0.511824074074074,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "distribution_shift",
+    "plot": "lc_acc",
+    "auc": 0.5099814814814816,
+    "ci": [
+     0.4629122685185185,
+     0.5560018518518519
+    ],
+    "recall": 0.16111111111111112,
+    "families": {
+     "logreg": 0.47700000000000004,
+     "hgb": 0.530037037037037,
+     "rf": 0.5479814814814814,
+     "mlp": 0.43674074074074076,
+     "resnet18_image": 0.5217777777777778
+    },
+    "grade": "certified",
+    "best_estimator": "rf",
+    "best_val": 0.5479814814814814,
+    "blind_share": 1.0
+   }
+  ],
+  "stability": {
+   "overfitting|lc_loss": 1.0,
+   "overfitting|lc_acc": 1.0,
+   "overfitting|rel": 0.6,
+   "overfitting|rel_n": 0.6,
+   "overfitting|cm": 0.8,
+   "overfitting|cm_norm": 1.0,
+   "overfitting|roc": 0.8,
+   "overfitting|pr": 0.8,
+   "overfitting|dist": 0.6,
+   "miscalibration|lc_loss": 0.8,
+   "miscalibration|lc_acc": 1.0,
+   "miscalibration|rel": 1.0,
+   "miscalibration|rel_n": 0.8,
+   "miscalibration|cm": 1.0,
+   "miscalibration|cm_norm": 1.0,
+   "miscalibration|roc": 1.0,
+   "miscalibration|pr": 1.0,
+   "miscalibration|dist": 0.8,
+   "label_noise|lc_loss": 0.6,
+   "label_noise|lc_acc": 0.48,
+   "label_noise|rel": 1.0,
+   "label_noise|rel_n": 1.0,
+   "label_noise|cm": 0.36,
+   "label_noise|cm_norm": 0.36,
+   "label_noise|roc": 1.0,
+   "label_noise|pr": 1.0,
+   "label_noise|dist": 0.8,
+   "class_imbalance|lc_loss": 1.0,
+   "class_imbalance|lc_acc": 1.0,
+   "class_imbalance|rel": 0.8,
+   "class_imbalance|rel_n": 1.0,
+   "class_imbalance|cm": 1.0,
+   "class_imbalance|cm_norm": 0.6,
+   "class_imbalance|roc": 1.0,
+   "class_imbalance|pr": 1.0,
+   "class_imbalance|dist": 1.0,
+   "data_leakage|lc_loss": 1.0,
+   "data_leakage|lc_acc": 0.8,
+   "data_leakage|rel": 0.8,
+   "data_leakage|rel_n": 0.6,
+   "data_leakage|cm": 0.6,
+   "data_leakage|cm_norm": 0.48,
+   "data_leakage|roc": 1.0,
+   "data_leakage|pr": 1.0,
+   "data_leakage|dist": 0.8,
+   "distribution_shift|lc_loss": 1.0,
+   "distribution_shift|lc_acc": 1.0,
+   "distribution_shift|rel": 1.0,
+   "distribution_shift|rel_n": 1.0,
+   "distribution_shift|cm": 1.0,
+   "distribution_shift|cm_norm": 1.0,
+   "distribution_shift|roc": 0.48,
+   "distribution_shift|pr": 0.64,
+   "distribution_shift|dist": 1.0
+  }
+ },
+ "confirm_magic": {
+  "grid": {
+   "0.6|0.3": [
+    38,
+    3,
+    13
+   ],
+   "0.6|0.4": [
+    36,
+    5,
+    13
+   ],
+   "0.6|0.5": [
+    29,
+    12,
+    13
+   ],
+   "0.6|0.6": [
+    25,
+    16,
+    13
+   ],
+   "0.6|0.7": [
+    18,
+    23,
+    13
+   ],
+   "0.65|0.3": [
+    37,
+    3,
+    14
+   ],
+   "0.65|0.4": [
+    35,
+    5,
+    14
+   ],
+   "0.65|0.5": [
+    29,
+    11,
+    14
+   ],
+   "0.65|0.6": [
+    25,
+    15,
+    14
+   ],
+   "0.65|0.7": [
+    18,
+    22,
+    14
+   ],
+   "0.7|0.3": [
+    34,
+    3,
+    17
+   ],
+   "0.7|0.4": [
+    32,
+    5,
+    17
+   ],
+   "0.7|0.5": [
+    28,
+    9,
+    17
+   ],
+   "0.7|0.6": [
+    25,
+    12,
+    17
+   ],
+   "0.7|0.7": [
+    18,
+    19,
+    17
+   ],
+   "0.75|0.3": [
+    33,
+    1,
+    20
+   ],
+   "0.75|0.4": [
+    32,
+    2,
+    20
+   ],
+   "0.75|0.5": [
+    28,
+    6,
+    20
+   ],
+   "0.75|0.6": [
+    25,
+    9,
+    20
+   ],
+   "0.75|0.7": [
+    18,
+    16,
+    20
+   ],
+   "0.8|0.3": [
+    31,
+    1,
+    22
+   ],
+   "0.8|0.4": [
+    30,
+    2,
+    22
+   ],
+   "0.8|0.5": [
+    26,
+    6,
+    22
+   ],
+   "0.8|0.6": [
+    24,
+    8,
+    22
+   ],
+   "0.8|0.7": [
+    17,
+    15,
+    22
+   ]
+  },
+  "blind": [
+   {
+    "failure": "overfitting",
+    "plot": "cm",
+    "auc": 0.5473055555555556,
+    "ci": [
+     0.4969710648148148,
+     0.5961155092592593
+    ],
+    "recall": 0.09444444444444444,
+    "families": {
+     "logreg": 0.6118888888888887,
+     "hgb": 0.5427129629629629,
+     "rf": 0.536462962962963,
+     "mlp": 0.5631574074074073,
+     "resnet18_image": 0.6096574074074074
+    },
+    "grade": "robust",
+    "best_estimator": "logreg",
+    "best_val": 0.6118888888888887,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "overfitting",
+    "plot": "cm_norm",
+    "auc": 0.564175925925926,
+    "ci": [
+     0.5191134259259259,
+     0.6125898148148148
+    ],
+    "recall": 0.15555555555555556,
+    "families": {
+     "logreg": 0.6008148148148148,
+     "hgb": 0.5917824074074074,
+     "rf": 0.5734259259259259,
+     "mlp": 0.5195648148148149,
+     "resnet18_image": 0.5982222222222222
+    },
+    "grade": "robust",
+    "best_estimator": "logreg",
+    "best_val": 0.6008148148148148,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "overfitting",
+    "plot": "roc",
+    "auc": 0.5338796296296296,
+    "ci": [
+     0.4824604166666666,
+     0.5828828703703703
+    ],
+    "recall": 0.08888888888888889,
+    "families": {
+     "logreg": 0.5556388888888889,
+     "hgb": 0.5350833333333334,
+     "rf": 0.5395277777777778,
+     "mlp": 0.5893796296296296,
+     "resnet18_image": 0.5539166666666666
+    },
+    "grade": "robust",
+    "best_estimator": "mlp",
+    "best_val": 0.5893796296296296,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "overfitting",
+    "plot": "pr",
+    "auc": 0.5706296296296296,
+    "ci": [
+     0.5265108796296296,
+     0.6182777777777777
+    ],
+    "recall": 0.2611111111111111,
+    "families": {
+     "logreg": 0.5977592592592593,
+     "hgb": 0.5551388888888888,
+     "rf": 0.5394351851851852,
+     "mlp": 0.5781944444444445,
+     "resnet18_image": 0.5592222222222222
+    },
+    "grade": "robust",
+    "best_estimator": "logreg",
+    "best_val": 0.5977592592592593,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "lc_loss",
+    "auc": 0.5813888888888888,
+    "ci": [
+     0.5334520052123634,
+     0.6364191162620824
+    ],
+    "recall": 0.37777777777777777,
+    "families": {
+     "logreg": 0.5484259259259259,
+     "hgb": 0.509074074074074,
+     "rf": 0.5020324074074074,
+     "mlp": 0.4929166666666667,
+     "resnet18_image": 0.5860740740740741
+    },
+    "grade": "robust",
+    "best_estimator": "resnet18_image",
+    "best_val": 0.5860740740740741,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "lc_acc",
+    "auc": 0.4954166666666667,
+    "ci": [
+     0.4452637848204757,
+     0.5410008274699517
+    ],
+    "recall": 0.1388888888888889,
+    "families": {
+     "logreg": 0.4735787037037038,
+     "hgb": 0.5044351851851852,
+     "rf": 0.5036759259259259,
+     "mlp": 0.4855925925925926,
+     "resnet18_image": 0.5165648148148149
+    },
+    "grade": "certified",
+    "best_estimator": "resnet18_image",
+    "best_val": 0.5165648148148149,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "cm",
+    "auc": 0.5396527777777779,
+    "ci": [
+     0.4946988838060148,
+     0.5839979798840499
+    ],
+    "recall": 0.07777777777777778,
+    "families": {
+     "logreg": 0.49531944444444453,
+     "hgb": 0.48774537037037036,
+     "rf": 0.4985509259259259,
+     "mlp": 0.47324537037037034,
+     "resnet18_image": 0.5189027777777778
+    },
+    "grade": "certified",
+    "best_estimator": "resnet18_image",
+    "best_val": 0.5189027777777778,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "cm_norm",
+    "auc": 0.5059768518518518,
+    "ci": [
+     0.4583542824074074,
+     0.552762962962963
+    ],
+    "recall": 0.1111111111111111,
+    "families": {
+     "logreg": 0.48403240740740744,
+     "hgb": 0.47387037037037033,
+     "rf": 0.4776805555555556,
+     "mlp": 0.49266203703703704,
+     "resnet18_image": 0.4753703703703704
+    },
+    "grade": "certified",
+    "best_estimator": "mlp",
+    "best_val": 0.49266203703703704,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "roc",
+    "auc": 0.5282129629629629,
+    "ci": [
+     0.4814983796296296,
+     0.5735291666666666
+    ],
+    "recall": 0.13333333333333333,
+    "families": {
+     "logreg": 0.5188055555555555,
+     "hgb": 0.5127962962962962,
+     "rf": 0.49266666666666664,
+     "mlp": 0.5058333333333334,
+     "resnet18_image": 0.512
+    },
+    "grade": "certified",
+    "best_estimator": "logreg",
+    "best_val": 0.5188055555555555,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "pr",
+    "auc": 0.5266296296296296,
+    "ci": [
+     0.4739587962962963,
+     0.573344675925926
+    ],
+    "recall": 0.1,
+    "families": {
+     "logreg": 0.52125,
+     "hgb": 0.5020555555555556,
+     "rf": 0.5299722222222223,
+     "mlp": 0.49330555555555555,
+     "resnet18_image": 0.5173888888888889
+    },
+    "grade": "certified",
+    "best_estimator": "rf",
+    "best_val": 0.5299722222222223,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "label_noise",
+    "plot": "lc_acc",
+    "auc": 0.6980185185185186,
+    "ci": [
+     0.6556011574074075,
+     0.7385321759259258
+    ],
+    "recall": 0.45555555555555555,
+    "families": {
+     "logreg": 0.6415555555555557,
+     "hgb": 0.6668703703703703,
+     "rf": 0.684675925925926,
+     "mlp": 0.6964814814814815,
+     "resnet18_image": 0.5948425925925925
+    },
+    "grade": "borderline",
+    "best_estimator": "mlp",
+    "best_val": 0.6964814814814815,
+    "blind_share": 0.6
+   },
+   {
+    "failure": "label_noise",
+    "plot": "cm",
+    "auc": 0.6447592592592593,
+    "ci": [
+     0.6016849537037037,
+     0.6838430555555556
+    ],
+    "recall": 0.45,
+    "families": {
+     "logreg": 0.6344166666666666,
+     "hgb": 0.6260277777777777,
+     "rf": 0.633824074074074,
+     "mlp": 0.6533703703703704,
+     "resnet18_image": 0.6524074074074073
+    },
+    "grade": "robust",
+    "best_estimator": "mlp",
+    "best_val": 0.6533703703703704,
+    "blind_share": 0.8
+   },
+   {
+    "failure": "label_noise",
+    "plot": "cm_norm",
+    "auc": 0.6696574074074073,
+    "ci": [
+     0.6195869116797823,
+     0.7164785710549856
+    ],
+    "recall": 0.5555555555555556,
+    "families": {
+     "logreg": 0.6471018518518519,
+     "hgb": 0.5933842592592593,
+     "rf": 0.5783148148148147,
+     "mlp": 0.4193611111111111,
+     "resnet18_image": 0.6473472222222223
+    },
+    "grade": "borderline",
+    "best_estimator": "resnet18_image",
+    "best_val": 0.6473472222222223,
+    "blind_share": 0.6
+   },
+   {
+    "failure": "class_imbalance",
+    "plot": "lc_loss",
+    "auc": 0.5824351851851852,
+    "ci": [
+     0.5349546296296296,
+     0.6298997685185186
+    ],
+    "recall": 0.06666666666666667,
+    "families": {
+     "logreg": 0.5553425925925926,
+     "hgb": 0.6067037037037037,
+     "rf": 0.6140185185185185,
+     "mlp": 0.5406203703703705,
+     "resnet18_image": 0.5613703703703703
+    },
+    "grade": "robust",
+    "best_estimator": "rf",
+    "best_val": 0.6140185185185185,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "distribution_shift",
+    "plot": "lc_loss",
+    "auc": 0.5010462962962963,
+    "ci": [
+     0.4541127314814815,
+     0.5501446759259259
+    ],
+    "recall": 0.07222222222222222,
+    "families": {
+     "logreg": 0.5736296296296296,
+     "hgb": 0.5110092592592592,
+     "rf": 0.5112777777777777,
+     "mlp": 0.45199074074074075,
+     "resnet18_image": 0.5269722222222223
+    },
+    "grade": "certified",
+    "best_estimator": "logreg",
+    "best_val": 0.5736296296296296,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "distribution_shift",
+    "plot": "lc_acc",
+    "auc": 0.4930740740740741,
+    "ci": [
+     0.4434570725295121,
+     0.538111116425737
+    ],
+    "recall": 0.14444444444444443,
+    "families": {
+     "logreg": 0.5575462962962964,
+     "hgb": 0.5023888888888889,
+     "rf": 0.4974814814814815,
+     "mlp": 0.49491666666666667,
+     "resnet18_image": 0.5584814814814815
+    },
+    "grade": "certified",
+    "best_estimator": "resnet18_image",
+    "best_val": 0.5584814814814815,
+    "blind_share": 1.0
+   },
+   {
+    "failure": "distribution_shift",
+    "plot": "pr",
+    "auc": 0.6738148148148149,
+    "ci": [
+     0.6313482938415268,
+     0.7188289323237435
+    ],
+    "recall": 0.4722222222222222,
+    "families": {
+     "logreg": 0.6779074074074074,
+     "hgb": 0.6953333333333334,
+     "rf": 0.69675,
+     "mlp": 0.6950740740740741,
+     "resnet18_image": 0.7025277777777779
+    },
+    "grade": "borderline",
+    "best_estimator": "resnet18_image",
+    "best_val": 0.7025277777777779,
+    "blind_share": 0.6
+   }
+  ],
+  "stability": {
+   "overfitting|lc_loss": 1.0,
+   "overfitting|lc_acc": 0.8,
+   "overfitting|rel": 0.8,
+   "overfitting|rel_n": 0.6,
+   "overfitting|cm": 1.0,
+   "overfitting|cm_norm": 1.0,
+   "overfitting|roc": 1.0,
+   "overfitting|pr": 1.0,
+   "overfitting|dist": 0.6,
+   "miscalibration|lc_loss": 1.0,
+   "miscalibration|lc_acc": 1.0,
+   "miscalibration|rel": 0.6,
+   "miscalibration|rel_n": 0.8,
+   "miscalibration|cm": 1.0,
+   "miscalibration|cm_norm": 1.0,
+   "miscalibration|roc": 1.0,
+   "miscalibration|pr": 1.0,
+   "miscalibration|dist": 1.0,
+   "label_noise|lc_loss": 0.6,
+   "label_noise|lc_acc": 0.6,
+   "label_noise|rel": 1.0,
+   "label_noise|rel_n": 1.0,
+   "label_noise|cm": 0.8,
+   "label_noise|cm_norm": 0.6,
+   "label_noise|roc": 0.8,
+   "label_noise|pr": 1.0,
+   "label_noise|dist": 1.0,
+   "class_imbalance|lc_loss": 1.0,
+   "class_imbalance|lc_acc": 0.6,
+   "class_imbalance|rel": 0.6,
+   "class_imbalance|rel_n": 1.0,
+   "class_imbalance|cm": 1.0,
+   "class_imbalance|cm_norm": 1.0,
+   "class_imbalance|roc": 1.0,
+   "class_imbalance|pr": 1.0,
+   "class_imbalance|dist": 1.0,
+   "data_leakage|lc_loss": 0.8,
+   "data_leakage|lc_acc": 0.8,
+   "data_leakage|rel": 0.6,
+   "data_leakage|rel_n": 1.0,
+   "data_leakage|cm": 0.8,
+   "data_leakage|cm_norm": 0.48,
+   "data_leakage|roc": 0.8,
+   "data_leakage|pr": 1.0,
+   "data_leakage|dist": 0.8,
+   "distribution_shift|lc_loss": 1.0,
+   "distribution_shift|lc_acc": 1.0,
+   "distribution_shift|rel": 1.0,
+   "distribution_shift|rel_n": 1.0,
+   "distribution_shift|cm": 1.0,
+   "distribution_shift|cm_norm": 0.6,
+   "distribution_shift|roc": 0.48,
+   "distribution_shift|pr": 0.6,
+   "distribution_shift|dist": 1.0
+  }
+ }
+}

@@ -88,6 +88,20 @@ py gaps_prepare.py sets runs/confirm_synthetic --jobs=8 || FAIL=1
 py gaps_prepare.py sets runs/confirm_magic --jobs=8 || FAIL=1
 need $CODE/runs/confirm_synthetic/plotsets.json $CODE/runs/confirm_magic/plotsets.json
 '''),
+    "rev_cpu": (CPU, "03:00:00", "Instructor review: kernel two-sample tests (both runs) + binary/2AFC reader items. No args", r'''
+R=$CODE/runs
+need $CODE/review_prepare.py $R/confirm_synthetic/features.npz $R/confirm_magic/features.npz $R/confirm_synthetic/reader_items_core.json $R/confirm_synthetic/img
+py review_prepare.py items runs/confirm_synthetic || FAIL=1
+need $R/confirm_synthetic/reader_items_binary.json $R/confirm_synthetic/reader_items_2afc.json $R/confirm_synthetic/img_2afc
+py review_prepare.py mmd runs/confirm_synthetic runs/confirm_magic || FAIL=1
+need $R/confirm_synthetic/two_sample.json $R/confirm_magic/two_sample.json
+'''),
+    "b3": (GPU, "08:00:00", "Instructor review: stronger image benchmark B3 (ConvNeXt-Tiny, native resolution). Args: RUN", r'''
+RUN=${1:?RUN}
+need $CODE/runs/$RUN/meta.json $CODE/runs/$RUN/img
+py hpc/b3_strong.py runs/$RUN || FAIL=1
+need $CODE/runs/$RUN/b3_results.json
+'''),
 }
 
 for name, (res, time, doc, body) in JOBS.items():
