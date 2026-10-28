@@ -66,10 +66,12 @@ Last updated: 2026-10-28.
 
 - **Core (paper and course):** evidential map (9 plots × 6 failures × 2 data sources) with the invisible/weak
   distinction; benchmarks B0/B1/B2(+B3) with the robustness checks; five open AI readers (7-way, binary, 2AFC);
-  redesigns (bin sizes drawn, values printed) evaluated by benchmarks and readers; the Plot Evidence Explorer.
+  redesigns (bin sizes drawn, values printed) evaluated by benchmarks and readers; the Plot Evidence Explorer;
+  4–6 formative expert sessions (qualitative) covering the plots and the Explorer task — these replace the controlled
+  human study and the Explorer user test, as the instructor asked.
 - **Supporting (already done, appendix or short sections):** real-world check, read-then-reason, multi-plot benchmark,
   positive control, value probe, badges and companion views.
-- **Stretch:** frontier models (paid APIs, only if the instructor approves); formative expert sessions.
+- **Stretch:** frontier models (paid APIs, only if the instructor approves).
 
 **First results for point 4 (done locally)**
 
