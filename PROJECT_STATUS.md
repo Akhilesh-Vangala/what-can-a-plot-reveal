@@ -5,7 +5,7 @@ DS-GA 3001 Visualization for Machine Learning (Prof. Claudio Silva), Fall 2026, 
 Akhilesh Vangala (sv3129@nyu.edu), Sanvi Jagtap (sj5129@nyu.edu), Lucas Yao (ly2808@nyu.edu).
 Goal: the course project, then a workshop paper (possibly a full paper).
 
-Last updated: 2026-10-28.
+Last updated: 2026-10-29.
 
 ---
 
@@ -58,8 +58,8 @@ Last updated: 2026-10-28.
 | 1 | State the visualization insight | Lead the update and the paper with the insight: which plots hide which failures (including failures that are provably invisible in a plot) and what each redesign changes. Show that the Explorer and the redesigns are already built (screenshot + headline redesign result). | To write (update) |
 | 2 | What is new this term | All work was done this term: idea and manual pilot early October, first cluster job Oct 7, confirmatory run Oct 12–13, repository Oct 14. "Complete" in the proposal meant the core pipeline built in the first weeks of term. **Team to confirm** before the update states it. | To write; team confirms |
 | 3 | No controlled human study | Controlled study dropped (archived). Replaced by 4–6 qualitative expert sessions: think-aloud on 12 chosen plots, an Explorer task, a short interview; reported as themes and quotes, no statistics. Protocol: `04_experiments/human_study/PROTOCOL.md`. | Materials ready; recruit 4–6 people |
-| 4 | What "blind" means | (a) Cells **blind by construction**: failing model re-trained next to its healthy twin; plotted values identical → no reader or estimator can ever detect the failure. (b) Full **cutoff sensitivity** with a grade per blind cell. (c) **Classifier-free two-sample test** per cell and a **stronger, different image benchmark** (B3, ConvNeXt-Tiny at native resolution). "Blind" is split into *invisible* (plot unchanged) and *weak* (a difference exists, but no estimator reaches AUC 0.70). | (a), (b) done; (c) ready to run on the cluster |
-| 5 | Near chance may be a task-design effect | Two simpler tasks for all five readers on the same held-out items: **binary** (healthy vs. problem; AUC per failure × plot, compared with the benchmark on the same items) and **two-alternative forced choice** (which of two plots is the failing model; chance 0.5). | Ready to run on the cluster |
+| 4 | What "blind" means | (a) Cells **blind by construction**: failing model re-trained next to its healthy twin; plotted values identical → no reader or estimator can ever detect the failure. (b) Full **cutoff sensitivity** with a grade per blind cell. (c) **Classifier-free two-sample test** per cell and a **stronger, different image benchmark** (B3, ConvNeXt-Tiny at native resolution). "Blind" is split into *invisible* (plot unchanged) and *weak* (a difference exists, but no estimator reaches AUC 0.70). | **Done** (results below) |
+| 5 | Near chance may be a task-design effect | Two simpler tasks for all five readers on the same held-out items: **binary** (healthy vs. problem; AUC per failure × plot, compared with the benchmark on the same items) and **two-alternative forced choice** (which of two plots is the failing model; chance 0.5). | **Done** (results below) |
 | 6 | Core vs. stretch | Proposed split below. | To confirm with the team, then state in the update |
 
 **Proposed scope split (point 6)**
@@ -83,6 +83,16 @@ Last updated: 2026-10-28.
   0 borderline; real 17 = 7 certified + 7 robust + 3 borderline (labels that depend on the cutoff: label noise on
   accuracy curves and on the row-normalized confusion matrix, shift on PR). Report: `04_experiments/code/runs/BLIND_SENSITIVITY.md`.
 
+
+**Final results for points 4 and 5 (2026-10-29; `04_experiments/code/runs/REVIEW_RESULTS.md`)**
+
+- Point 4: the stronger image benchmark B3 never beats the earlier benchmarks by more than 0.05. Blind cells,
+  synthetic: 5 invisible (proven) + 4 invisible (no difference found) + 6 weak; real: 7 + 5 + 4, and one cell revised
+  to detectable (distribution shift on PR, B3 AUC 0.72).
+- Point 5: readers stay near chance on the simpler tasks — binary detection AUC 0.50–0.54 (benchmark 0.80 on the
+  same items), 2AFC 0.51–0.58 (benchmark 0.79 on the same pairs). The largest reader detects only textbook pairs
+  (overfitting on loss curves 0.86). The near-chance result is not a task-design effect.
+
 ---
 
 ## 4. What has been done (timeline)
@@ -99,6 +109,7 @@ Last updated: 2026-10-28.
 | Oct 15–16 | Plot Evidence Explorer (map, cell, my-plots and reader views); human-study materials |
 | Oct 20 | Proposal submitted |
 | Oct 28 | Instructor feedback received (9/10); response started: blind-by-construction proof, cutoff sensitivity, new cluster stage `review`, formative expert-session protocol |
+| Oct 29 | Review checks complete: two-sample tests, B3, binary and 2AFC tasks for all five readers (points 4 and 5 answered) |
 
 Main results: see `README.md` (study design and results) and `04_experiments/FINDINGS_LOG.md` (dated log).
 Deviations from the plan and their reasons: `04_experiments/DEVIATIONS.md`.
@@ -137,8 +148,8 @@ Deviations from the plan and their reasons: `04_experiments/DEVIATIONS.md`.
 
 | # | Step | Who | When |
 |---|---|---|---|
-| 1 | Run cluster stage `review` (two-sample tests, B3, binary + 2AFC readers): upload `visml_bundle.zip`, then `bash $SCRATCH/visml/code/hpc/run_stage.sh review` | Sanvi | Now (~8 GPU-hours, about half a day) |
-| 2 | Download results; score with `score_review.py`; final invisible/weak map; update figures and Explorer | — | When jobs finish |
+| 1 | ~~Run cluster stage `review`~~ — done Oct 29 | — | — |
+| 2 | Update the evidential-map figure and the Explorer with the invisible/weak labels | — | Before the update |
 | 3 | Confirm what predates the course (point 2) and the core/stretch split (point 6) | Team | Before Nov 1 |
 | 4 | Write the 1-page mid-term update answering all six points | Team | **Nov 3** |
 | 5 | Recruit 4–6 experts; run the sessions (40 min each); code notes into themes | Team | Nov 4–20 |

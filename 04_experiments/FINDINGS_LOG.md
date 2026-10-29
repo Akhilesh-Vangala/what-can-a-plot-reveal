@@ -429,3 +429,22 @@ Gap 5 — machine-reader designs (key values printed on reliability, ROC, histog
   AUC 0.60 [0.56, 0.65]). "Blind" is therefore split into *invisible* (plot unchanged) and *weak* (detectable
   difference, but no estimator reaches 0.70). The kernel two-sample test and B3 (stage `review`) decide the split for
   the non-certified cells.
+
+## 2026-10-29 — Instructor review, points 4 and 5: final (score_review.py → runs/REVIEW_RESULTS.md)
+**Point 4 (blind cells).** Kernel two-sample test (no learned model; Holm over 54 cells) + stronger image benchmark
+B3 (ConvNeXt-Tiny, native 320×240, 3 seeds). B3 mean AUC 0.78 syn / 0.76 real vs B2 0.78 / 0.76 and B1* 0.79 / 0.78;
+B3 exceeds B1* by > 0.05 in **0** cells. Final grades of the cells blind at the default cutoffs:
+- synthetic (15): 5 invisible (proven) + 4 invisible (no difference found) + 6 weak;
+- real (17): 7 invisible (proven) + 5 invisible (no difference found) + 4 weak + **1 revised**: distribution shift on
+  PR, B3 0.72 [0.68, 0.76] (was borderline 0.67) → detectable.
+The two-sample test finds no difference on every proven-identical cell (Holm p ≥ 0.6) and a difference where failures
+are visible → calibrated. "Blind" is reported as invisible / weak from now on.
+**Point 5 (task difficulty).** Same 4,500 held-out core items (binary) and 900 balanced pairs (2AFC), five readers.
+- Binary (healthy vs problem), mean AUC over 30 failure × plot cells: readers 0.50–0.54 vs benchmark 0.80 on the same
+  items. Largest readers reach the textbook cells only: InternVL3-38B overfitting on loss curves 0.86 (benchmark
+  0.96); Qwen-32B class imbalance on the confusion matrix 0.80 (0.98).
+- 2AFC (which plot is failing; chance 0.50): readers 0.51–0.53, InternVL3-38B 0.58 [0.55, 0.61]; benchmark 0.79 on
+  the same pairs. Position bias: Qwen-7B picks A 9%, InternVL-8B 16%, Qwen-32B 23% (sides balanced, so accuracy is
+  unaffected).
+→ Near-chance 7-way performance is not a task-design effect: readers barely detect that anything is wrong; only the
+largest reader shows a small detection ability, limited to textbook plot–failure pairs.
