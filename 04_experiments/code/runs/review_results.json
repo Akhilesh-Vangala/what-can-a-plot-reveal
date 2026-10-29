@@ -5,7 +5,13 @@
     "failure": "overfitting",
     "plot": "cm",
     "b1": 0.6008518518518519,
-    "b3": null,
+    "b3": {
+     "auc": 0.5867870370370369,
+     "ci": [
+      0.5386432485659701,
+      0.6319708519799806
+     ]
+    },
     "two_sample": {
      "failure": "overfitting",
      "plot": "cm",
@@ -17,13 +23,19 @@
      "p_holm": 0.026986506746626684
     },
     "earlier": "robust",
-    "final": "weak, B3 pending"
+    "final": "weak"
    },
    {
     "failure": "overfitting",
     "plot": "cm_norm",
     "b1": 0.5985925925925926,
-    "b3": null,
+    "b3": {
+     "auc": 0.5982453703703704,
+     "ci": [
+      0.5532831771979698,
+      0.6501309082848548
+     ]
+    },
     "two_sample": {
      "failure": "overfitting",
      "plot": "cm_norm",
@@ -35,13 +47,19 @@
      "p_holm": 0.026986506746626684
     },
     "earlier": "robust",
-    "final": "weak, B3 pending"
+    "final": "weak"
    },
    {
     "failure": "overfitting",
     "plot": "roc",
     "b1": 0.6417037037037038,
-    "b3": null,
+    "b3": {
+     "auc": 0.6228148148148149,
+     "ci": [
+      0.5752859983141344,
+      0.666457752123439
+     ]
+    },
     "two_sample": {
      "failure": "overfitting",
      "plot": "roc",
@@ -53,13 +71,19 @@
      "p_holm": 0.026986506746626684
     },
     "earlier": "robust",
-    "final": "weak, B3 pending"
+    "final": "weak"
    },
    {
     "failure": "overfitting",
     "plot": "pr",
     "b1": 0.6216203703703704,
-    "b3": null,
+    "b3": {
+     "auc": 0.6456666666666668,
+     "ci": [
+      0.5978628981493138,
+      0.6861765228539451
+     ]
+    },
     "two_sample": {
      "failure": "overfitting",
      "plot": "pr",
@@ -71,13 +95,19 @@
      "p_holm": 0.026986506746626684
     },
     "earlier": "robust",
-    "final": "weak, B3 pending"
+    "final": "weak"
    },
    {
     "failure": "miscalibration",
     "plot": "lc_loss",
     "b1": 0.6498518518518519,
-    "b3": null,
+    "b3": {
+     "auc": 0.6927407407407408,
+     "ci": [
+      0.6357888315920465,
+      0.7387161229914959
+     ]
+    },
     "two_sample": {
      "failure": "miscalibration",
      "plot": "lc_loss",
@@ -89,13 +119,19 @@
      "p_holm": 0.026986506746626684
     },
     "earlier": "robust",
-    "final": "weak, B3 pending"
+    "final": "weak"
    },
    {
     "failure": "miscalibration",
     "plot": "lc_acc",
     "b1": 0.49125,
-    "b3": null,
+    "b3": {
+     "auc": 0.4999212962962963,
+     "ci": [
+      0.45182631251841743,
+      0.5481175465396547
+     ]
+    },
     "two_sample": {
      "failure": "miscalibration",
      "plot": "lc_acc",
@@ -113,7 +149,13 @@
     "failure": "miscalibration",
     "plot": "cm",
     "b1": 0.4779953703703704,
-    "b3": null,
+    "b3": {
+     "auc": 0.518662037037037,
+     "ci": [
+      0.4791150292778644,
+      0.553722312358002
+     ]
+    },
     "two_sample": {
      "failure": "miscalibration",
      "plot": "cm",
@@ -131,7 +173,13 @@
     "failure": "miscalibration",
     "plot": "cm_norm",
     "b1": 0.5267685185185185,
-    "b3": null,
+    "b3": {
+     "auc": 0.5308611111111111,
+     "ci": [
+      0.48133582299940325,
+      0.5761423554133741
+     ]
+    },
     "two_sample": {
      "failure": "miscalibration",
      "plot": "cm_norm",
@@ -149,7 +197,13 @@
     "failure": "miscalibration",
     "plot": "roc",
     "b1": 0.5232129629629629,
-    "b3": null,
+    "b3": {
+     "auc": 0.49530555555555555,
+     "ci": [
+      0.449035784624379,
+      0.543520509466703
+     ]
+    },
     "two_sample": {
      "failure": "miscalibration",
      "plot": "roc",
@@ -161,13 +215,19 @@
      "p_holm": 1.0
     },
     "earlier": "robust",
-    "final": "invisible (no difference found), B3 pending"
+    "final": "invisible (no difference found)"
    },
    {
     "failure": "miscalibration",
     "plot": "pr",
     "b1": 0.5160462962962963,
-    "b3": null,
+    "b3": {
+     "auc": 0.4908935185185185,
+     "ci": [
+      0.44220654454632363,
+      0.5389314168706019
+     ]
+    },
     "two_sample": {
      "failure": "miscalibration",
      "plot": "pr",
@@ -179,13 +239,19 @@
      "p_holm": 1.0
     },
     "earlier": "robust",
-    "final": "invisible (no difference found), B3 pending"
+    "final": "invisible (no difference found)"
    },
    {
     "failure": "class_imbalance",
     "plot": "lc_loss",
     "b1": 0.4999444444444444,
-    "b3": null,
+    "b3": {
+     "auc": 0.5252453703703704,
+     "ci": [
+      0.47742568972476446,
+      0.568569162935155
+     ]
+    },
     "two_sample": {
      "failure": "class_imbalance",
      "plot": "lc_loss",
@@ -197,13 +263,19 @@
      "p_holm": 1.0
     },
     "earlier": "robust",
-    "final": "invisible (no difference found), B3 pending"
+    "final": "invisible (no difference found)"
    },
    {
     "failure": "class_imbalance",
     "plot": "lc_acc",
     "b1": 0.5899351851851852,
-    "b3": null,
+    "b3": {
+     "auc": 0.5835416666666666,
+     "ci": [
+      0.5343269115458865,
+      0.630674831888815
+     ]
+    },
     "two_sample": {
      "failure": "class_imbalance",
      "plot": "lc_acc",
@@ -215,13 +287,19 @@
      "p_holm": 1.0
     },
     "earlier": "robust",
-    "final": "invisible (no difference found), B3 pending"
+    "final": "invisible (no difference found)"
    },
    {
     "failure": "class_imbalance",
     "plot": "rel",
     "b1": 0.6382685185185185,
-    "b3": null,
+    "b3": {
+     "auc": 0.5913425925925926,
+     "ci": [
+      0.5464107121571605,
+      0.6366272825334887
+     ]
+    },
     "two_sample": {
      "failure": "class_imbalance",
      "plot": "rel",
@@ -233,13 +311,19 @@
      "p_holm": 0.026986506746626684
     },
     "earlier": "robust",
-    "final": "weak, B3 pending"
+    "final": "weak"
    },
    {
     "failure": "distribution_shift",
     "plot": "lc_loss",
     "b1": 0.5052592592592593,
-    "b3": null,
+    "b3": {
+     "auc": 0.49164351851851856,
+     "ci": [
+      0.4389130552347675,
+      0.5412472816214442
+     ]
+    },
     "two_sample": {
      "failure": "distribution_shift",
      "plot": "lc_loss",
@@ -257,7 +341,13 @@
     "failure": "distribution_shift",
     "plot": "lc_acc",
     "b1": 0.5099814814814816,
-    "b3": null,
+    "b3": {
+     "auc": 0.5172083333333333,
+     "ci": [
+      0.4690501551733485,
+      0.5692967786698384
+     ]
+    },
     "two_sample": {
      "failure": "distribution_shift",
      "plot": "lc_acc",
@@ -271,7 +361,823 @@
     "earlier": "certified",
     "final": "invisible (proven)"
    }
-  ]
+  ],
+  "tasks": {
+   "binary|Qwen2.5-VL-7B-Instruct": {
+    "cells": {
+     "overfitting|lc_loss": {
+      "auc": 0.63375,
+      "ci": [
+       0.5752962101514932,
+       0.6849303915646898
+      ],
+      "bench": 0.9630333333333333
+     },
+     "overfitting|rel": {
+      "auc": 0.6854333333333333,
+      "ci": [
+       0.6318637325972402,
+       0.7378953886889819
+      ],
+      "bench": 0.9359666666666667
+     },
+     "overfitting|cm": {
+      "auc": 0.4892500000000001,
+      "ci": [
+       0.46072643158529236,
+       0.5193551251719999
+      ],
+      "bench": 0.6268333333333334
+     },
+     "overfitting|roc": {
+      "auc": 0.5033333333333334,
+      "ci": [
+       0.5,
+       0.5086101926905575
+      ],
+      "bench": 0.6834333333333334
+     },
+     "overfitting|dist": {
+      "auc": 0.48916666666666664,
+      "ci": [
+       0.4234938248670412,
+       0.563010343815887
+      ],
+      "bench": 0.8911
+     },
+     "miscalibration|lc_loss": {
+      "auc": 0.545,
+      "ci": [
+       0.4913458128171569,
+       0.5914064143649268
+      ],
+      "bench": 0.6435166666666666
+     },
+     "miscalibration|rel": {
+      "auc": 0.5609166666666667,
+      "ci": [
+       0.5024833968843372,
+       0.6094856513473512
+      ],
+      "bench": 0.7938333333333333
+     },
+     "miscalibration|cm": {
+      "auc": 0.48810000000000003,
+      "ci": [
+       0.4611369536380896,
+       0.5161979298278864
+      ],
+      "bench": 0.5045166666666667
+     },
+     "miscalibration|roc": {
+      "auc": 0.5033333333333334,
+      "ci": [
+       0.5,
+       0.508569115990991
+      ],
+      "bench": 0.5527333333333333
+     },
+     "miscalibration|dist": {
+      "auc": 0.47686666666666666,
+      "ci": [
+       0.41302546245151467,
+       0.5447237275165171
+      ],
+      "bench": 0.7707333333333333
+     },
+     "label_noise|lc_loss": {
+      "auc": 0.63,
+      "ci": [
+       0.5760138137384886,
+       0.6824609187551629
+      ],
+      "bench": 0.8565333333333334
+     },
+     "label_noise|rel": {
+      "auc": 0.5698833333333333,
+      "ci": [
+       0.5170016656006823,
+       0.6252411861750906
+      ],
+      "bench": 0.9138333333333334
+     },
+     "label_noise|cm": {
+      "auc": 0.5279166666666667,
+      "ci": [
+       0.4912242222665522,
+       0.5683349572099956
+      ],
+      "bench": 0.7008333333333333
+     },
+     "label_noise|roc": {
+      "auc": 0.5033333333333334,
+      "ci": [
+       0.5,
+       0.5084609768666972
+      ],
+      "bench": 0.9310666666666667
+     },
+     "label_noise|dist": {
+      "auc": 0.4987666666666667,
+      "ci": [
+       0.4457394071115288,
+       0.5490892559523809
+      ],
+      "bench": 0.8064333333333332
+     },
+     "class_imbalance|lc_loss": {
+      "auc": 0.53,
+      "ci": [
+       0.4775074200913242,
+       0.5766554209086299
+      ],
+      "bench": 0.5129166666666667
+     },
+     "class_imbalance|rel": {
+      "auc": 0.5697499999999999,
+      "ci": [
+       0.5175240367524561,
+       0.6224090314588078
+      ],
+      "bench": 0.6419333333333334
+     },
+     "class_imbalance|cm": {
+      "auc": 0.46866666666666673,
+      "ci": [
+       0.44289734136650366,
+       0.4933706668941512
+      ],
+      "bench": 0.9794
+     },
+     "class_imbalance|roc": {
+      "auc": 0.49833333333333335,
+      "ci": [
+       0.48575539044289046,
+       0.5068992579908675
+      ],
+      "bench": 0.9584333333333334
+     },
+     "class_imbalance|dist": {
+      "auc": 0.4796666666666667,
+      "ci": [
+       0.4171538806786197,
+       0.5419535794998905
+      ],
+      "bench": 0.9662666666666667
+     },
+     "data_leakage|lc_loss": {
+      "auc": 0.575,
+      "ci": [
+       0.519674102384364,
+       0.6274717238249213
+      ],
+      "bench": 0.8981
+     },
+     "data_leakage|rel": {
+      "auc": 0.5972999999999999,
+      "ci": [
+       0.5361952937417502,
+       0.6545326326245461
+      ],
+      "bench": 0.8575666666666666
+     },
+     "data_leakage|cm": {
+      "auc": 0.4888666666666667,
+      "ci": [
+       0.4615920822813673,
+       0.5206963086183231
+      ],
+      "bench": 0.7111333333333333
+     },
+     "data_leakage|roc": {
+      "auc": 0.5033333333333334,
+      "ci": [
+       0.5,
+       0.5082394691130171
+      ],
+      "bench": 0.8667333333333334
+     },
+     "data_leakage|dist": {
+      "auc": 0.4963,
+      "ci": [
+       0.4304785082007984,
+       0.562429230012241
+      ],
+      "bench": 0.8564666666666667
+     },
+     "distribution_shift|lc_loss": {
+      "auc": 0.525,
+      "ci": [
+       0.4754815770226729,
+       0.5764445427873023
+      ],
+      "bench": 0.5093666666666666
+     },
+     "distribution_shift|rel": {
+      "auc": 0.7058333333333333,
+      "ci": [
+       0.651776001317523,
+       0.7680021667031115
+      ],
+      "bench": 0.9724999999999999
+     },
+     "distribution_shift|cm": {
+      "auc": 0.57885,
+      "ci": [
+       0.5300024921187293,
+       0.6231798801495066
+      ],
+      "bench": 0.9421
+     },
+     "distribution_shift|roc": {
+      "auc": 0.5033333333333334,
+      "ci": [
+       0.5,
+       0.5083333333333333
+      ],
+      "bench": 0.7598333333333332
+     },
+     "distribution_shift|dist": {
+      "auc": 0.5590333333333333,
+      "ci": [
+       0.5130655141730395,
+       0.6005305746522975
+      ],
+      "bench": 0.9337666666666665
+     }
+    },
+    "answered": 4500,
+    "items": 4500,
+    "share_problem": 0.21933333333333332
+   },
+   "binary|InternVL3-8B": {
+    "cells": {
+     "overfitting|lc_loss": {
+      "auc": 0.6153096179183135,
+      "ci": [
+       0.5839973896960627,
+       0.6489348316709992
+      ],
+      "bench": 0.9631620553359683
+     },
+     "overfitting|rel": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.9359666666666667
+     },
+     "overfitting|cm": {
+      "auc": 0.43706074578092124,
+      "ci": [
+       0.3881991631942575,
+       0.4894578348257975
+      ],
+      "bench": 0.6269752450870675
+     },
+     "overfitting|roc": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.6834333333333334
+     },
+     "overfitting|dist": {
+      "auc": 0.48285889194980103,
+      "ci": [
+       0.4467021993982778,
+       0.5217037711210171
+      ],
+      "bench": 0.8910315273951639
+     },
+     "miscalibration|lc_loss": {
+      "auc": 0.5586655782780547,
+      "ci": [
+       0.5145368470925925,
+       0.6034048382785352
+      ],
+      "bench": 0.6298547860457123
+     },
+     "miscalibration|rel": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.7938333333333333
+     },
+     "miscalibration|cm": {
+      "auc": 0.4486055776892429,
+      "ci": [
+       0.39819358907554225,
+       0.5025938986916058
+      ],
+      "bench": 0.4929224279353175
+     },
+     "miscalibration|roc": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.5527333333333333
+     },
+     "miscalibration|dist": {
+      "auc": 0.5387715539230691,
+      "ci": [
+       0.5146744364447501,
+       0.5650312036685861
+      ],
+      "bench": 0.7708057000986294
+     },
+     "label_noise|lc_loss": {
+      "auc": 0.5664373200605085,
+      "ci": [
+       0.5262292502917532,
+       0.6048747761629117
+      ],
+      "bench": 0.8484848484848485
+     },
+     "label_noise|rel": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.9138333333333334
+     },
+     "label_noise|cm": {
+      "auc": 0.415062641002256,
+      "ci": [
+       0.3477689706713257,
+       0.47674230613727314
+      ],
+      "bench": 0.7008112129794076
+     },
+     "label_noise|roc": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.9310666666666667
+     },
+     "label_noise|dist": {
+      "auc": 0.4381015542631704,
+      "ci": [
+       0.39525625867221564,
+       0.48013520845431923
+      ],
+      "bench": 0.8110056796925484
+     },
+     "class_imbalance|lc_loss": {
+      "auc": 0.5015626436253332,
+      "ci": [
+       0.4506272770888385,
+       0.5516522018643523
+      ],
+      "bench": 0.5068250758341759
+     },
+     "class_imbalance|rel": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.6419333333333334
+     },
+     "class_imbalance|cm": {
+      "auc": 0.4853558738020889,
+      "ci": [
+       0.4203579324106631,
+       0.5534119970712029
+      ],
+      "bench": 0.9787875524927319
+     },
+     "class_imbalance|roc": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.9584333333333334
+     },
+     "class_imbalance|dist": {
+      "auc": 0.4381818181818182,
+      "ci": [
+       0.3959709984842179,
+       0.4810110742231233
+      ],
+      "bench": 0.9659259259259259
+     },
+     "data_leakage|lc_loss": {
+      "auc": 0.5150916277398491,
+      "ci": [
+       0.4685223088451549,
+       0.5633837074805286
+      ],
+      "bench": 0.8909450233560906
+     },
+     "data_leakage|rel": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.8575666666666666
+     },
+     "data_leakage|cm": {
+      "auc": 0.5330725291604665,
+      "ci": [
+       0.48521131493706826,
+       0.5723844612707639
+      ],
+      "bench": 0.7038352613641817
+     },
+     "data_leakage|roc": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.8667333333333334
+     },
+     "data_leakage|dist": {
+      "auc": 0.518989898989899,
+      "ci": [
+       0.48660332738556383,
+       0.5494639060175889
+      ],
+      "bench": 0.8589562289562289
+     },
+     "distribution_shift|lc_loss": {
+      "auc": 0.5116075449041877,
+      "ci": [
+       0.45588167555509596,
+       0.5568846029248427
+      ],
+      "bench": 0.4757592435082804
+     },
+     "distribution_shift|rel": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.9722222222222222
+     },
+     "distribution_shift|cm": {
+      "auc": 0.4013017696655239,
+      "ci": [
+       0.34278943278943275,
+       0.4516464504756197
+      ],
+      "bench": 0.9462151394422311
+     },
+     "distribution_shift|roc": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.7598333333333332
+     },
+     "distribution_shift|dist": {
+      "auc": 0.5131931560502989,
+      "ci": [
+       0.4780023449132442,
+       0.5439548138732426
+      ],
+      "bench": 0.9330378616092901
+     }
+    },
+    "answered": 4196,
+    "items": 4500,
+    "share_problem": 0.6051000953288846
+   },
+   "binary|llava-onevision-qwen2-7b-ov-hf": {
+    "cells": {
+     "overfitting|lc_loss": {
+      "auc": 0.48,
+      "ci": [
+       0.4696204836829837,
+       0.4899681208053691
+      ],
+      "bench": 0.9630333333333333
+     },
+     "overfitting|rel": {
+      "auc": 0.7078333333333333,
+      "ci": [
+       0.6564888741523177,
+       0.761726694661977
+      ],
+      "bench": 0.9359666666666667
+     },
+     "overfitting|cm": {
+      "auc": 0.49566666666666664,
+      "ci": [
+       0.4371397420333421,
+       0.5621052370434342
+      ],
+      "bench": 0.6268333333333334
+     },
+     "overfitting|roc": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.6834333333333334
+     },
+     "overfitting|dist": {
+      "auc": 0.43856666666666666,
+      "ci": [
+       0.41542180786603505,
+       0.46177313882074683
+      ],
+      "bench": 0.8911
+     },
+     "miscalibration|lc_loss": {
+      "auc": 0.51,
+      "ci": [
+       0.4852737169597635,
+       0.5390677650271625
+      ],
+      "bench": 0.6435166666666666
+     },
+     "miscalibration|rel": {
+      "auc": 0.5782499999999999,
+      "ci": [
+       0.5240887435491476,
+       0.6421416012008244
+      ],
+      "bench": 0.7938333333333333
+     },
+     "miscalibration|cm": {
+      "auc": 0.49735000000000007,
+      "ci": [
+       0.4368995635635451,
+       0.5657961442076881
+      ],
+      "bench": 0.5045166666666667
+     },
+     "miscalibration|roc": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.5527333333333333
+     },
+     "miscalibration|dist": {
+      "auc": 0.45248333333333335,
+      "ci": [
+       0.42380036444159286,
+       0.48436540670718553
+      ],
+      "bench": 0.7707333333333333
+     },
+     "label_noise|lc_loss": {
+      "auc": 0.51,
+      "ci": [
+       0.4862240340242492,
+       0.5346397353084151
+      ],
+      "bench": 0.8565333333333334
+     },
+     "label_noise|rel": {
+      "auc": 0.43889999999999996,
+      "ci": [
+       0.3871492726344036,
+       0.492186899464877
+      ],
+      "bench": 0.9138333333333334
+     },
+     "label_noise|cm": {
+      "auc": 0.5515833333333333,
+      "ci": [
+       0.4904003033991639,
+       0.6103266086685345
+      ],
+      "bench": 0.7008333333333333
+     },
+     "label_noise|roc": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.9310666666666667
+     },
+     "label_noise|dist": {
+      "auc": 0.6696333333333333,
+      "ci": [
+       0.615428999275666,
+       0.7268182915273133
+      ],
+      "bench": 0.8064333333333332
+     },
+     "class_imbalance|lc_loss": {
+      "auc": 0.52,
+      "ci": [
+       0.4942086679529968,
+       0.5486080004676691
+      ],
+      "bench": 0.5129166666666667
+     },
+     "class_imbalance|rel": {
+      "auc": 0.5354,
+      "ci": [
+       0.4673108094186006,
+       0.5901728468717891
+      ],
+      "bench": 0.6419333333333334
+     },
+     "class_imbalance|cm": {
+      "auc": 0.34806666666666664,
+      "ci": [
+       0.2963476739995156,
+       0.4005286159734349
+      ],
+      "bench": 0.9794
+     },
+     "class_imbalance|roc": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.9584333333333334
+     },
+     "class_imbalance|dist": {
+      "auc": 0.5424333333333333,
+      "ci": [
+       0.5003468986645627,
+       0.5859393601880736
+      ],
+      "bench": 0.9662666666666667
+     },
+     "data_leakage|lc_loss": {
+      "auc": 0.4852,
+      "ci": [
+       0.46586533825001547,
+       0.5069230099734537
+      ],
+      "bench": 0.8981
+     },
+     "data_leakage|rel": {
+      "auc": 0.6354833333333333,
+      "ci": [
+       0.5709227157738095,
+       0.6933269651608902
+      ],
+      "bench": 0.8575666666666666
+     },
+     "data_leakage|cm": {
+      "auc": 0.6169666666666667,
+      "ci": [
+       0.5614041990037908,
+       0.6827155398469131
+      ],
+      "bench": 0.7111333333333333
+     },
+     "data_leakage|roc": {
+      "auc": 0.5,
+      "ci": [
+       0.5,
+       0.5
+      ],
+      "bench": 0.8667333333333334
+     },
+     "data_leakage|dist": {
+      "auc": 0.43273333333333336,
+      "ci": [
+       0.4142223526876136,
+       0.4537978855770496
+      ],
+      "bench": 0.8564666666666667
+     },
+     "distribution_shift|lc_loss": {
+      "auc": 0.49,
+      "ci": [
+       0.47447955882053683,
+       0.5084740476481601
+      ],
+      "bench": 0.5093666666666666
+     },
+     "distribution_shift|rel": {
+      "auc": 0.6461666666666667,
+      "ci": [
+       0.5929716770209259,
+       0.6995116688354925
+      ],
+      "bench": 0.9724999999999999
+     },
+     "distribution_shift|cm": {
+      "auc": 0.45363333333333333,
+      "ci": [
+       0.38388279500671746,
+       0.5192235881977758
+      ],
+      "bench": 0.9421
+     },
+     "distribution_shift|roc": {
+      "auc": 0.505,
+      "ci": [
+       0.5,
+       0.5155484858247422
+      ],
+      "bench": 0.7598333333333332
+     },
+     "distribution_shift|dist": {
+      "auc": 0.5359833333333334,
+      "ci": [
+       0.4923552974406029,
+       0.5855727588685183
+      ],
+      "bench": 0.9337666666666665
+     }
+    },
+    "answered": 4500,
+    "items": 4500,
+    "share_problem": 0.3008888888888889
+   },
+   "2afc|Qwen2.5-VL-7B-Instruct": {
+    "acc": 0.5144444444444445,
+    "ci": [
+     0.48,
+     0.5477777777777778
+    ],
+    "picks_A": 0.09,
+    "by_plot": {
+     "lc_loss": 0.5222222222222223,
+     "rel": 0.55,
+     "cm": 0.5,
+     "roc": 0.5,
+     "dist": 0.5
+    },
+    "by_failure": {
+     "overfitting": 0.5733333333333334,
+     "miscalibration": 0.47333333333333333,
+     "label_noise": 0.52,
+     "class_imbalance": 0.47333333333333333,
+     "data_leakage": 0.5066666666666667,
+     "distribution_shift": 0.54
+    },
+    "answered": 900
+   },
+   "2afc|InternVL3-8B": {
+    "acc": 0.5267260579064588,
+    "ci": [
+     0.4933184855233853,
+     0.5590200445434298
+    ],
+    "picks_A": 0.16146993318485522,
+    "by_plot": {
+     "lc_loss": 0.5555555555555556,
+     "rel": 0.5754189944134078,
+     "cm": 0.49162011173184356,
+     "roc": 0.5,
+     "dist": 0.5111111111111111
+    },
+    "by_failure": {
+     "overfitting": 0.5333333333333333,
+     "miscalibration": 0.5133333333333333,
+     "label_noise": 0.4866666666666667,
+     "class_imbalance": 0.5202702702702703,
+     "data_leakage": 0.62,
+     "distribution_shift": 0.4866666666666667
+    },
+    "answered": 898
+   },
+   "2afc|llava-onevision-qwen2-7b-ov-hf": {
+    "acc": 0.5255555555555556,
+    "ci": [
+     0.49333333333333335,
+     0.5577777777777778
+    ],
+    "picks_A": 0.4922222222222222,
+    "by_plot": {
+     "lc_loss": 0.5111111111111111,
+     "rel": 0.5555555555555556,
+     "cm": 0.5333333333333333,
+     "roc": 0.5,
+     "dist": 0.5277777777777778
+    },
+    "by_failure": {
+     "overfitting": 0.54,
+     "miscalibration": 0.52,
+     "label_noise": 0.48,
+     "class_imbalance": 0.52,
+     "data_leakage": 0.58,
+     "distribution_shift": 0.5133333333333333
+    },
+    "answered": 900
+   },
+   "2afc|benchmark": 0.7888888888888889
+  }
  },
  "confirm_magic": {
   "blind": [
@@ -279,7 +1185,13 @@
     "failure": "overfitting",
     "plot": "cm",
     "b1": 0.5473055555555556,
-    "b3": null,
+    "b3": {
+     "auc": 0.5365324074074074,
+     "ci": [
+      0.48697011071957175,
+      0.5846345842108568
+     ]
+    },
     "two_sample": {
      "failure": "overfitting",
      "plot": "cm",
@@ -291,13 +1203,19 @@
      "p_holm": 0.051974012993503245
     },
     "earlier": "robust",
-    "final": "invisible (no difference found), B3 pending"
+    "final": "invisible (no difference found)"
    },
    {
     "failure": "overfitting",
     "plot": "cm_norm",
     "b1": 0.564175925925926,
-    "b3": null,
+    "b3": {
+     "auc": 0.536712962962963,
+     "ci": [
+      0.4867393542516773,
+      0.5815986265683489
+     ]
+    },
     "two_sample": {
      "failure": "overfitting",
      "plot": "cm_norm",
@@ -309,13 +1227,19 @@
      "p_holm": 0.06596701649175413
     },
     "earlier": "robust",
-    "final": "invisible (no difference found), B3 pending"
+    "final": "invisible (no difference found)"
    },
    {
     "failure": "overfitting",
     "plot": "roc",
     "b1": 0.5338796296296296,
-    "b3": null,
+    "b3": {
+     "auc": 0.5497314814814814,
+     "ci": [
+      0.5049310863881825,
+      0.6022239142088285
+     ]
+    },
     "two_sample": {
      "failure": "overfitting",
      "plot": "roc",
@@ -327,13 +1251,19 @@
      "p_holm": 0.4287856071964018
     },
     "earlier": "robust",
-    "final": "invisible (no difference found), B3 pending"
+    "final": "invisible (no difference found)"
    },
    {
     "failure": "overfitting",
     "plot": "pr",
     "b1": 0.5706296296296296,
-    "b3": null,
+    "b3": {
+     "auc": 0.5080231481481481,
+     "ci": [
+      0.4649470024143196,
+      0.5540269873126711
+     ]
+    },
     "two_sample": {
      "failure": "overfitting",
      "plot": "pr",
@@ -345,13 +1275,19 @@
      "p_holm": 0.8815592203898052
     },
     "earlier": "robust",
-    "final": "invisible (no difference found), B3 pending"
+    "final": "invisible (no difference found)"
    },
    {
     "failure": "miscalibration",
     "plot": "lc_loss",
     "b1": 0.5813888888888888,
-    "b3": null,
+    "b3": {
+     "auc": 0.5934722222222222,
+     "ci": [
+      0.5452934026080232,
+      0.6382702235573502
+     ]
+    },
     "two_sample": {
      "failure": "miscalibration",
      "plot": "lc_loss",
@@ -363,13 +1299,19 @@
      "p_holm": 1.0
     },
     "earlier": "robust",
-    "final": "invisible (no difference found), B3 pending"
+    "final": "invisible (no difference found)"
    },
    {
     "failure": "miscalibration",
     "plot": "lc_acc",
     "b1": 0.4954166666666667,
-    "b3": null,
+    "b3": {
+     "auc": 0.47097222222222224,
+     "ci": [
+      0.4222046937003968,
+      0.5168627587105716
+     ]
+    },
     "two_sample": {
      "failure": "miscalibration",
      "plot": "lc_acc",
@@ -387,7 +1329,13 @@
     "failure": "miscalibration",
     "plot": "cm",
     "b1": 0.5396527777777779,
-    "b3": null,
+    "b3": {
+     "auc": 0.49666203703703704,
+     "ci": [
+      0.45149716723900407,
+      0.5449444020511648
+     ]
+    },
     "two_sample": {
      "failure": "miscalibration",
      "plot": "cm",
@@ -405,7 +1353,13 @@
     "failure": "miscalibration",
     "plot": "cm_norm",
     "b1": 0.5059768518518518,
-    "b3": null,
+    "b3": {
+     "auc": 0.4981157407407407,
+     "ci": [
+      0.4529351853897729,
+      0.5455567022476666
+     ]
+    },
     "two_sample": {
      "failure": "miscalibration",
      "plot": "cm_norm",
@@ -423,7 +1377,13 @@
     "failure": "miscalibration",
     "plot": "roc",
     "b1": 0.5282129629629629,
-    "b3": null,
+    "b3": {
+     "auc": 0.4783148148148149,
+     "ci": [
+      0.4347597130463199,
+      0.5292706109470815
+     ]
+    },
     "two_sample": {
      "failure": "miscalibration",
      "plot": "roc",
@@ -441,7 +1401,13 @@
     "failure": "miscalibration",
     "plot": "pr",
     "b1": 0.5266296296296296,
-    "b3": null,
+    "b3": {
+     "auc": 0.47732407407407407,
+     "ci": [
+      0.4265168989785078,
+      0.5204636660300586
+     ]
+    },
     "two_sample": {
      "failure": "miscalibration",
      "plot": "pr",
@@ -459,7 +1425,13 @@
     "failure": "label_noise",
     "plot": "lc_acc",
     "b1": 0.6980185185185186,
-    "b3": null,
+    "b3": {
+     "auc": 0.49660648148148145,
+     "ci": [
+      0.4507312263160014,
+      0.5375643321977209
+     ]
+    },
     "two_sample": {
      "failure": "label_noise",
      "plot": "lc_acc",
@@ -471,13 +1443,19 @@
      "p_holm": 0.026986506746626684
     },
     "earlier": "borderline",
-    "final": "weak, B3 pending"
+    "final": "weak"
    },
    {
     "failure": "label_noise",
     "plot": "cm",
     "b1": 0.6447592592592593,
-    "b3": null,
+    "b3": {
+     "auc": 0.6356388888888889,
+     "ci": [
+      0.5930010786634475,
+      0.6758854639812435
+     ]
+    },
     "two_sample": {
      "failure": "label_noise",
      "plot": "cm",
@@ -489,13 +1467,19 @@
      "p_holm": 0.026986506746626684
     },
     "earlier": "robust",
-    "final": "weak, B3 pending"
+    "final": "weak"
    },
    {
     "failure": "label_noise",
     "plot": "cm_norm",
     "b1": 0.6696574074074073,
-    "b3": null,
+    "b3": {
+     "auc": 0.6280185185185185,
+     "ci": [
+      0.5823771435478919,
+      0.6741221324484787
+     ]
+    },
     "two_sample": {
      "failure": "label_noise",
      "plot": "cm_norm",
@@ -507,13 +1491,19 @@
      "p_holm": 0.026986506746626684
     },
     "earlier": "borderline",
-    "final": "weak, B3 pending"
+    "final": "weak"
    },
    {
     "failure": "class_imbalance",
     "plot": "lc_loss",
     "b1": 0.5824351851851852,
-    "b3": null,
+    "b3": {
+     "auc": 0.540625,
+     "ci": [
+      0.48968435089915524,
+      0.5851201297612602
+     ]
+    },
     "two_sample": {
      "failure": "class_imbalance",
      "plot": "lc_loss",
@@ -525,13 +1515,19 @@
      "p_holm": 0.026986506746626684
     },
     "earlier": "robust",
-    "final": "weak, B3 pending"
+    "final": "weak"
    },
    {
     "failure": "distribution_shift",
     "plot": "lc_loss",
     "b1": 0.5010462962962963,
-    "b3": null,
+    "b3": {
+     "auc": 0.5187268518518519,
+     "ci": [
+      0.4732896890293413,
+      0.5647809148518043
+     ]
+    },
     "two_sample": {
      "failure": "distribution_shift",
      "plot": "lc_loss",
@@ -549,7 +1545,13 @@
     "failure": "distribution_shift",
     "plot": "lc_acc",
     "b1": 0.4930740740740741,
-    "b3": null,
+    "b3": {
+     "auc": 0.48469444444444443,
+     "ci": [
+      0.43455040018919494,
+      0.5302420055083865
+     ]
+    },
     "two_sample": {
      "failure": "distribution_shift",
      "plot": "lc_acc",
@@ -567,7 +1569,13 @@
     "failure": "distribution_shift",
     "plot": "pr",
     "b1": 0.6738148148148149,
-    "b3": null,
+    "b3": {
+     "auc": 0.7221342592592592,
+     "ci": [
+      0.6846312089839168,
+      0.7646662560669915
+     ]
+    },
     "two_sample": {
      "failure": "distribution_shift",
      "plot": "pr",
@@ -579,7 +1587,7 @@
      "p_holm": 0.026986506746626684
     },
     "earlier": "borderline",
-    "final": "weak, B3 pending"
+    "final": "revised (B3 detects)"
    }
   ]
  }
