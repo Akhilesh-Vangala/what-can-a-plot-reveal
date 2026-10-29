@@ -1,0 +1,586 @@
+{
+ "confirm_synthetic": {
+  "blind": [
+   {
+    "failure": "overfitting",
+    "plot": "cm",
+    "b1": 0.6008518518518519,
+    "b3": null,
+    "two_sample": {
+     "failure": "overfitting",
+     "plot": "cm",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.03287854840153579,
+     "p": 0.0004997501249375312,
+     "constant": false,
+     "p_holm": 0.026986506746626684
+    },
+    "earlier": "robust",
+    "final": "weak, B3 pending"
+   },
+   {
+    "failure": "overfitting",
+    "plot": "cm_norm",
+    "b1": 0.5985925925925926,
+    "b3": null,
+    "two_sample": {
+     "failure": "overfitting",
+     "plot": "cm_norm",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.04297427624613494,
+     "p": 0.0004997501249375312,
+     "constant": false,
+     "p_holm": 0.026986506746626684
+    },
+    "earlier": "robust",
+    "final": "weak, B3 pending"
+   },
+   {
+    "failure": "overfitting",
+    "plot": "roc",
+    "b1": 0.6417037037037038,
+    "b3": null,
+    "two_sample": {
+     "failure": "overfitting",
+     "plot": "roc",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.024781731399716653,
+     "p": 0.0004997501249375312,
+     "constant": false,
+     "p_holm": 0.026986506746626684
+    },
+    "earlier": "robust",
+    "final": "weak, B3 pending"
+   },
+   {
+    "failure": "overfitting",
+    "plot": "pr",
+    "b1": 0.6216203703703704,
+    "b3": null,
+    "two_sample": {
+     "failure": "overfitting",
+     "plot": "pr",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.02393306407038914,
+     "p": 0.0004997501249375312,
+     "constant": false,
+     "p_holm": 0.026986506746626684
+    },
+    "earlier": "robust",
+    "final": "weak, B3 pending"
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "lc_loss",
+    "b1": 0.6498518518518519,
+    "b3": null,
+    "two_sample": {
+     "failure": "miscalibration",
+     "plot": "lc_loss",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.011179953319825204,
+     "p": 0.0004997501249375312,
+     "constant": false,
+     "p_holm": 0.026986506746626684
+    },
+    "earlier": "robust",
+    "final": "weak, B3 pending"
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "lc_acc",
+    "b1": 0.49125,
+    "b3": null,
+    "two_sample": {
+     "failure": "miscalibration",
+     "plot": "lc_acc",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.0036875249828564743,
+     "p": 0.35332333833083457,
+     "constant": false,
+     "p_holm": 1.0
+    },
+    "earlier": "certified",
+    "final": "invisible (proven)"
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "cm",
+    "b1": 0.4779953703703704,
+    "b3": null,
+    "two_sample": {
+     "failure": "miscalibration",
+     "plot": "cm",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.00514481289255897,
+     "p": 0.08745627186406797,
+     "constant": false,
+     "p_holm": 0.8295852073963018
+    },
+    "earlier": "certified",
+    "final": "invisible (proven)"
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "cm_norm",
+    "b1": 0.5267685185185185,
+    "b3": null,
+    "two_sample": {
+     "failure": "miscalibration",
+     "plot": "cm_norm",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.005299569876079626,
+     "p": 0.08295852073963018,
+     "constant": false,
+     "p_holm": 0.8295852073963018
+    },
+    "earlier": "certified",
+    "final": "invisible (proven)"
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "roc",
+    "b1": 0.5232129629629629,
+    "b3": null,
+    "two_sample": {
+     "failure": "miscalibration",
+     "plot": "roc",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.004015257255521967,
+     "p": 0.248375812093953,
+     "constant": false,
+     "p_holm": 1.0
+    },
+    "earlier": "robust",
+    "final": "invisible (no difference found), B3 pending"
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "pr",
+    "b1": 0.5160462962962963,
+    "b3": null,
+    "two_sample": {
+     "failure": "miscalibration",
+     "plot": "pr",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.003692626704935967,
+     "p": 0.37881059470264866,
+     "constant": false,
+     "p_holm": 1.0
+    },
+    "earlier": "robust",
+    "final": "invisible (no difference found), B3 pending"
+   },
+   {
+    "failure": "class_imbalance",
+    "plot": "lc_loss",
+    "b1": 0.4999444444444444,
+    "b3": null,
+    "two_sample": {
+     "failure": "class_imbalance",
+     "plot": "lc_loss",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.003619098017657296,
+     "p": 0.375312343828086,
+     "constant": false,
+     "p_holm": 1.0
+    },
+    "earlier": "robust",
+    "final": "invisible (no difference found), B3 pending"
+   },
+   {
+    "failure": "class_imbalance",
+    "plot": "lc_acc",
+    "b1": 0.5899351851851852,
+    "b3": null,
+    "two_sample": {
+     "failure": "class_imbalance",
+     "plot": "lc_acc",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.004354821746704148,
+     "p": 0.17391304347826086,
+     "constant": false,
+     "p_holm": 1.0
+    },
+    "earlier": "robust",
+    "final": "invisible (no difference found), B3 pending"
+   },
+   {
+    "failure": "class_imbalance",
+    "plot": "rel",
+    "b1": 0.6382685185185185,
+    "b3": null,
+    "two_sample": {
+     "failure": "class_imbalance",
+     "plot": "rel",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.009545656611073672,
+     "p": 0.0004997501249375312,
+     "constant": false,
+     "p_holm": 0.026986506746626684
+    },
+    "earlier": "robust",
+    "final": "weak, B3 pending"
+   },
+   {
+    "failure": "distribution_shift",
+    "plot": "lc_loss",
+    "b1": 0.5052592592592593,
+    "b3": null,
+    "two_sample": {
+     "failure": "distribution_shift",
+     "plot": "lc_loss",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.001996715635545631,
+     "p": 0.9800099950024987,
+     "constant": false,
+     "p_holm": 1.0
+    },
+    "earlier": "certified",
+    "final": "invisible (proven)"
+   },
+   {
+    "failure": "distribution_shift",
+    "plot": "lc_acc",
+    "b1": 0.5099814814814816,
+    "b3": null,
+    "two_sample": {
+     "failure": "distribution_shift",
+     "plot": "lc_acc",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.0022340430207101773,
+     "p": 0.952023988005997,
+     "constant": false,
+     "p_holm": 1.0
+    },
+    "earlier": "certified",
+    "final": "invisible (proven)"
+   }
+  ]
+ },
+ "confirm_magic": {
+  "blind": [
+   {
+    "failure": "overfitting",
+    "plot": "cm",
+    "b1": 0.5473055555555556,
+    "b3": null,
+    "two_sample": {
+     "failure": "overfitting",
+     "plot": "cm",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.008495643131279375,
+     "p": 0.00399800099950025,
+     "constant": false,
+     "p_holm": 0.051974012993503245
+    },
+    "earlier": "robust",
+    "final": "invisible (no difference found), B3 pending"
+   },
+   {
+    "failure": "overfitting",
+    "plot": "cm_norm",
+    "b1": 0.564175925925926,
+    "b3": null,
+    "two_sample": {
+     "failure": "overfitting",
+     "plot": "cm_norm",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.008523737782202365,
+     "p": 0.005497251374312844,
+     "constant": false,
+     "p_holm": 0.06596701649175413
+    },
+    "earlier": "robust",
+    "final": "invisible (no difference found), B3 pending"
+   },
+   {
+    "failure": "overfitting",
+    "plot": "roc",
+    "b1": 0.5338796296296296,
+    "b3": null,
+    "two_sample": {
+     "failure": "overfitting",
+     "plot": "roc",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.00489303687675691,
+     "p": 0.038980509745127435,
+     "constant": false,
+     "p_holm": 0.4287856071964018
+    },
+    "earlier": "robust",
+    "final": "invisible (no difference found), B3 pending"
+   },
+   {
+    "failure": "overfitting",
+    "plot": "pr",
+    "b1": 0.5706296296296296,
+    "b3": null,
+    "two_sample": {
+     "failure": "overfitting",
+     "plot": "pr",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.0045957133683541245,
+     "p": 0.09795102448775612,
+     "constant": false,
+     "p_holm": 0.8815592203898052
+    },
+    "earlier": "robust",
+    "final": "invisible (no difference found), B3 pending"
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "lc_loss",
+    "b1": 0.5813888888888888,
+    "b3": null,
+    "two_sample": {
+     "failure": "miscalibration",
+     "plot": "lc_loss",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.0036122834099274197,
+     "p": 0.3888055972013993,
+     "constant": false,
+     "p_holm": 1.0
+    },
+    "earlier": "robust",
+    "final": "invisible (no difference found), B3 pending"
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "lc_acc",
+    "b1": 0.4954166666666667,
+    "b3": null,
+    "two_sample": {
+     "failure": "miscalibration",
+     "plot": "lc_acc",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.0026045613192463802,
+     "p": 0.912543728135932,
+     "constant": false,
+     "p_holm": 1.0
+    },
+    "earlier": "certified",
+    "final": "invisible (proven)"
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "cm",
+    "b1": 0.5396527777777779,
+    "b3": null,
+    "two_sample": {
+     "failure": "miscalibration",
+     "plot": "cm",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.005555025029591587,
+     "p": 0.06046976511744128,
+     "constant": false,
+     "p_holm": 0.6046976511744128
+    },
+    "earlier": "certified",
+    "final": "invisible (proven)"
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "cm_norm",
+    "b1": 0.5059768518518518,
+    "b3": null,
+    "two_sample": {
+     "failure": "miscalibration",
+     "plot": "cm_norm",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.0020556699496849713,
+     "p": 0.8760619690154923,
+     "constant": false,
+     "p_holm": 1.0
+    },
+    "earlier": "certified",
+    "final": "invisible (proven)"
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "roc",
+    "b1": 0.5282129629629629,
+    "b3": null,
+    "two_sample": {
+     "failure": "miscalibration",
+     "plot": "roc",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.0032940505402458036,
+     "p": 0.7251374312843578,
+     "constant": false,
+     "p_holm": 1.0
+    },
+    "earlier": "certified",
+    "final": "invisible (proven)"
+   },
+   {
+    "failure": "miscalibration",
+    "plot": "pr",
+    "b1": 0.5266296296296296,
+    "b3": null,
+    "two_sample": {
+     "failure": "miscalibration",
+     "plot": "pr",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.004411950347554194,
+     "p": 0.11394302848575712,
+     "constant": false,
+     "p_holm": 0.9115442278860569
+    },
+    "earlier": "certified",
+    "final": "invisible (proven)"
+   },
+   {
+    "failure": "label_noise",
+    "plot": "lc_acc",
+    "b1": 0.6980185185185186,
+    "b3": null,
+    "two_sample": {
+     "failure": "label_noise",
+     "plot": "lc_acc",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.05145084465815468,
+     "p": 0.0004997501249375312,
+     "constant": false,
+     "p_holm": 0.026986506746626684
+    },
+    "earlier": "borderline",
+    "final": "weak, B3 pending"
+   },
+   {
+    "failure": "label_noise",
+    "plot": "cm",
+    "b1": 0.6447592592592593,
+    "b3": null,
+    "two_sample": {
+     "failure": "label_noise",
+     "plot": "cm",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.02558582492061201,
+     "p": 0.0004997501249375312,
+     "constant": false,
+     "p_holm": 0.026986506746626684
+    },
+    "earlier": "robust",
+    "final": "weak, B3 pending"
+   },
+   {
+    "failure": "label_noise",
+    "plot": "cm_norm",
+    "b1": 0.6696574074074073,
+    "b3": null,
+    "two_sample": {
+     "failure": "label_noise",
+     "plot": "cm_norm",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.036242885017775346,
+     "p": 0.0004997501249375312,
+     "constant": false,
+     "p_holm": 0.026986506746626684
+    },
+    "earlier": "borderline",
+    "final": "weak, B3 pending"
+   },
+   {
+    "failure": "class_imbalance",
+    "plot": "lc_loss",
+    "b1": 0.5824351851851852,
+    "b3": null,
+    "two_sample": {
+     "failure": "class_imbalance",
+     "plot": "lc_loss",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.015858499153502466,
+     "p": 0.0004997501249375312,
+     "constant": false,
+     "p_holm": 0.026986506746626684
+    },
+    "earlier": "robust",
+    "final": "weak, B3 pending"
+   },
+   {
+    "failure": "distribution_shift",
+    "plot": "lc_loss",
+    "b1": 0.5010462962962963,
+    "b3": null,
+    "two_sample": {
+     "failure": "distribution_shift",
+     "plot": "lc_loss",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.0035275985122965987,
+     "p": 0.4292853573213393,
+     "constant": false,
+     "p_holm": 1.0
+    },
+    "earlier": "certified",
+    "final": "invisible (proven)"
+   },
+   {
+    "failure": "distribution_shift",
+    "plot": "lc_acc",
+    "b1": 0.4930740740740741,
+    "b3": null,
+    "two_sample": {
+     "failure": "distribution_shift",
+     "plot": "lc_acc",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.0037782749273652396,
+     "p": 0.3263368315842079,
+     "constant": false,
+     "p_holm": 1.0
+    },
+    "earlier": "certified",
+    "final": "invisible (proven)"
+   },
+   {
+    "failure": "distribution_shift",
+    "plot": "pr",
+    "b1": 0.6738148148148149,
+    "b3": null,
+    "two_sample": {
+     "failure": "distribution_shift",
+     "plot": "pr",
+     "n_healthy": 500,
+     "n_failing": 500,
+     "stat": 0.0301237687849873,
+     "p": 0.0004997501249375312,
+     "constant": false,
+     "p_holm": 0.026986506746626684
+    },
+    "earlier": "borderline",
+    "final": "weak, B3 pending"
+   }
+  ]
+ }
+}

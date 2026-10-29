@@ -1,0 +1,488 @@
+[
+ {
+  "failure": "overfitting",
+  "plot": "lc_loss",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.11874750594883256,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "overfitting",
+  "plot": "lc_acc",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.09239908567893214,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "overfitting",
+  "plot": "rel",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.08790132685385109,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "overfitting",
+  "plot": "rel_n",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.10449860597552328,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "overfitting",
+  "plot": "cm",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.008495643131279375,
+  "p": 0.00399800099950025,
+  "constant": false
+ },
+ {
+  "failure": "overfitting",
+  "plot": "cm_norm",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.008523737782202365,
+  "p": 0.005497251374312844,
+  "constant": false
+ },
+ {
+  "failure": "overfitting",
+  "plot": "roc",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.00489303687675691,
+  "p": 0.038980509745127435,
+  "constant": false
+ },
+ {
+  "failure": "overfitting",
+  "plot": "pr",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.0045957133683541245,
+  "p": 0.09795102448775612,
+  "constant": false
+ },
+ {
+  "failure": "overfitting",
+  "plot": "dist",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.12566558970574515,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "miscalibration",
+  "plot": "lc_loss",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.0036122834099274197,
+  "p": 0.3888055972013993,
+  "constant": false
+ },
+ {
+  "failure": "miscalibration",
+  "plot": "lc_acc",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.0026045613192463802,
+  "p": 0.912543728135932,
+  "constant": false
+ },
+ {
+  "failure": "miscalibration",
+  "plot": "rel",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.034146343273018895,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "miscalibration",
+  "plot": "rel_n",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.04085692354489709,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "miscalibration",
+  "plot": "cm",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.005555025029591587,
+  "p": 0.06046976511744128,
+  "constant": false
+ },
+ {
+  "failure": "miscalibration",
+  "plot": "cm_norm",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.0020556699496849713,
+  "p": 0.8760619690154923,
+  "constant": false
+ },
+ {
+  "failure": "miscalibration",
+  "plot": "roc",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.0032940505402458036,
+  "p": 0.7251374312843578,
+  "constant": false
+ },
+ {
+  "failure": "miscalibration",
+  "plot": "pr",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.004411950347554194,
+  "p": 0.11394302848575712,
+  "constant": false
+ },
+ {
+  "failure": "miscalibration",
+  "plot": "dist",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.045307982914545304,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "label_noise",
+  "plot": "lc_loss",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.1284780328371179,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "label_noise",
+  "plot": "lc_acc",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.05145084465815468,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "label_noise",
+  "plot": "rel",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.03736406418216079,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "label_noise",
+  "plot": "rel_n",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.042769241560804624,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "label_noise",
+  "plot": "cm",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.02558582492061201,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "label_noise",
+  "plot": "cm_norm",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.036242885017775346,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "label_noise",
+  "plot": "roc",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.11245023624216932,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "label_noise",
+  "plot": "pr",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.15040780917655167,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "label_noise",
+  "plot": "dist",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.050918198552877644,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "class_imbalance",
+  "plot": "lc_loss",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.015858499153502466,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "class_imbalance",
+  "plot": "lc_acc",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.03282092945032558,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "class_imbalance",
+  "plot": "rel",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.010558048894191204,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "class_imbalance",
+  "plot": "rel_n",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.07526216614758886,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "class_imbalance",
+  "plot": "cm",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.4582128877790324,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "class_imbalance",
+  "plot": "cm_norm",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.3300239058958324,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "class_imbalance",
+  "plot": "roc",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.0043021085040797855,
+  "p": 0.12993503248375812,
+  "constant": false
+ },
+ {
+  "failure": "class_imbalance",
+  "plot": "pr",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.1871944561054639,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "class_imbalance",
+  "plot": "dist",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.145617171610978,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "data_leakage",
+  "plot": "lc_loss",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.221383557785415,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "data_leakage",
+  "plot": "lc_acc",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.18632138091791073,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "data_leakage",
+  "plot": "rel",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.01284230079224099,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "data_leakage",
+  "plot": "rel_n",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.05016240098997031,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "data_leakage",
+  "plot": "cm",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.07784284505416837,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "data_leakage",
+  "plot": "cm_norm",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.11075119825587773,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "data_leakage",
+  "plot": "roc",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.17669582181110746,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "data_leakage",
+  "plot": "pr",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.07840918851637786,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "data_leakage",
+  "plot": "dist",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.09591990506587264,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "distribution_shift",
+  "plot": "lc_loss",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.0035275985122965987,
+  "p": 0.4292853573213393,
+  "constant": false
+ },
+ {
+  "failure": "distribution_shift",
+  "plot": "lc_acc",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.0037782749273652396,
+  "p": 0.3263368315842079,
+  "constant": false
+ },
+ {
+  "failure": "distribution_shift",
+  "plot": "rel",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.11008056746036095,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "distribution_shift",
+  "plot": "rel_n",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.10693641262351186,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "distribution_shift",
+  "plot": "cm",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.2144067386177545,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "distribution_shift",
+  "plot": "cm_norm",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.29283587324651394,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "distribution_shift",
+  "plot": "roc",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.07026680505359385,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "distribution_shift",
+  "plot": "pr",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.0301237687849873,
+  "p": 0.0004997501249375312,
+  "constant": false
+ },
+ {
+  "failure": "distribution_shift",
+  "plot": "dist",
+  "n_healthy": 500,
+  "n_failing": 500,
+  "stat": 0.029394663614751907,
+  "p": 0.0004997501249375312,
+  "constant": false
+ }
+]

@@ -5,10 +5,13 @@
 Point 4, "blind" cells. For every cell blind at the default cutoffs (AUC < 0.70): the certified flag (certify_blind.py),
 the kernel two-sample test (two_sample.json; Holm-adjusted over all 54 cells of a run) and the stronger image
 benchmark B3 (b3_results.json). Final grade:
-  invisible  plot identical to the healthy twin (certified), or no estimator above 0.70 and the two-sample test
-             finds no difference (Holm p >= 0.05);
-  weak       the plot's distribution does differ, but no estimator (B1 families, B2, B3) reaches AUC 0.70;
-  revised    B3 reaches AUC >= 0.70 (95% CI above 0.5): the cell was blind only for the weaker estimators.
+  invisible (proven)               plot identical to the healthy twin's (certify_blind.py);
+  invisible (no difference found)  no estimator reaches AUC 0.70 and the two-sample test finds no difference
+                                   (Holm p >= 0.05) - absence of evidence, not proof;
+  weak                             the plot's distribution does differ, but no estimator (B1 families, B2, B3)
+                                   reaches AUC 0.70;
+  revised (B3 detects)             B3 reaches AUC >= 0.70 (95% CI above 0.5): blind only for the weaker estimators.
+With 2,000 permutations the smallest p-value is 1/2001, so the smallest Holm-adjusted value over 54 cells is 0.027.
 Point 5, task difficulty. Binary: AUC of the reader's p_problem, healthy vs each failure, on the same held-out items
 as the benchmark (B1*), whose AUC on those items is the ceiling. 2AFC: share of pairs where the reader picks the
 failing model (chance 0.5); the benchmark's 2AFC accuracy on the same pairs is P(score failing > score healthy).
@@ -79,15 +82,15 @@ def blind_part(R, L):
         b = b3i.get(k)
         t = ts.get(k) if ts else None
         if c["grade"] == "certified":
-            g = "invisible"
+            g = "invisible (proven)"
         elif b and b["auc"] >= 0.70 and b["ci"][0] > 0.5:
             g = "revised (B3 detects)"
-        elif t is not None and t["p_holm"] >= 0.05 and max(c["best_val"], b["auc"] if b else 0) < 0.70:
-            g = "invisible"
-        elif b is None or t is None:
+        elif t is None:
             g = "pending"
         else:
-            g = "weak"
+            g = "invisible (no difference found)" if t["p_holm"] >= 0.05 else "weak"
+            if b is None:
+                g += ", B3 pending"
         rows.append(dict(failure=k[0], plot=k[1], b1=c["auc"], b3=b, two_sample=t, earlier=c["grade"], final=g))
         L.append(f"| {k[0]} | {k[1]} | {c['auc']:.2f} | " + (f"{b['auc']:.2f} [{b['ci'][0]:.2f}, {b['ci'][1]:.2f}]" if b else "–") +
                  " | " + (f"{t['p_holm']:.3g}" if t else "–") + f" | {c['grade']} | **{g}** |")
