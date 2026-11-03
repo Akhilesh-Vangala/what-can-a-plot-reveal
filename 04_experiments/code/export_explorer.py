@@ -5,6 +5,8 @@
 
 Benchmark per cell = B1* (validation-best of mark-table / image model); diagnosis = balanced, prior-corrected where
 available. Works for the v3 file layout (b2_multi_results.json) and v4 (b2_results.json).
+Blind cells at the strongest severity carry the review grade from runs/review_results.json (score_review.py), if any:
+invisible (proven) / invisible (no difference found) / weak / revised (B3 detects).
 """
 import collections
 import json
@@ -31,6 +33,10 @@ def main(run, tag):
     classes = ["healthy"] + fails
     b2det = {(r["failure"], r["level"], r["spec"]): r for r in b2["detection"]}
     b2dia = {(r["level"], r["spec"]): r for r in b2["diagnosis"]}
+    rev = ROOT / "04_experiments" / "code" / "runs" / "review_results.json"
+    rev = json.load(open(rev)).get(run.name, {}).get("blind", []) if rev.exists() else []
+    grade = {(c["failure"], c["plot"]): c for c in rev}
+    top = len(meta["targets"]) - 1
     cells, confusions, bench_bal = [], {}, {}
     for r in res["detection"]:
         f, j = r["failure"], r["level"]
@@ -45,6 +51,11 @@ def main(run, tag):
                               ci=[round(float(x), 3) if x is not None else None for x in ci[:2]],
                               label="identifiable" if d["test_auc"] >= 0.7 and rec >= 0.5 else
                               ("detect-only" if d["test_auc"] >= 0.7 else "neither")))
+            g = grade.get((f, sp)) if j == top else None
+            if g:
+                cells[-1]["evidence"] = g["final"]
+                if g.get("b3"):
+                    cells[-1]["b3"] = round(g["b3"]["auc"], 3)
     for d in res["diagnosis"]:
         for sp in specs:
             g = star(d[sp], b2dia.get((d["level"], sp)))
@@ -60,8 +71,8 @@ def main(run, tag):
             continue
         name = rows[0]["model"].split("/")[-1]
         suffix = fp.stem.replace("responses_", "").replace(name, "").strip("_")
-        if suffix in ("iv", "hires", "controls", "probe", "extract", "variants", "ann"):
-            continue  # interventions / resolution files are shown elsewhere
+        if suffix in ("iv", "hires", "controls", "probe", "extract", "variants", "ann", "binary", "2afc"):
+            continue  # interventions / resolution / review-task files are shown elsewhere
         name = name + (f" ({suffix})" if suffix else "")
         conf = collections.defaultdict(lambda: np.zeros((len(classes), len(classes) + 1)))
         for r in rows:

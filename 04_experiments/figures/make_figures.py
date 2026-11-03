@@ -11,7 +11,7 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.colors import LinearSegmentedColormap
-from matplotlib.patches import Rectangle
+from matplotlib.patches import Patch, Rectangle
 
 HERE = pathlib.Path(__file__).parent
 CODE = HERE.parent / "code"
@@ -65,17 +65,29 @@ def evidential(R):
     return A, Rc
 
 
+# blind-cell grades from the review checks (score_review.py): hatch, short name
+GRADE = {"invisible (proven)": ("xxxx", "proven invisible"), "invisible (no difference found)": ("////", "no difference found"),
+         "weak": (None, "weak"), "revised (B3 detects)": (None, "revised")}
+
+
 def fig1(runs):
+    review = json.load(open(RUNS / "review_results.json"))
+    plt.rcParams["hatch.linewidth"] = 0.4
     fig, axes = plt.subplots(1, 2, figsize=(7.2, 2.55), gridspec_kw=dict(wspace=0.08))
     for ax, (title, R) in zip(axes, runs):
         A, Rc = evidential(R)
+        grade = {(c["failure"], c["plot"]): c["final"] for c in review.get(R.p.name, {}).get("blind", [])}
         im = ax.imshow(A, cmap=CMAP, vmin=.5, vmax=1, aspect="auto")
         for a in range(6):
             for b in range(9):
                 if A[a, b] >= .7 and Rc[a, b] < .5:
                     ax.add_patch(Rectangle((b - .46, a - .42), .92, .84, fill=False, ec=ORANGE, lw=1.2, ls=(0, (2, 1.2))))
                 elif A[a, b] < .7:
-                    ax.plot([b - .42, b + .42], [a + .38, a - .38], color=GREY, lw=.5)
+                    g = grade.get((FAIL[a], SPEC[b]))
+                    if g == "revised (B3 detects)":
+                        ax.add_patch(Rectangle((b - .46, a - .42), .92, .84, fill=False, ec=BLUE, lw=1.2))
+                    elif g and GRADE[g][0]:
+                        ax.add_patch(Rectangle((b - .5, a - .5), 1, 1, fill=False, ec=GREY, lw=0, hatch=GRADE[g][0]))
                 ax.text(b, a, f"{A[a, b]:.2f}", ha="center", va="center", fontsize=5.6, color="white" if A[a, b] > .82 else "black")
         ax.set_xticks(range(9), [SROT[s] for s in SPEC], fontsize=6, rotation=35, ha="right", rotation_mode="anchor")
         ax.set_yticks(range(6), [FLAB[f] for f in FAIL] if ax is axes[0] else [], fontsize=6.5)
@@ -84,10 +96,19 @@ def fig1(runs):
             s.set_visible(False)
         n_id = int(((A >= .7) & (Rc >= .5)).sum())
         n_do = int(((A >= .7) & (Rc < .5)).sum())
-        ax.set_title(f"{title}: {n_id} identifiable, {n_do} detect-only, {54 - n_id - n_do} blind", fontsize=7.5, loc="left")
+        n = collections.Counter(grade.values())
+        parts = " · ".join(f"{n[k]} {GRADE[k][1]}" for k in GRADE if n[k])
+        ax.set_title(f"{title}: {n_id} identifiable, {n_do} detect-only, {54 - n_id - n_do} blind\n(blind: {parts})",
+                     fontsize=7, loc="left")
     cb = fig.colorbar(im, ax=axes, fraction=0.015, pad=0.01)
     cb.ax.tick_params(labelsize=6)
     cb.set_label("benchmark detection AUC", fontsize=6.5)
+    fig.legend(handles=[Patch(fill=False, ec=ORANGE, ls=(0, (2, 1.2)), label="detect-only (AUC ≥ 0.70, recall < 0.5)"),
+                        Patch(fill=False, ec=GREY, lw=0, hatch="xxxx", label="blind: invisible, proven (plot identical to healthy twin)"),
+                        Patch(fill=False, ec=GREY, lw=0, hatch="////", label="blind: invisible, no difference found (two-sample test)"),
+                        Patch(fill=False, ec=BLUE, label="revised: stronger image benchmark detects"),
+                        Patch(fill=False, ec="none", label="other AUC < 0.70 cells: weak (difference exists, not detected)")],
+               loc="lower center", bbox_to_anchor=(0.45, -0.29), ncol=2, fontsize=5.8, frameon=False, handlelength=2.2)
     save(fig, "fig1_evidential_map")
 
 

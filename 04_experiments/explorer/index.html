@@ -69,7 +69,8 @@
 </div>
 <main>
   <section class="panel"><h2>Evidential map</h2><div class="note" id="mapNote"></div><div id="map"></div>
-    <div class="legend"><span>● identifiable</span><span>◐ detect-only</span><span>○ neither</span></div></section>
+    <div class="legend"><span>● identifiable</span><span>◐ detect-only</span><span>⊘ invisible (proven)</span><span>○ invisible (no difference found)</span><span>△ weak</span><span>◇ revised: stronger benchmark detects</span></div>
+    <div class="note">Blind grades (strongest severity, confirmatory runs) come from the review checks: a twin re-training test, a two-sample test on what the plot draws, and a stronger image benchmark.</div></section>
   <section class="panel"><h2 id="confTitle">Benchmark confusion</h2><div class="note">Rows = true state, columns = predicted (share of row). Diagonal = correct.</div><div id="bench"></div></section>
   <section class="panel wide"><h2 id="cellTitle">Cell view</h2><div class="note">Click a cell in the map. Example plots are real held-out models from the run (re-trained from their seeds); the same plot type for a healthy model and for this failure at each severity.</div>
     <div class="stats" id="cellStats"></div><div class="ex" id="cellEx"></div><div class="note" id="cellReaders" style="margin-top:10px"></div></section>
@@ -121,12 +122,12 @@ function drawMap(R) {
   const g = svg.selectAll(".cell").data(cells).join("g").attr("class","cell")
     .attr("transform", d => `translate(${left + R.plots.indexOf(d.plot)*cw},${top + R.failures.indexOf(d.failure)*ch})`)
     .on("click", (e,d) => { state.plot = d.plot; state.failure = d.failure; render(); })
-    .on("mousemove", (e,d) => showTip(e, `<b>${FN(d.failure)}</b> on <b>${NAMES[d.plot]||d.plot}</b><br>detection AUC ${d.detect.toFixed(2)}${d.ci && d.ci[0] != null ? ` [95% CI ${d.ci[0].toFixed(2)}–${d.ci[1].toFixed(2)}]` : " (image benchmark)"}<br>diagnosis recall ${d.diagnose.toFixed(2)}<br>${d.label}`))
+    .on("mousemove", (e,d) => showTip(e, `<b>${FN(d.failure)}</b> on <b>${NAMES[d.plot]||d.plot}</b><br>detection AUC ${d.detect.toFixed(2)}${d.ci && d.ci[0] != null ? ` [95% CI ${d.ci[0].toFixed(2)}–${d.ci[1].toFixed(2)}]` : " (image benchmark)"}<br>diagnosis recall ${d.diagnose.toFixed(2)}<br>${d.evidence ? `<b>${d.evidence}</b>: ${EVID[d.evidence][1]}${d.b3 != null ? ` (stronger image benchmark AUC ${d.b3.toFixed(2)})` : ""}` : d.label}`))
     .on("mouseleave", hideTip);
   g.append("rect").attr("width", cw-3).attr("height", ch-3).attr("rx",4).attr("fill", d => color(m === "detect" ? d.detect : d.diagnose));
   g.append("text").attr("x", (cw-3)/2).attr("y", ch/2+3).attr("text-anchor","middle").style("font-size","11px")
     .style("fill", d => (m === "detect" ? d.detect : d.diagnose) > (m === "detect" ? 0.78 : 0.55) ? "#111" : "#fff")
-    .text(d => (d.label === "identifiable" ? "● " : d.label === "detect-only" ? "◐ " : "○ ") + (m === "detect" ? d.detect : d.diagnose).toFixed(2));
+    .text(d => GLYPH(d) + " " + (m === "detect" ? d.detect : d.diagnose).toFixed(2));
   svg.append("rect").attr("class","colsel").attr("x", left + R.plots.indexOf(state.plot)*cw - 2).attr("y", top - 2)
     .attr("width", cw+1).attr("height", ch*R.failures.length+1).attr("rx",5);
 }
@@ -149,12 +150,17 @@ function matrix(sel, M, rows, cols, size) {
     .style("font-size", (c*0.3)+"px").text(FN(k)));
 }
 const RANK = {identifiable: 2, "detect-only": 1, neither: 0};
-const PILL = l => `<span class="pill ${l === "identifiable" ? "id" : l === "detect-only" ? "do" : "ne"}">${l === "neither" ? "blind" : l}</span>`;
+const EVID = {"invisible (proven)": ["⊘", "the plotted values are identical to those of the model's healthy twin, so no reader can ever see this failure here"],
+  "invisible (no difference found)": ["○", "no detectable difference between healthy and failing plots in a two-sample test"],
+  "weak": ["△", "a small difference exists, but no benchmark detects it reliably (AUC below 0.70)"],
+  "revised (B3 detects)": ["◇", "a stronger image benchmark does detect it, so this cell is not blind"]};
+const GLYPH = d => d.label === "identifiable" ? "●" : d.label === "detect-only" ? "◐" : d.evidence ? EVID[d.evidence][0] : "○";
+const PILL = (l, ev) => `<span class="pill ${l === "identifiable" ? "id" : l === "detect-only" ? "do" : "ne"}"${ev ? ` title="${EVID[ev][1]}"` : ""}>${ev || (l === "neither" ? "blind" : l)}</span>`;
 function drawCell(R) {
   const f = state.failure, p = state.plot, ex = (window.EXAMPLES || {})[state.run];
   d3.select("#cellTitle").text(`Cell view — ${FN(f)} on ${NAMES[p] || p}`);
   const lv = R.cells.filter(c => c.failure === f && c.plot === p).sort((a, b) => a.level - b.level);
-  d3.select("#cellStats").html(lv.map(c => `<span>Severity ${c.level + 1}: ${PILL(c.label)} detection <b>${c.detect.toFixed(2)}</b>` +
+  d3.select("#cellStats").html(lv.map(c => `<span>Severity ${c.level + 1}: ${PILL(c.label, c.evidence)} detection <b>${c.detect.toFixed(2)}</b>` +
     `${c.ci && c.ci[0] != null ? ` <span class="ba">[${c.ci[0].toFixed(2)}–${c.ci[1].toFixed(2)}]</span>` : ""} · recall <b>${c.diagnose.toFixed(2)}</b></span>`).join(""));
   const box = d3.select("#cellEx").html("");
   if (!ex) { box.append("div").attr("class", "note").text("No example plots for this run."); }
@@ -182,7 +188,7 @@ function drawMine(R) {
   const best = (f, set) => { let b = null; set.forEach(p => { const c = get(f, p); if (c && (!b || RANK[c.label] > RANK[b.label] ||
     (RANK[c.label] === RANK[b.label] && c.detect > b.detect))) b = c; }); return b; };
   const mine = [...state.mine];
-  const rows = R.failures.map(f => { const b = best(f, mine); return `<tr><td>${FN(f)}</td><td>${b ? PILL(b.label) : PILL("neither")}</td>` +
+  const rows = R.failures.map(f => { const b = best(f, mine); return `<tr><td>${FN(f)}</td><td>${b ? PILL(b.label, b.evidence) : PILL("neither")}</td>` +
     `<td>${b ? `${NAMES[b.plot]} (AUC ${b.detect.toFixed(2)}, recall ${b.diagnose.toFixed(2)})` : "—"}</td></tr>`; });
   d3.select("#mytable").html(`<table class="cov"><tr><th>Failure</th><th>Your plots can…</th><th>Best evidence from</th></tr>${rows.join("")}</table>`);
   const score = set => R.failures.reduce((s, f) => { const b = best(f, set); return s + (b ? RANK[b.label] : 0); }, 0), base = score(mine);
@@ -204,7 +210,7 @@ function drawMine(R) {
     ? `<div class="rec">No single extra plot improves on your current set at this severity.</div>`
     : `<div class="rec"><b>Add ${NAMES[rec.p]}</b>: it upgrades ${R.failures.filter(f => { const a = best(f, mine), b = best(f, mine.concat([rec.p]));
         return (b ? RANK[b.label] : 0) > (a ? RANK[a.label] : 0); }).map(FN).join(", ")}.` +
-      ` Failures your plots can only flag are detected but not told apart from others; blind failures leave no trace in any ticked plot.</div>`));
+      ` Failures your plots can only flag are detected but not told apart from others; blind failures leave no reliable trace in any ticked plot (hover a grade for what it means).</div>`));
 }
 function drawBench(R) {
   const key = `${state.level}|${state.plot}`;

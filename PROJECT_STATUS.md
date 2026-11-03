@@ -5,7 +5,7 @@ DS-GA 3001 Visualization for Machine Learning (Prof. Claudio Silva), Fall 2026, 
 Akhilesh Vangala (sv3129@nyu.edu), Sanvi Jagtap (sj5129@nyu.edu), Lucas Yao (ly2808@nyu.edu).
 Goal: the course project, then a workshop paper (possibly a full paper).
 
-Last updated: 2026-10-29.
+Last updated: 2026-11-03.
 
 ---
 
@@ -55,7 +55,7 @@ Last updated: 2026-10-29.
 
 | # | Point | Response | Status |
 |---|---|---|---|
-| 1 | State the visualization insight | Lead the update and the paper with the insight: which plots hide which failures (including failures that are provably invisible in a plot) and what each redesign changes. Show that the Explorer and the redesigns are already built (screenshot + headline redesign result). | To write (update) |
+| 1 | State the visualization insight | Lead the update and the paper with the insight: which plots hide which failures (including failures that are provably invisible in a plot) and what each redesign changes. Show that the Explorer and the redesigns are already built (screenshot + headline redesign result). Evidential-map figure and Explorer now show the blind-cell grades (Nov 3). | Figure + Explorer done; insight to write (update) |
 | 2 | What is new this term | All work was done this term: idea and manual pilot early October, first cluster job Oct 7, confirmatory run Oct 12–13, repository Oct 14. "Complete" in the proposal meant the core pipeline built in the first weeks of term. **Team to confirm** before the update states it. | To write; team confirms |
 | 3 | No controlled human study | Controlled study dropped (archived). Replaced by 4–6 qualitative expert sessions: think-aloud on 12 chosen plots, an Explorer task, a short interview; reported as themes and quotes, no statistics. Protocol: `04_experiments/human_study/PROTOCOL.md`. | Materials ready; recruit 4–6 people |
 | 4 | What "blind" means | (a) Cells **blind by construction**: failing model re-trained next to its healthy twin; plotted values identical → no reader or estimator can ever detect the failure. (b) Full **cutoff sensitivity** with a grade per blind cell. (c) **Classifier-free two-sample test** per cell and a **stronger, different image benchmark** (B3, ConvNeXt-Tiny at native resolution). "Blind" is split into *invisible* (plot unchanged) and *weak* (a difference exists, but no estimator reaches AUC 0.70). | **Done** (results below) |
@@ -110,6 +110,7 @@ Last updated: 2026-10-29.
 | Oct 20 | Proposal submitted |
 | Oct 28 | Instructor feedback received (9/10); response started: blind-by-construction proof, cutoff sensitivity, new cluster stage `review`, formative expert-session protocol |
 | Oct 29 | Review checks complete: two-sample tests, B3, binary and 2AFC tasks for all five readers (points 4 and 5 answered) |
+| Nov 3 | Evidential-map figure and Explorer show the blind-cell grades (invisible proven / no difference found / weak / revised) |
 
 Main results: see `README.md` (study design and results) and `04_experiments/FINDINGS_LOG.md` (dated log).
 Deviations from the plan and their reasons: `04_experiments/DEVIATIONS.md`.
@@ -149,7 +150,7 @@ Deviations from the plan and their reasons: `04_experiments/DEVIATIONS.md`.
 | # | Step | Who | When |
 |---|---|---|---|
 | 1 | ~~Run cluster stage `review`~~ — done Oct 29 | — | — |
-| 2 | Update the evidential-map figure and the Explorer with the invisible/weak labels | — | Before the update |
+| 2 | ~~Update the evidential-map figure and the Explorer with the invisible/weak labels~~ — done Nov 3 | — | — |
 | 3 | Confirm what predates the course (point 2) and the core/stretch split (point 6) | Team | Before Nov 1 |
 | 4 | Write the 1-page mid-term update answering all six points | Team | **Nov 3** |
 | 5 | Recruit 4–6 experts; run the sessions (40 min each); code notes into themes | Team | Nov 4–20 |
