@@ -1,0 +1,560 @@
+{
+ "bin_sizes": {
+  "confirm_synthetic": {
+   "benchmark": {
+    "overfitting": {
+     "rel": {
+      "auc": 0.926,
+      "recall": 0.578,
+      "label": "identifiable"
+     },
+     "rel_n": {
+      "auc": 0.926,
+      "recall": 0.55,
+      "label": "identifiable"
+     }
+    },
+    "miscalibration": {
+     "rel": {
+      "auc": 0.804,
+      "recall": 0.228,
+      "label": "detect-only"
+     },
+     "rel_n": {
+      "auc": 0.805,
+      "recall": 0.322,
+      "label": "detect-only"
+     }
+    },
+    "label_noise": {
+     "rel": {
+      "auc": 0.923,
+      "recall": 0.822,
+      "label": "identifiable"
+     },
+     "rel_n": {
+      "auc": 0.928,
+      "recall": 0.811,
+      "label": "identifiable"
+     }
+    },
+    "class_imbalance": {
+     "rel": {
+      "auc": 0.638,
+      "recall": 0.328,
+      "label": "blind"
+     },
+     "rel_n": {
+      "auc": 0.972,
+      "recall": 0.867,
+      "label": "identifiable"
+     }
+    },
+    "data_leakage": {
+     "rel": {
+      "auc": 0.868,
+      "recall": 0.65,
+      "label": "identifiable"
+     },
+     "rel_n": {
+      "auc": 0.858,
+      "recall": 0.578,
+      "label": "identifiable"
+     }
+    },
+    "distribution_shift": {
+     "rel": {
+      "auc": 0.967,
+      "recall": 0.806,
+      "label": "identifiable"
+     },
+     "rel_n": {
+      "auc": 0.971,
+      "recall": 0.833,
+      "label": "identifiable"
+     }
+    }
+   },
+   "readers": {
+    "InternVL3-8B": {
+     "n": 1500,
+     "per_failure": {
+      "overfitting": {
+       "rel": {
+        "auc": 0.576,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.5,
+        "recall": 0.0
+       }
+      },
+      "miscalibration": {
+       "rel": {
+        "auc": 0.556,
+        "recall": 1.0
+       },
+       "rel_n": {
+        "auc": 0.5,
+        "recall": 1.0
+       }
+      },
+      "label_noise": {
+       "rel": {
+        "auc": 0.444,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.5,
+        "recall": 0.0
+       }
+      },
+      "class_imbalance": {
+       "rel": {
+        "auc": 0.497,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.5,
+        "recall": 0.0
+       }
+      },
+      "data_leakage": {
+       "rel": {
+        "auc": 0.553,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.5,
+        "recall": 0.0
+       }
+      },
+      "distribution_shift": {
+       "rel": {
+        "auc": 0.579,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.5,
+        "recall": 0.0
+       }
+      }
+     },
+     "balanced": {
+      "rel": 0.143,
+      "rel_n": 0.143
+     }
+    },
+    "Qwen2.5-VL-32B-Instruct-AWQ": {
+     "n": 1500,
+     "per_failure": {
+      "overfitting": {
+       "rel": {
+        "auc": 0.594,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.618,
+        "recall": 0.0
+       }
+      },
+      "miscalibration": {
+       "rel": {
+        "auc": 0.547,
+        "recall": 0.99
+       },
+       "rel_n": {
+        "auc": 0.516,
+        "recall": 0.98
+       }
+      },
+      "label_noise": {
+       "rel": {
+        "auc": 0.436,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.445,
+        "recall": 0.0
+       }
+      },
+      "class_imbalance": {
+       "rel": {
+        "auc": 0.511,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.508,
+        "recall": 0.0
+       }
+      },
+      "data_leakage": {
+       "rel": {
+        "auc": 0.6,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.572,
+        "recall": 0.0
+       }
+      },
+      "distribution_shift": {
+       "rel": {
+        "auc": 0.579,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.571,
+        "recall": 0.0
+       }
+      }
+     },
+     "balanced": {
+      "rel": 0.144,
+      "rel_n": 0.144
+     }
+    },
+    "Qwen2.5-VL-7B-Instruct": {
+     "n": 1389,
+     "per_failure": {
+      "overfitting": {
+       "rel": {
+        "auc": 0.529,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.53,
+        "recall": 0.0
+       }
+      },
+      "miscalibration": {
+       "rel": {
+        "auc": 0.502,
+        "recall": 0.031
+       },
+       "rel_n": {
+        "auc": 0.504,
+        "recall": 0.021
+       }
+      },
+      "label_noise": {
+       "rel": {
+        "auc": 0.512,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.514,
+        "recall": 0.0
+       }
+      },
+      "class_imbalance": {
+       "rel": {
+        "auc": 0.51,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.501,
+        "recall": 0.0
+       }
+      },
+      "data_leakage": {
+       "rel": {
+        "auc": 0.5,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.496,
+        "recall": 0.0
+       }
+      },
+      "distribution_shift": {
+       "rel": {
+        "auc": 0.564,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.554,
+        "recall": 0.0
+       }
+      }
+     },
+     "balanced": {
+      "rel": 0.143,
+      "rel_n": 0.144
+     }
+    },
+    "llava-onevision-qwen2-7b-ov-hf": {
+     "n": 1500,
+     "per_failure": {
+      "overfitting": {
+       "rel": {
+        "auc": 0.5,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.498,
+        "recall": 0.0
+       }
+      },
+      "miscalibration": {
+       "rel": {
+        "auc": 0.5,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.498,
+        "recall": 0.0
+       }
+      },
+      "label_noise": {
+       "rel": {
+        "auc": 0.5,
+        "recall": 1.0
+       },
+       "rel_n": {
+        "auc": 0.498,
+        "recall": 0.99
+       }
+      },
+      "class_imbalance": {
+       "rel": {
+        "auc": 0.5,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.498,
+        "recall": 0.0
+       }
+      },
+      "data_leakage": {
+       "rel": {
+        "auc": 0.5,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.501,
+        "recall": 0.0
+       }
+      },
+      "distribution_shift": {
+       "rel": {
+        "auc": 0.5,
+        "recall": 0.0
+       },
+       "rel_n": {
+        "auc": 0.493,
+        "recall": 0.0
+       }
+      }
+     },
+     "balanced": {
+      "rel": 0.143,
+      "rel_n": 0.142
+     }
+    }
+   }
+  },
+  "confirm_magic": {
+   "benchmark": {
+    "overfitting": {
+     "rel": {
+      "auc": 0.929,
+      "recall": 0.628,
+      "label": "identifiable"
+     },
+     "rel_n": {
+      "auc": 0.927,
+      "recall": 0.583,
+      "label": "identifiable"
+     }
+    },
+    "miscalibration": {
+     "rel": {
+      "auc": 0.806,
+      "recall": 0.406,
+      "label": "detect-only"
+     },
+     "rel_n": {
+      "auc": 0.831,
+      "recall": 0.394,
+      "label": "detect-only"
+     }
+    },
+    "label_noise": {
+     "rel": {
+      "auc": 0.887,
+      "recall": 0.756,
+      "label": "identifiable"
+     },
+     "rel_n": {
+      "auc": 0.893,
+      "recall": 0.756,
+      "label": "identifiable"
+     }
+    },
+    "class_imbalance": {
+     "rel": {
+      "auc": 0.723,
+      "recall": 0.239,
+      "label": "detect-only"
+     },
+     "rel_n": {
+      "auc": 0.975,
+      "recall": 0.861,
+      "label": "identifiable"
+     }
+    },
+    "data_leakage": {
+     "rel": {
+      "auc": 0.828,
+      "recall": 0.461,
+      "label": "detect-only"
+     },
+     "rel_n": {
+      "auc": 0.943,
+      "recall": 0.767,
+      "label": "identifiable"
+     }
+    },
+    "distribution_shift": {
+     "rel": {
+      "auc": 0.935,
+      "recall": 0.7,
+      "label": "identifiable"
+     },
+     "rel_n": {
+      "auc": 0.95,
+      "recall": 0.761,
+      "label": "identifiable"
+     }
+    }
+   },
+   "readers": {}
+  }
+ },
+ "companion": {
+  "benchmark": {
+   "lc_loss": {
+    "companion": "roc",
+    "alone": 0.421,
+    "with_companion": 0.674
+   },
+   "rel": {
+    "companion": "lc_loss",
+    "alone": 0.531,
+    "with_companion": 0.63
+   },
+   "cm": {
+    "companion": "lc_loss",
+    "alone": 0.452,
+    "with_companion": 0.648
+   },
+   "roc": {
+    "companion": "lc_loss",
+    "alone": 0.499,
+    "with_companion": 0.674
+   },
+   "dist": {
+    "companion": "lc_loss",
+    "alone": 0.538,
+    "with_companion": 0.745
+   }
+  },
+  "readers": {
+   "InternVL3-8B": {
+    "n": 1079,
+    "plain": 0.147,
+    "companion": 0.153
+   },
+   "Qwen2.5-VL-32B-Instruct-AWQ": {
+    "n": 1270,
+    "plain": 0.151,
+    "companion": 0.131
+   },
+   "Qwen2.5-VL-7B-Instruct": {
+    "n": 992,
+    "plain": 0.144,
+    "companion": 0.143
+   },
+   "llava-onevision-qwen2-7b-ov-hf": {
+    "n": 954,
+    "plain": 0.142,
+    "companion": 0.144
+   }
+  }
+ },
+ "values_printed": {
+  "InternVL3-38B-AWQ": {
+   "original": {
+    "rel": 0.114,
+    "roc": 0.143,
+    "dist": 0.149
+   },
+   "annotated": {
+    "rel": 0.129,
+    "roc": 0.143,
+    "dist": 0.141
+   }
+  },
+  "InternVL3-8B": {
+   "original": {
+    "rel": 0.143,
+    "roc": 0.066,
+    "dist": 0.143
+   },
+   "annotated": {
+    "rel": 0.143,
+    "roc": 0.121,
+    "dist": 0.143
+   }
+  },
+  "Qwen2.5-VL-32B-Instruct-AWQ": {
+   "original": {
+    "rel": 0.144,
+    "roc": 0.142,
+    "dist": 0.143
+   },
+   "annotated": {
+    "rel": 0.145,
+    "roc": 0.14,
+    "dist": 0.143
+   }
+  },
+  "Qwen2.5-VL-7B-Instruct": {
+   "original": {
+    "rel": 0.137,
+    "roc": 0.143,
+    "dist": 0.143
+   },
+   "annotated": {
+    "rel": 0.129,
+    "roc": 0.145,
+    "dist": 0.124
+   }
+  },
+  "llava-onevision-qwen2-7b-ov-hf": {
+   "original": {
+    "rel": 0.143,
+    "roc": 0.124,
+    "dist": 0.0
+   },
+   "annotated": {
+    "rel": 0.143,
+    "roc": 0.143,
+    "dist": 0.009
+   }
+  }
+ },
+ "plotsets": {
+  "confirm_synthetic": {
+   "best_single": "rel_n",
+   "single": 0.627,
+   "all_nine": 0.819
+  },
+  "confirm_magic": {
+   "best_single": "rel_n",
+   "single": 0.65,
+   "all_nine": 0.791
+  }
+ }
+}

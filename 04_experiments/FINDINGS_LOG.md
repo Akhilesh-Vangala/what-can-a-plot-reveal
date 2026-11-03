@@ -448,3 +448,12 @@ are visible → calibrated. "Blind" is reported as invisible / weak from now on.
   unaffected).
 → Near-chance 7-way performance is not a task-design effect: readers barely detect that anything is wrong; only the
 largest reader shows a small detection ability, limited to textbook plot–failure pairs.
+
+## 2026-11-03 — What each redesign changes (instructor point 1; existing results, `code/redesigns.py` → `runs/REDESIGNS.md`)
+- Redesigns add evidence to the plot, but the AI readers do not use it.
+- Bin sizes on the reliability diagram: class imbalance blind → identifiable (benchmark AUC 0.64 → 0.97 synthetic,
+  0.72 → 0.97 real); on real data also data leakage detect-only → identifiable (0.83 → 0.94). Readers (4, synthetic, same
+  models): imbalance detection AUC 0.50 → 0.50, recall 0.00 → 0.00, balanced accuracy 0.14 → 0.14.
+- Companion plot: benchmark balanced diagnosis +0.10 to +0.25 on all five plots; readers 0.13–0.15, unchanged.
+- Values printed: direct 7-way diagnosis unchanged; read-then-reason on the histogram 0.12–0.21 → 0.23–0.39 (ceiling 0.41).
+- Several plots: best single plot (reliability + sizes) 0.63 / 0.65 → all nine 0.82 / 0.79 (synthetic / real).
