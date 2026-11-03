@@ -12,6 +12,7 @@
 #   gaps                        annotated machine-reader designs + 5 readers; multi-plot benchmark (both runs)
 #   review                      instructor-review checks: two-sample tests, binary + 2AFC reader tasks (5 readers),
 #                               stronger image benchmark B3 (both runs)
+#   review_real                 binary + 2AFC reader tasks on the real-data run (confirm_magic), 5 readers
 # Every submission: code version printed; inputs checked first; jobs requeue if a node dies; a failed job cancels the
 # jobs that depend on it (--kill-on-invalid-dep) instead of leaving them waiting forever.
 set -euo pipefail
@@ -129,6 +130,17 @@ case "${1:-check}" in
     B1=$($SB $H/b3.sbatch confirm_synthetic)
     B2=$($SB $H/b3.sbatch confirm_magic)
     echo "submitted review checks: prep $P -> readers $G1 (7B/8B/LLaVA), $G2 (32B/38B); stronger image benchmark $B1 (synthetic), $B2 (real)" ;;
+  review_real)
+    echo "preflight:"; check_env; ok $CODE/review_prepare.py; ok $H/items_cpu.sbatch
+    for f in meta.json img reader_items_core.json; do ok $CODE/runs/confirm_magic/$f; done
+    [ $MISS = 0 ] || { echo "Not submitting: inputs missing (see above)."; exit 1; }
+    [ ! -e $CODE/runs/confirm_magic/reader_items_2afc.json ] || { echo "review items already exist — not overwriting."; exit 1; }
+    P=$($SB $H/items_cpu.sbatch confirm_magic)
+    S=confirm_magic; I1=reader_items_binary.json; I2=reader_items_2afc.json
+    G1=$($SB --dependency=afterok:$P $H/readers.sbatch $S $I1:binary:$Q7 $I2:2afc:$Q7 $I1:binary:$I8 $I2:2afc:$I8 $I1:binary:$LV $I2:2afc:$LV)
+    G2=$($SB --dependency=afterok:$P $H/readers.sbatch $S $I1:binary:$Q32 $I2:2afc:$Q32)
+    G3=$($SB --dependency=afterok:$P $H/readers.sbatch $S $I1:binary:$I38 $I2:2afc:$I38)
+    echo "submitted real-data reader tasks: prep $P -> readers $G1 (7B/8B/LLaVA), $G2 (32B), $G3 (38B)" ;;
   *) echo "unknown stage $1"; exit 1 ;;
 esac
 squeue -u $USER

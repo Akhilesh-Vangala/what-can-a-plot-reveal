@@ -96,6 +96,12 @@ need $R/confirm_synthetic/reader_items_binary.json $R/confirm_synthetic/reader_i
 py review_prepare.py mmd runs/confirm_synthetic runs/confirm_magic || FAIL=1
 need $R/confirm_synthetic/two_sample.json $R/confirm_magic/two_sample.json
 '''),
+    "items_cpu": (CPU, "01:00:00", "Instructor review point 5 on another run: binary/2AFC reader items. Args: RUN", r'''
+RUN=${1:?RUN}
+need $CODE/review_prepare.py $CODE/runs/$RUN/meta.json $CODE/runs/$RUN/reader_items_core.json $CODE/runs/$RUN/img
+py review_prepare.py items runs/$RUN || FAIL=1
+need $CODE/runs/$RUN/reader_items_binary.json $CODE/runs/$RUN/reader_items_2afc.json $CODE/runs/$RUN/img_2afc
+'''),
     "b3": (GPU, "08:00:00", "Instructor review: stronger image benchmark B3 (ConvNeXt-Tiny, native resolution). Args: RUN", r'''
 RUN=${1:?RUN}
 need $CODE/runs/$RUN/meta.json $CODE/runs/$RUN/img
