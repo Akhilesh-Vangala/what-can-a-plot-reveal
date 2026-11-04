@@ -11,7 +11,10 @@ Interactive D3 view of what each ML diagnostic plot can reveal. Open `index.html
    models (re-trained from their seeds, identical to the study run), and what each AI reader answers on that plot.
 3. **My plots**: tick the plots you already look at; see which failures they can identify, only flag, or miss, and the
    single plot that would add the most evidence.
-4. **AI readers**: each reader's confusion on the selected plot next to the benchmark, and balanced accuracy by plot.
+4. **Redesigns**: what changes when a plot is redrawn: bin sizes drawn on the reliability diagram (benchmark grade per
+   failure before → after, AI readers' detection, example plots side by side), a companion plot added, values printed
+   (data from `code/redesigns.py`, `data_redesigns.js`).
+5. **AI readers**: each reader's confusion on the selected plot next to the benchmark, and balanced accuracy by plot.
 
 **Data**: `data_<run>.js` from `code/export_explorer.py`; example plots from `code/make_examples.py`
 (`examples/<run>/`, `examples_<run>.js`). Default run: the confirmatory synthetic study; the real-data run and the

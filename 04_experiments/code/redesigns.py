@@ -1,6 +1,6 @@
 """What each plot redesign changes, for the benchmark and for the AI readers (instructor review, point 1).
 
-  python redesigns.py   -> runs/REDESIGNS.md (+ redesigns.json)
+  python redesigns.py   -> runs/REDESIGNS.md (+ redesigns.json), ../explorer/data_redesigns.js (Explorer "Redesigns" view)
 
 Collects, from existing result files only (no new runs):
   bin sizes drawn   reliability diagram -> reliability + bin sizes (rel -> rel_n), strongest severity, both runs:
@@ -8,7 +8,8 @@ Collects, from existing result files only (no new runs):
                     item set, same models, severities pooled): detection AUC (score = 1 - P(healthy)) and diagnosis recall
   companion plot    benchmark balanced diagnosis accuracy, plot alone vs plot + companion (companion_benchmarks.json);
                     AI readers: balanced accuracy, companion - plain, on the same items (responses_*_iv.jsonl)
-  values printed    direct 7-way diagnosis on original vs annotated plots (from GAPS_RESULTS.md, score_gaps.py)
+  values printed    direct 7-way diagnosis and read-then-reason (reader transcribes values, fixed rule diagnoses) on
+                    original vs annotated plots, with the exact-values ceiling (from GAPS_RESULTS.md, score_gaps.py)
   several plots     benchmark: best single plot vs all nine (plotsets.json)
 """
 import collections
@@ -86,13 +87,17 @@ def companions(R):
 
 
 def values_printed(path):
-    rows = {}
+    rows, ceiling = {}, {}
     for line in open(path):
         m = re.match(r"\| (\S+) \| (original|annotated) \|" + r" ([\d.]+) \|" * 7, line)
         if m:
             g = m.groups()
-            rows.setdefault(g[0], {})[g[1]] = dict(zip(["rel", "roc", "dist"], map(float, g[5:8])))
-    return rows
+            rows.setdefault(g[0], {})[g[1]] = dict(direct=dict(zip(["rel", "roc", "dist"], map(float, g[5:8]))),
+                                                   rtr=dict(zip(["rel", "roc", "dist"], map(float, g[2:5]))))
+        m = re.match(r"\| exact values \(ceiling\) \| — \|" + r" ([\d.]+) \|" * 3, line)
+        if m:
+            ceiling = dict(zip(["rel", "roc", "dist"], map(float, m.groups())))
+    return dict(readers=rows, ceiling=ceiling)
 
 
 def plotsets(R):
@@ -140,14 +145,22 @@ def main():
     L += [f"| {short(n)} | {r['n']} | {r['plain']:.2f} -> {r['companion']:.2f} |" for n, r in c["readers"].items()]
     L += ["", "## 3. Values printed on the plot (synthetic; direct 7-way diagnosis, chance 0.14)", "",
           "| reader | reliability | ROC | histogram |", "|---|---|---|---|"]
-    for n, r in js["values_printed"].items():
-        o, a = r["original"], r["annotated"]
+    vp = js["values_printed"]
+    for n, r in vp["readers"].items():
+        o, a = r["original"]["direct"], r["annotated"]["direct"]
+        L.append(f"| {short(n)} | " + " | ".join(f"{o[k]:.2f} -> {a[k]:.2f}" for k in ("rel", "roc", "dist")) + " |")
+    L += ["", "Read-then-reason (reader transcribes values, fixed rule diagnoses), ceiling = exact values: "
+          + ", ".join(f"{k} {v:.2f}" for k, v in vp["ceiling"].items()), "",
+          "| reader | reliability | ROC | histogram |", "|---|---|---|---|"]
+    for n, r in vp["readers"].items():
+        o, a = r["original"]["rtr"], r["annotated"]["rtr"]
         L.append(f"| {short(n)} | " + " | ".join(f"{o[k]:.2f} -> {a[k]:.2f}" for k in ("rel", "roc", "dist")) + " |")
     L += ["", "## 4. Several plots together (benchmark, balanced diagnosis accuracy)", ""]
     L += [f"- {run}: best single plot ({d['best_single']}) {d['single']:.2f} -> all nine {d['all_nine']:.2f}"
           for run, d in js["plotsets"].items()]
     (RUNS / "REDESIGNS.md").write_text("\n".join(L) + "\n")
     json.dump(js, open(RUNS / "redesigns.json", "w"), indent=1)
+    (RUNS.parent.parent / "explorer" / "data_redesigns.js").write_text("window.REDESIGNS = " + json.dumps(js) + ";\n")
     print("\n".join(L))
 
 

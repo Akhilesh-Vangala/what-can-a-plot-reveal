@@ -62,6 +62,16 @@ Benchmark = how much evidence the plot carries (B1*, strongest severity). Reader
 | Qwen2.5-VL-7B | 0.14 -> 0.13 | 0.14 -> 0.14 | 0.14 -> 0.12 |
 | LLaVA-OV-7B | 0.14 -> 0.14 | 0.12 -> 0.14 | 0.00 -> 0.01 |
 
+Read-then-reason (reader transcribes values, fixed rule diagnoses), ceiling = exact values: rel 0.46, roc 0.34, dist 0.41
+
+| reader | reliability | ROC | histogram |
+|---|---|---|---|
+| InternVL3-38B | 0.26 -> 0.29 | 0.21 -> 0.30 | 0.16 -> 0.39 |
+| InternVL3-8B | 0.16 -> 0.19 | 0.20 -> 0.30 | 0.12 -> 0.38 |
+| Qwen2.5-VL-32B | 0.30 -> 0.25 | 0.22 -> 0.24 | 0.21 -> 0.32 |
+| Qwen2.5-VL-7B | 0.18 -> 0.17 | 0.14 -> 0.24 | 0.15 -> 0.23 |
+| LLaVA-OV-7B | 0.14 -> 0.17 | 0.14 -> 0.14 | 0.14 -> 0.30 |
+
 ## 4. Several plots together (benchmark, balanced diagnosis accuracy)
 
 - confirm_synthetic: best single plot (rel_n) 0.63 -> all nine 0.82

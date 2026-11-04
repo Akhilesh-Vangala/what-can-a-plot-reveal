@@ -12,6 +12,7 @@
 <script src="data_v3.js" onerror="void 0"></script>
 <script src="data_v4syn.js" onerror="void 0"></script>
 <script src="data_v4magic.js" onerror="void 0"></script>
+<script src="data_redesigns.js" onerror="void 0"></script>
 <style>
   :root { --bg:#fbfbfa; --panel:#ffffff; --ink:#1d1d1f; --mute:#6b6b70; --rule:#e3e3e6; --accent:#4b3fa6; --sel:#e8590c; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#141416; --panel:#1d1d21; --ink:#ececf0; --mute:#9a9aa3; --rule:#33333a; --accent:#a99cff; --sel:#ff922b; } }
@@ -76,6 +77,11 @@
     <div class="stats" id="cellStats"></div><div class="ex" id="cellEx"></div><div class="note" id="cellReaders" style="margin-top:10px"></div></section>
   <section class="panel wide"><h2>My plots: what can my dashboard catch?</h2><div class="note">Tick the plots you already look at. For each failure, the best evidence any of them gives at the selected severity (from single-plot benchmarks; combining plots can only do better), and the one plot that would add the most.</div>
     <div class="checks" id="mychecks"></div><div id="mytable"></div><div id="myrec"></div></section>
+  <section class="panel wide" id="rdPanel"><h2>Redesigns: what changes when the plot is redrawn?</h2><div class="note">The benchmark
+    measures how much evidence the plot carries; the AI readers are asked about the same models. Strongest severity for
+    the benchmark; readers on the synthetic confirmatory run.</div>
+    <div class="seg" id="rdSel" style="margin:4px 0 10px"><button data-r="bins" class="on">Bin sizes drawn</button><button data-r="companion">Companion plot</button><button data-r="values">Values printed</button></div>
+    <div id="rdBody"></div><div class="ex" id="rdEx" style="margin-top:10px"></div><div id="rdRec"></div></section>
   <section class="panel wide"><h2>AI readers on the same plots</h2><div class="note" id="readerNote">Reader confusion for the selected plot, i.e. where an automated critique of this plot is reliable and where it guesses. A bright single column = the reader gives the same answer whatever the plot shows.</div><div id="readers" class="grid-small"></div></section>
   <section class="panel wide"><h2>Balanced diagnosis accuracy by plot</h2><div class="note">Chance = 1 / number of states. ◆ benchmark (strongest severity) · ● each AI reader (levels pooled).</div><div id="cmp"></div></section>
 </main>
@@ -103,7 +109,7 @@ function render() {
   if (!state.plot) state.plot = R.plots[0];
   d3.select("#levelTxt").text(`B0 target ${R.levels[state.level]}`);
   if (!state.failure) state.failure = R.failures[0];
-  drawMap(R); drawBench(R); drawCell(R); drawMine(R); drawReaders(R); drawCmp(R);
+  drawMap(R); drawBench(R); drawCell(R); drawMine(R); drawRedesign(R); drawReaders(R); drawCmp(R);
 }
 
 function drawMap(R) {
@@ -211,6 +217,52 @@ function drawMine(R) {
     : `<div class="rec"><b>Add ${NAMES[rec.p]}</b>: it upgrades ${R.failures.filter(f => { const a = best(f, mine), b = best(f, mine.concat([rec.p]));
         return (b ? RANK[b.label] : 0) > (a ? RANK[a.label] : 0); }).map(FN).join(", ")}.` +
       ` Failures your plots can only flag are detected but not told apart from others; blind failures leave no reliable trace in any ticked plot (hover a grade for what it means).</div>`));
+}
+const RDL = l => l === "blind" ? "neither" : l, ARROW = (a, b, d = 2) => `${a.toFixed(d)} → <b>${b.toFixed(d)}</b>`;
+const SHORT = n => n.split("-Instruct")[0].replace("llava-onevision-qwen2-7b-ov-hf", "LLaVA-OV-7B").replace("-AWQ", "");
+const span = v => { const lo = Math.min(...v), hi = Math.max(...v); return lo.toFixed(2) === hi.toFixed(2) ? lo.toFixed(2) : `${lo.toFixed(2)}–${hi.toFixed(2)}`; };
+d3.selectAll("#rdSel button").on("click", e => { state.rd = e.target.dataset.r;
+  d3.selectAll("#rdSel button").classed("on", function(){ return this.dataset.r === state.rd; }); render(); });
+function drawRedesign(R) {
+  const RD = window.REDESIGNS, body = d3.select("#rdBody").html(""), ex = d3.select("#rdEx").html(""), rec = d3.select("#rdRec").html("");
+  if (!RD) { d3.select("#rdPanel").style("display", "none"); return; }
+  const mode = state.rd || "bins", na = `<div class="note">Available for the confirmatory runs (${Object.keys(RD.bin_sizes).join(", ")}).</div>`;
+  if (mode === "bins") {
+    const d = RD.bin_sizes[state.run]; if (!d) { body.html(na); return; }
+    const rd = Object.values(d.readers);
+    body.html(`<table class="cov"><tr><th>Failure</th><th>Benchmark AUC: reliability → + bin sizes</th><th>Diagnosis recall</th><th>Grade</th>` +
+      (rd.length ? `<th>AI readers' detection AUC (${rd.length} readers)</th>` : "") + `</tr>` +
+      R.failures.map(f => { const a = d.benchmark[f].rel, b = d.benchmark[f].rel_n;
+        return `<tr style="cursor:pointer" data-f="${f}"${f === state.failure ? ' class="sel"' : ""}><td>${f === state.failure ? "▸ " : ""}${FN(f)}</td><td>${ARROW(a.auc, b.auc)}</td><td>${ARROW(a.recall, b.recall)}</td>` +
+          `<td>${PILL(RDL(a.label))} → ${PILL(RDL(b.label))}</td>` +
+          (rd.length ? `<td>${span(rd.map(r => r.per_failure[f].rel.auc))} → ${span(rd.map(r => r.per_failure[f].rel_n.auc))}</td>` : "") + `</tr>`; }).join("") + `</table>`);
+    body.selectAll("tr[data-f]").on("click", function() { state.failure = this.dataset.f; render(); });
+    const E = (window.EXAMPLES || {})[state.run];
+    if (E) { const f = state.failure, rows = [["Healthy", ((E.healthy || {}).None || [])[0]], [FN(f), (((E[f] || {})["2"]) || [])[0]]];
+      ex.style("grid-template-columns", "90px repeat(2, minmax(0, 300px))");
+      ex.append("div"); ["Reliability (standard)", "Reliability + bin sizes (redesign)"].forEach(t => ex.append("div").attr("class", "rl").style("text-align", "left").text(t));
+      rows.forEach(([lab, id]) => { ex.append("div").attr("class", "rl").text(lab);
+        ["rel", "rel_n"].forEach(sp => { const c = ex.append("div"); if (id) c.append("img").attr("src", `examples/${state.run}/${id}_${sp}.png`).attr("alt", `${lab}, ${NAMES[sp]}`).attr("loading", "lazy"); }); }); }
+    const up = R.failures.filter(f => RANK[RDL(d.benchmark[f].rel_n.label)] > RANK[RDL(d.benchmark[f].rel.label)]);
+    rec.html(`<div class="rec">Drawing bin sizes upgrades ${up.length ? up.map(FN).join(", ") : "no failure"} for the benchmark` +
+      (rd.length ? `; the AI readers' detection does not change.` : ".") + ` Click a failure to see example plots.</div>`);
+  } else if (mode === "companion") {
+    const c = RD.companion, rs = Object.entries(c.readers);
+    body.html(`<table class="cov"><tr><th>Plot</th><th>Companion added</th><th>Benchmark balanced diagnosis: alone → with companion</th></tr>` +
+      Object.entries(c.benchmark).map(([sp, v]) => `<tr><td>${NAMES[sp]}</td><td>${NAMES[v.companion]}</td><td>${ARROW(v.alone, v.with_companion)}</td></tr>`).join("") +
+      `</table><div class="stats" style="margin-top:10px"><span>AI readers, same five plots (balanced accuracy, plain → with companion; chance ${(1 / R.classes.length).toFixed(2)}):</span>` +
+      rs.map(([n, r]) => `<span>${SHORT(n)} ${ARROW(r.plain, r.companion)}</span>`).join("") + `</div>`);
+    rec.html(`<div class="rec">A companion plot adds evidence the benchmark can use on every plot; the AI readers stay at chance. Synthetic confirmatory run.</div>`);
+  } else {
+    const v = RD.values_printed, rs = Object.entries(v.readers), P = ["rel", "roc", "dist"];
+    const tab = (k, title) => `<tr><th colspan="4" style="padding-top:10px">${title}</th></tr>` +
+      rs.map(([n, r]) => `<tr><td>${SHORT(n)}</td>` + P.map(p => `<td>${ARROW(r.original[k][p], r.annotated[k][p])}</td>`).join("") + `</tr>`).join("");
+    body.html(`<table class="cov"><tr><th>Reader (original → values printed)</th>` + P.map(p => `<th>${NAMES[p]}</th>`).join("") + `</tr>` +
+      tab("direct", "The reader diagnoses the plot itself (balanced accuracy, chance 0.14)") +
+      tab("rtr", "The reader only reads the values; a fixed rule diagnoses") +
+      `<tr><td><b>Ceiling</b> (exact values)</td>` + P.map(p => `<td><b>${v.ceiling[p].toFixed(2)}</b></td>`).join("") + `</tr></table>`);
+    rec.html(`<div class="rec">Printing the values does not change what the readers conclude, but it makes the values easier to read: with a fixed rule doing the reasoning, accuracy on the score histogram approaches the ceiling. Synthetic confirmatory run.</div>`);
+  }
 }
 function drawBench(R) {
   const key = `${state.level}|${state.plot}`;

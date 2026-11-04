@@ -484,65 +484,142 @@
   }
  },
  "values_printed": {
-  "InternVL3-38B-AWQ": {
-   "original": {
-    "rel": 0.114,
-    "roc": 0.143,
-    "dist": 0.149
+  "readers": {
+   "InternVL3-38B-AWQ": {
+    "original": {
+     "direct": {
+      "rel": 0.114,
+      "roc": 0.143,
+      "dist": 0.149
+     },
+     "rtr": {
+      "rel": 0.261,
+      "roc": 0.207,
+      "dist": 0.157
+     }
+    },
+    "annotated": {
+     "direct": {
+      "rel": 0.129,
+      "roc": 0.143,
+      "dist": 0.141
+     },
+     "rtr": {
+      "rel": 0.287,
+      "roc": 0.297,
+      "dist": 0.394
+     }
+    }
    },
-   "annotated": {
-    "rel": 0.129,
-    "roc": 0.143,
-    "dist": 0.141
+   "InternVL3-8B": {
+    "original": {
+     "direct": {
+      "rel": 0.143,
+      "roc": 0.066,
+      "dist": 0.143
+     },
+     "rtr": {
+      "rel": 0.163,
+      "roc": 0.2,
+      "dist": 0.121
+     }
+    },
+    "annotated": {
+     "direct": {
+      "rel": 0.143,
+      "roc": 0.121,
+      "dist": 0.143
+     },
+     "rtr": {
+      "rel": 0.193,
+      "roc": 0.297,
+      "dist": 0.38
+     }
+    }
+   },
+   "Qwen2.5-VL-32B-Instruct-AWQ": {
+    "original": {
+     "direct": {
+      "rel": 0.144,
+      "roc": 0.142,
+      "dist": 0.143
+     },
+     "rtr": {
+      "rel": 0.299,
+      "roc": 0.216,
+      "dist": 0.211
+     }
+    },
+    "annotated": {
+     "direct": {
+      "rel": 0.145,
+      "roc": 0.14,
+      "dist": 0.143
+     },
+     "rtr": {
+      "rel": 0.253,
+      "roc": 0.238,
+      "dist": 0.322
+     }
+    }
+   },
+   "Qwen2.5-VL-7B-Instruct": {
+    "original": {
+     "direct": {
+      "rel": 0.137,
+      "roc": 0.143,
+      "dist": 0.143
+     },
+     "rtr": {
+      "rel": 0.177,
+      "roc": 0.144,
+      "dist": 0.15
+     }
+    },
+    "annotated": {
+     "direct": {
+      "rel": 0.129,
+      "roc": 0.145,
+      "dist": 0.124
+     },
+     "rtr": {
+      "rel": 0.175,
+      "roc": 0.244,
+      "dist": 0.228
+     }
+    }
+   },
+   "llava-onevision-qwen2-7b-ov-hf": {
+    "original": {
+     "direct": {
+      "rel": 0.143,
+      "roc": 0.124,
+      "dist": 0.0
+     },
+     "rtr": {
+      "rel": 0.143,
+      "roc": 0.143,
+      "dist": 0.144
+     }
+    },
+    "annotated": {
+     "direct": {
+      "rel": 0.143,
+      "roc": 0.143,
+      "dist": 0.009
+     },
+     "rtr": {
+      "rel": 0.168,
+      "roc": 0.143,
+      "dist": 0.301
+     }
+    }
    }
   },
-  "InternVL3-8B": {
-   "original": {
-    "rel": 0.143,
-    "roc": 0.066,
-    "dist": 0.143
-   },
-   "annotated": {
-    "rel": 0.143,
-    "roc": 0.121,
-    "dist": 0.143
-   }
-  },
-  "Qwen2.5-VL-32B-Instruct-AWQ": {
-   "original": {
-    "rel": 0.144,
-    "roc": 0.142,
-    "dist": 0.143
-   },
-   "annotated": {
-    "rel": 0.145,
-    "roc": 0.14,
-    "dist": 0.143
-   }
-  },
-  "Qwen2.5-VL-7B-Instruct": {
-   "original": {
-    "rel": 0.137,
-    "roc": 0.143,
-    "dist": 0.143
-   },
-   "annotated": {
-    "rel": 0.129,
-    "roc": 0.145,
-    "dist": 0.124
-   }
-  },
-  "llava-onevision-qwen2-7b-ov-hf": {
-   "original": {
-    "rel": 0.143,
-    "roc": 0.124,
-    "dist": 0.0
-   },
-   "annotated": {
-    "rel": 0.143,
-    "roc": 0.143,
-    "dist": 0.009
-   }
+  "ceiling": {
+   "rel": 0.456,
+   "roc": 0.339,
+   "dist": 0.406
   }
  },
  "plotsets": {
