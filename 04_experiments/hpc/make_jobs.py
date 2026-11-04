@@ -88,7 +88,7 @@ py gaps_prepare.py sets runs/confirm_synthetic --jobs=8 || FAIL=1
 py gaps_prepare.py sets runs/confirm_magic --jobs=8 || FAIL=1
 need $CODE/runs/confirm_synthetic/plotsets.json $CODE/runs/confirm_magic/plotsets.json
 '''),
-    "rev_cpu": (CPU, "03:00:00", "Instructor review: kernel two-sample tests (both runs) + binary/2AFC reader items. No args", r'''
+    "rev_cpu": (CPU, "03:00:00", "Robustness checks: kernel two-sample tests (both runs) + binary/2AFC reader items. No args", r'''
 R=$CODE/runs
 need $CODE/review_prepare.py $R/confirm_synthetic/features.npz $R/confirm_magic/features.npz $R/confirm_synthetic/reader_items_core.json $R/confirm_synthetic/img
 py review_prepare.py items runs/confirm_synthetic || FAIL=1
@@ -96,13 +96,13 @@ need $R/confirm_synthetic/reader_items_binary.json $R/confirm_synthetic/reader_i
 py review_prepare.py mmd runs/confirm_synthetic runs/confirm_magic || FAIL=1
 need $R/confirm_synthetic/two_sample.json $R/confirm_magic/two_sample.json
 '''),
-    "items_cpu": (CPU, "01:00:00", "Instructor review point 5 on another run: binary/2AFC reader items. Args: RUN", r'''
+    "items_cpu": (CPU, "01:00:00", "Simpler reader tasks on another run: binary/2AFC reader items. Args: RUN", r'''
 RUN=${1:?RUN}
 need $CODE/review_prepare.py $CODE/runs/$RUN/meta.json $CODE/runs/$RUN/reader_items_core.json $CODE/runs/$RUN/img
 py review_prepare.py items runs/$RUN || FAIL=1
 need $CODE/runs/$RUN/reader_items_binary.json $CODE/runs/$RUN/reader_items_2afc.json $CODE/runs/$RUN/img_2afc
 '''),
-    "b3": (GPU, "08:00:00", "Instructor review: stronger image benchmark B3 (ConvNeXt-Tiny, native resolution). Args: RUN", r'''
+    "b3": (GPU, "08:00:00", "Stronger image benchmark B3 (ConvNeXt-Tiny, native resolution). Args: RUN", r'''
 RUN=${1:?RUN}
 need $CODE/runs/$RUN/meta.json $CODE/runs/$RUN/img
 py hpc/b3_strong.py runs/$RUN || FAIL=1

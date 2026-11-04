@@ -1,4 +1,4 @@
-"""What each plot redesign changes, for the benchmark and for the AI readers (instructor review, point 1).
+"""What each plot redesign changes, for the benchmark and for the AI readers.
 
   python redesigns.py   -> runs/REDESIGNS.md (+ redesigns.json), ../explorer/data_redesigns.js (Explorer "Redesigns" view)
 
@@ -117,7 +117,7 @@ def main():
     js = dict(bin_sizes={"confirm_synthetic": bin_sizes(S, readers), "confirm_magic": bin_sizes(M, {})},
               companion=companions(S), values_printed=values_printed(S.p / "GAPS_RESULTS.md"),
               plotsets={R.p.name: plotsets(R) for R in (S, M)})
-    L = ["# What each redesign changes (point 1; existing results only)", "",
+    L = ["# What each redesign changes (existing results only)", "",
          "Benchmark = how much evidence the plot carries (B1*, strongest severity). Readers = the open AI readers on "
          "the same models (synthetic run).", "", "## 1. Bin sizes drawn on the reliability diagram (rel -> rel_n)", ""]
     for run, d in js["bin_sizes"].items():

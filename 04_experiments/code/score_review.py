@@ -1,8 +1,8 @@
-"""Score the instructor-review checks (points 4 and 5).
+"""Score the robustness checks: what the blind cells are, and simpler reader tasks.
 
   python score_review.py runs/confirm_synthetic runs/confirm_magic   -> runs/REVIEW_RESULTS.md (+ .json)
 
-Point 4, "blind" cells. For every cell blind at the default cutoffs (AUC < 0.70): the certified flag (certify_blind.py),
+"Blind" cells. For every cell blind at the default cutoffs (AUC < 0.70): the certified flag (certify_blind.py),
 the kernel two-sample test (two_sample.json; Holm-adjusted over all 54 cells of a run) and the stronger image
 benchmark B3 (b3_results.json). Final grade:
   invisible (proven)               plot identical to the healthy twin's (certify_blind.py);
@@ -12,7 +12,7 @@ benchmark B3 (b3_results.json). Final grade:
                                    reaches AUC 0.70;
   revised (B3 detects)             B3 reaches AUC >= 0.70 (95% CI above 0.5): blind only for the weaker estimators.
 With 2,000 permutations the smallest p-value is 1/2001, so the smallest Holm-adjusted value over 54 cells is 0.027.
-Point 5, task difficulty. Binary: AUC of the reader's p_problem, healthy vs each failure, on the same held-out items
+Task difficulty. Binary: AUC of the reader's p_problem, healthy vs each failure, on the same held-out items
 as the benchmark (B1*), whose AUC on those items is the ceiling. 2AFC: share of pairs where the reader picks the
 failing model (chance 0.5); the benchmark's 2AFC accuracy on the same pairs is P(score failing > score healthy).
 """
@@ -171,14 +171,14 @@ def task_part(R, L):
 
 
 def main(paths):
-    L = ["# Instructor-review checks (points 4 and 5)", ""]
+    L = ["# Robustness checks: blind cells and simpler reader tasks", ""]
     js = {}
     for p in paths:
         R = Run(p)
-        L += [f"## {R.p.name}", "", "### Point 4: what the blind cells are", ""]
+        L += [f"## {R.p.name}", "", "### What the blind cells are", ""]
         js[R.p.name] = dict(blind=blind_part(R, L))
         if (R.p / "reader_items_2afc.json").exists():
-            L += ["### Point 5: is the 7-way task too hard?", ""]
+            L += ["### Is the 7-way task too hard?", ""]
             js[R.p.name]["tasks"] = task_part(R, L)
     out = pathlib.Path(paths[0]).parent
     (out / "REVIEW_RESULTS.md").write_text("\n".join(L) + "\n")

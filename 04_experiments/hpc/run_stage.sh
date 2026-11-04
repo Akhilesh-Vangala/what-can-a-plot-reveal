@@ -10,7 +10,7 @@
 #   realworld                   real-world check: unzip ~/visml_hpc/realworld_data.zip, transfer job + 5 readers
 #   rtr                         read-then-reason: extraction items on 3 sets + 5 readers; proportion-based transfer
 #   gaps                        annotated machine-reader designs + 5 readers; multi-plot benchmark (both runs)
-#   review                      instructor-review checks: two-sample tests, binary + 2AFC reader tasks (5 readers),
+#   review                      robustness checks: two-sample tests, binary + 2AFC reader tasks (5 readers),
 #                               stronger image benchmark B3 (both runs)
 #   review_real                 binary + 2AFC reader tasks on the real-data run (confirm_magic), 5 readers
 # Every submission: code version printed; inputs checked first; jobs requeue if a node dies; a failed job cancels the

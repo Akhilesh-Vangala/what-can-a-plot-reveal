@@ -1,4 +1,4 @@
-"""B3: a stronger and different image benchmark (instructor review, point 4).
+"""B3: a stronger and different image benchmark.
 
   python b3_strong.py <run_dir>     -> <run_dir>/b3_results.json, b3_item_scores.json
 

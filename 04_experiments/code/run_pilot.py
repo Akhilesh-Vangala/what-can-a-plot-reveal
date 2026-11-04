@@ -22,7 +22,7 @@ def get_reader(name, model, effort):
     if name == "claude":
         from readers.claude_reader import ClaudeReader
         return ClaudeReader(model=model, effort=effort)
-    raise SystemExit(f"reader '{name}' not implemented yet (openai / gemini / vllm modules come next)")
+    raise SystemExit(f"reader '{name}' not implemented in the pilot (the study readers run with hpc/vlm_read.py)")
 
 
 def cmd_build(a):

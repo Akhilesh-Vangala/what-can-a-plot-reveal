@@ -1,4 +1,4 @@
-"""How robust are the evidential-map labels, and the "blind" label in particular? (instructor review, point 4)
+"""How robust are the evidential-map labels, and the "blind" label in particular?
 
   python blind_sensitivity.py runs/confirm_synthetic runs/confirm_magic   -> runs/BLIND_SENSITIVITY.md (+ .json)
 
@@ -50,7 +50,7 @@ def label(c, a, r):
 
 
 def main(paths):
-    L = ["# Sensitivity of the evidential map (instructor review, point 4)", "",
+    L = ["# Sensitivity of the evidential map", "",
          "Strongest severity. B1* = validation-best of the plotted-value benchmark (B1) and the image benchmark (B2).", ""]
     js = {}
     for p in paths:

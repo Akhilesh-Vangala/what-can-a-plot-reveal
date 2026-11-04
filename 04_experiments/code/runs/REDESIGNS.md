@@ -1,4 +1,4 @@
-# What each redesign changes (point 1; existing results only)
+# What each redesign changes (existing results only)
 
 Benchmark = how much evidence the plot carries (B1*, strongest severity). Readers = the open AI readers on the same models (synthetic run).
 

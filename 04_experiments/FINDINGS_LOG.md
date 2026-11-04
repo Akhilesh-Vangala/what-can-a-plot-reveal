@@ -1,4 +1,4 @@
-# Findings log (dated; prototype numbers — not final results)
+# Findings log (dated research log; entries before 2026-10-13 are prototype numbers, superseded by the confirmatory run)
 
 Each entry: what ran, the numbers, how sure we are, and what it does NOT show yet.
 Run folders: `04_experiments/code/runs/<name>/` (report.md, score_*.md, readers_summary.md).
@@ -411,7 +411,7 @@ Gap 5 — machine-reader designs (key values printed on reliability, ROC, histog
   imbalance (AUC 0.65; the earlier n = 40 run gave 0.51) and the best single epoch of training accuracy 0.65 (earlier
   0.68); synthetic stays ≈ 0.52. Mechanism replicates: healthy real models 79.2% on positives vs 85.8% on negatives.
 
-## 2026-10-28 — Instructor review, point 4: what "blind" means (certify_blind.py, blind_sensitivity.py)
+## 2026-10-28 — What "blind" means (certify_blind.py, blind_sensitivity.py)
 - **Blind by construction.** Failing models re-trained next to their healthy twins (30 per failure, strongest level,
   both sources; re-trained models match the study exactly). Plotted values identical in every model for: miscalibration
   on accuracy curves, confusion matrix (counts and row-normalized), ROC and PR (real data); distribution shift on loss
@@ -430,7 +430,7 @@ Gap 5 — machine-reader designs (key values printed on reliability, ROC, histog
   difference, but no estimator reaches 0.70). The kernel two-sample test and B3 (stage `review`) decide the split for
   the non-certified cells.
 
-## 2026-10-29 — Instructor review, points 4 and 5: final (score_review.py → runs/REVIEW_RESULTS.md)
+## 2026-10-29 — Blind cells and simpler reader tasks: final (score_review.py → runs/REVIEW_RESULTS.md)
 **Point 4 (blind cells).** Kernel two-sample test (no learned model; Holm over 54 cells) + stronger image benchmark
 B3 (ConvNeXt-Tiny, native 320×240, 3 seeds). B3 mean AUC 0.78 syn / 0.76 real vs B2 0.78 / 0.76 and B1* 0.79 / 0.78;
 B3 exceeds B1* by > 0.05 in **0** cells. Final grades of the cells blind at the default cutoffs:
@@ -449,7 +449,7 @@ are visible → calibrated. "Blind" is reported as invisible / weak from now on.
 → Near-chance 7-way performance is not a task-design effect: readers barely detect that anything is wrong; only the
 largest reader shows a small detection ability, limited to textbook plot–failure pairs.
 
-## 2026-11-03 — What each redesign changes (instructor point 1; existing results, `code/redesigns.py` → `runs/REDESIGNS.md`)
+## 2026-11-03 — What each redesign changes (existing results, `code/redesigns.py` → `runs/REDESIGNS.md`)
 - Redesigns add evidence to the plot, but the AI readers do not use it.
 - Bin sizes on the reliability diagram: class imbalance blind → identifiable (benchmark AUC 0.64 → 0.97 synthetic,
   0.72 → 0.97 real); on real data also data leakage detect-only → identifiable (0.83 → 0.94). Readers (4, synthetic, same

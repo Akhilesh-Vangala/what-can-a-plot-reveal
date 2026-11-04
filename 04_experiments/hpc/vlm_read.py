@@ -149,7 +149,7 @@ WHAT["roc_ann"] = WHAT["roc"] + "; a small table on the plot lists the true posi
 WHAT["dist_ann"] = WHAT["dist"] + "; a small table on the plot lists, for each histogram, the share of predictions below 0.1, above 0.5 and above 0.9"
 SHORT.update(rel_ann="annotated reliability diagram", roc_ann="annotated ROC curve", dist_ann="annotated score histogram")
 EXTRACT.update(rel_ann=EXTRACT["rel"], roc_ann=EXTRACT["roc"], dist_ann=EXTRACT["dist"])
-# simpler tasks (instructor review, point 5): is near-chance 7-way performance a task-difficulty effect?
+# simpler tasks: is near-chance 7-way performance a task-difficulty effect?
 BINARY = """The plot shows {what}. The model is either healthy or has exactly one problem.
 {definitions}
 

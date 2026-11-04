@@ -1,7 +1,7 @@
-"""Human reader study materials (ready to run once the IRB route is confirmed).
+"""Plot pool for the expert sessions (make_formative.py picks the 12 session plots from it).
 
-  python make_human_study.py   -> ../human_study/survey/ (participant files: survey.html, forms.js, images/)
-                                  + ../human_study/answer_key.json, items.json (team only)
+  python make_human_study.py   -> ../human_study/survey/ (images/, survey.html, forms.js)
+                                  + ../human_study/answer_key.json, items.json (not published)
 
 Items are held-out confirmatory models (strongest severity) that the AI readers also answered, so people, AI readers and
 benchmarks are compared on identical items. Models are re-trained from their seeds (identical to the study run; checked

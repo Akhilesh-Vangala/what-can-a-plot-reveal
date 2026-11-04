@@ -1,4 +1,4 @@
-# Sensitivity of the evidential map (instructor review, point 4)
+# Sensitivity of the evidential map
 
 Strongest severity. B1* = validation-best of the plotted-value benchmark (B1) and the image benchmark (B2).
 

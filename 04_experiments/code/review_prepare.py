@@ -1,16 +1,16 @@
-"""Instructor-review checks that need the cluster copy of a run (features.npz, img/).
+"""Robustness checks that need the cluster copy of a run (features.npz, img/).
 
   python review_prepare.py mmd   runs/confirm_synthetic runs/confirm_magic  -> <run>/two_sample.json
   python review_prepare.py items runs/confirm_synthetic                     -> <run>/reader_items_binary.json,
                                                                                reader_items_2afc.json, img_2afc/
 
-mmd (point 4, "blind" without a learned estimator): for every failure x plot at the strongest severity, a kernel
+mmd ("blind" without a learned estimator): for every failure x plot at the strongest severity, a kernel
   two-sample test of "the plotted values have the same distribution for healthy and failing models". Statistic: the
   largest (biased) MMD^2 over three RBF bandwidths (0.25x, 1x, 4x the median distance) on standardized plotted
   values, 500 healthy vs 500 failing models; p-value from 2,000 label permutations. No model is trained, so a
   non-significant result cannot be blamed on a weak estimator; a significant one with a low benchmark AUC means the
   plot carries a weak signal, not none.
-items (point 5, is the 7-way task too hard?): on the same held-out core items the readers already diagnosed,
+items (is the 7-way task too hard?): on the same held-out core items the readers already diagnosed,
   binary: one plot -> probability that the model has any problem (healthy vs failing; scored as AUC per failure);
   2afc:   two plots side by side, one healthy and one failing model -> which one has the problem (chance = 0.5).
   For an ideal observer, 2AFC accuracy equals the detection AUC, so both compare directly with the benchmark.

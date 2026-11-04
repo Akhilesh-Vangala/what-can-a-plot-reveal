@@ -1,9 +1,7 @@
 # Formative expert sessions — protocol
 
-Replaces the controlled human-reader study (archived in `archive/`), following the instructor's review: a controlled
-user study needs IRB approval, which is not feasible in the course; a small expert/formative study reported
-qualitatively fits the rules. The quantitative evidence comes from the benchmarks and the five AI readers.
-**No statistics are computed on these sessions and no accuracy is reported as a measurement.**
+A small expert study reported qualitatively; the quantitative reader evidence comes from the benchmarks and the five
+AI readers. **No statistics are computed on these sessions and no accuracy is reported as a measurement.**
 
 ## Purpose
 
@@ -50,4 +48,3 @@ are listed in the final report.
 - `formative/plots/` — the 12 plots (regenerate with `code/make_formative.py`).
 - `formative/key.json` — true states and the reason each plot is in the set (team only; not shown to participants).
 - `../explorer/index.html` — the Plot Evidence Explorer.
-- `survey/` — the earlier self-paced survey; not used for data collection.

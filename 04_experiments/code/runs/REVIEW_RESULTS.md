@@ -1,8 +1,8 @@
-# Instructor-review checks (points 4 and 5)
+# Robustness checks: blind cells and simpler reader tasks
 
 ## confirm_synthetic
 
-### Point 4: what the blind cells are
+### What the blind cells are
 
 Two-sample test detects a difference (Holm p < 0.05) in 44/54 cells.
 
@@ -28,7 +28,7 @@ B3 (ConvNeXt-Tiny, native resolution) over all 54 cells: mean AUC 0.781 (B2 ResN
 
 Final: 4 invisible (no difference found), 5 invisible (proven), 6 weak
 
-### Point 5: is the 7-way task too hard?
+### Is the 7-way task too hard?
 
 ### Binary task: healthy or problem? (detection AUC per failure x plot cell, 30 cells; chance 0.5)
 
@@ -56,7 +56,7 @@ Benchmark (B1*) on the same pairs: **0.79** (900 pairs).
 
 ## confirm_magic
 
-### Point 4: what the blind cells are
+### What the blind cells are
 
 Two-sample test detects a difference (Holm p < 0.05) in 41/54 cells.
 
