@@ -19,6 +19,8 @@
 | `gaps` | values-printed designs for the readers; multi-plot benchmark |
 | `review` | kernel two-sample tests, stronger image benchmark B3 (both runs), binary and 2AFC reader tasks (synthetic) |
 | `review_real` | binary and 2AFC reader tasks on the real-data run |
+| `finish_real` | real-data run: 7-way task for LLaVA-OV-7B and InternVL3-38B, binary and 2AFC for InternVL3-38B |
+| `dataset` | public plot dataset: one zip per confirmatory run (`code/make_dataset.py`) |
 
 ## Job design
 - Every job runs code only from the unpacked bundle and prints its VERSION.

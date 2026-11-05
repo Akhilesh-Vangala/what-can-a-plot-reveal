@@ -17,5 +17,5 @@ Interactive D3 view of what each ML diagnostic plot can reveal. Open `index.html
 5. **AI readers**: each reader's confusion on the selected plot next to the benchmark, and balanced accuracy by plot.
 
 **Data**: `data_<run>.js` from `code/export_explorer.py`; example plots from `code/make_examples.py`
-(`examples/<run>/`, `examples_<run>.js`). Default run: the confirmatory synthetic study; the real-data run and the
-pilots are selectable.
+(`examples/<run>/`, `examples_<run>.js`). Default run: the confirmatory synthetic study; the real-data run is
+selectable.

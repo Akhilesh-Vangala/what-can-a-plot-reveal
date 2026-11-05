@@ -13,6 +13,8 @@
 #   review                      robustness checks: two-sample tests, binary + 2AFC reader tasks (5 readers),
 #                               stronger image benchmark B3 (both runs)
 #   review_real                 binary + 2AFC reader tasks on the real-data run (confirm_magic), 5 readers
+#   finish_real                 real-data run: 7-way core task for LLaVA-OV-7B and InternVL3-38B, binary + 2AFC for 38B
+#   dataset                     public plot dataset: one zip per confirmatory run (CPU)
 # Every submission: code version printed; inputs checked first; jobs requeue if a node dies; a failed job cancels the
 # jobs that depend on it (--kill-on-invalid-dep) instead of leaving them waiting forever.
 set -euo pipefail
@@ -141,6 +143,20 @@ case "${1:-check}" in
     G2=$($SB --dependency=afterok:$P $H/readers.sbatch $S $I1:binary:$Q32 $I2:2afc:$Q32)
     G3=$($SB --dependency=afterok:$P $H/readers.sbatch $S $I1:binary:$I38 $I2:2afc:$I38)
     echo "submitted real-data reader tasks: prep $P -> readers $G1 (7B/8B/LLaVA), $G2 (32B), $G3 (38B)" ;;
+  finish_real)
+    echo "preflight:"; check_env
+    for f in meta.json img reader_items_core.json reader_items_binary.json reader_items_2afc.json img_2afc; do ok $CODE/runs/confirm_magic/$f; done
+    [ $MISS = 0 ] || { echo "Not submitting: inputs missing (see above)."; exit 1; }
+    S=confirm_magic; T="--time=04:00:00"
+    G1=$($SB $T $H/readers.sbatch $S reader_items_core.json:core:$LV)
+    G2=$($SB $T $H/readers.sbatch $S reader_items_core.json:core:$I38 reader_items_binary.json:binary:$I38 reader_items_2afc.json:2afc:$I38)
+    echo "submitted: LLaVA core $G1, InternVL3-38B core + binary + 2AFC $G2 (readers resume from answers already written)" ;;
+  dataset)
+    echo "preflight:"; ok $H/dataset_cpu.sbatch; ok $CODE/make_dataset.py
+    for r in confirm_synthetic confirm_magic; do ok $CODE/runs/$r/img; ok $CODE/runs/$r/meta.json; done
+    [ $MISS = 0 ] || { echo "Not submitting: inputs missing (see above)."; exit 1; }
+    D1=$($SB $H/dataset_cpu.sbatch confirm_synthetic); D2=$($SB $H/dataset_cpu.sbatch confirm_magic)
+    echo "submitted dataset zips: $D1 (synthetic), $D2 (real)" ;;
   *) echo "unknown stage $1"; exit 1 ;;
 esac
 squeue -u $USER

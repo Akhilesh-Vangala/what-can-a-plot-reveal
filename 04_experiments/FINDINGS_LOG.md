@@ -457,3 +457,14 @@ largest reader shows a small detection ability, limited to textbook plot–failu
 - Companion plot: benchmark balanced diagnosis +0.10 to +0.25 on all five plots; readers 0.13–0.15, unchanged.
 - Values printed: direct 7-way diagnosis unchanged; read-then-reason on the histogram 0.12–0.21 → 0.23–0.39 (ceiling 0.41).
 - Several plots: best single plot (reliability + sizes) 0.63 / 0.65 → all nine 0.82 / 0.79 (synthetic / real).
+
+## 2026-11-05 — Simpler reader tasks on real data (score_review.py → runs/REVIEW_RESULTS.md); plot guide
+- Real data (MagicTelescope), four readers so far (InternVL3-38B pending: cloud nodes failing to start).
+- Binary (healthy or problem; 30 cells): reader mean AUC 0.50–0.52, benchmark 0.79 on the same items. Cells above
+  chance: 2–7 of 30. Best cells: Qwen-32B class imbalance on the confusion matrix 0.85, Qwen-7B overfitting on loss
+  curves 0.69.
+- 2AFC: readers 0.50–0.51, benchmark 0.78 on the same pairs. Position bias again (Qwen-7B picks A 5%).
+→ Replicates the synthetic result: the gap is not a task-design effect on either data source.
+- Plot guide (`plot_guide.py` → `runs/PLOT_GUIDE.md`): per failure, the plots that diagnose, only detect or cannot
+  show it on both data sources. The usual dashboard (loss curves + confusion matrix + ROC) cannot show miscalibration
+  on either source, and no single plot diagnoses it; the reliability diagram with bin sizes at least detects it.

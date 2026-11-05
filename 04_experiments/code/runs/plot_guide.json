@@ -1,0 +1,229 @@
+{
+ "overfitting": {
+  "diagnoses": [
+   [
+    "lc_loss",
+    0.811
+   ],
+   [
+    "lc_acc",
+    0.65
+   ],
+   [
+    "rel",
+    0.578
+   ],
+   [
+    "rel_n",
+    0.55
+   ]
+  ],
+  "detects": [
+   "dist"
+  ],
+  "cannot_show": [
+   [
+    "cm",
+    null
+   ],
+   [
+    "cm_norm",
+    null
+   ],
+   [
+    "roc",
+    null
+   ],
+   [
+    "pr",
+    null
+   ]
+  ],
+  "depends": []
+ },
+ "miscalibration": {
+  "diagnoses": [],
+  "detects": [
+   "rel",
+   "rel_n",
+   "dist"
+  ],
+  "cannot_show": [
+   [
+    "lc_loss",
+    null
+   ],
+   [
+    "lc_acc",
+    "invisible (proven)"
+   ],
+   [
+    "cm",
+    "invisible (proven)"
+   ],
+   [
+    "cm_norm",
+    "invisible (proven)"
+   ],
+   [
+    "roc",
+    null
+   ],
+   [
+    "pr",
+    null
+   ]
+  ],
+  "depends": []
+ },
+ "label_noise": {
+  "diagnoses": [
+   [
+    "rel",
+    0.756
+   ],
+   [
+    "rel_n",
+    0.756
+   ],
+   [
+    "pr",
+    0.706
+   ],
+   [
+    "dist",
+    0.65
+   ],
+   [
+    "roc",
+    0.611
+   ]
+  ],
+  "detects": [
+   "lc_loss"
+  ],
+  "cannot_show": [],
+  "depends": [
+   "lc_acc",
+   "cm",
+   "cm_norm"
+  ]
+ },
+ "class_imbalance": {
+  "diagnoses": [
+   [
+    "cm",
+    0.872
+   ],
+   [
+    "rel_n",
+    0.861
+   ],
+   [
+    "dist",
+    0.817
+   ],
+   [
+    "pr",
+    0.789
+   ],
+   [
+    "roc",
+    0.733
+   ],
+   [
+    "cm_norm",
+    0.583
+   ]
+  ],
+  "detects": [],
+  "cannot_show": [
+   [
+    "lc_loss",
+    null
+   ]
+  ],
+  "depends": [
+   "lc_acc",
+   "rel"
+  ]
+ },
+ "data_leakage": {
+  "diagnoses": [
+   [
+    "pr",
+    0.761
+   ],
+   [
+    "cm",
+    0.733
+   ],
+   [
+    "roc",
+    0.65
+   ],
+   [
+    "lc_acc",
+    0.617
+   ],
+   [
+    "lc_loss",
+    0.611
+   ],
+   [
+    "rel_n",
+    0.578
+   ],
+   [
+    "cm_norm",
+    0.567
+   ]
+  ],
+  "detects": [
+   "rel",
+   "dist"
+  ],
+  "cannot_show": [],
+  "depends": []
+ },
+ "distribution_shift": {
+  "diagnoses": [
+   [
+    "rel_n",
+    0.761
+   ],
+   [
+    "dist",
+    0.756
+   ],
+   [
+    "rel",
+    0.7
+   ],
+   [
+    "cm",
+    0.7
+   ],
+   [
+    "cm_norm",
+    0.561
+   ]
+  ],
+  "detects": [
+   "roc"
+  ],
+  "cannot_show": [
+   [
+    "lc_loss",
+    "invisible (proven)"
+   ],
+   [
+    "lc_acc",
+    "invisible (proven)"
+   ]
+  ],
+  "depends": [
+   "pr"
+  ]
+ }
+}

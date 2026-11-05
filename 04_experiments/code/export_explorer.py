@@ -1,7 +1,7 @@
 """Export a run's benchmark + reader results for the D3 explorer (04_experiments/explorer).
 
-  python export_explorer.py runs/multi_v3 v3          -> 04_experiments/explorer/data_v3.js
-  python export_explorer.py runs/v4_synthetic v4syn
+  python export_explorer.py runs/confirm_synthetic confirm_synthetic   -> 04_experiments/explorer/data_confirm_synthetic.js
+  python export_explorer.py runs/confirm_magic confirm_magic
 
 Benchmark per cell = B1* (validation-best of mark-table / image model); diagnosis = balanced, prior-corrected where
 available. Works for the v3 file layout (b2_multi_results.json) and v4 (b2_results.json).

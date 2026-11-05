@@ -102,6 +102,12 @@ need $CODE/review_prepare.py $CODE/runs/$RUN/meta.json $CODE/runs/$RUN/reader_it
 py review_prepare.py items runs/$RUN || FAIL=1
 need $CODE/runs/$RUN/reader_items_binary.json $CODE/runs/$RUN/reader_items_2afc.json $CODE/runs/$RUN/img_2afc
 '''),
+    "dataset_cpu": (CPU, "02:00:00", "Public plot dataset: zip of the reader-item plots with labels. Args: RUN", r'''
+RUN=${1:?RUN}; R=$CODE/runs/$RUN
+need $CODE/make_dataset.py $R/meta.json $R/reader_items.json $R/reader_items_core.json $R/img
+py make_dataset.py runs/$RUN || FAIL=1
+need $R/plotreveal_$RUN.zip
+'''),
     "b3": (GPU, "08:00:00", "Stronger image benchmark B3 (ConvNeXt-Tiny, native resolution). Args: RUN", r'''
 RUN=${1:?RUN}
 need $CODE/runs/$RUN/meta.json $CODE/runs/$RUN/img
