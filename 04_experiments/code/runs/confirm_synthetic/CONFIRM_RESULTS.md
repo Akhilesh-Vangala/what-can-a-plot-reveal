@@ -127,13 +127,17 @@ Each hypothesis as preregistered; ✓ = prediction supported. CIs: bootstrap ove
 
 ## H5 [confirm_magic]: readers below the image benchmark — SUPPORTED
 
-- InternVL3-8B_core (main/core): reader 0.144 vs B2 0.448, diff [-0.322, -0.284] ✓ below | no-answer 286/4500 (6%); counting no-answer as wrong: 0.136
-- Qwen2.5-VL-32B-Instruct-AWQ_core (main/core): reader 0.141 vs B2 0.440, diff [-0.317, -0.282] ✓ below | no-answer 0/4500 (0%); counting no-answer as wrong: 0.141
-- Qwen2.5-VL-7B-Instruct_core (main/core): reader 0.143 vs B2 0.442, diff [-0.317, -0.280] ✓ below | no-answer 935/4500 (21%); counting no-answer as wrong: 0.114
+- InternVL3-38B-AWQ_core (main/core): reader 0.160 vs B2 0.437, diff [-0.294, -0.261] ✓ below | no-answer 604/4500 (13%); counting no-answer as wrong: 0.137
+- InternVL3-8B_core (main/core): reader 0.144 vs B2 0.448, diff [-0.321, -0.285] ✓ below | no-answer 286/4500 (6%); counting no-answer as wrong: 0.136
+- Qwen2.5-VL-32B-Instruct-AWQ_core (main/core): reader 0.141 vs B2 0.440, diff [-0.318, -0.281] ✓ below | no-answer 0/4500 (0%); counting no-answer as wrong: 0.141
+- Qwen2.5-VL-7B-Instruct_core (main/core): reader 0.143 vs B2 0.442, diff [-0.316, -0.283] ✓ below | no-answer 935/4500 (21%); counting no-answer as wrong: 0.114
+- llava-onevision-qwen2-7b-ov-hf_core (main/core): reader 0.135 vs B2 0.416, diff [-0.298, -0.264] ✓ below | no-answer 538/4500 (12%); counting no-answer as wrong: 0.117
 
 ## H6 [confirm_magic]: plot-type stereotype — SUPPORTED
 
+- InternVL3-38B-AWQ_core: χ² p = 2.6e-290; 'overfitting' on healthy loss curves 10% vs other plots 0% ✓
 - InternVL3-8B_core: χ² p = 0; 'overfitting' on healthy loss curves 100% vs other plots 0% ✓
 - Qwen2.5-VL-32B-Instruct-AWQ_core: χ² p = 0; 'overfitting' on healthy loss curves 100% vs other plots 0% ✓
 - Qwen2.5-VL-7B-Instruct_core: χ² p = 2.2e-239; 'overfitting' on healthy loss curves 100% vs other plots 33% ✓
+- llava-onevision-qwen2-7b-ov-hf_core: χ² p = 0; 'overfitting' on healthy loss curves 100% vs other plots 43% ✓
 

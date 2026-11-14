@@ -468,3 +468,12 @@ largest reader shows a small detection ability, limited to textbook plot–failu
 - Plot guide (`plot_guide.py` → `runs/PLOT_GUIDE.md`): per failure, the plots that diagnose, only detect or cannot
   show it on both data sources. The usual dashboard (loss curves + confusion matrix + ROC) cannot show miscalibration
   on either source, and no single plot diagnoses it; the reliability diagram with bin sizes at least detects it.
+
+## 2026-11-13 — 7-way diagnosis on real data, all five readers (score_confirm.py); plot dataset released
+- LLaVA-OV-7B and InternVL3-38B added on the real-data core set (4,500 items each): balanced accuracy 0.135 and 0.160
+  vs the image benchmark 0.42–0.44 on the same items. All five readers: 0.135–0.160. H5 and H6 stay supported on real
+  data; the other readers' bootstrap intervals moved by at most 0.003 (resampling order).
+- LLaVA calls healthy loss curves "overfitting" in 100% of cases (43% on other plots), the strongest stereotype seen.
+- Plot dataset (`make_dataset.py`): one zip per confirmatory run, 14,825 / 14,855 plots with labels, 4,500 held-out
+  core plots each; published as a GitHub release (CC BY 4.0).
+- Pending: InternVL3-38B binary and 2AFC on real data (first job hit its time limit after the 7-way task).
