@@ -66,7 +66,14 @@ plan: [`04_experiments/DEVIATIONS.md`](04_experiments/DEVIATIONS.md); per-run re
 
 Open `04_experiments/explorer/index.html` in a browser (no server needed): the evidential map, a cell view with example
 plots, a "my plots" view (which failures your plots can catch, and which plot to add), a redesigns view, and the AI
-readers' answers next to the benchmark.
+readers' answers next to the benchmark. Which plot to use for which failure, in one table:
+[`04_experiments/code/runs/PLOT_GUIDE.md`](04_experiments/code/runs/PLOT_GUIDE.md).
+
+## Plot dataset
+
+[Release `dataset-v1`](https://github.com/Akhilesh-Vangala/what-can-a-plot-reveal/releases/tag/dataset-v1): the
+rendered plots the AI readers diagnosed, one zip per data source (about 14,800 plots each, 4,500 held-out), with
+`labels.csv` (model, plot type, true state, severity). CC BY 4.0. Built by `04_experiments/code/make_dataset.py`.
 
 ## Repository layout
 
