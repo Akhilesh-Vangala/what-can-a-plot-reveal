@@ -476,4 +476,10 @@ largest reader shows a small detection ability, limited to textbook plot–failu
 - LLaVA calls healthy loss curves "overfitting" in 100% of cases (43% on other plots), the strongest stereotype seen.
 - Plot dataset (`make_dataset.py`): one zip per confirmatory run, 14,825 / 14,855 plots with labels, 4,500 held-out
   core plots each; published as a GitHub release (CC BY 4.0).
-- Pending: InternVL3-38B binary and 2AFC on real data (first job hit its time limit after the 7-way task).
+- InternVL3-38B binary and 2AFC on real data followed on 2026-11-17 (see below).
+
+## 2026-11-17 — Simpler reader tasks on real data, all five readers (score_review.py)
+- InternVL3-38B added: binary mean AUC 0.51 (5 of 30 cells above chance, best overfitting on loss curves 0.75),
+  2AFC 0.52 [0.49, 0.55] (picks A 43%). All five readers: binary 0.50–0.52 vs benchmark 0.79, 2AFC 0.50–0.52 vs
+  benchmark 0.78 on the same items.
+→ Every reader task is now complete on both data sources; the reader–benchmark gap holds on all of them.

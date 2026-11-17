@@ -96,6 +96,7 @@ Reader and benchmark (B1*) are scored on the same held-out items of each cell. C
 | InternVL3-8B | 4211/4500 | 0.50 | 2/30 | data_leakage on cm 0.59 | 0.79 | 0.53 | 0.50 | 0.48 | 0.50 | 0.52 | 0.50 |
 | llava-onevision-qwen2-7b-ov-hf | 4500/4500 | 0.50 | 6/30 | distribution_shift on rel 0.67 | 0.79 | 0.48 | 0.50 | 0.54 | 0.49 | 0.46 | 0.53 |
 | Qwen2.5-VL-32B-Instruct-AWQ | 4500/4500 | 0.52 | 3/30 | class_imbalance on cm 0.85 | 0.79 | 0.50 | 0.50 | 0.51 | 0.57 | 0.47 | 0.54 |
+| InternVL3-38B-AWQ | 4500/4500 | 0.51 | 5/30 | overfitting on lc_loss 0.75 | 0.79 | 0.57 | 0.51 | 0.50 | 0.49 | 0.51 | 0.50 |
 
 ### Two-alternative forced choice: which of two plots is the failing model? (chance 0.50)
 
@@ -103,8 +104,9 @@ Benchmark (B1*) on the same pairs: **0.78** (900 pairs).
 
 | reader | answered | accuracy [95% CI] | picks A | best plot | per failure (accuracy) |
 |---|---|---|---|---|---|
-| Qwen2.5-VL-7B-Instruct | 900/900 | 0.50 [0.47, 0.54] | 5% | rel 0.51 | overfitting 0.49, miscalibration 0.50, label_noise 0.51, class_imbalance 0.51, data_leakage 0.49, distribution_shift 0.50 |
-| InternVL3-8B | 896/900 | 0.51 [0.48, 0.54] | 14% | rel 0.53 | overfitting 0.47, miscalibration 0.49, label_noise 0.49, class_imbalance 0.53, data_leakage 0.51, distribution_shift 0.55 |
+| Qwen2.5-VL-7B-Instruct | 900/900 | 0.50 [0.47, 0.53] | 5% | rel 0.51 | overfitting 0.49, miscalibration 0.50, label_noise 0.51, class_imbalance 0.51, data_leakage 0.49, distribution_shift 0.50 |
+| InternVL3-8B | 896/900 | 0.51 [0.47, 0.54] | 14% | rel 0.53 | overfitting 0.47, miscalibration 0.49, label_noise 0.49, class_imbalance 0.53, data_leakage 0.51, distribution_shift 0.55 |
 | llava-onevision-qwen2-7b-ov-hf | 900/900 | 0.50 [0.47, 0.53] | 40% | cm 0.50 | overfitting 0.45, miscalibration 0.49, label_noise 0.47, class_imbalance 0.53, data_leakage 0.54, distribution_shift 0.51 |
 | Qwen2.5-VL-32B-Instruct-AWQ | 900/900 | 0.51 [0.48, 0.55] | 18% | dist 0.58 | overfitting 0.53, miscalibration 0.57, label_noise 0.49, class_imbalance 0.49, data_leakage 0.49, distribution_shift 0.51 |
+| InternVL3-38B-AWQ | 900/900 | 0.52 [0.49, 0.55] | 43% | roc 0.57 | overfitting 0.55, miscalibration 0.49, label_noise 0.51, class_imbalance 0.51, data_leakage 0.49, distribution_shift 0.57 |
 
